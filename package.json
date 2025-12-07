@@ -1,0 +1,11 @@
+{
+  "name": "test-app-oposiciones",
+  "version": "1.0.0",
+  "description": "Aplicación de tests para oposiciones de ayuntamiento",
+  "scripts": {
+    "build-index": "node scripts/build-index.js"
+  },
+  "keywords": ["tests", "oposiciones"],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,51 @@
+{
+  "id": 8,
+  "titulo": "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público",
+  "ley": "Ley 40/2015",
+  "preguntas": [
+    {
+      "id_p": 331,
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 39 de la Ley 40/2015, se entiende por portal de internet:",
+      "opciones": [
+        "Dirección electrónica disponible a través de redes de telecomunicaciones cuya titularidad es pública.",
+        "Dirección electrónica disponible a través de internet cuya titularidad es pública.",
+        "Punto de acceso electrónico que permite acceder a la información y, en su caso, a la sede electrónica.",
+        "Punto de acceso electrónico disponible a través de internet que permite acceder a la información y a la sede electrónica."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 332,
+      "enunciado": "Según la Ley 40/2015, artículo 29.3, la graduación de sanciones no considerará especialmente:",
+      "opciones": [
+        "Grado de culpabilidad.",
+        "Continuidad en la conducta infractora.",
+        "Naturaleza de los perjuicios causados.",
+        "Reincidencia en el término de dos años."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 333,
+      "enunciado": "Según el artículo 17.2 de la Ley 40/2015, para la válida constitución de un órgano colegiado se requiere:",
+      "opciones": [
+        "Presidente y la mitad de sus miembros.",
+        "Presidente y secretario, y la tercera parte.",
+        "Presidente y secretario y mayoría simple.",
+        "Presidente y secretario y la mitad, al menos, de sus miembros."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 334,
+      "enunciado": "Conforme a lo dispuesto en el artículo 1 de la Ley 40/2015, dicha norma regula:",
+      "opciones": [
+        "Las bases del procedimiento administrativo común.",
+        "La organización y funcionamiento de la Administración General del Estado.",
+        "La organización y funcionamiento de las Administraciones Públicas y su sector público institucional.",
+        "Las bases de las Administraciones Públicas y principios de responsabilidad y sancionadora."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

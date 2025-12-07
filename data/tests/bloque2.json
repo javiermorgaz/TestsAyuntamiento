@@ -1,0 +1,870 @@
+{
+  "id": 2,
+  "titulo": "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas",
+  "ley": "Ley 39/2015",
+  "preguntas": [
+    {
+      "id_p": 95,
+      "enunciado": "Según el artículo 48.2 de la Ley 39/2015, el defecto de forma determinará la anulabilidad del acto administrativo:",
+      "opciones": [
+        "Solo cuando carezca de los requisitos formales indispensables para alcanzar su fin.",
+        "Únicamente cuando dé lugar a la indefensión de los interesados.",
+        "Cuando su realización haya tenido lugar fuera del tiempo establecido.",
+        "Cuando carezca de los requisitos formales indispensables o dé lugar a indefensión."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 96,
+      "enunciado": "Conforme a lo dispuesto en el artículo 35 de la Ley 39/2015, no requieren ser motivados los actos que:",
+      "opciones": [
+        "Se separen del criterio seguido en actuaciones precedentes.",
+        "Se separen del dictamen de órganos consultivos.",
+        "Limiten intereses de cualquier naturaleza.",
+        "Se dicten en el ejercicio de potestades discrecionales."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 97,
+      "enunciado": "Según el artículo 71.3 de la Ley 39/2015, serán responsables directos de la tramitación del procedimiento:",
+      "opciones": [
+        "El órgano competente para la resolución.",
+        "El superior jerárquico del titular instructor.",
+        "Las personas designadas como órgano instructor o titulares de unidades administrativas.",
+        "El superior jerárquico del órgano instructor."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 98,
+      "enunciado": "Conforme a lo dispuesto en el artículo 112.4 de la Ley 39/2015, las reclamaciones económico-administrativas se ajustarán:",
+      "opciones": [
+        "A la Ley 40/2015.",
+        "A los procedimientos establecidos por su legislación específica.",
+        "A la Ley 29/1998.",
+        "Al TRLRHL (RDL 2/2004)."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 99,
+      "enunciado": "Según la Ley 39/2015, artículo 43.2, cuando la notificación electrónica sea obligatoria o elegida:",
+      "opciones": [
+        "Se entenderá rechazada si han pasado 10 días naturales.",
+        "Se entenderá rechazada si han pasado 10 días hábiles.",
+        "Se entenderá rechazada si han pasado 5 días naturales.",
+        "Se entenderá rechazada si han pasado 3 días hábiles."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 100,
+      "enunciado": "Según el artículo 15 de la Ley 39/2015, los documentos electrónicos deben conservarse en formato que garantice:",
+      "opciones": [
+        "Autenticidad, confidencialidad, integridad y conservación.",
+        "Autenticidad, integridad y conservación.",
+        "Autenticidad, integridad, calidad y conservación.",
+        "Autenticidad, integridad, calidad, protección y conservación."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 101,
+      "enunciado": "Serán responsables directos de la tramitación del procedimiento administrativo:",
+      "opciones": [
+        "El órgano competente para la tramitación del procedimiento.",
+        "El superior jerárquico...",
+        "Las personas designadas como órgano instructor…",
+        "Las respuestas a), b) y c) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 102,
+      "enunciado": "Conforme a lo dispuesto en el artículo 4 de la Ley 39/2015, no tienen la condición de interesados en el procedimiento administrativo:",
+      "opciones": [
+        "Titulares de derechos individuales o colectivos.",
+        "Titulares de intereses legítimos individuales o colectivos.",
+        "Los que, sin haber iniciado el procedimiento, tengan intereses afectados.",
+        "Los que puedan resultar afectados y se personen después de recaída la resolución definitiva."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 103,
+      "enunciado": "No pone fin al procedimiento administrativo:",
+      "opciones": [
+        "La imposibilidad material de continuarlo por causas sobrevenidas.",
+        "La declaración de caducidad.",
+        "El desistimiento.",
+        "La declaración de prescripción."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 104,
+      "enunciado": "Según la Ley 39/2015, el apoderamiento apud acta podrá efectuarse:",
+      "opciones": [
+        "Por cotejo o compulsa…",
+        "Solo mediante firma electrónica.",
+        "Solo por comparecencia personal…",
+        "Mediante comparecencia electrónica en sede electrónica."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 105,
+      "enunciado": "Según la Ley 39/2015, no serán motivados:",
+      "opciones": [
+        "Los actos que se separen del dictamen de órganos consultivos.",
+        "Los acuerdos de ampliación de plazos.",
+        "Los actos que admitan las pruebas propuestas por los interesados.",
+        "Los actos que limiten derechos subjetivos o intereses legítimos."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 106,
+      "enunciado": "Salvo disposición expresa en contrario, los informes en procedimiento administrativo serán:",
+      "opciones": [
+        "Facultativos, pero vinculantes si son emitidos.",
+        "Vinculantes en todo caso.",
+        "Facultativos y vinculantes.",
+        "Facultativos y no vinculantes."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 107,
+      "enunciado": "El desistimiento aceptado en procedimiento administrativo:",
+      "opciones": [
+        "Siempre que renuncie al derecho ejercido.",
+        "Se aceptará salvo que terceros lo impugnen en 10 días.",
+        "Tras ratificación previa.",
+        "No cabe desistimiento ni renuncia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 108,
+      "enunciado": "Según el artículo 40 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, toda notificación deberá ser cursada:",
+      "opciones": [
+        "Dentro del plazo de veinte días a partir de la fecha en que el acto haya sido dictado.",
+        "Dentro del plazo de quince días a partir de la fecha en que el acto haya sido dictado.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 109,
+      "enunciado": "La inclusión en el procedimiento administrativo de trámites adicionales o distintos a los contemplados en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Solo podrá hacerse mediante Ley.",
+        "Podrá hacerse mediante norma reglamentaria.",
+        "Podrá hacerse sin necesidad de norma alguna por el órgano competente para resolver, siempre que lo haga de manera motivada."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 110,
+      "enunciado": "Según el artículo 5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, la representación de los interesados en el procedimiento:",
+      "opciones": [
+        "Deberá acreditarse en todo caso y siempre mediante poder notarial.",
+        "Deberá acreditarse en todo caso y siempre mediante cualquier medio válido en derecho que deje constancia fidedigna de su existencia.",
+        "No deberá acreditarse en todo caso, presumiéndose a veces su existencia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 111,
+      "enunciado": "Según los artículos 47 y 48 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los actos administrativos que incurran en desviación de poder:",
+      "opciones": [
+        "Serán siempre nulos de pleno derecho.",
+        "Serán siempre anulables.",
+        "Solo serán anulables cuando carezcan de motivación."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 112,
+      "enunciado": "Según el artículo 30 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Los plazos expresados en horas no podrán tener una duración superior a veinticuatro horas.",
+        "Los plazos expresados en horas solo podrán tener una duración superior a veinticuatro horas cuando parte de las mismas sean inhábiles.",
+        "Los plazos expresados en horas se contarán desde la hora y minuto siguiente a la hora y minuto en que tenga lugar la notificación o publicación del acto de que se trate."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 113,
+      "enunciado": "Según el artículo 2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, dicha Ley:",
+      "opciones": [
+        "Se aplica en todo caso a las Universidades Públicas.",
+        "Se aplica a las Universidades Públicas con carácter supletorio.",
+        "No se aplica nunca a las Universidades Públicas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 114,
+      "enunciado": "Según la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Contra los actos de trámite no cabe interponer en ningún caso recurso administrativo alguno.",
+        "Contra la resolución de un recurso de alzada no cabe interponer recurso administrativo de ningún tipo.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 115,
+      "enunciado": "Según el artículo 35 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, no deben ser motivados:",
+      "opciones": [
+        "Los acuerdos de ampliación de plazos.",
+        "Los actos que admitan pruebas propuestas por los interesados en el procedimiento administrativo.",
+        "Los actos que acuerden el desistimiento por la Administración en procedimientos iniciados de oficio."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 116,
+      "enunciado": "Ponen fin a la vía administrativa, de conformidad con el art. 114 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Los actos de trámite de los órganos colegiados.",
+        "Las resoluciones de los recursos de alzada.",
+        "Las resoluciones de los órganos administrativos que tienen superior jerárquico."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 117,
+      "enunciado": "Conforme al artículo 16 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "La Administración dispondrá de un Registro Electrónico General común a la Administración General del Estado y a la de cada una de las Comunidades Autónomas.",
+        "La Administración dispondrá de un Registro Electrónico General común a todas ellas.",
+        "Cada Administración dispondrá de un Registro Electrónico General."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 118,
+      "enunciado": "Según el artículo 35 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, serán motivados, con sucinta referencia de hechos y fundamentos de derecho:",
+      "opciones": [
+        "Los actos que limiten derechos subjetivos o intereses legítimos.",
+        "Los actos que sigan el criterio seguido en actuaciones precedentes.",
+        "Los actos que acuerden la continuación del procedimiento."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 119,
+      "enunciado": "El artículo 47 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, enumera los actos de las Administraciones Públicas nulos de pleno derecho, entre los que se encuentran:",
+      "opciones": [
+        "Los que puedan lesionar derechos no susceptibles de amparo constitucional.",
+        "Los dictados siguiendo el procedimiento establecido.",
+        "Los que tengan un contenido imposible."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 120,
+      "enunciado": "Según el artículo 74 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, las cuestiones incidentales que se susciten en el procedimiento, incluso las que se refieran a la nulidad de actuaciones:",
+      "opciones": [
+        "No suspenderán la tramitación del mismo, salvo la recusación.",
+        "Suspenderán la tramitación del mismo.",
+        "No suspenderán nunca la tramitación del mismo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 121,
+      "enunciado": "De conformidad con el artículo 112 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, contra las resoluciones y los actos de trámite, si estos deciden directa o indirectamente el fondo del asunto, determinan la imposibilidad de continuar el procedimiento, producen indefensión o perjuicio irreparable a derechos e intereses legítimos, podrán interponerse por los interesados:",
+      "opciones": [
+        "Recurso contencioso-administrativo.",
+        "Exclusivamente recurso de alzada.",
+        "Recursos de alzada y potestativo de reposición."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 122,
+      "enunciado": "A tenor del artículo 124 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, el plazo máximo para dictar y notificar la resolución del recurso potestativo de reposición será de:",
+      "opciones": [
+        "Dos meses.",
+        "Un mes.",
+        "Tres meses."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 123,
+      "enunciado": "A tenor del artículo 39 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los actos de las Administraciones Públicas sujetos a derecho administrativo se presumirán válidos y producirán efectos desde:",
+      "opciones": [
+        "La fecha en que se dicten, salvo que en ellos se disponga otra cosa.",
+        "La fecha en que se notifiquen.",
+        "La fecha en que se recepcione la notificación por la persona interesada."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 124,
+      "enunciado": "Según el artículo 21 de la Ley 39/2015, el plazo máximo para dictar y notificar la resolución expresa será de:",
+      "opciones": [
+        "6 meses, salvo que una norma con rango de Ley establezca uno distinto.",
+        "3 meses, salvo que una norma de Derecho Comunitario o Ley establezca uno distinto.",
+        "3 meses, salvo que una norma de Derecho Comunitario, Ley o norma de rango reglamentario establezca uno distinto."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 125,
+      "enunciado": "El órgano que acuerde la acumulacion de procedimientos:",
+      "opciones": [
+        "Sera el competente para su tramitacion y resolucion.",
+        "Sera el competente para su tramitacion.",
+        "Sera el superior jerarquico de los que tramiten los procedimientos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 126,
+      "enunciado": "Según el articulo 14.1 de la Ley 39/2015, los interesados que NO estan obligados a relacionarse con la Administracion por medios electronicos podran elegir:",
+      "opciones": [
+        "En cualquier momento, si se relacionan a traves de medios electronicos o no.",
+        "Exclusivamente por medios electronicos.",
+        "Exclusivamente por medios no electronicos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 127,
+      "enunciado": "El plazo maximo para interponer recurso de alzada, si el acto fuera expreso, es de:",
+      "opciones": [
+        "1 mes.",
+        "3 meses.",
+        "2 meses."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 128,
+      "enunciado": "La caducidad produce la paralizacion del procedimiento:",
+      "opciones": [
+        "En los procedimientos iniciados a solicitud del interesado, si se produce la paralizacion por causa imputable al interesado, por el transcurso de tres meses.",
+        "En los procedimientos iniciados de oficio, si se produce la paralizacion por causa imputable al interesado, por el transcurso de tres meses.",
+        "En los procedimientos iniciados de oficio, si se produce la paralizacion por causa imputable al interesado, por el transcurso de dos meses."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 129,
+      "enunciado": "Los actos nulos de pleno derecho son aquellos que:",
+      "opciones": [
+        "Tengan un contenido imposible.",
+        "Hay an sido dictados con omision de algun tramite esencial.",
+        "Hay an sido dictados por organo manifiestamente incompetente por razon de la materia o del territorio."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 130,
+      "enunciado": "La conversion del acto nulo o anulable es posible si:",
+      "opciones": [
+        "El acto contiene los elementos constitutivos de otro distinto, cuya validez se corresponderia con el fin perseguido.",
+        "El acto fue dictado por un organo competente.",
+        "El acto no lesiono derechos o intereses de terceros."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 131,
+      "enunciado": "La inadmision o el desistimiento del recurso por parte de la Administracion:",
+      "opciones": [
+        "Establece que, en caso de inadmision por concurrir alguna de las causas del articulo 113, se aplicara la caducidad.",
+        "No podra decretar la inadmision de los recursos presentados por la Administracion.",
+        "Solo podra inadmitir recursos en los supuestos de inadmision o desistimiento previstos en la ley."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 132,
+      "enunciado": "La resolucion que pone fin al procedimiento administrativo es aquella que:",
+      "opciones": [
+        "Pone fin a la via administrativa.",
+        "Es dictada por el organo competente para resolver.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 133,
+      "enunciado": "El plazo para interponer recurso de alzada cuando el acto no es expreso es de:",
+      "opciones": [
+        "Un mes.",
+        "Tres meses.",
+        "En cualquier momento a partir del dia siguiente a aquel en que, de acuerdo con su normativa especifica, se produzcan los efectos del silencio administrativo."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 134,
+      "enunciado": "Según el articulo 107.2 de la Ley 39/2015, la revocacion:",
+      "opciones": [
+        "Se podra aplicar cuando el acto sea anulable.",
+        "Podra hacerse por el mismo organo que dicto el acto.",
+        "Ambas respuestas son correctas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 135,
+      "enunciado": "Los actos dictados por un organo manifiestamente incompetente por razon de la materia o del territorio son:",
+      "opciones": [
+        "Nulos de pleno derecho.",
+        "Anulables.",
+        "Revocables."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 136,
+      "enunciado": "El recurso extraordinario de revision procede:",
+      "opciones": [
+        "Contra los actos firmes en via administrativa.",
+        "Contra las resoluciones de los recursos de alzada.",
+        "Contra los actos que pongan fin a la via administrativa."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 137,
+      "enunciado": "El plazo para interponer recurso potestativo de reposicion sera de:",
+      "opciones": [
+        "Un mes, si el acto fuera expreso.",
+        "Tres meses, si el acto fuera expreso.",
+        "Un mes, en todo caso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 138,
+      "enunciado": "Los actos administrativos se presumiran validos y produciran efectos desde:",
+      "opciones": [
+        "La fecha en que se dicten, salvo que en ellos se disponga otra cosa.",
+        "La fecha de su notificacion.",
+        "La fecha de su publicacion."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 139,
+      "enunciado": "La rectificacion de errores materiales, de hecho o aritmeticos de los actos administrativos:",
+      "opciones": [
+        "Solo podra hacerse por el superior jerarquico.",
+        "Podra hacerse en cualquier momento, de oficio o a instancia de los interesados.",
+        "Solo podra hacerse en el plazo de un mes."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 140,
+      "enunciado": "Los efectos de la anulabilidad de un acto administrativo podran retrotraerse:",
+      "opciones": [
+        "Siempre que se solicite en el recurso.",
+        "A la fecha en que se dicto el acto, salvo derechos de terceros.",
+        "A la fecha en que se produjo la anulabilidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 141,
+      "enunciado": "El plazo para resolver y notificar el recurso de alzada, si es expreso, es de:",
+      "opciones": [
+        "Un mes.",
+        "Tres meses.",
+        "Dos meses."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 142,
+      "enunciado": "La notificacion se entendera rechazada si el interesado no accede a su contenido en el plazo de:",
+      "opciones": [
+        "10 dias habiles.",
+        "10 dias naturales.",
+        "3 meses."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 143,
+      "enunciado": "Los documentos electrónicos aportados por los interesados al procedimiento deberán conservarse:",
+      "opciones": [
+        "En formato que garantice la autenticidad, la integridad, la calidad, proteccion y conservacion.",
+        "En formato que garantice su autenticidad, integridad y conservacion.",
+        "En formato que garantice su interoperabilidad y calidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 144,
+      "enunciado": "La inadmision del recurso de alzada procedera por:",
+      "opciones": [
+        "Ser el acto no recurrible.",
+        "Falta de legitimacion del recurrente.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 145,
+      "enunciado": "Las notificaciones, según el articulo 40 de la Ley 39/2015, se cursaran en el plazo de:",
+      "opciones": [
+        "10 dias a partir de la fecha en que el acto haya sido dictado.",
+        "15 dias a partir de la fecha en que el acto haya sido dictado.",
+        "20 dias a partir de la fecha en que el acto haya sido dictado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 146,
+      "enunciado": "La nulidad de pleno derecho de un acto dictado por organo manifiestamente incompetente por razon de la materia o del territorio es un supuesto de:",
+      "opciones": [
+        "Incompetencia absoluta.",
+        "Incompetencia relativa.",
+        "Invalidez parcial."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 147,
+      "enunciado": "El recurso de reposicion es:",
+      "opciones": [
+        "Obligatorio y potestativo.",
+        "Potestativo y no preceptivo.",
+        "Obligatorio y preceptivo."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 148,
+      "enunciado": "El plazo para interponer el recurso contencioso-administrativo, si el recurso de reposicion es desestimado por silencio, es de:",
+      "opciones": [
+        "Seis meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo.",
+        "Tres meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo.",
+        "Dos meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 149,
+      "enunciado": "El apoderamiento 'apud acta' se puede realizar mediante:",
+      "opciones": [
+        "Comparecencia electronica o personal en sede electronica.",
+        "Solo comparecencia electronica en sede electronica.",
+        "Solo comparecencia personal."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 150,
+      "enunciado": "Los actos que declaren la caducidad del procedimiento seran motivados:",
+      "opciones": [
+        "Siempre.",
+        "Solo si son iniciados a solicitud del interesado.",
+        "Solo si afectan a derechos subjetivos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 151,
+      "enunciado": "El plazo para que la Administracion resuelva y notifique los recursos de alzada es de:",
+      "opciones": [
+        "Un mes.",
+        "Dos meses.",
+        "Tres meses."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 152,
+      "enunciado": "La inadmision de los recursos administrativos procedera por:",
+      "opciones": [
+        "Ser el acto recurrible.",
+        "Falta de legitimacion del recurrente.",
+        "Las respuestas a) y b) son correctas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 153,
+      "enunciado": "La resolucion que pone fin al procedimiento administrativo debe contener:",
+      "opciones": [
+        "Decisiones y pronunciamientos, sin que sea necesaria la motivacion.",
+        "Decisiones y pronunciamientos motivados, con indicacion de los recursos procedentes.",
+        "Decisiones y pronunciamientos, con indicacion de si pone fin a la via administrativa."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 154,
+      "enunciado": "La interrupcion de los plazos de prescripcion se producira por:",
+      "opciones": [
+        "El inicio del procedimiento de responsabilidad.",
+        "La realizacion de actuaciones dirigidas a la exigencia de responsabilidad.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 155,
+      "enunciado": "La conversion del acto administrativo:",
+      "opciones": [
+        "Permite que un acto nulo sea valido, si contiene los elementos de otro valido.",
+        "Permite que un acto anulable sea valido, si contiene los elementos de otro valido.",
+        "Permite que un acto nulo o anulable, si contiene los elementos constitutivos de otro distinto cuya validez se corresponda con el fin perseguido, surta los efectos de este."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 156,
+      "enunciado": "La subsanacion del acto administrativo:",
+      "opciones": [
+        "Es posible, salvo que afecte a la competencia.",
+        "Es posible, salvo que afecte al contenido esencial.",
+        "Es posible, salvo que afecte a la competencia o al contenido esencial."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 157,
+      "enunciado": "El desistimiento de la Administracion en procedimientos iniciados de oficio:",
+      "opciones": [
+        "Se acuerda por el organo competente, salvo que afecte al interes publico.",
+        "Se acuerda por el organo competente, salvo que afecte al interes general.",
+        "Se acuerda por el organo competente, con la conformidad de los interesados."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 158,
+      "enunciado": "La caducidad se produce por el transcurso de:",
+      "opciones": [
+        "Tres meses en los procedimientos iniciados a solicitud del interesado, si se produce la paralizacion por causa imputable al interesado.",
+        "Tres meses en los procedimientos iniciados de oficio, si se produce la paralizacion por causa imputable al interesado.",
+        "Dos meses en los procedimientos iniciados a solicitud del interesado, si se produce la paralizacion por causa imputable al interesado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 159,
+      "enunciado": "La nulidad de pleno derecho del acto administrativo, conforme al articulo 47 de la Ley 39/2015, se produce por:",
+      "opciones": [
+        "Violacion de derechos y libertades susceptibles de amparo constitucional.",
+        "Desviacion de poder.",
+        "Incompetencia manifesta por razon de la materia o del territorio."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 160,
+      "enunciado": "La inadmision del recurso de alzada procedera por:",
+      "opciones": [
+        "Ser el acto recurrible.",
+        "Falta de legitimacion del recurrente.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 161,
+      "enunciado": "El plazo maximo para dictar y notificar la resolucion del recurso de alzada es de:",
+      "opciones": [
+        "Un mes.",
+        "Dos meses.",
+        "Tres meses."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 162,
+      "enunciado": "El recurso potestativo de reposicion:",
+      "opciones": [
+        "Es obligatorio y preceptivo.",
+        "Es potestativo y no preceptivo.",
+        "Es obligatorio y no preceptivo."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 163,
+      "enunciado": "El plazo para interponer el recurso contencioso-administrativo, si el recurso de reposicion es desestimado por silencio, es de:",
+      "opciones": [
+        "Seis meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo.",
+        "Tres meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo.",
+        "Dos meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 164,
+      "enunciado": "La conversion del acto administrativo:",
+      "opciones": [
+        "Permite que un acto nulo o anulable, si contiene los elementos constitutivos de otro distinto cuya validez se corresponda con el fin perseguido, surta los efectos de este.",
+        "Permite la subsanacion de los defectos de forma, salvo que afecten a la competencia.",
+        "Permite la subsanacion de los defectos de forma, salvo que afecten al contenido esencial."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 165,
+      "enunciado": "La nulidad de pleno derecho del acto administrativo, conforme al articulo 47 de la Ley 39/2015, se produce por:",
+      "opciones": [
+        "Violacion de derechos y libertades susceptibles de amparo constitucional.",
+        "Desviacion de poder.",
+        "Incompetencia manifesta por razon de la materia o del territorio."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 166,
+      "enunciado": "El recurso extraordinario de revision procede contra:",
+      "opciones": [
+        "Los actos firmes en via administrativa.",
+        "Las resoluciones de los recursos de alzada.",
+        "Los actos que pongan fin a la via administrativa."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 167,
+      "enunciado": "El plazo para interponer recurso potestativo de reposicion sera de:",
+      "opciones": [
+        "Un mes, si el acto fuera expreso.",
+        "Tres meses, si el acto fuera expreso.",
+        "Un mes, en todo caso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 168,
+      "enunciado": "Los actos administrativos se presumiran validos y produciran efectos desde:",
+      "opciones": [
+        "La fecha en que se dicten, salvo que en ellos se disponga otra cosa.",
+        "La fecha de su notificacion.",
+        "La fecha de su publicacion."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 169,
+      "enunciado": "La rectificacion de errores materiales, de hecho o aritmeticos de los actos administrativos:",
+      "opciones": [
+        "Solo podra hacerse por el superior jerarquico.",
+        "Podra hacerse en cualquier momento, de oficio o a instancia de los interesados.",
+        "Solo podra hacerse en el plazo de un mes."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 170,
+      "enunciado": "Los efectos de la anulabilidad de un acto administrativo podran retrotraerse:",
+      "opciones": [
+        "Siempre que se solicite en el recurso.",
+        "A la fecha en que se dicto el acto, salvo derechos de terceros.",
+        "A la fecha en que se produjo la anulabilidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 171,
+      "enunciado": "El plazo para resolver y notificar el recurso de alzada, si es expreso, es de:",
+      "opciones": [
+        "Un mes.",
+        "Tres meses.",
+        "Dos meses."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 172,
+      "enunciado": "La notificacion se entendera rechazada si el interesado no accede a su contenido en el plazo de:",
+      "opciones": [
+        "10 dias habiles.",
+        "10 dias naturales.",
+        "3 meses."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 173,
+      "enunciado": "Los documentos electronicos aportados por los interesados al procedimiento deberan conservarse:",
+      "opciones": [
+        "En formato que garantice la autenticidad, la integridad, la calidad, proteccion y conservacion.",
+        "En formato que garantice su autenticidad, integridad y conservacion.",
+        "En formato que garantice su interoperabilidad y calidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 174,
+      "enunciado": "La inadmision del recurso de alzada procedera por:",
+      "opciones": [
+        "Ser el acto no recurrible.",
+        "Falta de legitimacion del recurrente.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 175,
+      "enunciado": "Las notificaciones, según el articulo 40 de la Ley 39/2015, se cursaran en el plazo de:",
+      "opciones": [
+        "10 dias a partir de la fecha en que el acto haya sido dictado.",
+        "15 dias a partir de la fecha en que el acto haya sido dictado.",
+        "20 dias a partir de la fecha en que el acto haya sido dictado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 176,
+      "enunciado": "La nulidad de pleno derecho de un acto dictado por organo manifiestamente incompetente por razon de la materia o del territorio es un supuesto de:",
+      "opciones": [
+        "Incompetencia absoluta.",
+        "Incompetencia relativa.",
+        "Invalidez parcial."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 177,
+      "enunciado": "El recurso de reposicion es:",
+      "opciones": [
+        "Obligatorio y potestativo.",
+        "Potestativo y no preceptivo.",
+        "Obligatorio y preceptivo."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 178,
+      "enunciado": "El plazo para interponer el recurso contencioso-administrativo, si el recurso de reposicion es desestimado por silencio, es de:",
+      "opciones": [
+        "Seis meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo.",
+        "Tres meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo.",
+        "Dos meses, a contar desde el dia siguiente a aquel en que se produzcan los efectos del silencio administrativo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 179,
+      "enunciado": "El apoderamiento 'apud acta' se puede realizar mediante:",
+      "opciones": [
+        "Comparecencia electronica o personal en sede electronica.",
+        "Solo comparecencia electronica en sede electronica.",
+        "Solo comparecencia personal."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}

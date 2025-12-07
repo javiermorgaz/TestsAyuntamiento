@@ -1,0 +1,250 @@
+{
+  "id": 6,
+  "titulo": "Estatuto de Autonomia de Andalucia (EAA) / Ley Organica 2/2007, de 19 de marzo, de reforma del EAA",
+  "ley": "LO 2/2007",
+  "preguntas": [
+    {
+      "id_p": 280,
+      "enunciado": "De conformidad con lo establecido en el artículo 89.1 del Estatuto de Autonomía para Andalucía, Andalucía se organiza territorialmente en:",
+      "opciones": [
+        "Municipios, provincias, mancomunidades y demás entidades territoriales que puedan crearse por ley.",
+        "Municipios, provincias y comarcas.",
+        "Municipios, provincias, comarcas y demás entidades territoriales que puedan crearse por ley.",
+        "Municipios, provincias y demás entidades territoriales que puedan crearse por ley."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 281,
+      "enunciado": "Según el artículo 50 del Estatuto de Autonomía para Andalucía, compete a la Comunidad Autónoma:",
+      "opciones": [
+        "La gestión de la Administración del Estado.",
+        "La organización territorial de Andalucía.",
+        "La gestión sanitaria estatal.",
+        "La defensa."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 282,
+      "enunciado": "Según el artículo 51 del Estatuto de Autonomía para Andalucía, el Parlamento andaluz controla:",
+      "opciones": [
+        "Solo al Consejo de Gobierno.",
+        "Empresas públicas andaluzas, acción del Consejo de Gobierno y Cuenta General.",
+        "Solo organismos autónomos.",
+        "Solo la Cuenta General."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 283,
+      "enunciado": "Según el artículo 119 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, en el ámbito de las competencias de la Comunidad Autónoma corresponde el ejercicio de la potestad reglamentaria:",
+      "opciones": [
+        "Solo al Presidente o Presidenta de la Junta.",
+        "Al Presidente o Presidenta de la Junta y al Consejo de Gobierno.",
+        "Al Consejo de Gobierno y a cada uno de sus miembros."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 284,
+      "enunciado": "Según el artículo 106 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, no corresponde al Parlamento de Andalucía:",
+      "opciones": [
+        "El control de las empresas públicas andaluzas.",
+        "La orientación y el impulso de la acción del Consejo de Gobierno.",
+        "La interposición de conflictos de competencia."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 285,
+      "enunciado": "De conformidad con el artículo 92 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, los Ayuntamientos tienen competencias propias en la siguiente materia:",
+      "opciones": [
+        "Mantenimiento de vías interurbanas.",
+        "Gestión de los servicios sociales comunitarios.",
+        "Gestión del sistema público de salud."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 286,
+      "enunciado": "Según el artículo 94 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, las funciones de las áreas metropolitanas, mancomunidades, consorcios y aquellas otras agrupaciones de municipios que se establezcan se regularán:",
+      "opciones": [
+        "Por decreto-ley.",
+        "Por decreto del Consejo de Gobierno.",
+        "Por ley."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 287,
+      "enunciado": "De conformidad el artículo 130 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, la Cámara de Cuentas es el órgano de control externo:",
+      "opciones": [
+        "De la actividad de organización económica de las entidades locales.",
+        "De la actividad de planificación presupuestaria de la Junta de Andalucía.",
+        "De la actividad económica y presupuestaria de la Junta de Andalucía, de los entes locales y del resto del sector público de Andalucía."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 288,
+      "enunciado": "Según el artículo 31 del EAA, los poderes de la Junta de Andalucía se ejercen a través de:",
+      "opciones": [
+        "El Parlamento, el Consejo de Gobierno y el Presidente.",
+        "El Parlamento, el Presidente y el Consejo de Gobierno.",
+        "El Parlamento, el Consejo de Gobierno, el Presidente y el Defensor del Pueblo Andaluz."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 289,
+      "enunciado": "El Presidente de la Junta de Andalucía es nombrado por:",
+      "opciones": [
+        "El Rey.",
+        "El Rey, a propuesta del Parlamento.",
+        "El Parlamento."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 290,
+      "enunciado": "El control de la acción del Consejo de Gobierno de Andalucía corresponde a:",
+      "opciones": [
+        "El Parlamento.",
+        "El Presidente.",
+        "El Tribunal Superior de Justicia."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 291,
+      "enunciado": "Según el EAA, la iniciativa legislativa corresponde a:",
+      "opciones": [
+        "El Consejo de Gobierno y el Parlamento.",
+        "El Consejo de Gobierno, el Parlamento y la Iniciativa Legislativa Popular.",
+        "El Consejo de Gobierno y los grupos parlamentarios."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 292,
+      "enunciado": "La Cámara de Cuentas es el órgano de control externo de la actividad económica y presupuestaria de la Junta de Andalucía, de los entes locales y del resto del sector público de Andalucía. Depende:",
+      "opciones": [
+        "Del Parlamento de Andalucía.",
+        "Del Consejo de Gobierno.",
+        "De la Presidencia de la Junta."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 293,
+      "enunciado": "La organización territorial de Andalucía se establece en:",
+      "opciones": [
+        "Municipios, Provincias y Comarcas.",
+        "Municipios, Provincias y demas entidades territoriales que puedan crearse por Ley.",
+        "Municipios, Provincias y areas metropolitanas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 294,
+      "enunciado": "El Defensor del Pueblo Andaluz es elegido por:",
+      "opciones": [
+        "El Parlamento por mayoria simple.",
+        "El Parlamento por mayoria de tres quintos.",
+        "El Parlamento por mayoria absoluta."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 295,
+      "enunciado": "El control de las empresas publicas andaluzas corresponde:",
+      "opciones": [
+        "Al Parlamento.",
+        "Al Consejo de Gobierno.",
+        "A la Camara de Cuentas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 296,
+      "enunciado": "El Consejo de Gobierno de Andalucia es un organo:",
+      "opciones": [
+        "Colegiado.",
+        "Ejecutivo.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 297,
+      "enunciado": "La potestad reglamentaria en el ambito de las competencias de la Comunidad Autonoma corresponde a:",
+      "opciones": [
+        "El Consejo de Gobierno.",
+        "El Consejo de Gobierno y a cada uno de sus miembros.",
+        "El Presidente."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 298,
+      "enunciado": "La Administracion de la Junta de Andalucia se organiza territorialmente en:",
+      "opciones": [
+        "Provincias y Municipios.",
+        "Delegaciones Provinciales.",
+        "Delegaciones Territoriales de la Junta de Andalucia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 299,
+      "enunciado": "El Parlamento de Andalucia ejerce la potestad legislativa, aprueba los Presupuestos y controla:",
+      "opciones": [
+        "Al Consejo de Gobierno.",
+        "Al Presidente.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 300,
+      "enunciado": "El Estatuto de Autonomia para Andalucia es una:",
+      "opciones": [
+        "Ley Organica.",
+        "Ley Ordinaria.",
+        "Norma con rango de Ley."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 301,
+      "enunciado": "La reforma del Estatuto de Autonomia para Andalucia requiere:",
+      "opciones": [
+        "Mayoria absoluta del Parlamento.",
+        "Mayoria de dos tercios del Parlamento.",
+        "Mayoria simple del Parlamento."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 302,
+      "enunciado": "El Presidente de la Junta de Andalucia es:",
+      "opciones": [
+        "El jefe del Gobierno de Andalucia.",
+        "El representante ordinario del Estado en Andalucia.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 303,
+      "enunciado": "El control de la actividad de los entes locales andaluces corresponde a la Camara de Cuentas:",
+      "opciones": [
+        "En su totalidad.",
+        "Solo en el ambito de la Comunidad Autonoma.",
+        "En el ambito economico y presupuestario."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 12,
+  "titulo": "TRLRHL (Haciendas Locales) - Presupuesto y Ejecución",
+  "ley": "Texto Refundido de la Ley Reguladora de Haciendas Locales (TRLRHL)",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 168.1 del TRLRHL, el presupuesto de la entidad local será formado por:",
+      "opciones": [
+        "El Pleno.",
+        "El Presidente de la entidad local.",
+        "La Junta de Gobierno Local."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 169.1 del TRLRHL, aprobado inicialmente el presupuesto se expondrá al público por:",
+      "opciones": [
+        "20 días.",
+        "30 días naturales.",
+        "15 días."
+      ],
+      "respuesta_correcta": 2
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "id": 4,
+  "titulo": "Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público (EBEP)",
+  "ley": "RDL 5/2015 (EBEP)",
+  "preguntas": [
+    {
+      "id_p": 222,
+      "enunciado": "Según establece el artículo 60.1 del texto refundido de la Ley del Estatuto Básico del Empleado Público, los órganos de selección serán colegiados y su composición deberá ajustarse a los principios de:",
+      "opciones": [
+        "Integridad y objetividad.",
+        "Independencia y profesionalidad.",
+        "Imparcialidad y discrecionalidad técnica.",
+        "Imparcialidad y profesionalidad."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 223,
+      "enunciado": "De conformidad con el artículo 68 del Estatuto Básico del Empleado Público, en caso de extinción de la relación de servicios por incapacidad permanente, una vez desaparecida la causa:",
+      "opciones": [
+        "Se concederá la rehabilitación automáticamente.",
+        "Podrá concederse si la pensión es inferior al 30 %.",
+        "Será denegada automáticamente.",
+        "Las respuestas a), b) y c) son incorrectas."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 224,
+      "enunciado": "¿Es posible que el personal funcionario interino en plaza vacante pueda permanecer en la plaza que ocupe temporalmente más de 3 años desde la fecha de su nombramiento?:",
+      "opciones": [
+        "Nunca.",
+        "Sí, excepcionalmente, previa justificación razonada para ello.",
+        "Sí, excepcionalmente, siempre que se haya publicado la correspondiente convocatoria dentro del citado plazo de tres años.",
+        "Sí, excepcionalmente, siempre que se haya publicado la correspondiente convocatoria dentro del citado plazo de tres años y sea resuelta conforme a los plazos establecidos en el artículo 70 del EBEP."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 225,
+      "enunciado": "El funcionario suspenso provisional tendrá derecho a percibir durante la suspensión:",
+      "opciones": [
+        "Solo las retribuciones básicas.",
+        "Las retribuciones básicas y, en su caso, las prestaciones familiares por hijo a cargo.",
+        "Las retribuciones básicas y el complemento de destino.",
+        "No tiene derecho a retribución alguna."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 226,
+      "enunciado": "Según lo dispuesto en el artículo 61.1 del EBEP, los procesos selectivos tendrán:",
+      "opciones": [
+        "Carácter formal…",
+        "Carácter abierto y garantizarán la libre concurrencia.",
+        "Carácter reglado…",
+        "Carácter restringido…"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 227,
+      "enunciado": "Un funcionario de carrera que desempeña el cargo de concejal será declarado en situación de servicios especiales:",
+      "opciones": [
+        "Siempre.",
+        "Si lo solicita el interesado.",
+        "Nunca, pues debe declararse en excedencia.",
+        "Cuando desempeñe el cargo con dedicación exclusiva y sea retribuido."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 228,
+      "enunciado": "La provisión de un puesto de trabajo de funcionario por adscripción provisional no procede en caso de:",
+      "opciones": [
+        "Remoción o cese.",
+        "Supresión del puesto.",
+        "Reingreso sin reserva.",
+        "Reasignación de efectivos."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 229,
+      "enunciado": "En las unidades electorales donde el número de funcionarios sea de 31 a 49, se elegirán:",
+      "opciones": [
+        "Dos delegados de personal.",
+        "Cuatro delegados de personal.",
+        "Tres delegados de personal.",
+        "Cinco delegados de personal."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 230,
+      "enunciado": "Conforme al artículo 12.1 del EBEP, se entenderá celebrado a tiempo parcial el contrato cuando la prestación de servicios sea:",
+      "opciones": [
+        "Inferior al 50%...",
+        "Inferior a la jornada de un trabajador a tiempo completo comparable.",
+        "Inferior al 75%...",
+        "Inferior al 80%..."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 231,
+      "enunciado": "Los empleados públicos se clasifican en:",
+      "opciones": [
+        "Funcionarios de carrera, funcionarios interinos, personal laboral y personal eventual.",
+        "Funcionarios de carrera, personal laboral, personal eventual.",
+        "Funcionarios de carrera, personal laboral, personal eventual y personal directivo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 232,
+      "enunciado": "La clasificacion del personal directivo en el EBEP:",
+      "opciones": [
+        "Se clasifica en el articulo 13 EBEP.",
+        "No se clasifica en el EBEP.",
+        "Se clasifica en el articulo 12 EBEP."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 233,
+      "enunciado": "El principio de mérito y capacidad en el acceso al empleo publico se encuentra recogido en el articulo:",
+      "opciones": [
+        "55 EBEP.",
+        "56 EBEP.",
+        "57 EBEP."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 234,
+      "enunciado": "Los funcionarios de carrera son aquellos que:",
+      "opciones": [
+        "Estan unidos a la Administracion por una relacion de servicios profesionales, retribuidos, regulada por el Derecho Administrativo.",
+        "Estan unidos a la Administracion por una relacion de servicios profesionales, retribuidos, regulada por el Derecho Laboral.",
+        "Estan unidos a la Administracion por una relacion de servicios, retribuidos, regulada por el Derecho Administrativo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 235,
+      "enunciado": "La excedencia voluntaria por interes particular requiere:",
+      "opciones": [
+        "Haber prestado servicios en cualquiera de las Administraciones Publicas durante 5 años inmediatamente anteriores.",
+        "Haber prestado servicios en cualquiera de las Administraciones Publicas durante 2 años inmediatamente anteriores.",
+        "Haber prestado servicios en la Administracion en la que se solicita la excedencia durante 5 años inmediatamente anteriores."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 236,
+      "enunciado": "La evaluacion del desempeño se regula en el articulo:",
+      "opciones": [
+        "20 EBEP.",
+        "21 EBEP.",
+        "22 EBEP."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 237,
+      "enunciado": "La carrera profesional se regula en el articulo:",
+      "opciones": [
+        "16 EBEP.",
+        "17 EBEP.",
+        "18 EBEP."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 238,
+      "enunciado": "La promocion interna:",
+      "opciones": [
+        "Se realizara mediante procesos selectivos que garanticen los principios de igualdad, merito, capacidad y publicidad.",
+        "Se realizara mediante procesos selectivos que garanticen los principios de merito y capacidad.",
+        "Se realizara mediante procesos selectivos que garanticen los principios de igualdad, merito y capacidad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 239,
+      "enunciado": "El sistema de provisión de puestos de trabajo mediante libre designación exige:",
+      "opciones": [
+        "Convocatoria publica.",
+        "Motivacion de la resolucion.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 240,
+      "enunciado": "La movilidad de los funcionarios de carrera:",
+      "opciones": [
+        "Se realiza mediante concurso.",
+        "Se realiza mediante concurso y libre designacion.",
+        "Se realiza mediante concurso, libre designacion y adscripcion provisional."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 241,
+      "enunciado": "El personal laboral fijo que acceda a la condicion de funcionario de carrera, podra:",
+      "opciones": [
+        "Ser declarado en excedencia voluntaria por prestacion de servicios en el sector publico.",
+        "Ser declarado en excedencia forzosa.",
+        "Ser declarado en excedencia voluntaria por interes particular."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 242,
+      "enunciado": "La retribucion de los funcionarios publicos comprende:",
+      "opciones": [
+        "Retribuciones basicas y complementarias.",
+        "Retribuciones basicas, complementarias y trienios.",
+        "Retribuciones basicas, complementarias, pagas extraordinarias y trienios."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 243,
+      "enunciado": "El complemento de destino retribuye:",
+      "opciones": [
+        "El nivel del puesto que se desempeña.",
+        "La especial dificultad tecnica, responsabilidad, incompatibilidad o condiciones especiales del puesto.",
+        "La dedicacion y rendimiento."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 244,
+      "enunciado": "Los funcionarios publicos podran ser declarados en la situacion de servicios especiales cuando:",
+      "opciones": [
+        "Sean elegidos para el cargo de Senador o Diputado de las Cortes Generales.",
+        "Sean elegidos para el cargo de miembro de las Asambleas Legislativas de las CCAA.",
+        "Ambas son correctas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 245,
+      "enunciado": "La rehabilitacion de la condicion de funcionario se produce:",
+      "opciones": [
+        "Por la desaparicion de la causa de la incapacidad permanente.",
+        "Por la solicitud del interesado, si se cumplen los requisitos.",
+        "Por la declaracion de la Administracion competente."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 246,
+      "enunciado": "Los funcionarios de carrera son aquellos que:",
+      "opciones": [
+        "Han superado un proceso selectivo y han sido nombrados legalmente.",
+        "Estan unidos a la Administracion por una relacion de servicios profesionales, retribuidos, regulada por el Derecho Administrativo.",
+        "Han superado un proceso selectivo y han sido nombrados legalmente y estan unidos a la Administracion por una relacion de servicios profesionales, retribuidos, regulada por el Derecho Administrativo."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 247,
+      "enunciado": "El plazo maximo de duracion de la comision de servicios es de:",
+      "opciones": [
+        "Dos años, prorrogable por uno mas.",
+        "Un año, prorrogable por otro.",
+        "Tres años, prorrogable por uno mas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 248,
+      "enunciado": "Las retribuciones basicas de los funcionarios de carrera se componen de:",
+      "opciones": [
+        "Sueldo, trienios y pagas extraordinarias.",
+        "Sueldo y trienios.",
+        "Sueldo, trienios y complemento de destino."
+      ],
+      "respuesta_correcta": 2
+    }
+  ]
+}
