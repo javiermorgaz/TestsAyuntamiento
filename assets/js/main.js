@@ -39,13 +39,9 @@ async function renderizarListado(tests) {
 
     // Procesar cada test de forma asíncrona
     for (const test of tests) {
-        // Obtener historial desde dataService (Supabase → localStorage)
-        const resultadosTest = await obtenerHistorial(test.id, 3);
-
         // Buscar si hay progreso en curso
         const progreso = await buscarProgresoTest(test.id);
 
-        let historialHTML = '';
         let progresoHTML = '';
         let botonHTML = '';
         let botonResetHTML = '';
@@ -83,30 +79,11 @@ async function renderizarListado(tests) {
             `;
         }
 
-        // Mostrar historial de intentos completados
-        if (resultadosTest.length > 0) {
-            historialHTML = '<div class="historial-resultados">';
-            historialHTML += '<p class="historial-titulo">Últimos intentos:</p>';
-
-            resultadosTest.forEach(resultado => {
-                const fecha = new Date(resultado.fecha).toLocaleDateString('es-ES');
-                const porcentaje = parseFloat(resultado.porcentaje).toFixed(0);
-                historialHTML += `
-                    <span class="badge-resultado">
-                        ${fecha}: ${resultado.aciertos}/${resultado.total} (${porcentaje}%)
-                    </span>
-                `;
-            });
-
-            historialHTML += '</div>';
-        }
-
         htmlContent += `
             <li>
                 <h3>${test.titulo}</h3>
                 <p>Preguntas: ${test.num_preguntas}</p>
                 ${progresoHTML}
-                ${historialHTML}
                 <div class="test-actions">
                     ${botonHTML}
                     ${botonResetHTML}

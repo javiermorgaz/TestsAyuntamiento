@@ -66,32 +66,6 @@ main h2 {
     margin-bottom: 1rem;
 }
 
-.historial-resultados {
-    margin: 1rem 0;
-    padding: 0.75rem;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    border-left: 3px solid #3498db;
-}
-
-.historial-titulo {
-    font-size: 0.85rem;
-    color: #5a6c7d;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.badge-resultado {
-    display: inline-block;
-    background-color: #e8f4f8;
-    color: #2c3e50;
-    padding: 0.3rem 0.6rem;
-    margin: 0.25rem 0.25rem 0.25rem 0;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    border: 1px solid #3498db;
-}
-
 button {
     background-color: #3498db;
     color: white;
