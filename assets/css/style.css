@@ -33,26 +33,31 @@ main {
 
 /* Indicador de guardado automático */
 .save-indicator {
-    position: fixed;
-    top: 20px;
-    right: 20px;
     background-color: #27ae60;
     color: white;
-    padding: 0.75rem 1.25rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
     font-weight: 500;
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateX(10px);
     transition: all 0.3s ease;
     pointer-events: none;
-    z-index: 10000;
+    white-space: nowrap;
 }
 
 .save-indicator.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+}
+
+/* Cuando está en el body (fallback) */
+body>.save-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
 }
 
 main h2 {

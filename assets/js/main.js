@@ -10,7 +10,21 @@ const testsContainer = document.getElementById('tests-container');
  */
 async function cargarListadoTests() {
     try {
-        testsContainer.innerHTML = '<p>Cargando tests...</p>';
+        // Mostrar skeleton loader moderno con texto
+        testsContainer.innerHTML = `
+            <div class="col-span-full">
+                <p class="text-white drop-shadow-lg text-center text-2xl md:text-3xl font-light mb-8 animate-pulse" style="color: #ffffff;">Cargando tests...</p>
+                <div class="space-y-6">
+                    ${[1, 2, 3, 4].map(() => `
+                        <div class="glass-card p-6 animate-pulse">
+                            <div class="h-6 bg-white/30 rounded w-3/4 mb-4"></div>
+                            <div class="h-4 bg-white/20 rounded w-1/2 mb-6"></div>
+                            <div class="h-12 bg-white/25 rounded"></div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
 
         // Usar dataService (intenta Supabase → fallback JSON)
         const tests = await obtenerTests();
@@ -20,22 +34,22 @@ async function cargarListadoTests() {
     } catch (error) {
         console.error("Error crítico al cargar listado:", error);
         testsContainer.innerHTML =
-            '<p style="color:red;">⚠️ No se pudieron cargar los tests. Revisa la consola y las rutas de los archivos JSON.</p>';
+            '<p class="text-white text-center bg-red-500/20 p-4 rounded-lg border border-red-500/50">⚠️ No se pudieron cargar los tests. Revisa la consola y las rutas de los archivos JSON.</p>';
     }
 }
 
 /**
  * Genera el HTML para mostrar la lista de tests disponibles.
- * Ahora carga el historial desde Supabase con fallback a localStorage.
+ * Ahora usa Tailwind CSS para un diseño moderno con glassmorphism.
  * @param {Array<Object>} tests - Array de objetos de tests.
  */
 async function renderizarListado(tests) {
     if (tests.length === 0) {
-        testsContainer.innerHTML = '<p>No hay tests disponibles.</p>';
+        testsContainer.innerHTML = '<p class="text-white text-center">No hay tests disponibles.</p>';
         return;
     }
 
-    let htmlContent = '<ul>';
+    let htmlContent = '';
 
     // Procesar cada test de forma asíncrona
     for (const test of tests) {
@@ -49,50 +63,58 @@ async function renderizarListado(tests) {
         // Mostrar indicador de progreso si existe
         if (progreso) {
             const respondidas = progreso.answers_data.filter(a => a !== null).length;
+            const porcentaje = Math.round((respondidas / progreso.total_questions) * 100);
+
             progresoHTML = `
-                <div class="progreso-indicator">
-                    <span class="badge-progreso">
-                        📝 En progreso: ${respondidas}/${progreso.total_questions} preguntas
-                    </span>
+                <div class="mb-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-medium text-gray-700">📝 En progreso</span>
+                        <span class="text-sm font-semibold text-primary">${respondidas}/${progreso.total_questions}</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full transition-all duration-300" style="width: ${porcentaje}%"></div>
+                    </div>
                 </div>
             `;
 
-            // Botón para continuar (color diferente)
+            // Botón para continuar (verde)
             botonHTML = `
-                <button class="btn-continuar" onclick="iniciarTest(${test.id}, '${test.fichero}')">
-                    Continuar Test
+                <button class="flex-1 bg-gradient-to-r from-accent to-green-600 hover:from-green-600 hover:to-accent text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="iniciarTest(${test.id}, '${test.fichero}')">
+                    ▶️ Continuar Test
                 </button>
             `;
 
-            // Botón para resetear
+            // Botón para resetear (naranja)
             botonResetHTML = `
-                <button class="btn-reset" onclick="resetearTest(${test.id}, '${test.fichero}')">
+                <button class="flex-1 bg-gradient-to-r from-reset to-orange-600 hover:from-orange-600 hover:to-reset text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="resetearTest(${test.id}, '${test.fichero}')">
                     🔄 Empezar de Nuevo
                 </button>
             `;
         } else {
-            // Botón normal para comenzar
+            // Botón normal para comenzar (azul)
             botonHTML = `
-                <button onclick="iniciarTest(${test.id}, '${test.fichero}')">
-                    Comenzar Test
+                <button class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="iniciarTest(${test.id}, '${test.fichero}')">
+                    🚀 Comenzar Test
                 </button>
             `;
         }
 
         htmlContent += `
-            <li>
-                <h3>${test.titulo}</h3>
-                <p>Preguntas: ${test.num_preguntas}</p>
+            <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 select-none">
+                <h3 class="text-xl font-bold text-dark mb-3">${test.titulo}</h3>
+                <p class="text-gray-600 mb-4 flex items-center gap-2">
+                    <span class="text-2xl">📋</span>
+                    <span class="font-medium">${test.num_preguntas} preguntas</span>
+                </p>
                 ${progresoHTML}
-                <div class="test-actions">
+                <div class="flex gap-3 ${progreso ? 'flex-col sm:flex-row' : ''}">
                     ${botonHTML}
                     ${botonResetHTML}
                 </div>
-            </li>
+            </div>
         `;
     }
 
-    htmlContent += '</ul>';
     testsContainer.innerHTML = htmlContent;
 }
 

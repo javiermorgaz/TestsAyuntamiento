@@ -147,27 +147,30 @@ async function cargarTestConProgreso(testId, fileName, progreso) {
 function renderizarTodasLasPreguntas() {
     if (!currentTest) return;
 
-    let html = '<div class="preguntas-listado">';
+    let html = '<div class="space-y-6">';
 
     currentTest.preguntas.forEach((pregunta, index) => {
         html += `
-            <div class="pregunta-item" id="pregunta-${index}">
-                <h3 class="pregunta-numero">Pregunta ${index + 1}</h3>
-                <p class="enunciado">${pregunta.enunciado}</p>
-                <div class="opciones">
+            <div class="bg-white rounded-xl shadow-md p-3 md:p-4 border-l-4 border-primary hover:shadow-lg transition-shadow duration-300" id="pregunta-${index}">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">${index + 1}</span>
+                </div>
+                <p class="text-base md:text-lg text-dark font-medium mb-5 leading-relaxed">${pregunta.enunciado}</p>
+                <div class="space-y-3">
         `;
 
         pregunta.opciones.forEach((opcion, opcionIndex) => {
             const valorOpcion = opcionIndex + 1;
             html += `
-                <label class="opcion-label">
+                <label class="flex items-start p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-primary/10 hover:border-primary border-2 border-transparent transition-all duration-200 group">
                     <input
                         type="radio"
                         name="pregunta-${index}"
                         value="${valorOpcion}"
                         onchange="guardarRespuesta(${index}, ${valorOpcion})"
+                        class="mt-1 w-5 h-5 text-primary focus:ring-primary focus:ring-2 cursor-pointer"
                     >
-                    <span class="opcion-texto">${opcion}</span>
+                    <span class="ml-3 text-gray-700 group-hover:text-dark font-medium flex-1">${opcion}</span>
                 </label>
             `;
         });
@@ -219,7 +222,8 @@ async function autoGuardarProgreso() {
  * Muestra un indicador visual no intrusivo de que se ha guardado el progreso
  */
 function showSaveIndicator() {
-    // Buscar o crear el indicador
+    // Buscar el contenedor en el header o crear indicador en body
+    const container = document.getElementById('save-indicator-container');
     let indicator = document.getElementById('save-indicator');
 
     if (!indicator) {
@@ -227,7 +231,13 @@ function showSaveIndicator() {
         indicator.id = 'save-indicator';
         indicator.className = 'save-indicator';
         indicator.innerHTML = '✓ Guardado';
-        document.body.appendChild(indicator);
+
+        // Si existe el contenedor del header, añadirlo ahí, sino al body
+        if (container) {
+            container.appendChild(indicator);
+        } else {
+            document.body.appendChild(indicator);
+        }
     }
 
     // Mostrar el indicador
@@ -356,42 +366,52 @@ function mostrarResultado(resultado) {
     const porcentaje = ((resultado.aciertos / resultado.total) * 100).toFixed(1);
 
     let html = `
-        <div class="resultado-card">
-            <h2>Resultado del Test</h2>
-            <h3>${resultado.titulo}</h3>
-            <div class="resultado-stats">
-                <div class="stat aciertos">
-                    <span class="stat-label">Aciertos</span>
-                    <span class="stat-value">${resultado.aciertos}</span>
+        <div class="glass-card p-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-dark mb-2">🎯 Resultado del Test</h2>
+                <h3 class="text-xl text-dark/80">${resultado.titulo}</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-gradient-to-br from-green-400 to-green-600 rounded-xl p-4 text-white shadow-lg">
+                    <div class="text-xs font-medium mb-1 opacity-90">Aciertos</div>
+                    <div class="text-2xl md:text-3xl font-bold">${resultado.aciertos}</div>
                 </div>
-                <div class="stat errores">
-                    <span class="stat-label">Errores</span>
-                    <span class="stat-value">${resultado.errores}</span>
+                <div class="bg-gradient-to-br from-red-400 to-red-600 rounded-xl p-4 text-white shadow-lg">
+                    <div class="text-xs font-medium mb-1 opacity-90">Errores</div>
+                    <div class="text-2xl md:text-3xl font-bold">${resultado.errores}</div>
                 </div>
-                <div class="stat blancos">
-                    <span class="stat-label">En blanco</span>
-                    <span class="stat-value">${resultado.blancos}</span>
+                <div class="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl p-4 text-white shadow-lg">
+                    <div class="text-xs font-medium mb-1 opacity-90">En blanco</div>
+                    <div class="text-2xl md:text-3xl font-bold">${resultado.blancos}</div>
                 </div>
-                <div class="stat total">
-                    <span class="stat-label">Puntuación</span>
-                    <span class="stat-value">${porcentaje}%</span>
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-4 text-white shadow-lg">
+                    <div class="text-xs font-medium mb-1 opacity-90">Puntuación</div>
+                    <div class="text-2xl md:text-3xl font-bold">${porcentaje}%</div>
                 </div>
             </div>
 
-            <h3 class="detalle-titulo">Detalle de respuestas</h3>
-            <div class="detalle-preguntas">
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-2">
+                <span>📝</span> Detalle de respuestas
+            </h3>
+            <div class="space-y-4">
     `;
 
     resultado.detalle.forEach((detalle, index) => {
-        const claseEstado = detalle.enBlanco ? 'blanco' : (detalle.esCorrecta ? 'correcto' : 'incorrecto');
-        const iconoEstado = detalle.enBlanco ? '⚪' : (detalle.esCorrecta ? '✅' : '❌');
+        const esCorrecta = detalle.esCorrecta;
+        const enBlanco = detalle.enBlanco;
+        const iconoEstado = enBlanco ? '⚪' : (esCorrecta ? '✅' : '❌');
+        const borderColor = enBlanco ? 'border-yellow-400' : (esCorrecta ? 'border-green-500' : 'border-red-500');
+        const bgColor = enBlanco ? 'bg-yellow-50' : (esCorrecta ? 'bg-green-50' : 'bg-red-50');
 
         html += `
-            <div class="detalle-item ${claseEstado}">
-                <div class="detalle-header">
-                    <span class="detalle-numero">${iconoEstado} Pregunta ${index + 1}</span>
+            <div class="bg-white rounded-xl shadow-md p-6 border-l-4 ${borderColor}">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="text-2xl">${iconoEstado}</span>
+                    <span class="font-semibold text-dark">Pregunta ${index + 1}</span>
                 </div>
-                <p class="detalle-enunciado">${detalle.pregunta}</p>
+                <p class="text-gray-700 font-medium mb-4">${detalle.pregunta}</p>
+                <div class="space-y-2">
         `;
 
         // Mostrar opciones con indicadores
@@ -400,27 +420,34 @@ function mostrarResultado(resultado) {
             const esRespuestaUsuario = valorOpcion === detalle.respuestaUsuario;
             const esRespuestaCorrecta = valorOpcion === detalle.respuestaCorrecta;
 
-            let claseOpcion = 'detalle-opcion';
+            let claseOpcion = 'p-3 rounded-lg border-2 ';
             let marcador = '';
+            let iconoOpcion = '';
 
             if (esRespuestaCorrecta) {
-                claseOpcion += ' opcion-correcta';
-                marcador = '✓ ';
+                claseOpcion += 'bg-green-100 border-green-500 text-green-900';
+                marcador = '✓';
+                iconoOpcion = '✅';
+            } else if (esRespuestaUsuario && !esRespuestaCorrecta) {
+                claseOpcion += 'bg-red-100 border-red-500 text-red-900';
+                marcador = '✗';
+                iconoOpcion = '❌';
+            } else {
+                claseOpcion += 'bg-gray-50 border-gray-200 text-gray-700';
             }
 
-            if (esRespuestaUsuario && !esRespuestaCorrecta) {
-                claseOpcion += ' opcion-incorrecta';
-                marcador = '✗ ';
-            }
-
-            if (esRespuestaUsuario && esRespuestaCorrecta) {
-                marcador = '✓ ';
-            }
-
-            html += `<div class="${claseOpcion}">${marcador}${opcion}</div>`;
+            html += `
+                <div class="${claseOpcion} flex items-center gap-2">
+                    ${iconoOpcion ? `<span class="text-lg">${iconoOpcion}</span>` : ''}
+                    <span class="font-medium">${marcador ? marcador + ' ' : ''}${opcion}</span>
+                </div>
+            `;
         });
 
-        html += `</div>`;
+        html += `
+                </div>
+            </div>
+        `;
     });
 
     html += `
