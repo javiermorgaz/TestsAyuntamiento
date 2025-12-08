@@ -18,8 +18,8 @@ const TESTS_DIR = path.join(DATA_DIR, 'tests');
 const OUTPUT_FILE = path.join(DATA_DIR, 'tests_index.json');
 const TESTS_TABLE = 'tests'; // Nombre de tu tabla
 
-// Ruta relativa al archivo de credenciales
-const AUTH_FILE_PATH = path.join(__dirname, '..', '..', 'supabaseAuth.txt');
+// Ruta al archivo de credenciales (dentro del proyecto en config/)
+const AUTH_FILE_PATH = path.join(__dirname, '..', 'config', 'supabaseAuth.txt');
 
 // --- 2. FUNCIÓN PARA CARGAR CREDENCIALES ---
 /**

@@ -1,9 +1,3 @@
-# Archivos de configuración con credenciales sensibles
-# El archivo supabaseAuth.txt está FUERA del directorio del proyecto
-# pero este recordatorio evita que se agregue por error
-**/supabaseAuth.txt
-supabaseAuth.txt
-
 # Dependencias de Node.js
 node_modules/
 

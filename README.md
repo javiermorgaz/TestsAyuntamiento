@@ -111,6 +111,8 @@ La aplicación guarda automáticamente tus últimos intentos de cada test. Puede
 ```
 TestsAyuntamiento/
 ├── index.html                      # Página principal
+├── config/
+│   └── supabaseAuth.txt            # Credenciales de Supabase (claves públicas)
 ├── assets/
 │   ├── css/
 │   │   └── style.css               # Estilos
@@ -120,7 +122,7 @@ TestsAyuntamiento/
 │       ├── storage.js              # Gestión de localStorage
 │       ├── supabase-config.js      # Configuración de Supabase
 │       ├── supabase-service.js     # Servicios de Supabase
-│       └── dataService.js          # Capa de abstracción (en desarrollo)
+│       └── dataService.js          # Capa de abstracción
 ├── data/
 │   ├── tests_index.json            # Índice de tests
 │   └── tests/
@@ -204,13 +206,13 @@ npm run build-index
 
 ### Configuración
 
-Las credenciales de Supabase se almacenan en un archivo **fuera del proyecto**:
+Las credenciales de Supabase se almacenan en un archivo de configuración **dentro del proyecto**:
 
 ```
-../supabaseAuth.txt
+config/supabaseAuth.txt
 ```
 
-Por ejemplo, si tu proyecto está en `~/Documents/TestsAyuntamiento`, el archivo debe estar en `~/Documents/supabaseAuth.txt`
+Este archivo contiene las claves públicas de Supabase, por lo que es seguro incluirlo en el repositorio.
 
 Formato del archivo:
 ```
@@ -218,7 +220,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_clave_aqui
 ```
 
-Ver [SECURITY.md](./SECURITY.md) para más detalles.
+Ver [SECURITY.md](./docs/SECURITY.md) para más detalles.
 
 ### Tablas
 

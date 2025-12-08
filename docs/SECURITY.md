@@ -2,28 +2,31 @@
 
 ## Ubicación del Archivo de Credenciales
 
-Las credenciales de Supabase se almacenan en un archivo **fuera del directorio del proyecto** para evitar que se suban accidentalmente al repositorio.
+Las credenciales de Supabase se almacenan en un archivo de configuración **dentro del proyecto** en la carpeta `config/`.
 
-### Ubicación Recomendada
+### Ubicación
 ```
-../supabaseAuth.txt
+config/supabaseAuth.txt
 ```
-(Un nivel arriba del directorio del proyecto)
 
 ### Estructura del Proyecto
 ```
-/ruta/a/tus/proyectos/
-├── supabaseAuth.txt          ← Archivo de credenciales (FUERA del proyecto)
-└── TestsAyuntamiento/        ← Directorio del proyecto
-    ├── assets/
-    │   └── js/
-    │       ├── supabase-config.js    (carga credenciales desde ../../supabaseAuth.txt)
-    │       └── supabase-service.js
-    ├── scripts/
-    │   └── build-index.js            (carga credenciales desde ../../supabaseAuth.txt)
-    ├── .gitignore                    (ignora supabaseAuth.txt)
-    └── ...
+TestsAyuntamiento/
+├── config/
+│   └── supabaseAuth.txt          ← Archivo de credenciales (claves públicas)
+├── assets/
+│   └── js/
+│       ├── supabase-config.js    (carga credenciales desde ./config/supabaseAuth.txt)
+│       └── supabase-service.js
+├── scripts/
+│   └── build-index.js            (carga credenciales desde ../config/supabaseAuth.txt)
+├── .gitignore
+└── ...
 ```
+
+### Nota sobre Seguridad
+
+Este archivo contiene **únicamente claves públicas** de Supabase (anon key), que son seguras para incluir en el repositorio. Las claves públicas están diseñadas para ser expuestas en aplicaciones del lado del cliente.
 
 ## Formato del Archivo de Credenciales
 
@@ -53,7 +56,7 @@ SUPABASE_SERVICE_KEY=tu_clave_de_servicio
 **Archivo**: `scripts/build-index.js`
 
 ```javascript
-const AUTH_FILE_PATH = path.join(__dirname, '..', '..', 'supabaseAuth.txt');
+const AUTH_FILE_PATH = path.join(__dirname, '..', 'config', 'supabaseAuth.txt');
 ```
 
 Este script lee el archivo usando `fs.readFileSync` (Node.js).
@@ -62,7 +65,7 @@ Este script lee el archivo usando `fs.readFileSync` (Node.js).
 **Archivo**: `assets/js/supabase-config.js`
 
 ```javascript
-const AUTH_FILE_URL = '../../supabaseAuth.txt';
+const AUTH_FILE_URL = './config/supabaseAuth.txt';
 const response = await fetch(AUTH_FILE_URL);
 ```
 
@@ -72,17 +75,17 @@ Este archivo lee el archivo usando `fetch` (navegador).
 
 ### ✅ Prácticas Seguras Implementadas
 
-1. **Archivo externo**: Las credenciales NO están en el código fuente
-2. **`.gitignore`**: El archivo está excluido del control de versiones
-3. **Modo offline**: Si no se encuentran credenciales, la app funciona localmente
-4. **Dos entornos**: Script backend usa service key, frontend usa publishable key
+1. **Claves públicas**: Solo se usan claves públicas (anon key), seguras para el frontend
+2. **Modo offline**: Si no se encuentran credenciales, la app funciona localmente
+3. **Separación de configuración**: Las credenciales están en un archivo de configuración separado
+4. **Fallback automático**: La app funciona sin Supabase si no hay credenciales
 
 ### ⚠️ Consideraciones Importantes
 
-1. **No subir al repositorio**: Asegúrate de que `supabaseAuth.txt` NUNCA se suba a GitHub
+1. **Solo claves públicas**: Este archivo debe contener SOLO la clave pública (anon key), nunca la service key
 2. **Backups**: Haz backup del archivo de credenciales en un lugar seguro
-3. **Compartir**: Si compartes el proyecto, NO incluyas el archivo de credenciales
-4. **Servidor local**: Para desarrollo, usa un servidor local (Live Server) en lugar de abrir `index.html` directamente
+3. **Servidor local**: Para desarrollo, usa un servidor local (Live Server) en lugar de abrir `index.html` directamente
+4. **Row Level Security**: Asegúrate de configurar RLS en Supabase para proteger tus datos
 
 ## Regenerar Credenciales
 
@@ -119,9 +122,9 @@ Durante el build, reemplaza las credenciales usando herramientas como `dotenv` o
 **Causa**: El archivo no existe o la ruta es incorrecta
 
 **Solución**:
-1. Verifica que el archivo existe en la ruta correcta (un nivel arriba del proyecto)
+1. Verifica que el archivo existe en `config/supabaseAuth.txt`
 2. Verifica los permisos del archivo
-3. Si estás usando un servidor local, asegúrate de que puede acceder a archivos fuera del directorio raíz
+3. Asegúrate de estar usando un servidor local (Live Server, http-server, etc.)
 
 ### Error de CORS al cargar credenciales
 

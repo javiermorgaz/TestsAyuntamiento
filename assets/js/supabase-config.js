@@ -2,21 +2,21 @@
 
 /**
  * Configuración del cliente de Supabase
- * Lee las credenciales desde un archivo externo (supabaseAuth.txt)
- * localizado fuera del directorio del proyecto
+ * Lee las credenciales desde un archivo de configuración (supabaseAuth.txt)
+ * localizado en la carpeta config/ del proyecto
  */
 
 let supabaseClient = null;
 let supabaseConfig = null;
 
 /**
- * Carga las credenciales desde el archivo externo
+ * Carga las credenciales desde el archivo de configuración
  * @returns {Promise<Object>} Objeto con SUPABASE_URL y SUPABASE_KEY
  */
 async function loadSupabaseCredentials() {
     try {
-        // Ruta al archivo de credenciales (fuera del directorio del proyecto)
-        const AUTH_FILE_URL = '../../supabaseAuth.txt';
+        // Ruta al archivo de credenciales (dentro del proyecto en config/)
+        const AUTH_FILE_URL = './config/supabaseAuth.txt';
 
         const response = await fetch(AUTH_FILE_URL);
 

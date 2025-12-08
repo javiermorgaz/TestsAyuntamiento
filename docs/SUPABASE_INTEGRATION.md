@@ -31,9 +31,9 @@ Almacena el historial de intentos y el progreso actual de los tests.
 
 ### Configuración
 
-El archivo `supabase-config.js` inicializa el cliente de Supabase cargando las credenciales desde un archivo externo (`supabaseAuth.txt` ubicado fuera del directorio del proyecto):
+El archivo `supabase-config.js` inicializa el cliente de Supabase cargando las credenciales desde un archivo de configuración (`supabaseAuth.txt` ubicado en la carpeta `config/` del proyecto):
 
-**IMPORTANTE:** Las credenciales NO están hardcoded en el código. Se cargan dinámicamente desde un archivo fuera del directorio del proyecto para mayor seguridad.
+**IMPORTANTE:** Las credenciales NO están hardcoded en el código. Se cargan dinámicamente desde un archivo de configuración para facilitar el mantenimiento.
 
 ```javascript
 // Inicializar cliente (async)
@@ -371,7 +371,7 @@ async function migrarResultadosASupabase() {
 
 ## Notas Importantes
 
-1. **Credenciales**: Las credenciales se cargan desde un archivo externo (`../../supabaseAuth.txt` relativo al directorio del proyecto). Este archivo NO debe estar en el repositorio git (está incluido en `.gitignore`).
+1. **Credenciales**: Las credenciales se cargan desde un archivo de configuración (`config/supabaseAuth.txt`). Este archivo contiene únicamente claves públicas de Supabase, que son seguras para incluir en el repositorio.
 
 2. **Modo Offline**: Si no se pueden cargar las credenciales, la aplicación automáticamente funciona en modo offline (sin sincronización con Supabase). Los datos se guardarán solo localmente.
 
