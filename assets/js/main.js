@@ -98,33 +98,21 @@ async function renderizarListado(tests) {
 
 
 // Función para iniciar el test
-// Ahora detecta si hay progreso anterior
+// Ahora detecta si hay progreso anterior y lo carga directamente
 async function iniciarTest(testId, fileName) {
     try {
         // Buscar progreso existente en Supabase
         const progreso = await buscarProgresoTest(testId);
 
         if (progreso) {
-            const respondidas = progreso.answers_data.filter(a => a !== null).length;
-            const continuar = await showConfirm(
-                `🔄 Tienes un test en progreso.\n\nProgreso: ${respondidas}/${progreso.total_questions} preguntas respondidas\n\n¿Quieres continuar donde lo dejaste?`,
-                'Test en Progreso'
-            );
+            // Continuar test con progreso guardado directamente
+            testsListSection.style.display = 'none';
+            document.getElementById('test-view').style.display = 'block';
+            document.getElementById('resultado-view').style.display = 'none';
+            window.scrollTo(0, 0);
 
-            if (continuar) {
-                // Continuar test con progreso guardado
-                testsListSection.style.display = 'none';
-                document.getElementById('test-view').style.display = 'block';
-                document.getElementById('resultado-view').style.display = 'none';
-                window.scrollTo(0, 0);
-
-                await cargarTestConProgreso(testId, fileName, progreso);
-                return;
-            } else {
-                // Eliminar progreso y empezar de nuevo
-                await eliminarProgreso(progreso.id);
-                console.log('🗑️ Progreso eliminado, empezando test nuevo');
-            }
+            await cargarTestConProgreso(testId, fileName, progreso);
+            return;
         }
     } catch (error) {
         console.warn('⚠️ Error al verificar progreso:', error);
