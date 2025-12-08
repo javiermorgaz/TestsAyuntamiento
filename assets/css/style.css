@@ -410,25 +410,241 @@ button:disabled {
     font-weight: 600;
 }
 
-/* Responsive */
+/* Responsive Design */
+
+/* Tablets y pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 1rem 1rem;
+    }
+
+    main {
+        padding: 0 0.75rem;
+        margin: 1rem auto;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    #tests-list h3 {
+        font-size: 1.1rem;
+    }
+
+    #tests-list li {
+        padding: 1rem;
+    }
+
+    /* Botones en columna en móviles */
+    .test-actions {
+        flex-direction: column;
+    }
+
+    .test-actions button {
+        width: 100%;
+    }
+
+    /* Indicador de guardado más pequeño */
+    .save-indicator {
+        top: 10px;
+        right: 10px;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Stats en 2 columnas */
+    .resultado-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    /* Botón de finalizar a ancho completo */
+    #test-controls button {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    /* Preguntas más compactas */
+    .pregunta-item {
+        padding: 1rem;
+    }
+
+    .enunciado {
+        font-size: 1rem;
+    }
+
+    .opcion-label {
+        padding: 0.75rem;
+    }
+
+    .opcion-label input[type="radio"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Detalle de resultados más compacto */
+    .detalle-item {
+        padding: 1rem;
+    }
+
+    .detalle-enunciado {
+        font-size: 0.95rem;
+    }
+
+    .detalle-opcion {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    header {
+        padding: 0.75rem 0.5rem;
+    }
+
     main {
         padding: 0 0.5rem;
     }
 
-    .resultado-stats {
-        grid-template-columns: repeat(2, 1fr);
+    main h2 {
+        font-size: 1.3rem;
     }
 
-    #test-controls button {
-        min-width: 100%;
+    #tests-list h3 {
+        font-size: 1rem;
+    }
+
+    #tests-list li {
+        padding: 0.75rem;
+    }
+
+    #tests-list p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .badge-progreso {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* Stats en 1 columna en móviles muy pequeños */
+    .resultado-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .pregunta-numero {
+        font-size: 0.9rem;
+    }
+
+    .enunciado {
+        font-size: 0.95rem;
+    }
+
+    .opcion-label {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .save-indicator {
+        top: 5px;
+        right: 5px;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablets horizontales y pantallas medianas (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        max-width: 800px;
+    }
+
+    .resultado-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    main {
+        max-width: 900px;
+    }
+
+    .resultado-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Mejorar hover effects solo en desktop */
+    .opcion-label:hover {
+        transform: translateX(8px);
+    }
+
+    #tests-list li:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Ajustes para landscape en móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    main {
+        margin: 0.5rem auto;
     }
 
     .pregunta-item {
         padding: 1rem;
     }
 
-    .detalle-item {
-        padding: 1rem;
+    .save-indicator {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* Mejoras de accesibilidad y touch targets */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Dispositivos táctiles - aumentar área de toque */
+    button {
+        min-height: 44px;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .opcion-label {
+        min-height: 50px;
+    }
+
+    .opcion-label input[type="radio"] {
+        width: 20px;
+        height: 20px;
     }
 }

@@ -116,18 +116,67 @@
         width: 95%;
         max-width: none;
     }
-    
+
     .modal-header,
     .modal-body,
     .modal-footer {
         padding: 1rem;
     }
-    
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-message {
+        font-size: 0.95rem;
+    }
+
     .modal-footer {
         flex-direction: column-reverse;
     }
-    
+
     .modal-btn {
         width: 100%;
+        min-height: 44px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .modal {
+        width: 98%;
+        max-height: 95vh;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 0.75rem;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+
+    .modal-message {
+        font-size: 0.9rem;
+    }
+
+    .modal-btn {
+        padding: 0.65rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    .modal {
+        max-height: 95vh;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 0.75rem;
     }
 }
