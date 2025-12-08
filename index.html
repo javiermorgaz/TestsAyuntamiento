@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App de Tests de Oposición</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
 </head>
+
 <body>
     <header>
         <h1>📚 Simulacros de Oposiciones</h1>
     </header>
 
-<main>
-    <section id="tests-list">
-        <h2>Tests Disponibles</h2>
-        <div id="tests-container"></div>
-    </section>
+    <main>
+        <section id="tests-list">
+            <h2>Tests Disponibles</h2>
+            <div id="tests-container"></div>
+        </section>
 
-    <section id="test-view" style="display:none;">
-        <div class="test-header">
-            <button id="btn-volver-inicio" class="btn-secondary">← Volver al Inicio</button>
-            <h2 id="test-titulo"></h2>
-        </div>
+        <section id="test-view" style="display:none;">
+            <div class="test-header">
+                <button id="btn-volver-inicio" class="btn-secondary">← Volver al Inicio</button>
+                <h2 id="test-titulo"></h2>
+            </div>
 
-        <form id="questions-form">
-            <div id="questions-container"></div>
-        </form>
+            <form id="questions-form">
+                <div id="questions-container"></div>
+            </form>
 
-        <div id="test-controls">
-            <button id="btn-finish">Finalizar y Corregir</button>
-        </div>
-    </section>
+            <div id="test-controls">
+                <button id="btn-finish">Finalizar y Corregir</button>
+            </div>
+        </section>
 
-    <section id="resultado-view" style="display:none;">
-        <div class="test-header">
-            <button id="btn-volver-inicio-resultado" class="btn-secondary">← Volver al Inicio</button>
-        </div>
-        <div id="resultado-container"></div>
-    </section>
-</main>
+        <section id="resultado-view" style="display:none;">
+            <div class="test-header">
+                <button id="btn-volver-inicio-resultado" class="btn-secondary">← Volver al Inicio</button>
+            </div>
+            <div id="resultado-container"></div>
+        </section>
+    </main>
 
     <!-- SDK de Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <!-- Scripts de la aplicación -->
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/supabase-config.js"></script>
     <script src="assets/js/supabase-service.js"></script>
     <script src="assets/js/dataService.js"></script>
@@ -51,4 +55,5 @@
     <script src="assets/js/test.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
