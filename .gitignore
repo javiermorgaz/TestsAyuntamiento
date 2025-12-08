@@ -1,0 +1,40 @@
+# Archivos de configuración con credenciales sensibles
+# El archivo supabaseAuth.txt está FUERA del directorio del proyecto
+# pero este recordatorio evita que se agregue por error
+**/supabaseAuth.txt
+supabaseAuth.txt
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code (historial y planes locales)
+.claude/
+
+# Planificación temporal del desarrollo (no se sube al repo)
+.plan/
+
+# Archivos de log
+*.log
+npm-debug.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de lock de paquetes (opcional)
+# package-lock.json    # Descomenta si no quieres incluirlo

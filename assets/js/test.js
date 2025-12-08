@@ -8,12 +8,31 @@
 // Variables globales del test actual
 let currentTest = null;
 let userResponses = []; // Array para almacenar las respuestas del usuario
+let currentProgressId = null; // ID del progreso en Supabase
+let autoSaveInterval = null; // Intervalo de auto-guardado periódico
 
 /**
  * Función para volver al listado de tests
- * Definida aquí para que esté disponible cuando se añadan los event listeners
+ * Ahora limpia los intervalos y variables de auto-guardado
  */
 function volverAlListado() {
+    // Limpiar auto-guardado periódico
+    if (autoSaveInterval) {
+        clearInterval(autoSaveInterval);
+        autoSaveInterval = null;
+    }
+
+    // Limpiar timeout de guardado debounced
+    if (window.autoSaveTimeout) {
+        clearTimeout(window.autoSaveTimeout);
+        window.autoSaveTimeout = null;
+    }
+
+    // Resetear variables globales
+    currentTest = null;
+    userResponses = [];
+    currentProgressId = null;
+
     const testsListSection = document.getElementById('tests-list');
     const testView = document.getElementById('test-view');
     const resultadoView = document.getElementById('resultado-view');
@@ -47,6 +66,7 @@ const btnVolverInicioResultado = document.getElementById('btn-volver-inicio-resu
 
 /**
  * Carga un test desde su archivo JSON
+ * Ahora también inicializa el sistema de auto-guardado
  * @param {number} testId - ID del test
  * @param {string} fileName - Nombre del archivo JSON
  */
@@ -69,9 +89,55 @@ async function cargarTest(testId, fileName) {
         // Renderizar todas las preguntas
         renderizarTodasLasPreguntas();
 
+        // NUEVO: Iniciar auto-guardado periódico cada 30 segundos
+        if (autoSaveInterval) clearInterval(autoSaveInterval);
+
+        autoSaveInterval = setInterval(async () => {
+            await autoGuardarProgreso();
+        }, 30000); // 30 segundos
+
+        console.log('🔄 Sistema de auto-guardado activado (cada 30s)');
+
     } catch (error) {
         console.error("Error al cargar el test:", error);
         questionsContainer.innerHTML = '<p style="color:red;">Error al cargar el test. Verifica la consola.</p>';
+    }
+}
+
+/**
+ * Carga un test con progreso anterior (continuación)
+ * @param {number} testId - ID del test
+ * @param {string} fileName - Nombre del archivo JSON
+ * @param {Object} progreso - Objeto con el progreso guardado
+ */
+async function cargarTestConProgreso(testId, fileName, progreso) {
+    try {
+        // Primero cargar el test normalmente
+        await cargarTest(testId, fileName);
+
+        // Restaurar el ID de progreso
+        currentProgressId = progreso.id;
+
+        // Restaurar las respuestas guardadas
+        userResponses = progreso.answers_data;
+
+        // Marcar las respuestas en el formulario
+        progreso.answers_data.forEach((respuesta, index) => {
+            if (respuesta !== null) {
+                const radio = document.querySelector(
+                    `input[name="pregunta-${index}"][value="${respuesta}"]`
+                );
+                if (radio) {
+                    radio.checked = true;
+                }
+            }
+        });
+
+        const respondidas = userResponses.filter(r => r !== null).length;
+        console.log(`✅ Test restaurado con ${respondidas}/${currentTest.preguntas.length} respuestas`);
+
+    } catch (error) {
+        console.error("Error al cargar test con progreso:", error);
     }
 }
 
@@ -117,18 +183,64 @@ function renderizarTodasLasPreguntas() {
 }
 
 /**
+ * Auto-guarda el progreso actual del test en Supabase
+ * Se ejecuta periódicamente y cuando el usuario cambia una respuesta
+ */
+async function autoGuardarProgreso() {
+    if (!currentTest) return;
+
+    // Solo guardar si hay al menos una respuesta
+    const respondidas = userResponses.filter(r => r !== null).length;
+    if (respondidas === 0) return;
+
+    try {
+        const resultado = await guardarProgreso({
+            id: currentProgressId,           // null la primera vez
+            test_id: currentTest.id,
+            answers_data: userResponses,
+            total_questions: currentTest.preguntas.length
+        });
+
+        // Guardar el ID para futuras actualizaciones
+        if (!currentProgressId && resultado.id) {
+            currentProgressId = resultado.id;
+        }
+
+        console.log(`💾 Progreso guardado: ${respondidas}/${currentTest.preguntas.length} preguntas`);
+    } catch (error) {
+        console.error('⚠️ Error al auto-guardar:', error);
+    }
+}
+
+/**
  * Guarda la respuesta seleccionada por el usuario
+ * Ahora también dispara un auto-guardado debounced
  * @param {number} preguntaIndex - Índice de la pregunta
  * @param {number} opcionSeleccionada - Índice de la opción (1-based)
  */
-function guardarRespuesta(preguntaIndex, opcionSeleccionada) {
+async function guardarRespuesta(preguntaIndex, opcionSeleccionada) {
     userResponses[preguntaIndex] = opcionSeleccionada;
+
+    // Trigger auto-guardado inmediato (debounced)
+    // Espera 2 segundos después del último cambio antes de guardar
+    if (window.autoSaveTimeout) clearTimeout(window.autoSaveTimeout);
+
+    window.autoSaveTimeout = setTimeout(async () => {
+        await autoGuardarProgreso();
+    }, 2000); // 2 segundos
 }
 
 /**
  * Corrige el test y calcula la puntuación
+ * Ahora guarda en Supabase además de localStorage
  */
-function corregirTest() {
+async function corregirTest() {
+    // Limpiar auto-guardado
+    if (autoSaveInterval) {
+        clearInterval(autoSaveInterval);
+        autoSaveInterval = null;
+    }
+
     let aciertos = 0;
     let errores = 0;
     let blancos = 0;
@@ -158,6 +270,35 @@ function corregirTest() {
         });
     });
 
+    const totalPreguntas = currentTest.preguntas.length;
+    const porcentaje = (aciertos / totalPreguntas) * 100;
+
+    // Preparar answers_data con información de corrección para Supabase
+    const answersData = userResponses.map((respuesta, index) => ({
+        q_id: currentTest.preguntas[index].id_p,
+        selected_option: respuesta,
+        is_correct: respuesta === currentTest.preguntas[index].respuesta_correcta,
+        correct_option: currentTest.preguntas[index].respuesta_correcta
+    }));
+
+    try {
+        // Guardar en Supabase
+        await completarTest({
+            id: currentProgressId,              // Actualizar progreso existente
+            test_id: currentTest.id,
+            total_correct: aciertos,
+            total_questions: totalPreguntas,
+            score_percentage: porcentaje,
+            answers_data: answersData
+        });
+
+        console.log('✅ Resultado guardado en Supabase');
+    } catch (error) {
+        console.error('⚠️ Error al guardar en Supabase:', error);
+        console.log('💾 Guardado solo en localStorage');
+    }
+
+    // Preparar objeto resultado para localStorage y visualización
     const resultado = {
         testId: currentTest.id,
         titulo: currentTest.titulo,
@@ -165,13 +306,16 @@ function corregirTest() {
         aciertos: aciertos,
         errores: errores,
         blancos: blancos,
-        total: currentTest.preguntas.length,
+        total: totalPreguntas,
         respuestas: [...userResponses],
         detalle: detalleRespuestas
     };
 
-    // Guardar en localStorage
+    // También guardar en localStorage como backup
     guardarResultado(resultado);
+
+    // Resetear ID de progreso
+    currentProgressId = null;
 
     // Mostrar resultado
     mostrarResultado(resultado);
@@ -269,7 +413,9 @@ function mostrarResultado(resultado) {
 
 // Event Listeners - Verificar que los elementos existan antes de añadir listeners
 if (btnFinish) {
-    btnFinish.addEventListener('click', corregirTest);
+    btnFinish.addEventListener('click', async () => {
+        await corregirTest();
+    });
 }
 
 if (btnVolverInicio) {

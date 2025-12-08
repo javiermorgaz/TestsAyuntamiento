@@ -5,7 +5,13 @@
   "scripts": {
     "build-index": "node scripts/build-index.js"
   },
-  "keywords": ["tests", "oposiciones"],
+  "keywords": [
+    "tests",
+    "oposiciones"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.86.2"
+  }
 }

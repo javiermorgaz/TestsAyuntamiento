@@ -1,0 +1,284 @@
+/**
+ * Data Service - Capa de Abstracción para Supabase + localStorage
+ *
+ * Este servicio maneja la lógica híbrida:
+ * - Intenta usar Supabase como fuente principal
+ * - Fallback automático a localStorage si Supabase no está disponible
+ * - Modo offline completamente funcional
+ */
+
+// ============================================
+// VERIFICACIÓN DE DISPONIBILIDAD
+// ============================================
+
+/**
+ * Verifica si Supabase está disponible y configurado
+ * @returns {Promise<boolean>}
+ */
+async function isSupabaseAvailable() {
+    try {
+        const client = await getSupabaseClient();
+        return client !== null;
+    } catch (error) {
+        console.log('ℹ️ Supabase no disponible, usando modo offline');
+        return false;
+    }
+}
+
+// ============================================
+// GESTIÓN DE TESTS (Catálogo)
+// ============================================
+
+/**
+ * Obtiene la lista de tests disponibles
+ * Intenta desde Supabase, fallback a JSON local
+ * @returns {Promise<Array>} Lista de tests
+ */
+async function obtenerTests() {
+    try {
+        // Intentar desde Supabase
+        if (await isSupabaseAvailable()) {
+            console.log('📡 Cargando tests desde Supabase...');
+            const tests = await obtenerTestsDesdeSupabase();
+            if (tests && tests.length > 0) {
+                console.log(`✅ ${tests.length} tests cargados desde Supabase`);
+                return tests;
+            }
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al cargar desde Supabase:', error.message);
+    }
+
+    // Fallback: cargar desde JSON local
+    try {
+        console.log('📁 Cargando tests desde archivo local...');
+        const response = await fetch('./data/tests_index.json');
+        const tests = await response.json();
+        console.log(`✅ ${tests.length} tests cargados desde archivo local`);
+        return tests;
+    } catch (error) {
+        console.error('❌ Error al cargar tests:', error);
+        return [];
+    }
+}
+
+// ============================================
+// GESTIÓN DE HISTORIAL
+// ============================================
+
+/**
+ * Obtiene el historial de resultados de un test específico
+ * @param {number} testId - ID del test
+ * @param {number} limit - Cantidad máxima de resultados (default: 3)
+ * @returns {Promise<Array>} Lista de resultados
+ */
+async function obtenerHistorial(testId, limit = 3) {
+    try {
+        // Intentar desde Supabase
+        if (await isSupabaseAvailable()) {
+            const historial = await obtenerHistorialTest(testId, limit);
+            if (historial && historial.length > 0) {
+                console.log(`📊 Historial cargado desde Supabase: ${historial.length} resultados`);
+                return historial.map(resultado => ({
+                    fecha: resultado.created_at,
+                    aciertos: resultado.total_correct,
+                    total: resultado.total_questions,
+                    porcentaje: resultado.score_percentage
+                }));
+            }
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al cargar historial desde Supabase:', error.message);
+    }
+
+    // Fallback: cargar desde localStorage
+    try {
+        const todosLosResultados = obtenerResultados(); // Función de storage.js
+        const resultadosTest = todosLosResultados
+            .filter(r => r.testId === testId)
+            .slice(0, limit)
+            .map(r => ({
+                fecha: r.fecha,
+                aciertos: r.aciertos,
+                total: r.total,
+                porcentaje: ((r.aciertos / r.total) * 100).toFixed(1)
+            }));
+
+        console.log(`💾 Historial cargado desde localStorage: ${resultadosTest.length} resultados`);
+        return resultadosTest;
+    } catch (error) {
+        console.error('❌ Error al cargar historial:', error);
+        return [];
+    }
+}
+
+// ============================================
+// GESTIÓN DE PROGRESO
+// ============================================
+
+/**
+ * Busca si existe un test en progreso
+ * @param {number} testId - ID del test
+ * @returns {Promise<Object|null>} Objeto con progreso o null
+ */
+async function buscarProgresoTest(testId) {
+    try {
+        if (await isSupabaseAvailable()) {
+            const progreso = await obtenerTestEnProgreso(testId);
+            if (progreso) {
+                console.log(`🔄 Test en progreso encontrado (${progreso.answers_data.filter(a => a !== null).length} respuestas)`);
+                return progreso;
+            }
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al buscar progreso:', error.message);
+    }
+
+    return null;
+}
+
+/**
+ * Guarda el progreso actual de un test
+ * @param {Object} data - Datos del progreso
+ * @param {number} data.id - ID del resultado (null para crear nuevo)
+ * @param {number} data.test_id - ID del test
+ * @param {Array} data.answers_data - Array con respuestas del usuario
+ * @param {number} data.total_questions - Total de preguntas del test
+ * @returns {Promise<Object>} Resultado guardado
+ */
+async function guardarProgreso(data) {
+    try {
+        if (await isSupabaseAvailable()) {
+            const resultado = await guardarProgresoTest(data);
+            console.log(`💾 Progreso guardado en Supabase (ID: ${resultado.id})`);
+            return resultado;
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al guardar en Supabase, guardando localmente:', error.message);
+    }
+
+    // Fallback: guardar en localStorage temporalmente
+    // Nota: localStorage no soporta progreso in_progress, solo guarda resultados finales
+    // Aquí podríamos implementar una cola de sincronización para cuando vuelva online
+    console.log('💾 Progreso guardado solo en memoria (se perderá al cerrar)');
+
+    return {
+        id: data.id || Date.now(), // ID temporal
+        ...data,
+        status: 'in_progress'
+    };
+}
+
+/**
+ * Elimina un progreso en curso
+ * @param {number} progressId - ID del progreso a eliminar
+ * @returns {Promise<boolean>} True si se eliminó correctamente
+ */
+async function eliminarProgreso(progressId) {
+    try {
+        if (await isSupabaseAvailable()) {
+            const eliminado = await eliminarProgresoTest(progressId);
+            if (eliminado) {
+                console.log('🗑️ Progreso eliminado de Supabase');
+                return true;
+            }
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al eliminar progreso:', error.message);
+    }
+
+    return false;
+}
+
+// ============================================
+// FINALIZACIÓN DE TESTS
+// ============================================
+
+/**
+ * Completa un test y guarda el resultado final
+ * @param {Object} data - Datos del resultado
+ * @param {number} data.id - ID del resultado en progreso (opcional)
+ * @param {number} data.test_id - ID del test
+ * @param {number} data.total_correct - Cantidad de respuestas correctas
+ * @param {number} data.total_questions - Total de preguntas
+ * @param {number} data.score_percentage - Porcentaje de aciertos
+ * @param {Array} data.answers_data - Array con todas las respuestas y correcciones
+ * @returns {Promise<Object>} Resultado guardado
+ */
+async function completarTest(data) {
+    let guardadoEnSupabase = false;
+
+    // Intentar guardar en Supabase
+    try {
+        if (await isSupabaseAvailable()) {
+            const resultado = await completarTestEnSupabase(data);
+            console.log('✅ Resultado guardado en Supabase');
+            guardadoEnSupabase = true;
+
+            // También guardar en localStorage como backup
+            guardarEnLocalStorage(data);
+
+            return resultado;
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al guardar en Supabase:', error.message);
+    }
+
+    // Fallback: guardar solo en localStorage
+    if (!guardadoEnSupabase) {
+        console.log('💾 Resultado guardado solo en localStorage');
+        return guardarEnLocalStorage(data);
+    }
+}
+
+/**
+ * Guarda resultado en localStorage (función auxiliar)
+ * @private
+ */
+function guardarEnLocalStorage(data) {
+    const resultado = {
+        testId: data.test_id,
+        fecha: new Date().toISOString(),
+        aciertos: data.total_correct,
+        errores: data.total_questions - data.total_correct,
+        blancos: 0,
+        total: data.total_questions,
+        respuestas: data.answers_data.map(a => a.selected_option),
+        detalle: data.answers_data
+    };
+
+    // Usar función de storage.js
+    guardarResultado(resultado);
+
+    return resultado;
+}
+
+// ============================================
+// FUNCIONES DE UTILIDAD
+// ============================================
+
+/**
+ * Verifica el estado de la conexión
+ * @returns {Promise<Object>} Estado de la conexión
+ */
+async function verificarEstado() {
+    const supabaseDisponible = await isSupabaseAvailable();
+
+    return {
+        supabase: supabaseDisponible,
+        localStorage: typeof(Storage) !== "undefined",
+        modo: supabaseDisponible ? 'online' : 'offline'
+    };
+}
+
+// ============================================
+// LOG DE INICIALIZACIÓN
+// ============================================
+
+(async function inicializarDataService() {
+    const estado = await verificarEstado();
+    console.log('🚀 Data Service inicializado');
+    console.log(`   Modo: ${estado.modo.toUpperCase()}`);
+    console.log(`   Supabase: ${estado.supabase ? '✅' : '❌'}`);
+    console.log(`   localStorage: ${estado.localStorage ? '✅' : '❌'}`);
+})();

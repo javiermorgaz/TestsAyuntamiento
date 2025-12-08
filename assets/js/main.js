@@ -6,20 +6,16 @@ const testsContainer = document.getElementById('tests-container');
 
 /**
  * Carga el archivo de índice de tests y llama a la función de renderizado.
+ * Usa dataService para intentar Supabase primero, luego fallback a JSON local.
  */
 async function cargarListadoTests() {
     try {
         testsContainer.innerHTML = '<p>Cargando tests...</p>';
 
-        const response = await fetch(TESTS_INDEX_URL);
+        // Usar dataService (intenta Supabase → fallback JSON)
+        const tests = await obtenerTests();
 
-        if (!response.ok) {
-            throw new Error(`Error al cargar el índice: ${response.status}`);
-        }
-
-        const tests = await response.json();
-
-        renderizarListado(tests);
+        await renderizarListado(tests);
 
     } catch (error) {
         console.error("Error crítico al cargar listado:", error);
@@ -30,35 +26,31 @@ async function cargarListadoTests() {
 
 /**
  * Genera el HTML para mostrar la lista de tests disponibles.
+ * Ahora carga el historial desde Supabase con fallback a localStorage.
  * @param {Array<Object>} tests - Array de objetos de tests.
  */
-function renderizarListado(tests) {
+async function renderizarListado(tests) {
     if (tests.length === 0) {
         testsContainer.innerHTML = '<p>No hay tests disponibles.</p>';
         return;
     }
 
-    // Obtener resultados anteriores del localStorage
-    const todosLosResultados = obtenerResultados();
-
     let htmlContent = '<ul>';
 
-    tests.forEach(test => {
-        // Filtrar resultados de este test específico
-        const resultadosTest = todosLosResultados.filter(r => r.testId === test.id);
+    // Procesar cada test de forma asíncrona
+    for (const test of tests) {
+        // Obtener historial desde dataService (Supabase → localStorage)
+        const resultadosTest = await obtenerHistorial(test.id, 3);
 
         let historialHTML = '';
 
         if (resultadosTest.length > 0) {
-            // Mostrar los últimos 3 resultados
-            const ultimosResultados = resultadosTest.slice(-3).reverse();
-
             historialHTML = '<div class="historial-resultados">';
             historialHTML += '<p class="historial-titulo">Últimos intentos:</p>';
 
-            ultimosResultados.forEach(resultado => {
+            resultadosTest.forEach(resultado => {
                 const fecha = new Date(resultado.fecha).toLocaleDateString('es-ES');
-                const porcentaje = ((resultado.aciertos / resultado.total) * 100).toFixed(0);
+                const porcentaje = parseFloat(resultado.porcentaje).toFixed(0);
                 historialHTML += `
                     <span class="badge-resultado">
                         ${fecha}: ${resultado.aciertos}/${resultado.total} (${porcentaje}%)
@@ -79,7 +71,7 @@ function renderizarListado(tests) {
                 </button>
             </li>
         `;
-    });
+    }
 
     htmlContent += '</ul>';
     testsContainer.innerHTML = htmlContent;
@@ -87,13 +79,43 @@ function renderizarListado(tests) {
 
 
 // Función para iniciar el test
-function iniciarTest(testId, fileName) {
-    // Ocultar la lista y mostrar la vista del test
+// Ahora detecta si hay progreso anterior
+async function iniciarTest(testId, fileName) {
+    try {
+        // Buscar progreso existente en Supabase
+        const progreso = await buscarProgresoTest(testId);
+
+        if (progreso) {
+            const respondidas = progreso.answers_data.filter(a => a !== null).length;
+            const continuar = confirm(
+                '🔄 Tienes un test en progreso.\n\n' +
+                `Progreso: ${respondidas}/${progreso.total_questions} preguntas respondidas\n\n` +
+                '¿Quieres continuar donde lo dejaste?'
+            );
+
+            if (continuar) {
+                // Continuar test con progreso guardado
+                testsListSection.style.display = 'none';
+                document.getElementById('test-view').style.display = 'block';
+                document.getElementById('resultado-view').style.display = 'none';
+                window.scrollTo(0, 0);
+
+                await cargarTestConProgreso(testId, fileName, progreso);
+                return;
+            } else {
+                // Eliminar progreso y empezar de nuevo
+                await eliminarProgreso(progreso.id);
+                console.log('🗑️ Progreso eliminado, empezando test nuevo');
+            }
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al verificar progreso:', error);
+    }
+
+    // Continuar con flujo normal (test nuevo)
     testsListSection.style.display = 'none';
     document.getElementById('test-view').style.display = 'block';
     document.getElementById('resultado-view').style.display = 'none';
-
-    // Scroll al inicio
     window.scrollTo(0, 0);
 
     // Llamar a la función que cargará el test real (definida en test.js)
