@@ -143,27 +143,20 @@ async function buildIndexAndSync() {
         if (supabase && testsIndex.length > 0) {
             console.log('\n🔄 Sincronizando con Supabase...');
 
-            // Paso 1: Borrar todos los registros existentes
-            const { error: deleteError } = await supabase
+            // Usar UPSERT en lugar de DELETE + INSERT para evitar conflictos con foreign keys
+            // UPSERT actualiza si existe (por id) o inserta si no existe
+            const { data, error: upsertError } = await supabase
                 .from(TESTS_TABLE)
-                .delete()
-                .neq('id', 0);
-
-            if (deleteError) {
-                throw new Error(`Error al borrar la tabla ${TESTS_TABLE}: ${deleteError.message}`);
-            }
-            console.log('   ✅ Índice anterior borrado.');
-
-            // Paso 2: Insertar el nuevo índice completo
-            const { data, error: insertError } = await supabase
-                .from(TESTS_TABLE)
-                .insert(testsIndex)
+                .upsert(testsIndex, {
+                    onConflict: 'id',
+                    ignoreDuplicates: false  // Actualiza si ya existe
+                })
                 .select();
 
-            if (insertError) {
-                throw new Error(`Error al insertar datos en la tabla ${TESTS_TABLE}: ${insertError.message}`);
+            if (upsertError) {
+                throw new Error(`Error al sincronizar datos en la tabla ${TESTS_TABLE}: ${upsertError.message}`);
             }
-            console.log(`   ✅ Insertados ${data.length} tests en Supabase.`);
+            console.log(`   ✅ Sincronizados ${data.length} tests en Supabase (insertados/actualizados).`);
         }
 
         // --- 5. ESCRIBIR ARCHIVO LOCAL ---
