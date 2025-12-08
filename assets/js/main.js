@@ -66,7 +66,7 @@ async function renderizarListado(tests) {
 
             // Botón para resetear
             botonResetHTML = `
-                <button class="btn-reset" onclick="resetearTest(${test.id})">
+                <button class="btn-reset" onclick="resetearTest(${test.id}, '${test.fichero}')">
                     🔄 Empezar de Nuevo
                 </button>
             `;
@@ -142,10 +142,11 @@ async function iniciarTest(testId, fileName) {
 
 /**
  * Resetea el progreso de un test específico
- * Muestra confirmación antes de eliminar
+ * Muestra confirmación antes de eliminar y navega al test
  * @param {number} testId - ID del test a resetear
+ * @param {string} fileName - Nombre del archivo del test
  */
-async function resetearTest(testId) {
+async function resetearTest(testId, fileName) {
     try {
         const confirmar = await showConfirm(
             '¿Estás seguro de que quieres eliminar el progreso de este test?\n\nEsta acción no se puede deshacer.',
@@ -159,12 +160,16 @@ async function resetearTest(testId) {
             if (progreso) {
                 // Eliminar el progreso
                 await eliminarProgreso(progreso.id);
+                console.log('🗑️ Progreso eliminado, iniciando test nuevo');
 
-                // Mostrar mensaje de éxito
-                await showModal('El progreso del test ha sido eliminado correctamente.', 'Test Reseteado');
+                // Navegar directamente al test
+                testsListSection.style.display = 'none';
+                document.getElementById('test-view').style.display = 'block';
+                document.getElementById('resultado-view').style.display = 'none';
+                window.scrollTo(0, 0);
 
-                // Recargar el listado para actualizar la interfaz
-                await cargarListadoTests();
+                // Cargar el test
+                cargarTest(testId, fileName);
             }
         }
     } catch (error) {
