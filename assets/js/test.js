@@ -207,9 +207,36 @@ async function autoGuardarProgreso() {
         }
 
         console.log(`💾 Progreso guardado: ${respondidas}/${currentTest.preguntas.length} preguntas`);
+
+        // Mostrar indicador visual de guardado
+        showSaveIndicator();
     } catch (error) {
         console.error('⚠️ Error al auto-guardar:', error);
     }
+}
+
+/**
+ * Muestra un indicador visual no intrusivo de que se ha guardado el progreso
+ */
+function showSaveIndicator() {
+    // Buscar o crear el indicador
+    let indicator = document.getElementById('save-indicator');
+
+    if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.id = 'save-indicator';
+        indicator.className = 'save-indicator';
+        indicator.innerHTML = '✓ Guardado';
+        document.body.appendChild(indicator);
+    }
+
+    // Mostrar el indicador
+    indicator.classList.add('show');
+
+    // Ocultar después de 2 segundos
+    setTimeout(() => {
+        indicator.classList.remove('show');
+    }, 2000);
 }
 
 /**
