@@ -1,0 +1,176 @@
+{
+  "id": 16,
+  "titulo": "Tema 16. Igualdad y Violencia de Género",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "¿Cuál es el objetivo principal de la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género?",
+      "opciones": [
+        "Prevenir, sancionar y erradicar la violencia contra la mujer.",
+        "Establecer la igualdad de trato y de oportunidades entre hombres y mujeres.",
+        "Regular los derechos de las víctimas de violencia en el ámbito familiar."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según la LO 1/2004, la violencia de género es aquella ejercida por:",
+      "opciones": [
+        "Quien sea o haya sido su cónyuge o esté o haya estado ligado a ella por análoga relación de afectividad, aun sin convivencia.",
+        "Cualquier persona del sexo masculino contra la mujer.",
+        "Cualquier familiar que conviva con la víctima."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "La **discriminación directa por razón de sexo** se define como:",
+      "opciones": [
+        "La situación en que una persona es, ha sido o sería tratada de manera menos favorable que otra en situación análoga por razón de sexo.",
+        "La situación en que una disposición, criterio o práctica aparentemente neutros sitúan a personas de un sexo en desventaja particular respecto de personas del otro.",
+        "Cualquier comportamiento verbal o físico de naturaleza sexual que tenga el propósito o produzca el efecto de atentar contra la dignidad de una persona."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 4,
+      "enunciado": "El **principio de igualdad de trato y de oportunidades** entre mujeres y hombres en la Ley Orgánica 3/2007 es un principio que:",
+      "opciones": [
+        "Informará, con carácter transversal, la actuación de todos los Poderes Públicos.",
+        "Se aplicará únicamente en el ámbito de las relaciones laborales.",
+        "Es un objetivo a conseguir, pero no un principio informador."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según la LO 3/2007, ¿qué son las **acciones positivas**?",
+      "opciones": [
+        "Medidas específicas, a favor de las mujeres, para corregir situaciones patentes de desigualdad de hecho respecto de los hombres.",
+        "Medidas económicas para apoyar el emprendimiento femenino.",
+        "Medidas dirigidas a fomentar la conciliación de la vida personal, familiar y laboral."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 6,
+      "enunciado": "La **violencia psicológica** como manifestación de la violencia de género es:",
+      "opciones": [
+        "Una conducta tipificada como delito o falta en el Código Penal.",
+        "Únicamente la amenaza de causar un mal grave.",
+        "Todo acto que cause o pueda causar daño o sufrimiento psicológico."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Las víctimas de violencia de género tienen derecho a la **asistencia social integral**. ¿Quién debe garantizar este derecho?",
+      "opciones": [
+        "Las Comunidades Autónomas, en el ejercicio de sus competencias, y las Corporaciones Locales.",
+        "Exclusivamente el Estado a través de la Administración General del Estado.",
+        "El Ministerio de Sanidad y Consumo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 8,
+      "enunciado": "De acuerdo con la legislación laboral, la trabajadora víctima de violencia de género tiene derecho a la **reducción de su jornada de trabajo** con la consiguiente reducción proporcional del salario, o a la **reordenación de su tiempo de trabajo**:",
+      "opciones": [
+        "Para hacer efectiva su protección o su derecho a la asistencia social integral.",
+        "Solo para hacer efectiva su protección y con un límite de tres meses.",
+        "Únicamente con el consentimiento expreso del empresario."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "El derecho de la trabajadora víctima de violencia de género a la **suspensión de su contrato de trabajo** tendrá una duración inicial de:",
+      "opciones": [
+        "Seis meses, prorrogables por periodos de tres meses hasta un máximo de dieciocho meses.",
+        "Tres meses, prorrogables por periodos de seis meses hasta un máximo de veinticuatro meses.",
+        "Un año completo, sin posibilidad de prórroga."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 10,
+      "enunciado": "En el caso de extinción del contrato de trabajo por decisión de la trabajadora víctima de violencia de género, ¿existe derecho a indemnización?",
+      "opciones": [
+        "Sí, por la cuantía legalmente establecida para el despido improcedente.",
+        "No, solo tiene derecho a la prestación por desempleo.",
+        "Sí, pero solo si la antigüedad es superior a un año."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 11,
+      "enunciado": "La **Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres**, entró en vigor:",
+      "opciones": [
+        "Al día siguiente de su publicación en el BOE.",
+        "El 2 de marzo de 2007, sin perjuicio de lo previsto para determinados artículos.",
+        "Seis meses después de su publicación en el BOE."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "La **discriminación indirecta** por razón de sexo se produce cuando:",
+      "opciones": [
+        "Una disposición o práctica aparentemente neutra perjudica a personas de un sexo concreto.",
+        "Existe un trato desfavorable a las mujeres embarazadas.",
+        "El acoso tiene una connotación sexual explícita."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 13,
+      "enunciado": "El **Plan Estratégico de Igualdad de Oportunidades** es aprobado por:",
+      "opciones": [
+        "El Consejo de Ministros.",
+        "Las Cortes Generales.",
+        "El Ministerio de Igualdad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 14,
+      "enunciado": "En las Administraciones Públicas, ¿cuál es el porcentaje mínimo de representación de cada sexo que debe respetarse en los nombramientos de los órganos directivos y colegiados?",
+      "opciones": [
+        "El 40% del total de sus miembros.",
+        "El 30% del total de sus miembros.",
+        "El 60% del total de sus miembros."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Las empresas que elaboren un **Plan de Igualdad** deben constituir una Comisión de Seguimiento con representación de:",
+      "opciones": [
+        "La empresa y los representantes legales de los trabajadores.",
+        "Solo la empresa y la autoridad laboral.",
+        "Solo los sindicatos más representativos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Los **Planes de Igualdad** serán obligatorios para las empresas con un número de trabajadores superior a:",
+      "opciones": [
+        "50 trabajadores.",
+        "250 trabajadores.",
+        "100 trabajadores."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 17,
+      "enunciado": "El **acoso sexual** se define en la LO 3/2007 como cualquier comportamiento de naturaleza sexual que tenga el propósito o produzca el efecto de atentar contra la dignidad de una persona, en particular cuando se crea:",
+      "opciones": [
+        "Un entorno intimidatorio, hostil, degradante, humillante u ofensivo.",
+        "Una situación de tensión con la dirección de la empresa.",
+        "Una pérdida de rendimiento laboral en el trabajo."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}

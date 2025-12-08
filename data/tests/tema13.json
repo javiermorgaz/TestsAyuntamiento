@@ -1,0 +1,126 @@
+{
+  "id": 13,
+  "titulo": "Tema 13. Organización y Funcionamiento del Ayuntamiento de Sevilla",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 123.1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local (LBRL), el órgano colegiado que ejerce la función ejecutiva y la potestad reglamentaria en los municipios de gran población es:",
+      "opciones": [
+        "El Pleno.",
+        "El Alcalde.",
+        "La Junta de Gobierno Local."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según la normativa de organización municipal, las Juntas Municipales de Distrito tienen el carácter de:",
+      "opciones": [
+        "Órganos de gestión desconcentrada.",
+        "Órganos de gestión descentralizada.",
+        "Órganos de gestión delegada."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 124.2 de la LBRL (Gran Población), el Alcalde, en su calidad de presidente del Pleno, ejerce la función de:",
+      "opciones": [
+        "Convocar y presidir las sesiones del Pleno, y moderar los debates.",
+        "Convocar y presidir las sesiones del Pleno, y ordenar los debates.",
+        "Convocar y presidir las sesiones del Pleno, y moderar y dirigir los debates."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 122.2 de la LBRL (Gran Población), la delegación de las competencias del Pleno en el Alcalde debe hacerse por:",
+      "opciones": [
+        "Mayoría absoluta.",
+        "Mayoría de dos tercios.",
+        "Mayoría simple."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 126.1 de la LBRL (Gran Población), la Junta de Gobierno Local se compone por:",
+      "opciones": [
+        "El Alcalde y un número de Concejales no superior a un tercio del número legal de Concejales.",
+        "El Alcalde y los Tenientes de Alcalde, sin que su número pueda superar un tercio de los Concejales.",
+        "El Alcalde y un número de Concejales no superior a un cuarto del número legal de Concejales."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según la normativa de organización municipal, los Distritos, como unidades territoriales básicas, tienen asignadas competencias en materia de:",
+      "opciones": [
+        "Urbanismo y vivienda.",
+        "Gestión de servicios de proximidad y participación ciudadana.",
+        "Ordenación del tráfico y seguridad ciudadana."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 124.2 de la LBRL (Gran Población), la función de presidir el Pleno puede ser delegada por el Alcalde en:",
+      "opciones": [
+        "Un Teniente de Alcalde.",
+        "Un Concejal designado al efecto.",
+        "Un Concejal, sin que quepa la delegación en los Tenientes de Alcalde."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 124.4 de la LBRL (Gran Población), el Alcalde puede delegar el ejercicio de sus competencias en:",
+      "opciones": [
+        "Los Tenientes de Alcalde, Concejales y, en su caso, en los titulares de las Direcciones y Gerencias.",
+        "Solo en los Tenientes de Alcalde y Concejales.",
+        "Solo en los Tenientes de Alcalde y, en su caso, en los titulares de las Direcciones y Gerencias."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 85.2 de la LBRL, las empresas públicas municipales tienen el carácter de:",
+      "opciones": [
+        "Organismos Autónomos.",
+        "Entidades públicas empresariales.",
+        "Sociedades mercantiles de capital íntegramente local."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 124.4 de la LBRL (Gran Población), el Concejal de Distrito es nombrado por:",
+      "opciones": [
+        "El Pleno, a propuesta del Alcalde.",
+        "La Junta de Gobierno Local, a propuesta del Alcalde.",
+        "El Alcalde, entre los miembros del Pleno."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 124.4 de la LBRL (Gran Población), el nombramiento de los Tenientes de Alcalde corresponde a:",
+      "opciones": [
+        "El Alcalde, de entre los miembros de la Junta de Gobierno Local.",
+        "El Pleno, a propuesta del Alcalde.",
+        "La Junta de Gobierno Local."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 85.1.a) de la LBRL, los Organismos Autónomos Locales tienen el carácter de:",
+      "opciones": [
+        "Entidades públicas empresariales.",
+        "Organismos de carácter autónomo, dotados de personalidad jurídica propia.",
+        "Sociedades mercantiles de capital íntegramente local."
+      ],
+      "respuesta_correcta": 2
+    }
+  ]
+}

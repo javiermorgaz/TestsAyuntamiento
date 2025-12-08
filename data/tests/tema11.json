@@ -1,0 +1,246 @@
+{
+  "id": 11,
+  "titulo": "Tema 11. Ley 40/2015 (LRJSP): Órganos, Competencia y R. Patrimonial",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 25.1 de la Ley 40/2015, de Régimen Jurídico del Sector Público (LRJSP), el principio de la potestad sancionadora se ejerce en todo caso por:",
+      "opciones": [
+        "Las Administraciones Públicas.",
+        "Los órganos constitucionales.",
+        "Las Corporaciones de Derecho Público."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 23.2 de la Ley 40/2015, la abstención podrá ser promovida por:",
+      "opciones": [
+        "El superior jerárquico.",
+        "El interesado.",
+        "El superior jerárquico, sin que quepa la iniciativa del interesado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 32.1 de la Ley 40/2015, el principio de responsabilidad patrimonial de las Administraciones Públicas se exige por:",
+      "opciones": [
+        "La lesión que sufran los particulares en sus bienes y derechos.",
+        "La lesión que sufran los particulares en sus bienes y derechos, a consecuencia del funcionamiento normal o anormal de los servicios públicos.",
+        "La lesión que sufran los particulares en cualquiera de sus bienes y derechos, salvo en casos de fuerza mayor."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 27.1 de la Ley 40/2015, el principio de la potestad sancionadora se ejerce de acuerdo con:",
+      "opciones": [
+        "El principio de legalidad y tipicidad.",
+        "El principio de legalidad y proporcionalidad.",
+        "El principio de legalidad, con carácter general."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 25.1 de la Ley 40/2015, la potestad sancionadora de las Administraciones Públicas se ejerce de conformidad con:",
+      "opciones": [
+        "La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas.",
+        "Los principios de legalidad, irretroactividad, tipicidad, responsabilidad, proporcionalidad, prescripción y non bis in ídem.",
+        "Los principios de legalidad, irretroactividad y tipicidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 17.1 de la Ley 40/2015, los órganos colegiados podrán constituirse, convocar y celebrar sus sesiones y adoptar acuerdos:",
+      "opciones": [
+        "Tanto de forma presencial como a distancia, salvo que su reglamento interno establezca lo contrario.",
+        "Solo de forma presencial, salvo que su reglamento interno establezca lo contrario.",
+        "Solo de forma presencial."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 23.1 de la Ley 40/2015, las autoridades y personal al servicio de las Administraciones en quienes concurra alguna causa de abstención deben:",
+      "opciones": [
+        "Declararse no competentes.",
+        "Declararse incompetentes, con carácter general.",
+        "Abstenerse de intervenir en el procedimiento y comunicarlo a su superior jerárquico."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 25.1 de la Ley 40/2015, el ejercicio de la Potestad Sancionadora corresponde:",
+      "opciones": [
+        "A los órganos administrativos que la tengan atribuida legalmente o por reglamento.",
+        "Al órgano administrativo que la tenga atribuida legalmente.",
+        "Al órgano administrativo superior jerárquico de la Administración."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 10.1 de la Ley 40/2015, la avocación de competencia se acordará por:",
+      "opciones": [
+        "El órgano inferior, y requerirá la autorización del superior.",
+        "El órgano superior, de forma motivada y en supuestos de excepcionalidad.",
+        "El órgano superior, de forma motivada."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 18.2 de la Ley 40/2015, corresponde a la Presidencia de los órganos colegiados:",
+      "opciones": [
+        "Ostentar la representación del órgano, acordar la convocatoria de las sesiones y moderar los debates.",
+        "Ostentar la representación del órgano y moderar los debates.",
+        "Acordar la convocatoria de las sesiones y moderar los debates."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 12.1 de la Ley 40/2015, la delegación de firma sólo procede entre:",
+      "opciones": [
+        "Los titulares de los órganos superiores de la Administración General del Estado.",
+        "Los titulares de los órganos superiores y los inferiores, si la delegación es necesaria.",
+        "Los órganos dependientes, y no alterará la competencia del órgano delegante."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 23.3 de la Ley 40/2015, la no abstención en un procedimiento por concurrir alguna de las causas legalmente previstas, implicará la:",
+      "opciones": [
+        "Nulidad del acto administrativo, si se ha producido indefensión al interesado.",
+        "Anulabilidad del acto administrativo.",
+        "Nulidad del acto administrativo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 11.2 de la Ley 40/2015, el instrumento de formalización de la encomienda de gestión contendrá, entre otros extremos:",
+      "opciones": [
+        "La actividad o actividades a realizar, el plazo de vigencia, la naturaleza y el alcance de la gestión encomendada.",
+        "La actividad o actividades a realizar, el plazo de vigencia y la naturaleza y el alcance de la gestión encomendada.",
+        "La actividad o actividades a realizar, el plazo de vigencia y los medios materiales para su cumplimiento."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 32.1 de la Ley 40/2015, el principio de responsabilidad patrimonial se rige por:",
+      "opciones": [
+        "La legislación civil.",
+        "La legislación civil y la Ley 39/2015.",
+        "La legislación administrativa."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 13.1 de la Ley 40/2015 (Suplencia), los titulares de los órganos administrativos podrán ser suplidos temporalmente en los supuestos de vacante, ausencia o enfermedad por:",
+      "opciones": [
+        "El titular del órgano superior jerárquico.",
+        "El órgano administrativo del que dependa el suplido.",
+        "La persona que designe el órgano competente para el nombramiento de aquéllos o el superior jerárquico común."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 9.3 de la Ley 40/2015, la delegación de competencias debe ser publicada en:",
+      "opciones": [
+        "El Boletín Oficial del Estado o en el de la Comunidad Autónoma correspondiente.",
+        "El Boletín Oficial del Estado, el de la Comunidad Autónoma o de la Provincia, según el ámbito territorial del órgano delegante, y surtirá efecto a partir del día siguiente al de su publicación.",
+        "El Boletín Oficial del Estado o en el de la Comunidad Autónoma correspondiente, y surtirá efecto a partir del día siguiente al de su publicación."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 5.1 de la Ley 40/2015, los órganos administrativos tienen naturaleza:",
+      "opciones": [
+        "Administrativa.",
+        "Reglamentaria.",
+        "Funcional."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 26.2 de la Ley 40/2015, el principio de irretroactividad se aplica a la potestad sancionadora en el sentido de que:",
+      "opciones": [
+        "Solo son aplicables las disposiciones sancionadoras vigentes en el momento de producirse los hechos.",
+        "Solo son aplicables las disposiciones sancionadoras vigentes en el momento de producirse los hechos, salvo si la disposición posterior es más favorable al presunto infractor.",
+        "Solo son aplicables las disposiciones sancionadoras vigentes en el momento de producirse los hechos, si la disposición posterior es más favorable al presunto infractor."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 30.1 de la Ley 40/2015, las infracciones y sanciones prescriben:",
+      "opciones": [
+        "En el plazo de tres, dos o un año, según la gravedad de la infracción.",
+        "Según lo dispuesto en las leyes que las establezcan.",
+        "En el plazo de tres, dos o un año, según la gravedad de la sanción."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 1.1 de la Ley 40/2015, la Ley tiene por objeto establecer y regular:",
+      "opciones": [
+        "Las bases del régimen jurídico de las Administraciones Públicas, los principios del sistema de responsabilidad patrimonial de las Administraciones Públicas y la potestad sancionadora.",
+        "Las bases del régimen jurídico de las Administraciones Públicas y la potestad sancionadora.",
+        "Las bases del régimen jurídico de las Administraciones Públicas, sin perjuicio de la Ley 39/2015."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 24.1 de la Ley 40/2015, la recusación de un funcionario debe hacerse:",
+      "opciones": [
+        "Por escrito, en cualquier momento del procedimiento.",
+        "Por escrito, en cualquier momento del procedimiento, y debe estar motivada.",
+        "Por escrito, tan pronto como se tenga conocimiento de la causa y debe estar motivada."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 9.3 de la Ley 40/2015, los acuerdos de delegación de competencias:",
+      "opciones": [
+        "Se publicarán en el boletín oficial correspondiente y surtirán efecto a partir del día siguiente al de su publicación.",
+        "Se publicarán en el boletín oficial correspondiente.",
+        "Se publicarán en el boletín oficial correspondiente y surtirán efecto a partir de su firma."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 19.2 de la Ley 40/2015, el Secretario de los órganos colegiados es:",
+      "opciones": [
+        "El titular del órgano administrativo de inferior jerarquía.",
+        "Nombrado y separado por el titular del órgano al que pertenezca el órgano colegiado.",
+        "Elegido por los miembros del órgano colegiado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 11.1 de la Ley 40/2015, la encomienda de gestión tiene por objeto la realización de actividades de carácter:",
+      "opciones": [
+        "Material o técnico, de la competencia de los órganos o entidades, por otros órganos o entidades de la misma o de distinta Administración.",
+        "Material, de la competencia de los órganos o entidades, por otros órganos o entidades de la misma o de distinta Administración.",
+        "Material, técnico o de servicios, de la competencia de los órganos o entidades, por otros órganos o entidades de la misma o de distinta Administración."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

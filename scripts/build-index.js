@@ -24,7 +24,7 @@ try {
     const testFiles = files.filter(file =>
         file.endsWith('.json') &&
         file !== 'tests_index.json' &&
-        (file.startsWith('test') || file.startsWith('bloque'))
+        (file.startsWith('test') || file.startsWith('bloque') || file.startsWith('tema'))
     );
 
     if (testFiles.length === 0) {

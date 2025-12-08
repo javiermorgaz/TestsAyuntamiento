@@ -1,0 +1,356 @@
+{
+  "id": 15,
+  "titulo": "Tema 15. Personal al Servicio de Entidades Locales (II): Retribuciones, Movilidad y Disciplinario",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 22.a) del Texto Refundido de la Ley del Estatuto Básico del Empleado Público (EBEP), las retribuciones básicas son:",
+      "opciones": [
+        "El sueldo y los trienios.",
+        "El sueldo y el complemento de destino.",
+        "El sueldo, los trienios y las pagas extraordinarias."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 37.2 del EBEP, las siguientes materias están excluidas de la negociación colectiva, excepto:",
+      "opciones": [
+        "Las decisiones de las Administraciones Públicas que afecten a sus potestades de organización.",
+        "Las decisiones de las Administraciones Públicas que afecten a sus potestades de organización, si no se afectan las condiciones de trabajo de los empleados públicos.",
+        "La regulación del ejercicio de los derechos de los ciudadanos y de los usuarios de los servicios públicos."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 80.1 del EBEP, la provisión de puestos de trabajo por libre designación se aplicará:",
+      "opciones": [
+        "Solo a los funcionarios de carrera.",
+        "Solo a los puestos de trabajo que se determinen por ley.",
+        "A los puestos de trabajo que se determinen por ley, en atención a su naturaleza."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 87.1 del EBEP, el funcionario en servicios especiales, en los casos previstos en la Ley, debe haber sido nombrado para ocupar un puesto con carácter:",
+      "opciones": [
+        "Permanente, durante al menos dos años.",
+        "Temporal, durante al menos un año.",
+        "Temporal, durante al menos seis meses."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 97.1 del EBEP, la sanción de separación del servicio de los funcionarios de carrera prescribe a los:",
+      "opciones": [
+        "Tres años.",
+        "Dos años.",
+        "Cuatro años."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 95.2.c) del EBEP, la falta de asistencia al trabajo, sin causa justificada, constituye:",
+      "opciones": [
+        "Falta leve.",
+        "Falta grave.",
+        "Falta muy grave."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 87.1 del EBEP, el funcionario de carrera que es nombrado para ocupar un puesto en el Consejo de Gobierno de una Comunidad Autónoma, pasa a la situación de:",
+      "opciones": [
+        "Excedencia forzosa.",
+        "Servicios en otras Administraciones Públicas.",
+        "Servicios especiales."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 24.a) del EBEP, el complemento de destino retribuye:",
+      "opciones": [
+        "El nivel del puesto de trabajo.",
+        "El nivel del puesto de trabajo y la carrera profesional.",
+        "La dedicación del puesto de trabajo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 37.1 del EBEP, el derecho a la negociación colectiva se ejerce:",
+      "opciones": [
+        "Mediante la negociación de convenios colectivos.",
+        "Mediante la negociación de convenios y acuerdos.",
+        "Mediante la negociación de acuerdos."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 87.2 del EBEP, el funcionario de carrera en servicios especiales tendrá derecho a:",
+      "opciones": [
+        "La reserva del puesto de trabajo que ocupaba y la percepción de las retribuciones básicas.",
+        "La reserva del puesto de trabajo que ocupaba, y la percepción de las retribuciones básicas y complementarias.",
+        "La reserva del puesto de trabajo y al cómputo del tiempo que permanezca en tal situación a efectos de ascensos, trienios y derechos pasivos."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 24.c) del EBEP, el complemento específico retribuye:",
+      "opciones": [
+        "La especial dificultad técnica, la dedicación o la responsabilidad, sin que quepa la peligrosidad.",
+        "La especial dificultad técnica, el riesgo o la responsabilidad.",
+        "La especial dificultad técnica, la dedicación o el riesgo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 74.1 del EBEP, el puesto de trabajo es la unidad básica de la estructura orgánica y funcional del empleo público, y consiste en:",
+      "opciones": [
+        "Una relación de puestos de trabajo.",
+        "Una relación de puestos de trabajo, sin que quepa la dotación presupuestaria.",
+        "Una relación de puestos de trabajo, dotada presupuestariamente."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 89.4 del EBEP, el funcionario tiene derecho a la excedencia por cuidado de familiares por un periodo máximo de:",
+      "opciones": [
+        "Un año, para el cuidado de cada familiar.",
+        "Tres años, para el cuidado de cada hijo, y dos años para el cuidado de otros familiares.",
+        "Dos años, para el cuidado de cada hijo, y tres años para el cuidado de otros familiares."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 95.2.a) del EBEP, el incumplimiento del deber de respetar la Constitución y los respectivos Estatutos de Autonomía es:",
+      "opciones": [
+        "Falta muy grave.",
+        "Falta grave.",
+        "Falta leve."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 96.1.c) del EBEP, la sanción de suspensión de funciones puede ser impuesta por la comisión de:",
+      "opciones": [
+        "Faltas leves.",
+        "Faltas graves y muy graves.",
+        "Faltas muy graves."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 78 del EBEP, la provisión de puestos de trabajo se realizará por los procedimientos de:",
+      "opciones": [
+        "Concurso y libre designación, con convocatoria pública.",
+        "Concurso y libre designación, y su convocatoria se hará pública.",
+        "Concurso, libre designación y redistribución."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 26.1 del EBEP, las retribuciones por servicios extraordinarios, fuera de la jornada normal de trabajo, son:",
+      "opciones": [
+        "Excepcionales, y no podrán ser fijas en su cuantía ni periódicas en su devengo.",
+        "Excepcionales, y no podrán ser fijas en su cuantía.",
+        "Excepcionales, y no podrán ser periódicas en su devengo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 89.1 del EBEP, el funcionario tiene derecho a la excedencia voluntaria por interés particular, si ha prestado servicios en cualquiera de las Administraciones Públicas por un periodo mínimo de:",
+      "opciones": [
+        "Tres años.",
+        "Dos años.",
+        "Cinco años."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 97.1 del EBEP, las faltas muy graves prescriben a los:",
+      "opciones": [
+        "Dos años.",
+        "Tres años.",
+        "Cuatro años."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 22.b) del EBEP, las retribuciones complementarias son:",
+      "opciones": [
+        "El complemento de destino, el complemento específico y el complemento de productividad.",
+        "El complemento de destino y el complemento específico.",
+        "El complemento de destino, el complemento específico y los trienios."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 80.1 del EBEP, el sistema de provisión de puestos de trabajo es:",
+      "opciones": [
+        "El concurso, como regla general.",
+        "La libre designación, como regla general.",
+        "El concurso, como procedimiento normal."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 24.d) del EBEP, el complemento de productividad retribuye:",
+      "opciones": [
+        "El especial rendimiento y la actividad extraordinaria, sin que quepa la participación en programas.",
+        "El especial rendimiento, la actividad extraordinaria y el interés o iniciativa con que se desempeñen los puestos de trabajo.",
+        "El especial rendimiento y la dedicación del empleado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 89.1 del EBEP, el funcionario de carrera en excedencia voluntaria por interés particular:",
+      "opciones": [
+        "No devenga retribuciones ni le es computable el tiempo que permanezca en tal situación a efectos de ascensos, trienios y derechos pasivos.",
+        "No devenga retribuciones, pero le es computable el tiempo que permanezca en tal situación a efectos de trienios.",
+        "No devenga retribuciones, pero le es computable el tiempo que permanezca en tal situación a efectos de ascensos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 79.1 del EBEP, la provisión de puestos de trabajo por concurso consiste en la valoración de:",
+      "opciones": [
+        "Los méritos y capacidades, conforme a las bases de la convocatoria.",
+        "Los méritos y capacidades, conforme al sistema de méritos.",
+        "Los méritos y capacidades, conforme al sistema de méritos y capacidades."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Según el artículo 95.2.c) del EBEP, las faltas muy graves son, entre otras:",
+      "opciones": [
+        "La falta de obediencia a los superiores jerárquicos.",
+        "El incumplimiento del deber de atender a los ciudadanos.",
+        "El acoso laboral y el acoso sexual."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 85.2 del EBEP, ¿cuál de las siguientes no es una situación administrativa de los funcionarios de carrera?",
+      "opciones": [
+        "Servicio activo.",
+        "Servicios especiales.",
+        "Excedencia forzosa."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Según el artículo 24.b) del EBEP, el complemento de carrera profesional retribuye:",
+      "opciones": [
+        "El desarrollo de la carrera profesional, conforme al sistema de carrera.",
+        "El desarrollo de la carrera profesional, conforme al sistema de carrera vertical.",
+        "El desarrollo de la carrera profesional y la dedicación del empleado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 28,
+      "enunciado": "Según el artículo 96.1.c) del EBEP, la sanción de suspensión de funciones tendrá una duración máxima de:",
+      "opciones": [
+        "Seis años.",
+        "Seis años, si es por falta muy grave.",
+        "Tres años."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 29,
+      "enunciado": "Según el artículo 97.1 del EBEP, las faltas leves prescriben a los:",
+      "opciones": [
+        "Diez días.",
+        "Un mes.",
+        "Seis meses."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 30,
+      "enunciado": "Según el artículo 87.1.j) del EBEP, el funcionario en situación de servicios especiales es el que:",
+      "opciones": [
+        "Es nombrado como alto cargo en una Administración Pública.",
+        "Es nombrado como alto cargo en una Entidad Local.",
+        "Es nombrado como personal eventual."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 31,
+      "enunciado": "Según el artículo 98.2 del EBEP, el procedimiento disciplinario se ajustará a los principios de:",
+      "opciones": [
+        "Contradicción y audiencia.",
+        "Contradicción, audiencia y presunción de inocencia.",
+        "Contradicción y presunción de inocencia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 32,
+      "enunciado": "Según el artículo 24.c) del EBEP, el complemento específico retribuye:",
+      "opciones": [
+        "El grado de interés, iniciativa o esfuerzo con que el funcionario desempeñe su puesto.",
+        "El nivel del puesto de trabajo.",
+        "La especial dificultad técnica, la dedicación, la incompatibilidad, la responsabilidad, el riesgo o las condiciones en que se desarrolle el trabajo."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 33,
+      "enunciado": "Según el artículo 85.2 del EBEP, los funcionarios de carrera pueden estar en excedencia forzosa:",
+      "opciones": [
+        "En los supuestos previstos en la Ley, y con reserva del puesto de trabajo.",
+        "En los supuestos previstos en la Ley, y sin reserva del puesto de trabajo.",
+        "Solo en los casos de incompatibilidad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 34,
+      "enunciado": "Según el artículo 95.3 del EBEP, la tipificación de las faltas leves se establecerá por:",
+      "opciones": [
+        "El EBEP.",
+        "La Ley de la Función Pública de cada Administración.",
+        "Reglamento de la Administración Pública."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 35,
+      "enunciado": "Según el artículo 21.1 del EBEP, las retribuciones de los funcionarios se componen de:",
+      "opciones": [
+        "Retribuciones básicas y retribuciones complementarias.",
+        "Retribuciones básicas, retribuciones complementarias y servicios extraordinarios.",
+        "Retribuciones básicas y retribuciones complementarias, sin que quepa la retribución por servicios extraordinarios."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}

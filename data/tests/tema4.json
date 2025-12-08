@@ -1,0 +1,266 @@
+{
+  "id": 4,
+  "titulo": "Tema 4. El Estatuto de Autonomía para Andalucía",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 93 del Estatuto de Autonomía para Andalucía, la Provincia, como entidad territorial propia, es la demarcación en la que se articula la organización y actuación de la Junta de Andalucía, así como:",
+      "opciones": [
+        "El ámbito territorial de determinados intereses del Estado.",
+        "El ámbito territorial de la Corporación Local en que se articula la participación institucional de la provincia.",
+        "El ámbito territorial de la circunscripción electoral."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 118 del Estatuto de Autonomía para Andalucía, el Consejo de Gobierno, en su gestión política, responde solidariamente ante:",
+      "opciones": [
+        "El Parlamento de Andalucía.",
+        "El Presidente de la Junta de Andalucía.",
+        "El Gobierno de la Nación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 116.3 del Estatuto de Autonomía para Andalucía, el Presidente es responsable político ante:",
+      "opciones": [
+        "El Consejo de Gobierno y el Parlamento de Andalucía.",
+        "El Parlamento de Andalucía.",
+        "El Consejo de Gobierno."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 128.2 del Estatuto de Autonomía para Andalucía, el Defensor del Pueblo Andaluz dará cuenta de su gestión al Parlamento en un informe:",
+      "opciones": [
+        "Anual.",
+        "Semestral.",
+        "Extraordinario."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 131.2 del Estatuto de Autonomía para Andalucía, la Cámara de Cuentas está compuesta por:",
+      "opciones": [
+        "El Presidente de la Junta de Andalucía y los Consejeros.",
+        "Un número impar de Consejeros designados por el Parlamento, de acuerdo con la proporción de fuerzas políticas.",
+        "Un número par de Consejeros designados por el Parlamento, de acuerdo con la proporción de fuerzas políticas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 147.2 del Estatuto de Autonomía para Andalucía, el Parlamento de Andalucía promoverá, en los ámbitos de interés mutuo, la creación de Comisiones bilaterales con las instituciones competentes del Estado, que serán:",
+      "opciones": [
+        "Exclusivamente a nivel de Presidentes de Gobiernos.",
+        "Cauce de colaboración e información.",
+        "Órganos de decisión legislativa."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "De acuerdo con el artículo 92.1 del Estatuto de Autonomía para Andalucía, las relaciones entre la Comunidad Autónoma y el conjunto de los municipios andaluces se articulan a través de:",
+      "opciones": [
+        "El Consejo Andaluz de Concertación Local.",
+        "La Federación Andaluza de Municipios y Provincias.",
+        "La Comisión Bilateral de Cooperación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 100 del Estatuto de Autonomía para Andalucía, el Parlamento de Andalucía ejerce la potestad legislativa de la Comunidad Autónoma:",
+      "opciones": [
+        "En nombre de las Cortes Generales.",
+        "En nombre del Consejo de Gobierno.",
+        "En nombre del pueblo andaluz."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 124.1 del Estatuto de Autonomía para Andalucía, el Tribunal Superior de Justicia de Andalucía es el órgano del Poder Judicial en la Comunidad Autónoma, sin perjuicio de:",
+      "opciones": [
+        "La Superior Autoridad del Consejo General del Poder Judicial.",
+        "La jurisdicción que corresponde al Tribunal Supremo.",
+        "La jurisdicción del Tribunal Constitucional."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 129.1 del Estatuto de Autonomía para Andalucía, el Consejo Consultivo de Andalucía es el supremo órgano consultivo del Consejo de Gobierno y de la Administración de la Junta de Andalucía, incluidos sus organismos autónomos.",
+      "opciones": [
+        "En materia de su competencia.",
+        "En todas las materias.",
+        "En materia de su competencia, salvo las materias reservadas a la Asamblea."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 118 del Estatuto de Autonomía para Andalucía, el Consejo de Gobierno, en su gestión política, responde solidariamente ante:",
+      "opciones": [
+        "El Parlamento de Andalucía.",
+        "El Presidente de la Junta de Andalucía.",
+        "El Gobierno de la Nación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 111 del Estatuto de Autonomía para Andalucía, la iniciativa legislativa de proyectos de ley corresponde a:",
+      "opciones": [
+        "El Consejo de Gobierno y el Parlamento de Andalucía.",
+        "El Consejo de Gobierno.",
+        "El Consejo de Gobierno, al Parlamento de Andalucía y a la iniciativa legislativa popular."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 118.2 del Estatuto de Autonomía para Andalucía, el Presidente de la Junta de Andalucía es elegido por:",
+      "opciones": [
+        "Mayoría simple del Parlamento de Andalucía.",
+        "El Parlamento de Andalucía, entre sus miembros.",
+        "El Rey, a propuesta del Parlamento de Andalucía."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "De acuerdo con el artículo 93 del Estatuto de Autonomía para Andalucía, las relaciones entre la Comunidad Autónoma y la Provincia se articulan a través de:",
+      "opciones": [
+        "Convenios de colaboración.",
+        "El Consejo de Concertación Local.",
+        "La Federación Andaluza de Municipios y Provincias."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 101.1 del Estatuto de Autonomía para Andalucía, el número de miembros del Parlamento de Andalucía será no inferior a:",
+      "opciones": [
+        "90 ni superior a 110.",
+        "80 ni superior a 100.",
+        "70 ni superior a 90."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 106.1 del Estatuto de Autonomía para Andalucía, la convocatoria de elecciones al Parlamento de Andalucía corresponde al:",
+      "opciones": [
+        "Consejo de Gobierno.",
+        "El Rey.",
+        "Presidente de la Junta de Andalucía."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 121.1 del Estatuto de Autonomía para Andalucía, la Administración de la Junta de Andalucía se organiza en:",
+      "opciones": [
+        "Consejerías.",
+        "Consejerías y Viceconsejerías.",
+        "Consejerías, Viceconsejerías y Secretarías Generales."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 100.2 del Estatuto de Autonomía para Andalucía, el Parlamento de Andalucía aprueba:",
+      "opciones": [
+        "Su Reglamento, por mayoría absoluta de sus miembros.",
+        "Su Reglamento, por mayoría de dos tercios de sus miembros.",
+        "Su Reglamento, por mayoría simple de sus miembros."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 118.5 del Estatuto de Autonomía para Andalucía, el Presidente de la Junta nombra y separa a los Consejeros, que responden:",
+      "opciones": [
+        "Políticamente ante él y solidariamente ante el Parlamento de Andalucía.",
+        "Políticamente ante el Parlamento y solidariamente ante el Presidente.",
+        "Políticamente ante él."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 103 del Estatuto de Autonomía para Andalucía, las sesiones del Parlamento serán:",
+      "opciones": [
+        "Públicas, salvo que el Reglamento establezca lo contrario, por mayoría absoluta de sus miembros.",
+        "Secretas, salvo que se decida lo contrario, por mayoría de dos tercios de sus miembros.",
+        "Públicas, salvo acuerdo en contrario del Parlamento, adoptado por mayoría absoluta o en lo previsto en el Reglamento."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 131.1 del Estatuto de Autonomía para Andalucía, la Cámara de Cuentas es el órgano de control:",
+      "opciones": [
+        "Financiero, contable y económico del sector público instrumental.",
+        "Externo de la actividad económica y financiera de la Junta de Andalucía y del sector público de Andalucía.",
+        "Externo de la actividad financiera de la Junta de Andalucía y del sector público de Andalucía."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 110 del Estatuto de Autonomía para Andalucía, en caso de extraordinaria y urgente necesidad, el Consejo de Gobierno podrá dictar disposiciones legislativas provisionales que tomarán la forma de Decretos-leyes, que no podrán afectar a:",
+      "opciones": [
+        "El Estatuto, a los derechos, deberes y libertades, al régimen electoral, a las instituciones de la Junta de Andalucía y a los Presupuestos de la Comunidad.",
+        "El Estatuto, a los derechos, deberes y libertades, y a la legislación civil.",
+        "El Estatuto, a los derechos, deberes y libertades, y a los Presupuestos de la Comunidad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 127.1 del Estatuto de Autonomía para Andalucía, el Presidente del Tribunal Superior de Justicia de Andalucía es nombrado por:",
+      "opciones": [
+        "El Rey, a propuesta del Consejo General del Poder Judicial.",
+        "El Rey, a propuesta del Consejo de Gobierno de la Junta de Andalucía.",
+        "El Consejo General del Poder Judicial."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 117 del Estatuto de Autonomía para Andalucía, la Junta de Andalucía es la Institución que ostenta el poder ejecutivo y:",
+      "opciones": [
+        "La potestad legislativa.",
+        "La potestad reglamentaria.",
+        "La potestad jurisdiccional."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Según el artículo 147 del Estatuto de Autonomía para Andalucía, la Junta de Andalucía promoverá la creación de Comisiones bilaterales de cooperación entre la Junta de Andalucía y el Estado, que serán cauce de colaboración e información.",
+      "opciones": [
+        "A nivel de Consejeros y Secretarios de Estado.",
+        "A nivel de Presidentes de Gobiernos.",
+        "A nivel de Presidentes de Gobiernos y Consejeros."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 116 del Estatuto de Autonomía para Andalucía, el Presidente de la Junta de Andalucía ejerce la Superior Representación de la Comunidad Autónoma y:",
+      "opciones": [
+        "Dirige y coordina la acción ejecutiva del Consejo de Gobierno.",
+        "Ejerce la potestad legislativa y reglamentaria.",
+        "La ordinaria del Estado en Andalucía."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

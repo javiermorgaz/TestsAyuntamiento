@@ -1,0 +1,286 @@
+{
+  "id": 12,
+  "titulo": "Tema 12. Ley 19/2013 (Transparencia): Publicidad Activa y Acceso a la Información",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 12.1 de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, el derecho de acceso a la información pública se podrá ejercer por:",
+      "opciones": [
+        "Todas las personas.",
+        "Todas las personas jurídicas y físicas.",
+        "Todas las personas físicas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 5.1 de la Ley 19/2013, la publicidad activa tiene por finalidad:",
+      "opciones": [
+        "Aumentar la transparencia de la Administración Pública.",
+        "Garantizar el derecho de acceso a la información.",
+        "Potenciar el control de la actuación pública."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 8.1.g) de la Ley 19/2013, la información relativa a bienes inmuebles es objeto de publicidad activa cuando:",
+      "opciones": [
+        "La adquisición se haya realizado con cargo a los Presupuestos Generales del Estado.",
+        "La adquisición se haya realizado con cargo a los presupuestos públicos.",
+        "La adquisición se haya realizado con cargo a los presupuestos de la Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 26.1 de la Ley 19/2013, el régimen de Buen Gobierno se aplica:",
+      "opciones": [
+        "A los miembros del Gobierno y a los Altos Cargos de la Administración General del Estado.",
+        "A los miembros del Gobierno y a los Altos Cargos de las Administraciones Públicas.",
+        "A los miembros del Gobierno, a los Altos Cargos y a los Directivos de las Entidades del Sector Público."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 6.1.a) de la Ley 19/2013, las Administraciones deben publicar la información relativa a las resoluciones y acuerdos adoptados que afecten:",
+      "opciones": [
+        "Con carácter general o significativo a un número relevante de personas.",
+        "Con carácter general o significativo a los ciudadanos.",
+        "A un número relevante de personas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 20.1 de la Ley 19/2013, la resolución de la solicitud de acceso a la información debe notificarse al solicitante y a los terceros afectados, en su caso, en el plazo máximo de:",
+      "opciones": [
+        "Quince días hábiles.",
+        "Un mes.",
+        "Veinte días hábiles."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 2.1 de la Ley 19/2013, esta Ley se aplica a:",
+      "opciones": [
+        "Los organismos autónomos y las entidades de derecho público con personalidad jurídica propia.",
+        "Solo a las Administraciones Públicas.",
+        "Solo a los organismos autónomos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 5.2 de la Ley 19/2013, la publicidad activa debe ser accesible de forma:",
+      "opciones": [
+        "Sencilla, con carácter general.",
+        "Clara y estructurada.",
+        "Clara, estructurada y comprensible."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 8.1.f) de la Ley 19/2013, la información sobre indemnizaciones percibidas con ocasión del abandono del cargo deberá publicarse en:",
+      "opciones": [
+        "El Boletín Oficial correspondiente.",
+        "La sede electrónica de la Administración Pública.",
+        "El Portal de Transparencia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 28.2 de la Ley 19/2013, el control del cumplimiento de la Publicidad Activa, en el ámbito de la Administración General del Estado, corresponde al:",
+      "opciones": [
+        "Defensor del Pueblo.",
+        "Consejo de Transparencia y Buen Gobierno.",
+        "Consejo de Transparencia y Buen Gobierno, y en las Comunidades Autónomas, al órgano que determine la Ley autonómica."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 17.1 de la Ley 19/2013, la solicitud de acceso a la información debe contener, entre otros extremos:",
+      "opciones": [
+        "La identidad del solicitante, el domicilio a efectos de notificaciones y la información que se solicita.",
+        "La identidad del solicitante y la motivación de la solicitud.",
+        "La identidad del solicitante y la información que se solicita."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 2.1.c) de la Ley 19/2013, la Ley se aplica a:",
+      "opciones": [
+        "Los órganos de las Comunidades Autónomas y de las Entidades Locales.",
+        "Las Entidades que integran la Administración Local, sin excepción.",
+        "Las Entidades que integran la Administración Local, con excepción de los municipios de Gran Población."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 18.1 de la Ley 19/2013, la solicitud de acceso a la información puede ser inadmitida a trámite si:",
+      "opciones": [
+        "El solicitante pide documentos que ya han sido publicados en el Portal de Transparencia.",
+        "La solicitud se refiere a información que requiera una reelaboración de la información.",
+        "La solicitud se refiere a información que está en curso de elaboración o de publicación general."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 14.1 de la Ley 19/2013, ¿cuál de los siguientes no es un límite al derecho de acceso a la información pública?",
+      "opciones": [
+        "La libertad de empresa y la economía de mercado.",
+        "La seguridad nacional.",
+        "La protección del medio ambiente."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 8 de la Ley 19/2013, la Publicidad Activa incluye la información económica, presupuestaria y:",
+      "opciones": [
+        "Estadística.",
+        "Estadística, en los términos previstos en el Plan de Estadística Nacional.",
+        "Estadística, en los términos previstos en la Ley de Presupuestos Generales del Estado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 5.3 de la Ley 19/2013, la obligación de Publicidad Activa es sin perjuicio de las obligaciones de publicidad que se deriven de:",
+      "opciones": [
+        "La Ley de Contratos del Sector Público.",
+        "La Ley de Patrimonio de las Administraciones Públicas.",
+        "La normativa específica."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 6.1.c) de la Ley 19/2013, la información sobre el personal que trabaja en la entidad (Art. 6) incluye la:",
+      "opciones": [
+        "Relación de puestos de trabajo y las retribuciones anuales.",
+        "Relación de puestos de trabajo y las indemnizaciones por razón del servicio.",
+        "Relación de puestos de trabajo, las retribuciones anuales y las indemnizaciones por razón del servicio."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 6.2 de la Ley 19/2013, se publicará la información de relevancia jurídica, que incluye:",
+      "opciones": [
+        "Las directrices y circulares de la Administración, sin incluir los informes y memorias.",
+        "Las directrices, instrucciones, circulares o respuestas a consultas planteadas por los particulares, siempre que sean de interés público.",
+        "Las directrices, circulares y memorias que afecten a la legalidad vigente."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 22.1 de la Ley 19/2013, en caso de denegación del derecho de acceso a la información pública, el solicitante podrá:",
+      "opciones": [
+        "Interponer recurso contencioso-administrativo.",
+        "Interponer recurso de alzada.",
+        "Presentar reclamación ante el Consejo de Transparencia y Buen Gobierno."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 16.1 de la Ley 19/2013, las solicitudes de acceso a la información pública deben presentarse:",
+      "opciones": [
+        "Por escrito, con indicación del órgano al que se dirige y la identificación del solicitante.",
+        "Por escrito, con indicación del órgano al que se dirige, la identificación del solicitante y la motivación de la solicitud.",
+        "Por cualquier medio que permita su constancia."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 1 de la Ley 19/2013, el objeto de la Ley es regular la transparencia de la actividad pública, el derecho de acceso a la información pública y:",
+      "opciones": [
+        "El fomento de la participación ciudadana.",
+        "El control de la actividad económica.",
+        "Las obligaciones de buen gobierno."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 6.1.b) de la Ley 19/2013, la información sobre planificación y evaluación incluye los:",
+      "opciones": [
+        "Planes y programas anuales de las Administraciones Públicas.",
+        "Planes y programas anuales y plurianuales, con indicación de los objetivos de gestión y de los resultados de su evaluación.",
+        "Planes y programas anuales y plurianuales, sin indicación de los objetivos de gestión."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 8.1.a) de la Ley 19/2013, la información sobre contratos incluye:",
+      "opciones": [
+        "Todos los contratos, con independencia del procedimiento de adjudicación, y el importe de licitación o adjudicación.",
+        "Todos los contratos, con independencia del procedimiento de adjudicación, y el importe de adjudicación.",
+        "Solo los contratos de obras y servicios."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 8.1.b) de la Ley 19/2013, la información sobre convenios y encomiendas de gestión debe incluir:",
+      "opciones": [
+        "Las partes firmantes, el objeto, la duración, las modificaciones realizadas y los obligados a realizarlas.",
+        "Las partes firmantes, el objeto, la duración, las modificaciones realizadas, los obligados a realizarlas y las obligaciones económicas convenidas.",
+        "Las partes firmantes, el objeto, la duración y el importe."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Según el artículo 2.1 de la Ley 19/2013, las Administraciones que integran el sector público, a los efectos de esta Ley, son:",
+      "opciones": [
+        "La Administración General del Estado, las de las Comunidades Autónomas y las Entidades que integran la Administración Local.",
+        "La Administración General del Estado, las de las Comunidades Autónomas y las Entidades Locales.",
+        "La Administración General del Estado y las de las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 14.2 de la Ley 19/2013, la aplicación de los límites al derecho de acceso debe ser:",
+      "opciones": [
+        "Justificada y proporcional a su objeto y finalidad de protección.",
+        "Justificada, proporcional y necesaria en una sociedad democrática.",
+        "Justificada, proporcional y motivada."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Según el artículo 6.1.d) de la Ley 19/2013, la información estadística incluye:",
+      "opciones": [
+        "Los datos agregados, con el fin de evitar la identificación de los interesados.",
+        "La información estadística necesaria para el cumplimiento de sus funciones.",
+        "La información estadística y de gestión."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 28,
+      "enunciado": "Según el artículo 27 de la Ley 19/2013, la Dirección de Transparencia es el órgano encargado de:",
+      "opciones": [
+        "El control de la aplicación de la Ley, en el ámbito de la Administración General del Estado.",
+        "El control de la aplicación de la Ley, en el ámbito de todas las Administraciones Públicas.",
+        "La promoción de la transparencia y el acceso a la información."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}

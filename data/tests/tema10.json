@@ -1,0 +1,186 @@
+{
+  "id": 10,
+  "titulo": "Tema 10. Ley Orgánica 3/2018 (LOPD-GDD): Principios y Derechos",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 11.2 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPD-GDD), el principio de transparencia del tratamiento de datos exige:",
+      "opciones": [
+        "Que la información a los afectados sea clara y sencilla, especialmente si se trata de menores.",
+        "Que la información a los afectados sea clara y concisa.",
+        "Que la información a los afectados sea concisa, transparente, inteligible y de fácil acceso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 5.1.b) del Reglamento General de Protección de Datos (RGPD), los datos personales serán recogidos con fines determinados, explícitos y legítimos, y no serán tratados ulteriormente de manera incompatible con dichos fines. Este es el principio de:",
+      "opciones": [
+        "Minimización de datos.",
+        "Limitación de la finalidad.",
+        "Integridad y confidencialidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 1 de la Ley Orgánica 3/2018, esta Ley tiene por objeto adaptar el ordenamiento jurídico español al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, y completarlo en relación con:",
+      "opciones": [
+        "El tratamiento de datos por parte de las Administraciones Públicas.",
+        "El tratamiento de datos por parte de las empresas privadas.",
+        "El tratamiento de datos personales y la garantía de los derechos digitales."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 1.2 de la Ley Orgánica 3/2018, el derecho a la protección de datos personales se configura como:",
+      "opciones": [
+        "Un derecho fundamental de la persona, que la ley desarrolla en el marco del artículo 18.4 de la Constitución Española.",
+        "Un derecho fundamental de la persona.",
+        "Un derecho subjetivo, que la ley desarrolla en el marco del artículo 18.4 de la Constitución Española."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 7 de la Ley Orgánica 3/2018, el consentimiento del menor para el tratamiento de sus datos personales es lícito a partir de:",
+      "opciones": [
+        "Catorce años.",
+        "Catorce años, salvo que se trate de servicios de la sociedad de la información, en cuyo caso será a partir de los dieciséis años.",
+        "Dieciséis años."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 13 de la Ley Orgánica 3/2018, el derecho de acceso se ejercerá:",
+      "opciones": [
+        "Mediante petición al responsable del tratamiento.",
+        "Mediante petición al responsable del tratamiento, sin que quepa la negativa.",
+        "Mediante petición al responsable del tratamiento, a través de cualquier medio."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 6 del RGPD, el tratamiento de datos personales solo será lícito si el interesado dio su consentimiento para uno o varios fines específicos, o si es necesario para:",
+      "opciones": [
+        "La ejecución de un contrato o para el cumplimiento de una obligación legal aplicable al responsable del tratamiento.",
+        "El cumplimiento de una obligación legal, con excepción de los datos especialmente protegidos.",
+        "La ejecución de un contrato o para la satisfacción de intereses legítimos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 14 de la Ley Orgánica 3/2018, el derecho de rectificación tiene por objeto que se modifiquen los datos que resulten:",
+      "opciones": [
+        "Incompletos, inexactos o falsos.",
+        "Inexactos o incompletos, atendiendo a los fines del tratamiento.",
+        "Inexactos, incompletos o inadecuados."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 12 de la Ley Orgánica 3/2018, el ejercicio de los derechos ante el responsable del tratamiento será:",
+      "opciones": [
+        "Gratuito, salvo que se trate de solicitudes manifiestamente infundadas o excesivas.",
+        "Gratuito, con excepción de los costes de notificación al interesado.",
+        "Gratuito."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 5.1 de la Ley Orgánica 3/2018, la obligación de confidencialidad de los datos:",
+      "opciones": [
+        "Se aplicará a quienes intervengan en cualquier fase del tratamiento.",
+        "Se aplicará a quienes intervengan en cualquier fase del tratamiento, salvo que se trate de datos de acceso público.",
+        "Solo se aplicará al responsable y al encargado del tratamiento."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 37.7 del Reglamento General de Protección de Datos (RGPD), los datos de contacto del Delegado de Protección de Datos (DPD) deberán ser comunicados a:",
+      "opciones": [
+        "La Autoridad de Control, y notificados al interesado, con carácter previo al tratamiento.",
+        "La Autoridad de Control, y notificados al interesado.",
+        "La Autoridad de Control, y publicados de forma adecuada."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 88.1 de la Ley Orgánica 3/2018, el derecho a la desconexión digital se aplicará a:",
+      "opciones": [
+        "Todos los trabajadores, incluidos los empleados públicos.",
+        "Los trabajadores por cuenta ajena y a los empleados públicos.",
+        "Solo a los trabajadores por cuenta ajena."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 13 de la Ley Orgánica 3/2018, los menores de edad podrán ejercer sus derechos de acceso, rectificación, supresión y portabilidad:",
+      "opciones": [
+        "Por sí mismos, si sus condiciones de madurez lo permiten.",
+        "Por sí mismos, si tienen catorce años cumplidos.",
+        "Por medio de sus representantes legales."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 16 del RGPD, el derecho a la rectificación debe llevarse a cabo:",
+      "opciones": [
+        "En el plazo de un mes desde la solicitud, ampliable a tres meses.",
+        "En el plazo de un mes desde la solicitud, ampliable a dos meses.",
+        "En el plazo de quince días desde la solicitud, ampliable a un mes."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 17.1 del RGPD, el interesado tendrá derecho a obtener sin dilación indebida del responsable del tratamiento la supresión de los datos personales cuando:",
+      "opciones": [
+        "Los datos ya no sean necesarios para los fines para los que fueron recogidos.",
+        "El interesado revoque el consentimiento en que se basa el tratamiento.",
+        "Concurra alguna de las circunstancias tasadas del artículo 17.1."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 5.1.a) del RGPD, el responsable del tratamiento estará obligado a que los datos personales sean tratados de manera:",
+      "opciones": [
+        "Lícita, leal y transparente en relación con el interesado.",
+        "Lícita y transparente en relación con el interesado.",
+        "Lícita y leal en relación con el interesado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 1.1 de la Ley Orgánica 3/2018, la protección de datos personales es:",
+      "opciones": [
+        "Un derecho fundamental de la persona.",
+        "Un derecho subjetivo.",
+        "Un derecho de la personalidad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 14 de la Ley Orgánica 3/2018, el derecho de rectificación tiene por objeto que se modifiquen los datos que resulten:",
+      "opciones": [
+        "Incompletos.",
+        "Inexactos o incompletos, atendiendo a los fines del tratamiento.",
+        "Inexactos, incompletos o inadecuados."
+      ],
+      "respuesta_correcta": 2
+    }
+  ]
+}

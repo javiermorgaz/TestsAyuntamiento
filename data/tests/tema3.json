@@ -1,0 +1,246 @@
+{
+  "id": 3,
+  "titulo": "Tema 3. La Constitución Española (III): Organización Territorial del Estado",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 68.2 de la Constitución Española de 1978, la circunscripción electoral es la:",
+      "opciones": [
+        "Comunidad Autónoma.",
+        "Provincia.",
+        "Comarca."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 156.1 de la Constitución Española de 1978, las Haciendas de las Comunidades Autónomas deben gozar de la autonomía financiera que le es propia, de acuerdo con:",
+      "opciones": [
+        "La Constitución y la Ley Orgánica de Financiación de las Comunidades Autónomas (LOFCA).",
+        "La Constitución.",
+        "El Estatuto de Autonomía de cada Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Conforme al artículo 141.2 de la Constitución Española de 1978, el Gobierno de las Provincias está encomendado a:",
+      "opciones": [
+        "La Diputación Provincial.",
+        "Diputaciones u otras Corporaciones de carácter representativo.",
+        "La Asamblea Provincial."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 155.1 de la Constitución Española de 1978, si una Comunidad Autónoma no cumpliere las obligaciones que la Constitución u otras leyes le impongan, o actuare de forma que atente gravemente al interés general de España, el Gobierno podrá:",
+      "opciones": [
+        "Requerir al Presidente de la Comunidad Autónoma y, en caso de no ser atendido, solicitará la aprobación por mayoría absoluta del Senado para adoptar medidas.",
+        "Requerir al Presidente de la Comunidad Autónoma para que cese en el incumplimiento o en la actuación.",
+        "Solicitar la aprobación por mayoría absoluta del Congreso y del Senado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "De acuerdo con el artículo 153.a) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal Constitucional en lo relativo a:",
+      "opciones": [
+        "La legalidad de sus actos.",
+        "El control económico y presupuestario.",
+        "La constitucionalidad de sus disposiciones normativas con fuerza de ley."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 150.2 de la Constitución Española de 1978, el Estado podrá transferir o delegar a las Comunidades Autónomas, mediante Ley Orgánica, facultades correspondientes a materia de titularidad estatal que por su propia naturaleza sean susceptibles de transferencia o delegación. La ley preverá en cada caso:",
+      "opciones": [
+        "La correspondiente transferencia de medios financieros, así como las formas de control que se reserve el Estado.",
+        "La correspondiente transferencia de medios financieros.",
+        "La correspondiente transferencia de medios financieros y las formas de control que se reserve el Estado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 7,
+      "enunciado": "De acuerdo con el artículo 153.c) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por la Jurisdicción Contencioso-Administrativa en lo relativo a:",
+      "opciones": [
+        "La constitucionalidad de sus disposiciones normativas con fuerza de ley.",
+        "La legalidad de su Administración.",
+        "El control económico y presupuestario."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 68.2 de la Constitución Española de 1978, a cada provincia se le asigna un número mínimo inicial de Diputados:",
+      "opciones": [
+        "Dos.",
+        "Tres.",
+        "Cuatro."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "De acuerdo con el artículo 69.5 de la Constitución Española de 1978, las Comunidades Autónomas designarán, además, un Senador y otro más por cada millón de habitantes de su respectivo territorio. La designación corresponderá:",
+      "opciones": [
+        "Al Gobierno de la Comunidad Autónoma.",
+        "A la Asamblea legislativa de la Comunidad Autónoma.",
+        "Al Presidente de la Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 143.2 de la Constitución Española de 1978, la iniciativa del proceso autonómico en el caso de provincias limítrofes con características históricas, culturales y económicas comunes la adoptará:",
+      "opciones": [
+        "Todas las Diputaciones y las dos terceras partes de los municipios cuya población represente la mayoría del censo electoral de cada provincia.",
+        "Las tres cuartas partes de los municipios cuya población represente la mayoría del censo electoral de cada provincia.",
+        "Todas las Diputaciones y las dos terceras partes de los municipios cuya población represente al menos la mayoría del censo electoral de cada provincia."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 141.1 de la Constitución Española de 1978, la provincia es una entidad local con personalidad jurídica propia, determinada por:",
+      "opciones": [
+        "La agrupación de municipios.",
+        "La agrupación de municipios limítrofes.",
+        "La agrupación de municipios limítrofes y con características comunes."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 147.3 de la Constitución Española de 1978, la reforma de los Estatutos se ajustará a lo establecido en:",
+      "opciones": [
+        "El Estatuto, y requerirá en todo caso la aprobación por las Cortes Generales mediante Ley Orgánica.",
+        "El Estatuto.",
+        "El Estatuto, y requerirá en todo caso la aprobación por las Cortes Generales mediante Ley Ordinaria."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 134.3 de la Constitución Española de 1978, el Gobierno deberá presentar ante el Congreso de los Diputados los Presupuestos Generales del Estado:",
+      "opciones": [
+        "Al menos tres meses antes de la expiración de los del año anterior.",
+        "Al menos dos meses antes de la expiración de los del año anterior.",
+        "Al menos un mes antes de la expiración de los del año anterior."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según la Disposición Adicional Quinta de la Ley Orgánica 2/2012 de Estabilidad Presupuestaria y Sostenibilidad Financiera, la Conferencia de Presidentes se configura como:",
+      "opciones": [
+        "Órgano de colaboración y debate político para asuntos de interés común.",
+        "Órgano de máxima colaboración política entre el Estado y las Comunidades Autónomas, con funciones de coordinación administrativa.",
+        "Órgano de máxima cooperación política entre el Estado y las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 145.2 de la Constitución Española de 1978, la celebración de convenios de colaboración entre Comunidades Autónomas, para la gestión y prestación de servicios propios de las mismas, requerirá la comunicación a:",
+      "opciones": [
+        "Las Cortes Generales.",
+        "Las Cortes Generales, y podrán ser sometidos a la Comisión de las Comunidades Autónomas del Senado.",
+        "El Congreso de los Diputados."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 16,
+      "enunciado": "De acuerdo con el artículo 153.b) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal de Cuentas en lo relativo a:",
+      "opciones": [
+        "La legalidad de su Administración.",
+        "El control económico y presupuestario.",
+        "La constitucionalidad de sus disposiciones normativas con fuerza de ley."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 157.3 de la Constitución Española de 1978, la Ley Orgánica que regule el ejercicio de las competencias financieras de las Comunidades Autónomas se aprobará por:",
+      "opciones": [
+        "Mayoría absoluta del Congreso y mayoría simple del Senado.",
+        "Mayoría absoluta de cada una de las Cámaras.",
+        "Mayoría de tres quintos de ambas Cámaras."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 150.3 de la Constitución Española de 1978, el Estado podrá dictar leyes que establezcan los principios necesarios para armonizar las disposiciones normativas de las Comunidades Autónomas, aun en el caso de materias atribuidas a la competencia de éstas, cuando así lo exija:",
+      "opciones": [
+        "El interés general.",
+        "El interés de la mayoría de las Comunidades Autónomas.",
+        "La urgencia por motivos de estabilidad presupuestaria."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Conforme al artículo 147.2.b) de la Constitución Española de 1978, los Estatutos de Autonomía deberán contener la delimitación del territorio de la Comunidad Autónoma:",
+      "opciones": [
+        "De conformidad con los límites de las provincias existentes.",
+        "De conformidad con los límites de las provincias limítrofes.",
+        "De conformidad con los límites de las provincias."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 137 de la Constitución Española de 1978, el Estado se organiza territorialmente en:",
+      "opciones": [
+        "Municipios, Provincias y Comunidades Autónomas.",
+        "Provincias y Comunidades Autónomas.",
+        "Municipios y Provincias."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 107 de la Constitución Española de 1978, el Consejo de Estado es el supremo órgano consultivo del Gobierno. Su composición y competencia serán reguladas por:",
+      "opciones": [
+        "Ley Ordinaria.",
+        "El Reglamento de Régimen Interno.",
+        "Ley Orgánica."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "De acuerdo con el artículo 153.a) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal Constitucional en lo relativo a:",
+      "opciones": [
+        "La constitucionalidad de sus disposiciones normativas con fuerza de Ley.",
+        "La legalidad de su administración.",
+        "El control económico y presupuestario."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 138.1 de la Constitución Española de 1978, el Estado garantiza la realización efectiva del principio de solidaridad consagrado en el artículo 2, velando por el establecimiento de un equilibrio económico, adecuado y justo entre las diversas partes del territorio español y atendiendo en particular a:",
+      "opciones": [
+        "Las circunstancias de las Islas y las Comunidades Autónomas uniprovinciales.",
+        "Las circunstancias del hecho insular.",
+        "Las circunstancias insulares."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 153 de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal de Cuentas, el Tribunal Constitucional y:",
+      "opciones": [
+        "El Tribunal Supremo.",
+        "El Gobierno, previo acuerdo del Senado.",
+        "La Jurisdicción Contencioso-Administrativa."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "id": 14,
+  "titulo": "Tema 14. Personal al Servicio de Entidades Locales (I): Clases, Derechos y Acceso",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 55.1 del Texto Refundido de la Ley del Estatuto Básico del Empleado Público (EBEP), el principio de mérito y capacidad se aplica a:",
+      "opciones": [
+        "El acceso al empleo público y a la provisión de puestos de trabajo.",
+        "El acceso al empleo público.",
+        "La provisión de puestos de trabajo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 3.1.d) del EBEP, el personal al servicio de las Entidades Locales se rige por:",
+      "opciones": [
+        "La Ley de la Función Pública de la Comunidad Autónoma.",
+        "La Ley de la Función Pública de la Comunidad Autónoma y la legislación básica del Estado.",
+        "La legislación básica del Estado, las leyes de las Comunidades Autónomas y las normas que dicte la Corporación respectiva."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 13.2 del EBEP, el personal directivo profesional será nombrado:",
+      "opciones": [
+        "Por el órgano competente de la Administración Pública, entre funcionarios de carrera.",
+        "Por el órgano competente de la Administración Pública, atendiendo a criterios de competencia profesional y experiencia.",
+        "Por el órgano superior de la Administración Pública."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 11.1 del EBEP, el personal laboral es el que, en virtud de contrato de trabajo formalizado por escrito, presta servicios retribuidos en las Administraciones Públicas. El contrato puede ser:",
+      "opciones": [
+        "Fijo, por tiempo indefinido o temporal.",
+        "Fijo y temporal.",
+        "Fijo y por tiempo indefinido."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 10.1 del EBEP, el personal funcionario interino es el que, por razones expresamente justificadas de necesidad y urgencia, es nombrado como tal para el desempeño de funciones propias de funcionarios de carrera, en los siguientes supuestos, excepto:",
+      "opciones": [
+        "La sustitución transitoria de los titulares.",
+        "La ejecución de programas de carácter temporal.",
+        "La cobertura temporal de un puesto de trabajo hasta su provisión definitiva."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 13.1 del EBEP, el personal directivo profesional es el que desarrolla funciones de dirección profesional en las Administraciones Públicas. Su régimen jurídico es el que:",
+      "opciones": [
+        "Determine la legislación de la Función Pública de cada Administración.",
+        "Determine la legislación de la Función Pública de cada Administración, con sujeción a la Ley.",
+        "Determine la Ley Orgánica de la Función Pública."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 56.1 del EBEP, para acceder al empleo público, se requiere:",
+      "opciones": [
+        "Tener la nacionalidad española, sin perjuicio de lo dispuesto en el artículo 57.",
+        "Tener la nacionalidad española o la de un Estado miembro de la Unión Europea.",
+        "Tener la nacionalidad española, salvo en los casos que prevea la Ley de la Función Pública."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 8.1 del EBEP, son empleados públicos:",
+      "opciones": [
+        "Los funcionarios de carrera.",
+        "El personal laboral, fijo, por tiempo indefinido y temporal.",
+        "Los funcionarios de carrera, los funcionarios interinos, el personal laboral y el personal eventual."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 9.1 del EBEP, el personal funcionario de carrera es el que, en virtud de nombramiento legal, está vinculado a una Administración Pública por una relación estatutaria regulada por el Derecho Administrativo para el desempeño de:",
+      "opciones": [
+        "Funciones de asesoramiento y apoyo.",
+        "Servicios profesionales retribuidos de carácter permanente.",
+        "Funciones directivas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 10.1 del EBEP, el personal funcionario interino es nombrado para el ejercicio de funciones:",
+      "opciones": [
+        "No reservadas a funcionarios de carrera.",
+        "Reservadas a personal laboral.",
+        "Propias de funcionarios de carrera."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 70.1 del EBEP, la Oferta de Empleo Público (OEP) se aprobará anualmente por:",
+      "opciones": [
+        "El órgano de Gobierno de las Administraciones Públicas.",
+        "El órgano administrativo competente, previa negociación colectiva.",
+        "El Consejo de Gobierno de la Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 12.1 del EBEP, el personal eventual es el que, en virtud de nombramiento, y con carácter no permanente, realiza:",
+      "opciones": [
+        "Funciones directivas.",
+        "Funciones de apoyo y asesoramiento.",
+        "Funciones expresamente calificadas como de confianza o asesoramiento especial."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 52.1 del EBEP, los principios de actuación de los empleados públicos son, entre otros:",
+      "opciones": [
+        "Objetividad y profesionalidad.",
+        "Objetividad, integridad y austeridad.",
+        "Objetividad e imparcialidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 14 del EBEP, el empleado público tiene derecho a la igualdad de trato y oportunidades:",
+      "opciones": [
+        "Sin discriminación por razón de nacimiento, origen racial o étnico, género, orientación sexual, religión o discapacidad.",
+        "Sin discriminación por razón de nacimiento, origen racial o étnico, género, orientación sexual, religión, discapacidad o cualquier otra condición o circunstancia personal o social.",
+        "Sin discriminación por razón de nacimiento, origen racial o étnico, género, orientación sexual, religión, discapacidad o cualquier otra condición o circunstancia personal o social, y a la prevención del acoso sexual y por razón de sexo."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 15 del EBEP, la movilidad del personal entre las Administraciones Públicas:",
+      "opciones": [
+        "Podrá realizarse por los medios y procedimientos que se determinen reglamentariamente.",
+        "Podrá realizarse por los medios y procedimientos que se determinen por Ley.",
+        "Podrá realizarse por los medios y procedimientos que se determinen por acuerdo de las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 61.7 del EBEP, la selección del personal laboral fijo se realizará:",
+      "opciones": [
+        "Mediante convocatoria pública, a través de concurso de méritos.",
+        "Mediante convocatoria pública, a través de concurso-oposición.",
+        "Mediante convocatoria pública, y su régimen de selección será el previsto en el artículo 61.1, 61.2 y 61.3."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 70.1 del EBEP, la Oferta de Empleo Público se aprobará anualmente por:",
+      "opciones": [
+        "El Gobierno de la Nación o el órgano de gobierno de las Comunidades Autónomas y Entidades Locales.",
+        "El Gobierno de la Nación, previa consulta con las Comunidades Autónomas y Entidades Locales.",
+        "El Consejo de Ministros."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 3.1.d) de la Ley 6/1985, de 28 de noviembre, de Ordenación de la Función Pública de la Junta de Andalucía, el personal al servicio de las Entidades Locales se rige por:",
+      "opciones": [
+        "La Ley de la Función Pública de la Comunidad Autónoma y la legislación básica del Estado.",
+        "La legislación básica del Estado, las leyes de la Comunidad Autónoma y las normas que dicten las Corporaciones respectivas.",
+        "La legislación básica del Estado, con sujeción a la Ley de la Función Pública de la Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 92.1 de la LBRL, el personal al servicio de las Entidades Locales se rige por:",
+      "opciones": [
+        "La legislación básica del Estado y, en su desarrollo, por la de la Comunidad Autónoma y por las Entidades Locales.",
+        "La Ley de la Función Pública de la Comunidad Autónoma.",
+        "La legislación básica del Estado y las normas que dicte la Corporación respectiva."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 54.12 del EBEP, el empleado público tiene el deber de:",
+      "opciones": [
+        "Guardar secreto de la información conocida por razón de su cargo.",
+        "Guardar el debido sigilo respecto a los asuntos que conozca por razón de su cargo, con independencia de su calificación.",
+        "Guardar el debido sigilo respecto a los asuntos que conozca por razón de su cargo, y no divulgar información."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 56.1.a) del EBEP, la pérdida de la nacionalidad española:",
+      "opciones": [
+        "No es causa de exclusión.",
+        "Es causa de exclusión, salvo que se recupere en el plazo de un año.",
+        "Es causa de exclusión, sin que quepa excepción."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 61.1 del EBEP, los sistemas selectivos de funcionarios de carrera serán:",
+      "opciones": [
+        "Oposición y concurso-oposición.",
+        "Oposición, concurso-oposición y concurso.",
+        "Oposición y concurso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 97.1 de la LBRL, las Leyes de Función Pública de las Comunidades Autónomas regularán:",
+      "opciones": [
+        "El acceso a la Función Pública local.",
+        "El acceso a la Función Pública local y el régimen de selección.",
+        "El régimen de selección, la provisión de puestos de trabajo y las situaciones administrativas de los funcionarios locales."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 59.1 del EBEP, la reserva de plazas para personas con discapacidad en las ofertas de empleo público será de, al menos, el:",
+      "opciones": [
+        "Cinco por ciento de las plazas ofertadas.",
+        "Siete por ciento de las plazas ofertadas, siempre que superen los procesos selectivos y acrediten su discapacidad.",
+        "Diez por ciento de las plazas ofertadas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Según el artículo 9.1 del EBEP, el personal funcionario de carrera es el que, en virtud de nombramiento legal, está vinculado a una Administración Pública por:",
+      "opciones": [
+        "Una relación laboral regulada por el Derecho Laboral.",
+        "Una relación estatutaria regulada por el Derecho Administrativo.",
+        "Una relación estatutaria regulada por el Derecho Administrativo, para el desempeño de servicios profesionales retribuidos de carácter permanente."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 10.1.c) del EBEP, el personal funcionario interino es nombrado para:",
+      "opciones": [
+        "La ejecución de programas de carácter temporal.",
+        "La cobertura transitoria de un puesto de trabajo hasta su provisión definitiva.",
+        "La sustitución transitoria de los titulares."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Según el artículo 12.1 del EBEP, el personal eventual es nombrado y separado:",
+      "opciones": [
+        "Libremente por el órgano competente, y cesará automáticamente cuando cese la autoridad que lo nombró.",
+        "Libremente por el órgano competente, y cesará automáticamente cuando cese la autoridad que lo nombró, sin que quepa indemnización alguna.",
+        "Libremente por el órgano competente, sin que cese automáticamente."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 28,
+      "enunciado": "Según el artículo 12.2 del EBEP, en ningún caso el personal eventual puede ejercer:",
+      "opciones": [
+        "Funciones propias de los funcionarios de carrera.",
+        "Funciones directivas.",
+        "Funciones de asesoramiento, salvo que lo autorice la Ley de Presupuestos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 29,
+      "enunciado": "Según el artículo 54.12 del EBEP, el empleado público tiene el deber de guardar:",
+      "opciones": [
+        "Secreto de la información conocida por razón de su cargo.",
+        "Reserva sobre los asuntos que conozca por razón de su cargo.",
+        "Debido sigilo respecto a los asuntos que conozca por razón de su cargo, con independencia de su calificación."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 30,
+      "enunciado": "Según el artículo 53.1 del EBEP, el código de conducta de los empleados públicos se regula por:",
+      "opciones": [
+        "El Título V del EBEP.",
+        "El Capítulo II del Título III del EBEP, y se basa en los principios éticos.",
+        "La Ley de la Función Pública."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 31,
+      "enunciado": "Según el artículo 100.1 de la LBRL, la provisión de puestos de trabajo de los funcionarios con habilitación de carácter nacional se realiza por:",
+      "opciones": [
+        "Concurso, salvo en los casos en que se prevea la libre designación.",
+        "Concurso y libre designación.",
+        "Concurso, sin que quepa la libre designación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 32,
+      "enunciado": "Según el artículo 13.1 del EBEP, el personal directivo profesional se rige por:",
+      "opciones": [
+        "El Derecho Laboral.",
+        "El Derecho Laboral y el Administrativo, y su nombramiento atiende a criterios de competencia profesional y experiencia.",
+        "El Derecho Administrativo."
+      ],
+      "respuesta_correcta": 2
+    }
+  ]
+}

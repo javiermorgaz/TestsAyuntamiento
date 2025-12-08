@@ -1,0 +1,256 @@
+{
+  "id": 17,
+  "titulo": "Tema 17. El Presupuesto Municipal",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "La estructura del Presupuesto General de la Entidad Local está integrada por:",
+      "opciones": [
+        "El Presupuesto de la propia Entidad y los de sus organismos autónomos.",
+        "El Presupuesto de la propia Entidad y el de sus sociedades mercantiles.",
+        "El Presupuesto de la Entidad Local, el de sus Organismos Autónomos y los de las Sociedades Mercantiles estatales."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "El Presupuesto General de la Entidad Local se formará anualmente y deberá comprender:",
+      "opciones": [
+        "Todos los gastos e ingresos de la entidad y los de los organismos autónomos dependientes.",
+        "Solamente los gastos e ingresos de la propia Entidad.",
+        "Los gastos e ingresos de las sociedades mercantiles con participación mayoritaria."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "El Presupuesto de la Entidad Local deberá ser liquidado el día:",
+      "opciones": [
+        "31 de diciembre del ejercicio económico.",
+        "1 de enero del ejercicio siguiente.",
+        "30 de noviembre del ejercicio económico."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 4,
+      "enunciado": "¿Qué principio presupuestario obliga a que los gastos se apliquen a los fines para los que se autorizaron?",
+      "opciones": [
+        "Principio de especialidad cualitativa.",
+        "Principio de especialidad cuantitativa.",
+        "Principio de no afectación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Corresponde al **Presidente de la Entidad Local** la formación del Presupuesto General y su presentación al Pleno:",
+      "opciones": [
+        "Antes del 15 de octubre.",
+        "Antes del 31 de diciembre.",
+        "Antes del 1 de octubre."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 6,
+      "enunciado": "El Pleno de la Entidad Local debe aprobar el Presupuesto General inicial antes del día:",
+      "opciones": [
+        "31 de diciembre.",
+        "1 de enero.",
+        "15 de noviembre."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Si el Presupuesto no se aprueba antes del primer día del ejercicio económico, ¿qué Presupuesto se considera automáticamente prorrogado?",
+      "opciones": [
+        "El del ejercicio anterior.",
+        "El Presupuesto inicial presentado por el Presidente.",
+        "El Presupuesto de las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 8,
+      "enunciado": "La prórroga del Presupuesto se aplicará:",
+      "opciones": [
+        "Hasta la aprobación definitiva del nuevo.",
+        "Durante el primer trimestre del ejercicio únicamente.",
+        "Hasta el 30 de junio del ejercicio."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Una vez aprobado inicialmente, el Presupuesto se expondrá al público por un plazo de:",
+      "opciones": [
+        "Quince días hábiles.",
+        "Treinta días naturales.",
+        "Quince días naturales."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Las modificaciones del Presupuesto se realizan a través de:",
+      "opciones": [
+        "Créditos extraordinarios, suplementos de crédito y transferencias de crédito.",
+        "Exclusivamente créditos extraordinarios.",
+        "Ajustes de gastos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 11,
+      "enunciado": "El **crédito extraordinario** se tramita cuando el gasto es:",
+      "opciones": [
+        "Necesario y no existe crédito adecuado en el Presupuesto.",
+        "Superior a la dotación existente en la partida.",
+        "Un gasto no inventariado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "El **suplemento de crédito** se tramita cuando el gasto es:",
+      "opciones": [
+        "Necesario y el crédito consignado en la partida es insuficiente.",
+        "Imprevisto y excede la dotación inicial.",
+        "Para realizar nuevas inversiones."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 13,
+      "enunciado": "La aprobación de los créditos extraordinarios y suplementos de crédito corresponde al:",
+      "opciones": [
+        "Pleno de la Corporación.",
+        "Presidente de la Entidad Local.",
+        "Consejo de Gobierno."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 14,
+      "enunciado": "La **transferencia de crédito** consiste en el trasvase de consignaciones entre:",
+      "opciones": [
+        "Créditos de distinta área de gasto o programas.",
+        "Créditos para operaciones financieras.",
+        "Créditos para gastos de personal."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 15,
+      "enunciado": "La **generación de créditos** tiene lugar cuando:",
+      "opciones": [
+        "Se realizan ingresos no previstos en el Presupuesto inicial.",
+        "Se autorizan nuevos gastos por encima de los límites.",
+        "Se compensan deudas de ejercicios anteriores."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Los **remanentes de crédito** del Presupuesto anterior:",
+      "opciones": [
+        "Se anulan, salvo los relativos a créditos por operaciones de capital y a créditos extraordinarios y suplementos de crédito.",
+        "Se prorrogan automáticamente.",
+        "Se acumulan a los nuevos créditos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 17,
+      "enunciado": "El ciclo de la ejecución del gasto (fases del gasto) es:",
+      "opciones": [
+        "Autorización, Disposición o Compromiso, Obligación, y Pago.",
+        "Aprobación, Compromiso, Reconocimiento de la Obligación, y Ordenación del Pago.",
+        "Autorización, Ordenación del Pago, Obligación, y Disposición."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 18,
+      "enunciado": "La fase de ejecución del gasto que es el acto por el que se acuerda su realización, determinando su cuantía de forma cierta o por el procedimiento legalmente establecido, es:",
+      "opciones": [
+        "Disposición o Compromiso.",
+        "Autorización.",
+        "Obligación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 19,
+      "enunciado": "La fase de ejecución del gasto que es el acto por el que la Entidad Local se vincula jurídicamente con un tercero para la realización de un gasto, es:",
+      "opciones": [
+        "Disposición o Compromiso.",
+        "Autorización.",
+        "Obligación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 20,
+      "enunciado": "La **Ordenación del Pago** es la operación que se realiza después de:",
+      "opciones": [
+        "El reconocimiento de la obligación.",
+        "La autorización del gasto.",
+        "El compromiso del gasto."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "El órgano competente para la aprobación de la **Cuenta General** de la Entidad Local es:",
+      "opciones": [
+        "El Pleno de la Corporación.",
+        "El Tribunal de Cuentas.",
+        "El Presidente de la Entidad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 22,
+      "enunciado": "El órgano encargado de la **fiscalización y el control externo** de las cuentas de las Entidades Locales es:",
+      "opciones": [
+        "El Tribunal de Cuentas y, en su caso, los órganos de control externo de las Comunidades Autónomas.",
+        "Exclusivamente el Tribunal de Cuentas.",
+        "El Interventor de la propia Entidad Local."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el TRLRHL, la Hacienda de las Entidades Locales estará constituida por:",
+      "opciones": [
+        "Los ingresos procedentes de su patrimonio, los impuestos, tasas y contribuciones especiales, y las transferencias.",
+        "Exclusivamente los impuestos propios.",
+        "Los ingresos procedentes de su patrimonio y las subvenciones."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 24,
+      "enunciado": "El Presupuesto de la Entidad Local deberá estar **equilibrado** desde un punto de vista:",
+      "opciones": [
+        "Política y financieramente.",
+        "Únicamente financiero.",
+        "Exclusivamente político."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 25,
+      "enunciado": "La liquidación del Presupuesto deberá formalizarse por el Presidente de la Corporación antes del día:",
+      "opciones": [
+        "1 de marzo del ejercicio siguiente.",
+        "31 de diciembre del ejercicio.",
+        "30 de junio del ejercicio siguiente."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}

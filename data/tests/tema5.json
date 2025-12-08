@@ -1,0 +1,146 @@
+{
+  "id": 5,
+  "titulo": "Tema 5. La Unión Europea: Instituciones y Libre Circulación",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 17.7 del Tratado de la Unión Europea (TUE), el candidato a Presidente de la Comisión Europea es propuesto por:",
+      "opciones": [
+        "El Consejo Europeo, por mayoría cualificada, teniendo en cuenta las elecciones al Parlamento Europeo.",
+        "El Consejo Europeo, por mayoría simple, teniendo en cuenta las elecciones al Parlamento Europeo.",
+        "El Parlamento Europeo, por mayoría simple."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 19.1 del Tratado de la Unión Europea (TUE), el Tribunal de Justicia de la Unión Europea garantiza:",
+      "opciones": [
+        "El respeto del Derecho en la interpretación y aplicación de los Tratados.",
+        "El respeto del Derecho en la interpretación de los Tratados.",
+        "El respeto del Derecho en la aplicación de los Tratados."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 63 del Tratado de Funcionamiento de la Unión Europea (TFUE), se prohíben todas las restricciones a los movimientos de capitales entre:",
+      "opciones": [
+        "Estados miembros.",
+        "Estados miembros y terceros países.",
+        "Solo terceros países."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "De acuerdo con el artículo 16.2 del Tratado de la Unión Europea (TUE), el Consejo estará compuesto por:",
+      "opciones": [
+        "Un representante de cada Estado miembro de rango ministerial, facultado para comprometer a su Gobierno.",
+        "Los Jefes de Estado o de Gobierno de los Estados miembros.",
+        "Un representante de cada Estado miembro de rango ministerial, facultado para comprometer a su Gobierno y ejercer el derecho de voto."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 14.2 del Tratado de la Unión Europea (TUE), el Parlamento Europeo estará compuesto por:",
+      "opciones": [
+        "Representantes de los Estados miembros.",
+        "Representantes de los ciudadanos de los Estados miembros.",
+        "Representantes de los ciudadanos de la Unión."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 14.1 del Tratado de la Unión Europea (TUE), el Parlamento Europeo ejercerá conjuntamente con el Consejo las funciones:",
+      "opciones": [
+        "Legislativa y presupuestaria.",
+        "Legislativa y de control.",
+        "Presupuestaria y de control."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 1 del Tratado de la Unión Europea (TUE), los Tratados constitutivos de la Unión son:",
+      "opciones": [
+        "El Tratado de la Unión Europea.",
+        "El Tratado de la Unión Europea y el Tratado de Funcionamiento de la Unión Europea.",
+        "El Tratado de la Unión Europea, el Tratado de Funcionamiento de la Unión Europea y la Carta de los Derechos Fundamentales de la Unión Europea."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 286.2 del Tratado de Funcionamiento de la Unión Europea (TFUE), el Consejo, previa consulta al Parlamento Europeo, propondrá a:",
+      "opciones": [
+        "Los Jefes de Estado o de Gobierno de los Estados miembros, para la elección de los miembros del Tribunal de Cuentas.",
+        "La Comisión Europea, para la elección de los miembros del Tribunal de Cuentas.",
+        "Los candidatos para miembros del Tribunal de Cuentas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 15.2 del Tratado de la Unión Europea (TUE), el Consejo Europeo estará compuesto por:",
+      "opciones": [
+        "Los Jefes de Estado o de Gobierno de los Estados miembros, así como por su Presidente y el Presidente de la Comisión.",
+        "Los Jefes de Estado o de Gobierno de los Estados miembros.",
+        "Los Jefes de Estado o de Gobierno de los Estados miembros, así como por su Presidente y el Presidente de la Comisión, con voz y sin voto."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 16.1 del Tratado de la Unión Europea (TUE), el Consejo de la Unión Europea ejercerá conjuntamente con el Parlamento Europeo las funciones:",
+      "opciones": [
+        "Presupuestaria y de control político.",
+        "Legislativa y presupuestaria.",
+        "Legislativa y ejecutiva."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 17.2 del Tratado de la Unión Europea (TUE), la iniciativa legislativa de la Unión corresponde:",
+      "opciones": [
+        "Al Consejo Europeo.",
+        "Al Consejo.",
+        "A la Comisión."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 28 del Tratado de Funcionamiento de la Unión Europea (TFUE), la Unión aduanera abarcará:",
+      "opciones": [
+        "La prohibición entre los Estados miembros de los derechos de aduana de importación y exportación y de todas las exacciones de efecto equivalente, así como la adopción de un arancel aduanero común en sus relaciones con terceros países.",
+        "La prohibición entre los Estados miembros de los derechos de aduana de importación y de todas las exacciones de efecto equivalente.",
+        "La prohibición entre los Estados miembros de los derechos de aduana de importación y exportación y de todas las exacciones de efecto equivalente."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 2 del Tratado de la Unión Europea (TUE), la Unión se fundamenta en los valores de:",
+      "opciones": [
+        "Respeto de la dignidad humana, libertad, democracia, igualdad y Estado de Derecho.",
+        "Respeto de la dignidad humana, libertad, democracia, igualdad, Estado de Derecho y respeto de los derechos humanos.",
+        "Libertad, democracia, igualdad, Estado de Derecho y respeto de los derechos humanos."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 17.3 del Tratado de la Unión Europea (TUE), la Comisión Europea estará formada por:",
+      "opciones": [
+        "Un número de miembros que será igual a dos tercios del número de Estados miembros.",
+        "Un número de miembros que será igual al número de Estados miembros, incluido el Presidente.",
+        "Un número de miembros que será igual al número de Estados miembros."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

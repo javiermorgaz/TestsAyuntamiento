@@ -1,0 +1,426 @@
+{
+  "id": 1,
+  "titulo": "Tema 1. La Constitución Española (I): Derechos y Deberes Fundamentales, TC y Reforma",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 54 de la Constitución Española de 1978, el Defensor del Pueblo dará cuenta de su labor:",
+      "opciones": [
+        "A las Cortes Generales.",
+        "Al Presidente del Gobierno.",
+        "A los jueces y magistrados."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Atendiendo al artículo 168.1 de la Constitución Española de 1978, cuando se propusiere la revisión total de la Constitución, se procederá a la aprobación del principio:",
+      "opciones": [
+        "Por mayoría de dos tercios de ambas Cámaras reunidas en sesión conjunta.",
+        "Por mayoría de dos tercios de cada Cámara.",
+        "Por mayoría absoluta."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Conforme a lo dispuesto en el artículo 166 de la Constitución Española de 1978, la iniciativa de reforma constitucional se ejercerá en los términos previstos en los apartados:",
+      "opciones": [
+        "1 y 2 del artículo 86.",
+        "1 y 2 del artículo 87.",
+        "1 y 2 del artículo 89."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "En el artículo 20 de la Constitución Española de 1978 se reconoce y protege el derecho:",
+      "opciones": [
+        "Al secreto de las comunicaciones.",
+        "A la libertad de cátedra.",
+        "A la libertad y seguridad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según los artículos 34.2 y 22.4 de la Constitución Española de 1978, las asociaciones que persigan fines o utilicen medios tipificados como delito:",
+      "opciones": [
+        "Se consideran fundaciones para fines de interés general de carácter paramilitar.",
+        "Serán consideradas fundaciones para fines de interés general de carácter paramilitar.",
+        "Son ilegales."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según lo dispuesto en el artículo 167.1 de la Constitución Española de 1978, en los casos de reforma que no afecten al Título Preliminar, al Capítulo Segundo, Sección Primera del Título I, o al Título II, los proyectos de reforma deberán ser aprobados por una mayoría de:",
+      "opciones": [
+        "Tres quintos de cada una de las Cámaras.",
+        "Dos tercios de cada una de las Cámaras.",
+        "Mayoría absoluta del Senado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según la Constitución Española de 1978, tras la aprobación de la reforma constitucional por las Cortes Generales, si ésta es solicitada por una décima parte de los miembros de cualquiera de las Cámaras:",
+      "opciones": [
+        "Se someterá siempre a referéndum para su ratificación.",
+        "Se someterá a referéndum para su ratificación únicamente en los supuestos del artículo 168.1.",
+        "Se someterá a referéndum para su ratificación."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 159 de la Constitución Española de 1978, los miembros del Tribunal Constitucional serán nombrados:",
+      "opciones": [
+        "Solo entre Magistrados y Fiscales.",
+        "Solo entre Jueces, Fiscales, Letrados, Notarios y Profesores de Universidad.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Conforme al tenor literal del artículo 162.1,a) de la Constitución Española de 1978, están legitimados para interponer el recurso de inconstitucionalidad:",
+      "opciones": [
+        "Cincuenta Diputados, cincuenta Senadores, el Defensor del Pueblo y el Consejo de Estado.",
+        "El Defensor del Pueblo, cincuenta Diputados, el Presidente del Gobierno y los Parlamentos de las Comunidades Autónomas.",
+        "El Presidente del Gobierno, el Congreso de los Diputados, el Senado, el Defensor del Pueblo y los Parlamentos de las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 164 de la Constitución Española de 1978, las sentencias del Tribunal Constitucional:",
+      "opciones": [
+        "Tienen el valor de cosa juzgada desde el día siguiente de su publicación en el Boletín Oficial del Estado.",
+        "Tienen el valor de cosa juzgada desde la fecha en que se dictan.",
+        "Tienen el valor de cosa juzgada desde su publicación en el Boletín Oficial del Estado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según la Constitución Española de 1978: a) Contra las sentencias del Tribunal Constitucional no cabrá recurso alguno.",
+      "opciones": [
+        "Sólo cabe recurso ante el Tribunal de Derechos Humanos.",
+        "Sí cabe recurso de amparo ante el Tribunal Constitucional.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 12,
+      "enunciado": "En la Constitución Española de 1978, entre los derechos fundamentales y las libertades públicas recogidos en el Capítulo Segundo del Título I se incluye:",
+      "opciones": [
+        "El derecho de acceso a la vivienda.",
+        "El derecho de asociación.",
+        "El derecho a la protección de la salud."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 21 de la Constitución Española de 1978, solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de:",
+      "opciones": [
+        "Comunicación previa a la autoridad, pero no requerirán autorización previa.",
+        "Autorización previa por la autoridad, y podrán prohibirse cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
+        "Autorización previa por la autoridad, sin que quepa prohibirlas en ningún caso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 8 de la Constitución Española de 1978, la ley orgánica que regule las bases de la organización militar se aprobará por mayoría:",
+      "opciones": [
+        "Absoluta del Congreso de los Diputados y del Senado.",
+        "Absoluta del Congreso de los Diputados.",
+        "De dos tercios del Congreso de los Diputados y del Senado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 15,
+      "enunciado": "De conformidad con el artículo 29 de la Constitución Española de 1978, el ejercicio del derecho de petición de los miembros de las Fuerzas o Institutos Armados se regulará:",
+      "opciones": [
+        "Por la Ley Orgánica de la Defensa Nacional.",
+        "Por su legislación específica.",
+        "Por el Código Penal Militar."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 16,
+      "enunciado": "De acuerdo con el artículo 159.3 de la Constitución Española de 1978, la independencia de los miembros del Tribunal Constitucional es:",
+      "opciones": [
+        "Absoluta.",
+        "Inamovible.",
+        "Incompatible con todo mandato representativo."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 13.3 de la Constitución Española de 1978, la extradición solo se concederá en cumplimiento de un Tratado o de la Ley, atendiendo al principio de:",
+      "opciones": [
+        "Solidaridad.",
+        "Inviolabilidad.",
+        "Reciprocidad."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 18,
+      "enunciado": "¿En qué artículo de la Constitución Española de 1978 se reconoce el derecho a la propiedad privada y a la herencia?",
+      "opciones": [
+        "Artículo 17.",
+        "Artículo 33.",
+        "Artículo 34."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 19,
+      "enunciado": "¿Cuál de estos derechos no es fundamental, pero sí está reconocido en la Constitución Española de 1978?",
+      "opciones": [
+        "Derecho a la libertad de cátedra.",
+        "Derecho de fundación.",
+        "Derecho a contraer matrimonio."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según lo dispuesto en el artículo 167.3 de la Constitución Española de 1978, si se aprueba la reforma constitucional por las Cortes Generales, pero la solicitan una décima parte de los miembros de cualquiera de las Cámaras, se someterá a referéndum para su ratificación:",
+      "opciones": [
+        "En el plazo de quince días desde su aprobación.",
+        "En el plazo de un mes desde su aprobación.",
+        "En el plazo de tres meses desde su aprobación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 162.1, a) de la Constitución Española de 1978, están legitimados para interponer el recurso de inconstitucionalidad:",
+      "opciones": [
+        "Cincuenta Senadores.",
+        "La Asamblea de las Comunidades Autónomas.",
+        "Cincuenta Diputados."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Conforme a lo dispuesto en la Constitución Española de 1978, el Presidente del Tribunal Constitucional:",
+      "opciones": [
+        "Es nombrado por el Rey, a propuesta del Pleno del Tribunal Constitucional.",
+        "Es nombrado por el Rey, a propuesta del Gobierno.",
+        "Es elegido por el Pleno del Tribunal Constitucional y nombrado por el Rey."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Conforme a lo dispuesto en el artículo 16.2 de la Constitución Española de 1978:",
+      "opciones": [
+        "Nadie podrá ser obligado a declarar sobre su ideología, religión o creencias.",
+        "Nadie podrá ser obligado a declarar sobre su ideología o religión.",
+        "Nadie podrá ser obligado a declarar sobre su ideología."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 164 de la Constitución Española de 1978, la declaración de inconstitucionalidad de una norma jurídica con rango de ley:",
+      "opciones": [
+        "No permite que la ley sea nula de pleno derecho.",
+        "Declara la nulidad de la ley, sin más matices.",
+        "Declara la nulidad de los preceptos impugnados, así como la de aquellos otros de la misma a los que debiera extenderse por conexión o consecuencia."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Conforme a lo dispuesto en el artículo 168.1 de la Constitución Española de 1978, cuando se propusiere la revisión total de la Constitución o una parcial que afecte al Título Preliminar, al Capítulo Segundo, Sección Primera del Título I, o al Título II, se procederá a la aprobación del principio por:",
+      "opciones": [
+        "Mayoría de tres quintos de cada Cámara.",
+        "Mayoría de dos tercios de cada Cámara.",
+        "Mayoría absoluta del Congreso y de dos tercios del Senado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 1.2 de la Constitución Española de 1978, la soberanía nacional reside:",
+      "opciones": [
+        "En la Corona.",
+        "En el pueblo español, del que emanan los poderes del Estado.",
+        "En las Cortes Generales, que representan al pueblo español."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Se puede recabar la tutela a través de un recurso de amparo ante el Tribunal Constitucional, por la violación del derecho a:",
+      "opciones": [
+        "La objeción de conciencia.",
+        "La libertad de empresa.",
+        "La protección de la salud."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 28,
+      "enunciado": "El Tribunal Constitucional se compone de:",
+      "opciones": [
+        "15 miembros.",
+        "16 miembros.",
+        "12 miembros."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 29,
+      "enunciado": "Según el artículo 54 de la Constitución Española de 1978, el Defensor del Pueblo:",
+      "opciones": [
+        "Está nombrado por el Congreso de los Diputados y el Senado.",
+        "Está elegido por las Cortes Generales para defender los derechos comprendidos en el Título I de la Constitución.",
+        "Está nombrado por el Rey para defender los derechos comprendidos en el Título I de la Constitución."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 30,
+      "enunciado": "Según el artículo 29.2 de la Constitución Española de 1978, los miembros de las Fuerzas o Institutos Armados podrán ejercer su derecho de petición:",
+      "opciones": [
+        "Individualmente y con sujeción a lo dispuesto en su legislación específica.",
+        "Individual y colectivamente, y con sujeción a lo dispuesto en su legislación específica.",
+        "Individualmente y por escrito."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 31,
+      "enunciado": "Según el artículo 21.2 de la Constitución Española de 1978, en los casos de reuniones en lugares de tránsito público y manifestaciones, la autoridad podrá prohibirlas:",
+      "opciones": [
+        "Siempre que lo considere oportuno, previa autorización judicial.",
+        "Solo cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
+        "Cuando el número de asistentes sea superior a 50."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 32,
+      "enunciado": "Conforme al artículo 7 de la Constitución Española de 1978, la estructura interna y el funcionamiento de los partidos políticos, sindicatos de trabajadores y asociaciones empresariales deben ser:",
+      "opciones": [
+        "Organizados.",
+        "Democráticos.",
+        "Estructurados."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 33,
+      "enunciado": "Según el artículo 167.3 de la Constitución Española de 1978, la reforma constitucional aprobada por las Cortes Generales se someterá a referéndum para su ratificación si así lo solicitan:",
+      "opciones": [
+        "Dos grupos parlamentarios.",
+        "Una décima parte de los miembros de cualquiera de las Cámaras.",
+        "Un tercio de los miembros del Congreso de los Diputados."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 34,
+      "enunciado": "Según el artículo 20.1 c) de la Constitución Española de 1978, se reconoce y protege:",
+      "opciones": [
+        "El derecho a comunicar o recibir libremente información veraz por cualquier medio de difusión.",
+        "El derecho a la producción y creación literaria, artística, científica y técnica.",
+        "El derecho a la libertad de expresión."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 35,
+      "enunciado": "Según el artículo 160 de la Constitución Española de 1978, el Presidente del Tribunal Constitucional es nombrado por:",
+      "opciones": [
+        "El Rey, a propuesta del Pleno del Tribunal Constitucional.",
+        "El Pleno del Tribunal Constitucional, y nombrado por el Rey.",
+        "El Rey, a propuesta de la mayoría absoluta de los miembros del Tribunal Constitucional."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 36,
+      "enunciado": "En la Constitución Española de 1978 no se incluyen entre los derechos fundamentales y las libertades públicas:",
+      "opciones": [
+        "El derecho a la producción y creación literaria, artística, científica y técnica.",
+        "El derecho a la propiedad privada y a la herencia.",
+        "El derecho a la libertad de enseñanza."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 37,
+      "enunciado": "Según la Constitución Española de 1978, no será susceptible de recurso de amparo ante el Tribunal Constitucional los derechos a:",
+      "opciones": [
+        "La libertad de creación de centros docentes.",
+        "La libertad de cátedra.",
+        "La libertad de empresa en el marco de la economía de mercado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 38,
+      "enunciado": "Según el artículo 21 de la Constitución Española de 1978, solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de:",
+      "opciones": [
+        "Comunicación previa a la autoridad, pero no requerirán autorización previa.",
+        "Autorización previa por la autoridad, y podrán prohibirse cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
+        "Autorización previa por la autoridad, sin que quepa prohibirlas en ningún caso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 39,
+      "enunciado": "Los derechos reconocidos en el Título I de la Constitución que no pueden suspenderse ni en estado de excepción ni de sitio son:",
+      "opciones": [
+        "Derecho al honor, intimidad y propia imagen.",
+        "Derecho a la inviolabilidad del domicilio.",
+        "Derecho a expresar y difundir libremente el pensamiento."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 40,
+      "enunciado": "Según el artículo 8 de la Constitución Española de 1978, las Fuerzas Armadas están constituidas por:",
+      "opciones": [
+        "El Ejército de Tierra, la Armada y el Ejército del Aire, y cumplen sus misiones de acuerdo con la Ley Orgánica de la Defensa Nacional.",
+        "El Ejército de Tierra, la Armada y el Ejército del Aire.",
+        "El Ejército de Tierra, la Armada y el Ejército del Aire, y el Mando Superior corresponde al Rey."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 41,
+      "enunciado": "Según el artículo 10.2 de la Constitución Española de 1978, las normas relativas a los derechos fundamentales y a las libertades que la Constitución reconoce se interpretarán de conformidad con:",
+      "opciones": [
+        "La Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España.",
+        "La Declaración Universal de Derechos Humanos y la Convención Europea de Derechos Humanos.",
+        "La Declaración Universal de Derechos Humanos."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 42,
+      "enunciado": "Los derechos reconocidos en el Título I de la Constitución que no pueden suspenderse siquiera en estado de excepción o de sitio son:",
+      "opciones": [
+        "La libertad de expresión.",
+        "La libertad sindical.",
+        "El derecho al honor, intimidad personal y familiar y propia imagen."
+      ],
+      "respuesta_correcta": 3
+    }
+  ]
+}

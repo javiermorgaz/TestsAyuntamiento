@@ -1,0 +1,396 @@
+{
+  "id": 8,
+  "titulo": "Tema 8. Ley 39/2015 (II): Actos Administrativos, Notificación y Vicios",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 35.1 de la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas (LPAC), serán motivados, con sucinta referencia de hechos y fundamentos de derecho, entre otros, los actos que:",
+      "opciones": [
+        "Resuelvan recursos administrativos.",
+        "Resuelvan procedimientos de revisión de oficio, salvo el recurso de alzada.",
+        "Resuelvan procedimientos de revisión de oficio, el recurso de alzada y la reclamación previa."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 48.1 de la Ley 39/2015, son causas de anulabilidad:",
+      "opciones": [
+        "La infracción del ordenamiento jurídico, incluyendo la desviación de poder.",
+        "La infracción del ordenamiento jurídico, sin incluir la desviación de poder.",
+        "La infracción del ordenamiento jurídico, siempre que afecte a los derechos fundamentales."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 40.1 de la Ley 39/2015, toda notificación deberá ser practicada por cualquier medio que permita:",
+      "opciones": [
+        "Dejar constancia de su recepción.",
+        "Dejar constancia de su contenido, de la identidad del interesado y de la fecha de la notificación.",
+        "Acreditar el envío y recepción, la fecha, la identidad y el contenido íntegro del acto."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, la notificación de un acto sin el texto íntegro del mismo:",
+      "opciones": [
+        "Produce efectos a partir de la fecha en que el interesado realice actuaciones que supongan el conocimiento del contenido y alcance de la resolución o interponga el recurso procedente.",
+        "Produce efectos a partir de la fecha en que el interesado realice actuaciones que supongan el conocimiento del contenido y alcance de la resolución, pero no a partir de la fecha en que interponga el recurso procedente.",
+        "Produce efectos a partir de la fecha en que el interesado interponga el recurso procedente."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 34.1 de la Ley 39/2015, los actos administrativos que dicten las Administraciones Públicas se producirán:",
+      "opciones": [
+        "Por escrito a través de medios electrónicos.",
+        "Por escrito o verbalmente.",
+        "Por escrito a través de medios electrónicos, a menos que su naturaleza exija otra forma más adecuada de expresión y constancia."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, toda notificación deberá contener:",
+      "opciones": [
+        "El texto íntegro de la resolución, con expresión de si es o no definitivo en la vía administrativa, y la indicación de los recursos que procedan.",
+        "El texto íntegro de la resolución, con expresión de si es o no definitivo en la vía administrativa, los recursos que procedan, el órgano ante el que deben presentarse y el plazo para su interposición.",
+        "El texto íntegro de la resolución, y la indicación de los recursos que procedan."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 47.1 de la Ley 39/2015, son causas de nulidad de pleno derecho:",
+      "opciones": [
+        "Los actos dictados con infracción de la legalidad.",
+        "Los actos que tengan un contenido imposible.",
+        "Los actos que lesionen derechos de terceros, en el ejercicio de una competencia reglada."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 8,
+      "enunciado": "Según el artículo 47.2 de la Ley 39/2015, la declaración de nulidad de una parte del acto:",
+      "opciones": [
+        "No implicará la de las partes del mismo independientes de aquella.",
+        "Implicará la nulidad de las partes del mismo independientes de aquella.",
+        "No implicará la de las partes del mismo, incluso las no independientes de aquella."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, la notificación se practicará en el plazo de:",
+      "opciones": [
+        "Diez días a partir de la fecha en que el acto haya sido dictado.",
+        "Quince días a partir de la fecha en que el acto haya sido dictado.",
+        "Veinte días a partir de la fecha en que el acto haya sido dictado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 114 de la Ley 39/2015, los actos que ponen fin a la vía administrativa son, entre otros:",
+      "opciones": [
+        "Las resoluciones de los recursos de alzada.",
+        "Las resoluciones de los recursos de reposición.",
+        "Las resoluciones de los recursos de alzada y las resoluciones de los órganos administrativos que carezcan de superior jerárquico."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 44 de la Ley 39/2015, cuando la notificación por medios no electrónicos sea infructuosa, la Administración debe publicar el acto:",
+      "opciones": [
+        "En el tablón de anuncios de la entidad.",
+        "En el Boletín Oficial del Estado, y opcionalmente en el diario de la Comunidad Autónoma o de la Provincia.",
+        "En el Boletín Oficial del Estado y en el tablón de anuncios de la entidad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 48.2 de la Ley 39/2015, los defectos de forma sólo determinarán la anulación del acto cuando:",
+      "opciones": [
+        "El acto carezca de los requisitos formales indispensables.",
+        "El acto carezca de los requisitos formales indispensables o haya producido indefensión.",
+        "El acto carezca de los requisitos formales indispensables o haya producido la indefensión del interesado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 48.3 de la Ley 39/2015, los actos anulables son susceptibles de:",
+      "opciones": [
+        "Convalidación.",
+        "Ratificación.",
+        "Confirmación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 41.1 de la Ley 39/2015, las notificaciones se practicarán preferentemente:",
+      "opciones": [
+        "Por cualquier medio que permita tener constancia de su envío.",
+        "Por medios electrónicos, y en todo caso, cuando el interesado resulte obligado a recibirlas por esta vía.",
+        "Por medios electrónicos, salvo que el interesado manifieste su oposición."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 41.5 de la Ley 39/2015, cuando la notificación por medios electrónicos no pueda practicarse, se tendrá por rechazada si el interesado no accede a su contenido en el plazo de:",
+      "opciones": [
+        "Diez días naturales.",
+        "Cinco días naturales.",
+        "Diez días naturales a contar desde la puesta a disposición de la notificación."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 48.2 de la Ley 39/2015, la subsanación de los defectos de forma de un acto anulable puede realizarse si:",
+      "opciones": [
+        "El acto hubiera alcanzado el fin al que se destina.",
+        "El acto es dictado por órgano manifiestamente incompetente por razón de la materia o del territorio.",
+        "El acto es dictado con infracción manifiesta de la legalidad."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 70.1 de la Ley 39/2015, los procedimientos se impulsarán de oficio en todos sus trámites y se ordenarán bajo los principios de:",
+      "opciones": [
+        "Celeridad y economía procesal.",
+        "Economía procesal, celeridad y eficacia.",
+        "Celeridad y eficiencia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 53.1.a) de la Ley 39/2015, los interesados en el procedimiento tienen derecho a acceder y obtener copia de:",
+      "opciones": [
+        "Los documentos que formen parte de los expedientes en los que tengan la condición de interesado.",
+        "Los documentos que formen parte de los expedientes, siempre que no afecten a la seguridad nacional.",
+        "Los documentos que formen parte de los expedientes, sin que quepa excepción, si son interesados."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, la práctica de la notificación debe tener lugar en el plazo de:",
+      "opciones": [
+        "Diez días hábiles.",
+        "Quince días hábiles.",
+        "Diez días a partir de la fecha en que el acto haya sido dictado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 42.1 de la Ley 39/2015, cuando la notificación se practique en el domicilio del interesado, de no hallarse el interesado en el momento de la entrega, podrá hacerse cargo de la misma:",
+      "opciones": [
+        "Cualquier persona que se encuentre en el domicilio y haga constar su identidad.",
+        "Cualquier persona mayor de edad que se encuentre en el domicilio y haga constar su identidad.",
+        "Cualquier persona mayor de edad, con la condición de representante legal del interesado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 39.1 de la Ley 39/2015, los actos administrativos producen efectos:",
+      "opciones": [
+        "Desde que se dictan.",
+        "Desde la fecha en que se dictan, salvo que en ellos se disponga otra cosa.",
+        "Desde la fecha en que se dictan, salvo que se disponga otra cosa o se prevea la retroactividad."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 47.1.e) de la Ley 39/2015, el acto nulo de pleno derecho es el dictado prescindiendo totalmente del procedimiento legalmente establecido o de:",
+      "opciones": [
+        "Las normas esenciales del procedimiento.",
+        "Las normas que contienen las reglas esenciales para la formación de la voluntad de los órganos colegiados.",
+        "Las normas esenciales para la formación de la voluntad de la Administración."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 35.1.c) de la Ley 39/2015, los actos que se separen del criterio seguido en actuaciones precedentes deben ser:",
+      "opciones": [
+        "Motivados, con sucinta referencia de hechos y fundamentos de derecho.",
+        "Motivados, con exhaustiva referencia de hechos y fundamentos de derecho.",
+        "Motivados."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, si la notificación es incompleta y se refiere a un acto que ponga fin a la vía administrativa:",
+      "opciones": [
+        "El recurso no será admisible.",
+        "El recurso no podrá ser interpuesto hasta que la notificación sea completa.",
+        "El recurso no podrá ser interpuesto a partir de la fecha en que el interesado realice actuaciones que supongan el conocimiento del contenido y alcance de la resolución o interponga el recurso procedente."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Según el artículo 44 de la Ley 39/2015, cuando la notificación sea infructuosa por medios no electrónicos, la Administración publicará el acto en el Boletín Oficial del Estado, y la notificación se entenderá:",
+      "opciones": [
+        "Efectuada a partir del transcurso del plazo de diez días naturales desde la publicación.",
+        "Efectuada a partir del transcurso del plazo de diez días hábiles desde la publicación.",
+        "Efectuada a partir del transcurso del plazo de veinte días naturales desde la publicación."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, el plazo máximo para practicar la notificación del acto es de:",
+      "opciones": [
+        "Quince días.",
+        "Diez días.",
+        "Veinte días."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Según el artículo 35.1 de la Ley 39/2015, deben ser motivados, entre otros, los actos que:",
+      "opciones": [
+        "Resuelvan recursos administrativos, salvo el recurso de alzada.",
+        "Resuelvan procedimientos de revisión de oficio, apliquen el silencio negativo o resuelvan recursos administrativos.",
+        "Resuelvan recursos administrativos, salvo el de reposición."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 28,
+      "enunciado": "Según el artículo 39.1 de la Ley 39/2015, los actos administrativos gozan de la presunción de:",
+      "opciones": [
+        "Legalidad.",
+        "Validez.",
+        "Validez y producen efectos desde la fecha en que se dictan, salvo que en ellos se disponga otra cosa."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 29,
+      "enunciado": "Según el artículo 53.1 de la Ley 39/2015, ¿cuál de los siguientes no es un derecho del interesado en el procedimiento?",
+      "opciones": [
+        "A que se le exija la aportación de documentos originales, salvo que se justifique la imposibilidad de obtener la copia.",
+        "A identificar a las autoridades y personal al servicio de las Administraciones Públicas bajo cuya responsabilidad se tramiten los procedimientos.",
+        "A formular alegaciones en cualquier momento del procedimiento anterior al trámite de audiencia."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 30,
+      "enunciado": "Según el artículo 71.1 de la Ley 39/2015, el impulso del procedimiento, a fin de que se cumplan con la mayor celeridad posible todos los trámites que resulten necesarios, corresponde:",
+      "opciones": [
+        "Al órgano competente para la tramitación.",
+        "Al órgano competente para la resolución.",
+        "Al órgano competente para la tramitación, a instancia del interesado."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 31,
+      "enunciado": "Según el artículo 72.1 de la Ley 39/2015, el órgano administrativo que inicie o tramite un procedimiento, podrá acordar su acumulación a otros con los que guarden identidad sustancial o:",
+      "opciones": [
+        "Conexión, siempre que se garantice la celeridad y la igualdad de los interesados.",
+        "Íntima conexión, siempre que se garantice la celeridad y la igualdad de los interesados.",
+        "Conexión, siempre que se garantice la igualdad de los interesados."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 32,
+      "enunciado": "Según el artículo 73.1 de la Ley 39/2015, los interesados pueden presentar alegaciones y aportar documentos en cualquier momento anterior al trámite de:",
+      "opciones": [
+        "Audiencia.",
+        "Propuesta de resolución.",
+        "Finalización del procedimiento."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 33,
+      "enunciado": "Según el artículo 48.3 de la Ley 39/2015, la subsanación de los actos anulables puede realizarse a través de:",
+      "opciones": [
+        "La ratificación, la nulidad y la rectificación de errores.",
+        "La convalidación, la subsanación y la rectificación de errores.",
+        "La convalidación, la subsanación y la ratificación."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 34,
+      "enunciado": "Según el artículo 39.1 de la Ley 39/2015, la validez de los actos de las Administraciones Públicas se presume:",
+      "opciones": [
+        "Legítima.",
+        "De legalidad.",
+        "Constitucional."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 35,
+      "enunciado": "Según el artículo 40.4 de la Ley 39/2015, si la notificación se realiza con un contenido incompleto o defectuoso:",
+      "opciones": [
+        "El recurso interpuesto por el interesado no será admisible.",
+        "El plazo de interposición del recurso no empezará a contarse sino a partir del día siguiente a aquel en que el interesado reciba la notificación del texto íntegro.",
+        "El plazo de interposición del recurso empezará a contarse desde que el interesado reciba la notificación del texto incompleto."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 36,
+      "enunciado": "Según el artículo 48.2 de la Ley 39/2015, la omisión de trámites podrá ser causa de anulación del acto cuando:",
+      "opciones": [
+        "Se carezca de los requisitos formales indispensables.",
+        "Haya producido la indefensión del interesado.",
+        "Se carezca de los requisitos formales indispensables y se haya producido la indefensión del interesado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 37,
+      "enunciado": "Según el artículo 41.6 de la Ley 39/2015, en el ámbito estatal, las notificaciones se practicarán en la Dirección Electrónica Habilitada Única (DEHU), que será:",
+      "opciones": [
+        "Un buzón electrónico al que el interesado tendrá acceso para recibir las notificaciones.",
+        "Un buzón electrónico al que el interesado podrá acceder para recibir las notificaciones.",
+        "Un buzón electrónico al que el interesado tendrá que acceder para recibir las notificaciones."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 38,
+      "enunciado": "Según el artículo 73.1 de la Ley 39/2015, los plazos para la realización de cualquier trámite se podrán interrumpir si:",
+      "opciones": [
+        "Se solicita informe jurídico.",
+        "Se requiere al interesado la subsanación de deficiencias o la aportación de documentos y otros elementos de juicio.",
+        "Se solicita al órgano superior la avocación de la competencia."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 39,
+      "enunciado": "Según el artículo 74.1 de la Ley 39/2015, en los trámites que requieran la audiencia de terceros, estos deben ser puestos de manifiesto a:",
+      "opciones": [
+        "Los interesados en el procedimiento, y se dará un plazo de audiencia que no podrá ser inferior a diez días ni superior a quince.",
+        "Los interesados en el procedimiento, y se dará un plazo de audiencia de diez días.",
+        "Los interesados en el procedimiento, sin que se pueda dar un plazo superior a diez días."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}

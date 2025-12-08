@@ -1,86 +1,121 @@
 [
   {
     "id": 1,
-    "titulo": "Bloque 1: Constitución Española (CE) - Títulos I, IV, VI, VIII, IX y X",
-    "ley": "Constitución Española de 1978",
-    "fichero": "tests/bloque1.json",
-    "num_preguntas": 94
-  },
-  {
-    "id": 2,
-    "titulo": "Bloque 2: Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas",
-    "ley": "Ley 39/2015",
-    "fichero": "tests/bloque2.json",
-    "num_preguntas": 85
-  },
-  {
-    "id": 3,
-    "titulo": "Bloque 3: Ley 7/1985, Reguladora de las Bases del Régimen Local (LBRL)",
-    "ley": "Ley 7/1985",
-    "fichero": "tests/bloque3.json",
+    "titulo": "Tema 1. La Constitución Española (I): Derechos y Deberes Fundamentales, TC y Reforma",
+    "ley": "",
+    "fichero": "tests/tema1.json",
     "num_preguntas": 42
   },
   {
-    "id": 4,
-    "titulo": "Bloque 4: Real Decreto Legislativo 5/2015, Estatuto Básico del Empleado Público (EBEP)",
-    "ley": "RDL 5/2015 (EBEP)",
-    "fichero": "tests/bloque4.json",
-    "num_preguntas": 27
+    "id": 2,
+    "titulo": "Tema 2. La Constitución Española (II): Corona, Cortes, Gobierno y Poder Judicial",
+    "ley": "",
+    "fichero": "tests/tema2.json",
+    "num_preguntas": 38
   },
   {
-    "id": 5,
-    "titulo": "Bloque 5: Ley 19/2013, de Transparencia, Acceso a la Información Pública y Buen Gobierno",
-    "ley": "Ley 19/2013",
-    "fichero": "tests/bloque5.json",
-    "num_preguntas": 31
-  },
-  {
-    "id": 6,
-    "titulo": "Bloque 6: Estatuto de Autonomía de Andalucía (EAA) / Ley Orgánica 2/2007",
-    "ley": "LO 2/2007",
-    "fichero": "tests/bloque6.json",
+    "id": 3,
+    "titulo": "Tema 3. La Constitución Española (III): Organización Territorial del Estado",
+    "ley": "",
+    "fichero": "tests/tema3.json",
     "num_preguntas": 24
   },
   {
+    "id": 4,
+    "titulo": "Tema 4. El Estatuto de Autonomía para Andalucía",
+    "ley": "",
+    "fichero": "tests/tema4.json",
+    "num_preguntas": 26
+  },
+  {
+    "id": 5,
+    "titulo": "Tema 5. La Unión Europea: Instituciones y Libre Circulación",
+    "ley": "",
+    "fichero": "tests/tema5.json",
+    "num_preguntas": 14
+  },
+  {
+    "id": 6,
+    "titulo": "Tema 6. Ley Reguladora de las Bases del Régimen Local (LBRL)",
+    "ley": "",
+    "fichero": "tests/tema6.json",
+    "num_preguntas": 41
+  },
+  {
     "id": 7,
-    "titulo": "Bloque 7: Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPD GDD)",
-    "ley": "LO 3/2018",
-    "fichero": "tests/bloque7.json",
-    "num_preguntas": 27
+    "titulo": "Tema 7. Ley 39/2015 (I): Interesados, Registros, Plazos y Copias",
+    "ley": "",
+    "fichero": "tests/tema7.json",
+    "num_preguntas": 36
   },
   {
     "id": 8,
-    "titulo": "Bloque 8: Ley 40/2015, de Régimen Jurídico del Sector Público",
-    "ley": "Ley 40/2015",
-    "fichero": "tests/bloque8.json",
-    "num_preguntas": 4
+    "titulo": "Tema 8. Ley 39/2015 (II): Actos Administrativos, Notificación y Vicios",
+    "ley": "",
+    "fichero": "tests/tema8.json",
+    "num_preguntas": 39
   },
   {
     "id": 9,
-    "titulo": "Bloque 9: Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres",
-    "ley": "LO 3/2007",
-    "fichero": "tests/bloque9.json",
-    "num_preguntas": 6
+    "titulo": "Tema 9. Ley 39/2015 (III): Los Recursos Administrativos",
+    "ley": "",
+    "fichero": "tests/tema9.json",
+    "num_preguntas": 31
   },
   {
     "id": 10,
-    "titulo": "Bloque 10: Ley Orgánica 1/2004, de Medidas de Protección Integral contra la Violencia de Género",
-    "ley": "LO 1/2004",
-    "fichero": "tests/bloque10.json",
-    "num_preguntas": 1
+    "titulo": "Tema 10. Ley Orgánica 3/2018 (LOPD-GDD): Principios y Derechos",
+    "ley": "",
+    "fichero": "tests/tema10.json",
+    "num_preguntas": 18
   },
   {
     "id": 11,
-    "titulo": "Bloque 11: Derecho de la Unión Europea (TFUE, TUE)",
-    "ley": "TFUE, TUE",
-    "fichero": "tests/bloque11.json",
-    "num_preguntas": 3
+    "titulo": "Tema 11. Ley 40/2015 (LRJSP): Órganos, Competencia y R. Patrimonial",
+    "ley": "",
+    "fichero": "tests/tema11.json",
+    "num_preguntas": 24
   },
-    {
+  {
     "id": 12,
-    "titulo": "Bloque 12: TRLRHL (Haciendas Locales) - Presupuesto y Ejecución",
-    "ley": "TRLRHL",
-    "fichero": "tests/bloque12.json",
-    "num_preguntas": 2
+    "titulo": "Tema 12. Ley 19/2013 (Transparencia): Publicidad Activa y Acceso a la Información",
+    "ley": "",
+    "fichero": "tests/tema12.json",
+    "num_preguntas": 28
+  },
+  {
+    "id": 13,
+    "titulo": "Tema 13. Organización y Funcionamiento del Ayuntamiento de Sevilla",
+    "ley": "",
+    "fichero": "tests/tema13.json",
+    "num_preguntas": 12
+  },
+  {
+    "id": 14,
+    "titulo": "Tema 14. Personal al Servicio de Entidades Locales (I): Clases, Derechos y Acceso",
+    "ley": "",
+    "fichero": "tests/tema14.json",
+    "num_preguntas": 32
+  },
+  {
+    "id": 15,
+    "titulo": "Tema 15. Personal al Servicio de Entidades Locales (II): Retribuciones, Movilidad y Disciplinario",
+    "ley": "",
+    "fichero": "tests/tema15.json",
+    "num_preguntas": 35
+  },
+  {
+    "id": 16,
+    "titulo": "Tema 16. Igualdad y Violencia de Género",
+    "ley": "",
+    "fichero": "tests/tema16.json",
+    "num_preguntas": 17
+  },
+  {
+    "id": 17,
+    "titulo": "Tema 17. El Presupuesto Municipal",
+    "ley": "",
+    "fichero": "tests/tema17.json",
+    "num_preguntas": 25
   }
 ]

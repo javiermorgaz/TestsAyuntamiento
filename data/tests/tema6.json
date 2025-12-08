@@ -1,0 +1,416 @@
+{
+  "id": 6,
+  "titulo": "Tema 6. Ley Reguladora de las Bases del Régimen Local (LBRL)",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 25.2.d) de la Ley Reguladora de las Bases del Régimen Local, el Municipio, para la gestión de sus intereses y en el ámbito de sus competencias, puede promover actividades y prestar los servicios públicos que contribuyan a satisfacer las necesidades y aspiraciones de la comunidad vecinal en materia de:",
+      "opciones": [
+        "Educación.",
+        "Sanidad.",
+        "Urbanismo: planeamiento, gestión, ejecución y disciplina urbanística."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 2,
+      "enunciado": "Según el artículo 3.1 de la Ley Reguladora de las Bases del Régimen Local, ¿cuál de las siguientes es una Entidad Local territorial?",
+      "opciones": [
+        "El Municipio.",
+        "Las Comarcas.",
+        "Las áreas metropolitanas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 3,
+      "enunciado": "De acuerdo con el artículo 31 de la Ley Reguladora de las Bases del Régimen Local, la provincia está compuesta por:",
+      "opciones": [
+        "La agrupación de municipios.",
+        "La agrupación de municipios de la comunidad autónoma.",
+        "La agrupación de municipios contiguos."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 18.1 de la Ley Reguladora de las Bases del Régimen Local, los vecinos del municipio gozan de los siguientes derechos, excepto:",
+      "opciones": [
+        "Ser elector y elegible.",
+        "Participar en las actividades y en el funcionamiento de los órganos de la Corporación.",
+        "Exigir el cumplimiento de los servicios mínimos obligatorios."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 11.1 de la Ley Reguladora de las Bases del Régimen Local, el Municipio es la Entidad Local básica de la organización territorial del Estado, y tiene:",
+      "opciones": [
+        "Personalidad jurídica y plena capacidad para el cumplimiento de sus fines.",
+        "Personalidad jurídica y capacidad para el cumplimiento de sus fines.",
+        "Personalidad jurídica para el cumplimiento de sus fines."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 13.1 de la Ley Reguladora de las Bases del Régimen Local, la creación o supresión de municipios, así como la alteración de términos municipales, se regulará:",
+      "opciones": [
+        "Por la Ley Orgánica.",
+        "Por la legislación de las Comunidades Autónomas.",
+        "Por la Ley Ordinaria del Estado."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 2 de la Ley Reguladora de las Bases del Régimen Local, ¿qué ámbito de la Administración goza de autonomía para la gestión de sus respectivos intereses?",
+      "opciones": [
+        "Solo los municipios.",
+        "Solo las provincias.",
+        "Los municipios, las provincias y las Islas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 8,
+      "enunciado": "De acuerdo con el artículo 121 de la Ley Reguladora de las Bases del Régimen Local, las especialidades en la organización y funcionamiento de los municipios de Gran Población se regulan en:",
+      "opciones": [
+        "El Título X de la Ley Reguladora de las Bases del Régimen Local.",
+        "La Ley Orgánica.",
+        "El Estatuto de Autonomía de cada Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 9,
+      "enunciado": "De acuerdo con el artículo 4.1.a) de la Ley Reguladora de las Bases del Régimen Local, las Corporaciones Locales, en su calidad de Administraciones Públicas de carácter territorial y dentro de la esfera de sus competencias, tienen:",
+      "opciones": [
+        "Potestad de Autoorganización.",
+        "Potestad reglamentaria y de autoorganización.",
+        "Potestad de autoorganización y de planificación."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 10,
+      "enunciado": "Según el artículo 16.1 de la Ley Reguladora de las Bases del Régimen Local, el padrón municipal es el registro administrativo donde constan:",
+      "opciones": [
+        "Los vecinos del municipio.",
+        "Los vecinos que habitan en el municipio.",
+        "Los vecinos del municipio con derechos políticos."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 11,
+      "enunciado": "Según el artículo 1 de la Ley Reguladora de las Bases del Régimen Local, la Ley de Bases tiene por objeto:",
+      "opciones": [
+        "Desarrollar las Bases del Régimen Local que la Constitución encomienda al legislador, en el marco de la garantía constitucional de la autonomía de los municipios, provincias e islas.",
+        "Desarrollar el régimen local que la Constitución encomienda al legislador, en el marco de la garantía constitucional de la autonomía de los municipios, provincias e islas.",
+        "Desarrollar las Bases del Régimen Local que la Constitución encomienda al legislador."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según el artículo 130.3 de la Ley Reguladora de las Bases del Régimen Local (Gran Población), el Vicepresidente de la Junta de Gobierno Local, o el miembro de la Junta a quien corresponda sustituir al Alcalde en caso de vacante, será miembro de:",
+      "opciones": [
+        "La Junta de Gobierno Local.",
+        "El Pleno.",
+        "La Junta de Gobierno Local y concejal."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Según el artículo 121 de la Ley Reguladora de las Bases del Régimen Local, el Título X de la Ley se aplica a:",
+      "opciones": [
+        "Los municipios con población superior a 250.000 habitantes.",
+        "Los municipios a que se refiere el apartado 1, con las excepciones que establece esta Ley.",
+        "Los municipios a que se refiere el apartado 1, sin excepciones."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 6.1 de la Ley Reguladora de las Bases del Régimen Local, la Administración del Estado y las de las Comunidades Autónomas, en ejercicio de sus respectivas competencias, podrán impugnar ante la Jurisdicción Contencioso-Administrativa:",
+      "opciones": [
+        "Los actos y acuerdos de las Entidades Locales que incurran en infracción del ordenamiento jurídico.",
+        "Solo los actos y acuerdos de las Entidades Locales que incurran en infracción de la Constitución.",
+        "Los acuerdos de las Entidades Locales que incurran en infracción del ordenamiento jurídico."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Según el artículo 31 de la Ley Reguladora de las Bases del Régimen Local, el Gobierno y la Administración Autónoma de la Provincia están atribuidos a:",
+      "opciones": [
+        "La Diputación o a otras Corporaciones de carácter representativo.",
+        "El Pleno de la Diputación o a otras Corporaciones de carácter representativo.",
+        "El Presidente de la Diputación o a otras Corporaciones de carácter representativo."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el artículo 15.1 de la Ley Reguladora de las Bases del Régimen Local, la inscripción en el Padrón Municipal:",
+      "opciones": [
+        "Es un derecho y una obligación para quienes vivan en el municipio.",
+        "Es un derecho para quienes vivan en el municipio.",
+        "Da derecho a los vecinos a participar en las elecciones municipales."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según el artículo 4.1 de la Ley Reguladora de las Bases del Régimen Local, las Corporaciones Locales, en su calidad de Administraciones Públicas de carácter territorial y dentro de la esfera de sus competencias, tienen potestad de autoorganización, es decir:",
+      "opciones": [
+        "Determinar su estructura orgánica, sus órganos y su funcionamiento.",
+        "Determinar sus competencias y su estructura orgánica.",
+        "Determinar su estructura orgánica."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 18,
+      "enunciado": "Según el artículo 121.1 de la Ley Reguladora de las Bases del Régimen Local, los municipios que tienen más de 250.000 habitantes:",
+      "opciones": [
+        "Deben optar entre el régimen común o el de Gran Población.",
+        "Se regirán por las disposiciones del Título X de la Ley Reguladora de las Bases del Régimen Local.",
+        "Se regirán por el régimen general de las Entidades Locales, con las excepciones que establezca su Estatuto de Autonomía."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 6.1 de la Ley Reguladora de las Bases del Régimen Local, las leyes de las Comunidades Autónomas que creen órganos de colaboración entre las Entidades Locales y las Comunidades Autónomas, deben respetar:",
+      "opciones": [
+        "El principio de autonomía local.",
+        "El principio de autonomía local y la potestad reglamentaria.",
+        "El principio de estabilidad presupuestaria."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 20,
+      "enunciado": "Según el artículo 122.1 de la Ley Reguladora de las Bases del Régimen Local (Gran Población), el Pleno se integra por:",
+      "opciones": [
+        "Todos los concejales, y es presidido por el Alcalde.",
+        "Todos los concejales, y es presidido por el Presidente de la Comisión Especial de Sugerencias y Reclamaciones.",
+        "Todos los concejales, y es presidido por el Vicepresidente."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 21,
+      "enunciado": "Según el artículo 26.1 de la Ley Reguladora de las Bases del Régimen Local, los Municipios con población superior a 5.000 habitantes deberán prestar, en todo caso, los siguientes servicios, excepto:",
+      "opciones": [
+        "Parques y jardines.",
+        "Alumbrado público.",
+        "Evaluación e información de situaciones de necesidad social."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 22,
+      "enunciado": "Según el artículo 11.1 de la Ley Reguladora de las Bases del Régimen Local, el Municipio es la Entidad Local básica de la organización territorial del Estado, y tiene:",
+      "opciones": [
+        "Personalidad jurídica y plena capacidad para el cumplimiento de sus fines.",
+        "Personalidad jurídica.",
+        "Plena capacidad para el cumplimiento de sus fines."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 23,
+      "enunciado": "Según el artículo 122.2 de la Ley Reguladora de las Bases del Régimen Local (Gran Población), corresponde al Pleno:",
+      "opciones": [
+        "Aprobar el Presupuesto, la plantilla de personal, y las Ordenanzas Fiscales.",
+        "La fiscalización de la acción del Alcalde y del Consejo de Gobierno, el debate del Estado del Municipio y la aprobación del Presupuesto.",
+        "La aprobación de los Presupuestos, y la potestad de autoorganización."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según el artículo 18.1 de la Ley Reguladora de las Bases del Régimen Local, los vecinos del municipio tienen derecho a:",
+      "opciones": [
+        "Ser informados, previa solicitud, y a obtener copias y certificaciones de los acuerdos de los órganos municipales.",
+        "Ser informados, previa solicitud, y a pedir la celebración de consultas populares, con los requisitos que establezca la ley.",
+        "Ser informados de la gestión municipal, y a obtener copias y certificaciones de los acuerdos de los órganos municipales."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Según el artículo 13.1 de la Ley Reguladora de las Bases del Régimen Local, la alteración de términos municipales es competencia de:",
+      "opciones": [
+        "Las Comunidades Autónomas, y es incompatible con la legislación del Estado.",
+        "El Estado, y es incompatible con la legislación de las Comunidades Autónomas.",
+        "Las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según el artículo 6 de la Ley Reguladora de las Bases del Régimen Local, el Gobierno podrá plantear conflictos de competencias a las Entidades Locales cuando:",
+      "opciones": [
+        "Una Entidad Local invada las competencias de otra Entidad Local.",
+        "Una Entidad Local ejerza competencias que corresponden al Estado.",
+        "Se considere que una Entidad Local ejerce competencias que corresponden a la Administración del Estado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Según el artículo 4.1.e) de la Ley Reguladora de las Bases del Régimen Local, las Corporaciones Locales tienen potestad de:",
+      "opciones": [
+        "Autoorganización.",
+        "Aprobación de Ordenanzas.",
+        "Planificación."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 28,
+      "enunciado": "Según el artículo 4.1.f) de la Ley Reguladora de las Bases del Régimen Local, las Corporaciones Locales tienen potestad:",
+      "opciones": [
+        "De Expropiación.",
+        "Sancionadora.",
+        "Impositiva."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 29,
+      "enunciado": "Según el artículo 121.1 de la Ley Reguladora de las Bases del Régimen Local, la Ley se aplica a los municipios con población superior a:",
+      "opciones": [
+        "200.000 habitantes.",
+        "250.000 habitantes.",
+        "300.000 habitantes."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 30,
+      "enunciado": "Según el artículo 29 de la Ley Reguladora de las Bases del Régimen Local, el Concejo Abierto es un régimen de gobierno y administración en:",
+      "opciones": [
+        "Los municipios con menos de 100 habitantes y otros municipios que, por su peculiaridad geográfica, lo acuerde el Consejo de Gobierno de la CCAA.",
+        "Los municipios con menos de 100 habitantes, y en los que tradicionalmente se haya utilizado.",
+        "Los municipios con menos de 100 habitantes."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 31,
+      "enunciado": "Según el artículo 26.1.a) de la Ley Reguladora de las Bases del Régimen Local, los Municipios con población superior a 5.000 habitantes deberán prestar, en todo caso, el servicio de:",
+      "opciones": [
+        "Recogida y tratamiento de residuos.",
+        "Alumbrado público.",
+        "Abastecimiento domiciliario de agua potable."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 32,
+      "enunciado": "Según el artículo 31 de la Ley Reguladora de las Bases del Régimen Local, el territorio de la provincia no puede alterarse si no es por:",
+      "opciones": [
+        "Ley de las Cortes Generales.",
+        "Ley Orgánica de las Cortes Generales.",
+        "Acuerdo de los municipios afectados."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 33,
+      "enunciado": "Según el artículo 124.3 de la Ley Reguladora de las Bases del Régimen Local (Gran Población), los Decretos del Presidente, dictados en virtud de las delegaciones que le confiera el Reglamento Orgánico, tienen la naturaleza de:",
+      "opciones": [
+        "Actos administrativos, a los efectos de su control y fiscalización.",
+        "Disposiciones de carácter general.",
+        "Actos de carácter reglamentario."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 34,
+      "enunciado": "Según el artículo 2 de la Ley Reguladora de las Bases del Régimen Local, las Entidades Locales tienen autonomía para:",
+      "opciones": [
+        "La gestión de sus respectivos intereses.",
+        "La gestión de sus respectivos intereses, de acuerdo con la Constitución.",
+        "La gestión de sus respectivos intereses, de acuerdo con la Constitución y las leyes."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 35,
+      "enunciado": "Según el artículo 26.1 de la Ley Reguladora de las Bases del Régimen Local, los Municipios con población superior a 50.000 habitantes deberán prestar, en todo caso, los siguientes servicios:",
+      "opciones": [
+        "Protección civil.",
+        "Abastecimiento domiciliario de agua potable.",
+        "Parques y jardines."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 36,
+      "enunciado": "Según el artículo 69.2 de la Constitución Española de 1978, a la circunscripción electoral de la provincia le corresponde un mínimo de:",
+      "opciones": [
+        "Cuatro Senadores.",
+        "Dos Senadores.",
+        "Tres Senadores."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 37,
+      "enunciado": "Según el artículo 150.2 de la Constitución Española de 1978, el Estado podrá transferir o delegar a las Comunidades Autónomas, mediante Ley Orgánica, facultades correspondientes a materia de titularidad estatal que por su propia naturaleza sean susceptibles de transferencia o delegación. La Ley preverá en cada caso:",
+      "opciones": [
+        "La correspondiente transferencia de medios financieros y las formas de control que se reserve el Estado.",
+        "La correspondiente transferencia de medios financieros.",
+        "La correspondiente transferencia de medios financieros y las formas de control que se reserve el Estado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 38,
+      "enunciado": "Según el artículo 127 de la Ley Reguladora de las Bases del Régimen Local (Gran Población), la Comisión Especial de Sugerencias y Reclamaciones tiene por funciones la defensa de:",
+      "opciones": [
+        "Los derechos fundamentales del vecindario.",
+        "Los derechos de los vecinos del municipio, sin que puedan entrar en el fondo de las cuestiones objeto del expediente.",
+        "Los derechos de los vecinos del municipio, que podrá entrar en el fondo de las cuestiones objeto del expediente."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 39,
+      "enunciado": "Según el artículo 127.3 de la Ley Reguladora de las Bases del Régimen Local (Gran Población), la Comisión Especial de Cuentas está formada por:",
+      "opciones": [
+        "Miembros de todos los grupos políticos representados en el Pleno, de acuerdo con la proporción de fuerzas políticas.",
+        "Miembros de todos los grupos políticos representados en el Pleno.",
+        "Un número impar de miembros de todos los grupos políticos representados en el Pleno."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 40,
+      "enunciado": "Según el artículo 25.2.g) de la Ley Reguladora de las Bases del Régimen Local, ¿cuál de los siguientes no es competencia propia del Municipio?",
+      "opciones": [
+        "Protección de la salubridad pública.",
+        "Protección del medio ambiente.",
+        "Protección de la salud pública."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 41,
+      "enunciado": "Según el artículo 6.1 de la Ley Reguladora de las Bases del Régimen Local, el control de legalidad de los actos de las Entidades Locales se ejerce por:",
+      "opciones": [
+        "El Estado y las Comunidades Autónomas, sin perjuicio del control por los Tribunales.",
+        "El Estado y las Comunidades Autónomas, con carácter excepcional.",
+        "El Estado y las Comunidades Autónomas, con control del Tribunal de Cuentas."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
