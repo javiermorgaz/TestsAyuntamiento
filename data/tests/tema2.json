@@ -1,386 +1,439 @@
 {
   "id": 2,
-  "titulo": "Tema 2. La Constitución Española (II): Corona, Cortes, Gobierno y Poder Judicial",
+  "titulo": "Tema 2. La Constitución Española (II)",
   "preguntas": [
     {
       "id_p": 1,
-      "enunciado": "Según el artículo 62 de la Constitución Española de 1978, corresponde al Rey:",
+      "enunciado": "Conforme a lo dispuesto en el artículo 73.2 de la Constitución Española de 1978, las Cámaras podrán reunirse en sesiones extraordinarias a petición:",
       "opciones": [
-        "Sancionar y promulgar las leyes.",
-        "Proponer y nombrar al Presidente del Gobierno.",
-        "Convocar y disolver las Cortes Generales y convocar elecciones."
+        "Del presidente del Gobierno o de la mayoría de grupos parlamentarios.",
+        "De la mayoría simple de los miembros de cualquiera de las Cámaras.",
+        "Solo de la Diputación Permanente o de la mayoría de los miembros de cualquiera de las Cámaras.",
+        "Del Gobierno, de la Diputación Permanente o de la mayoría absoluta de los miembros de cualquiera de las Cámaras."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 4
     },
     {
       "id_p": 2,
-      "enunciado": "De acuerdo con el artículo 66.1 de la Constitución Española de 1978, las Cortes Generales representan:",
+      "enunciado": "Según lo dispuesto en los artículos 167 y 168 de la Constitución Española de 1978, el referéndum para la reforma constitucional es siempre:",
       "opciones": [
-        "A la Nación, y ostentan la potestad legislativa del Estado.",
-        "Al pueblo, y aprueban el presupuesto.",
-        "A la Nación, y aprueban la ley de presupuestos."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 3,
-      "enunciado": "Conforme al artículo 102 de la Constitución Española de 1978, la responsabilidad criminal del Presidente y demás miembros del Gobierno será exigible, en su caso:",
-      "opciones": [
-        "Ante la Sala de lo Penal del Tribunal Supremo.",
-        "Ante el Tribunal Constitucional.",
-        "Ante la Sala de lo Penal de la Audiencia Nacional."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 4,
-      "enunciado": "Conforme al artículo 124.1 de la Constitución Española de 1978, el Ministerio Fiscal ejerce sus funciones por medio de órganos propios en la forma que determine la ley:",
-      "opciones": [
-        "Con sujeción a los principios de legalidad e imparcialidad.",
-        "Con sujeción a los principios de legalidad y unidad de actuación.",
-        "Con sujeción a los principios de unidad de actuación y dependencia jerárquica."
+        "Necesario.",
+        "Facultativo.",
+        "Consultivo.",
+        "De ratificación."
       ],
       "respuesta_correcta": 2
     },
     {
-      "id_p": 5,
-      "enunciado": "Según el artículo 78 de la Constitución Española de 1978, las Comisiones serán presididas por:",
+      "id_p": 3,
+      "enunciado": "Conforme al artículo 28.2 de la Constitución española de 1978, el derecho de huelga reconocido constitucionalmente en favor de los trabajadores para la defensa de sus intereses:",
       "opciones": [
-        "El Presidente de la Cámara.",
-        "Un Diputado designado por el Presidente de la Cámara.",
-        "Un Presidente de cada Comisión, elegido por los miembros de la misma."
+        "Carece de limitación.",
+        "La ley que regule el ejercicio de este derecho establecerá las garantías precisas para asegurar el mantenimiento de los servicios esenciales de las empresas y de la comunidad.",
+        "La ley que regule este derecho establecerá las garantías precisas para asegurar el mantenimiento de los servicios esenciales de transporte, sanidad, educación y seguridad ciudadana.",
+        "La ley que regule el ejercicio de este derecho establecerá las garantías precisas para asegurar el mantenimiento de los servicios esenciales de la comunidad."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id_p": 4,
+      "enunciado": "Según el artículo 162.1, a) de la Constitución Española de 1978, están legitimados para interponer el recurso de inconstitucionalidad:",
+      "opciones": [
+        "El Presidente del Gobierno, el Defensor del Pueblo, el Fiscal General del Estado, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas.",
+        "El Presidente del Gobierno, el Defensor del Pueblo, los Defensores del Pueblo de las Comunidades Autónomas, el Fiscal General del Estado, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas.",
+        "El Presidente del Gobierno, el Defensor del Pueblo, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas."
       ],
       "respuesta_correcta": 3
     },
     {
-      "id_p": 6,
-      "enunciado": "Según el artículo 102.3 de la Constitución Española de 1978, si la acusación fuere por traición o por cualquier delito contra la seguridad del Estado en el ejercicio de sus funciones, la acusación solo podrá ser planteada:",
+      "id_p": 5,
+      "enunciado": "El artículo 159.3 de la Constitución Española de 1978 establece que los miembros del Tribunal Constitucional serán designados por un periodo de:",
       "opciones": [
-        "A iniciativa de la quinta parte de sus miembros y con la aprobación de la mayoría absoluta del Congreso.",
-        "A iniciativa de la décima parte de sus miembros y con la aprobación de la mayoría absoluta del Congreso.",
-        "A iniciativa de la décima parte de sus miembros y con la aprobación de la mayoría absoluta del Senado."
+        "Nueve años y se renovarán por terceras partes cada tres.",
+        "Nueve años y se renovarán por terceras partes cada dos.",
+        "Seis años y se renovarán por terceras partes cada tres."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 6,
+      "enunciado": "De conformidad con el artículo 144.b de la vigente Constitución Española de 1978, las Cortes Generales, mediante ley orgánica, podrán, por motivos de interés nacional:",
+      "opciones": [
+        "Autorizar o acordar, en su caso, un Estatuto de autonomía para territorios que no estén integrados en la organización provincial.",
+        "Autorizar la constitución de una comunidad autónoma integrada por municipios de distintas provincias.",
+        "Autorizar o acordar, en su caso, un Estatuto de autonomía para comarcas no integradas en ninguna organización provincial o municipal."
       ],
       "respuesta_correcta": 2
     },
     {
       "id_p": 7,
-      "enunciado": "De acuerdo con el artículo 76.1 de la Constitución Española de 1978, las Cámaras, y en su caso, ambas conjuntamente, podrán nombrar Comisiones de Investigación sobre:",
+      "enunciado": "De conformidad con el artículo 16.2 de la vigente Constitución Española de 1978, nadie podrá ser obligado a declarar sobre:",
       "opciones": [
-        "Cualquier asunto de interés público.",
-        "Cualquier asunto de interés privado y de interés público.",
-        "Solo asuntos que afecten a la Hacienda Pública y a los Presupuestos Generales del Estado."
+        "Su orientación sexual y religión.",
+        "Su afiliación política.",
+        "Su ideología, religión o creencias."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 3
     },
     {
       "id_p": 8,
-      "enunciado": "Según el artículo 97 de la Constitución Española de 1978, el Gobierno dirige la política interior y exterior, la Administración civil y militar y la defensa del Estado, y ejerce:",
+      "enunciado": "Según el artículo 164 de la Constitución Española de 1978, las sentencias del Tribunal Constitucional:",
       "opciones": [
-        "La función ejecutiva y la potestad reglamentaria de acuerdo con la Constitución y las leyes.",
-        "La función ejecutiva y la potestad de gracia de acuerdo con la Constitución y las leyes.",
-        "La función ejecutiva y la potestad de iniciativa legislativa de acuerdo con la Constitución y las leyes."
+        "Tienen el valor de cosa juzgada desde la fecha en que se dicte la sentencia.",
+        "Tienen el valor de cosa juzgada desde la fecha de publicación de la sentencia en el boletín oficial del Estado.",
+        "Tienen el valor de cosa juzgada a partir del día siguiente de su publicación en el boletín oficial del Estado."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 3
     },
     {
       "id_p": 9,
-      "enunciado": "Conforme al artículo 102.2 de la Constitución Española de 1978, la prerrogativa de gracia:",
+      "enunciado": "El artículo 103.2 de la Constitución Española de 1978 establece que los órganos de la Administración del Estado son creados, regidos y coordinados de acuerdo con:",
       "opciones": [
-        "No podrá autorizar los indultos generales.",
-        "Podrá autorizar los indultos generales si lo permite la Ley Orgánica.",
-        "Podrá autorizar los indultos generales si lo autoriza el Rey."
+        "Lo dispuesto en la propia Constitución Española de 1978.",
+        "El reglamento aprobado a tal efecto.",
+        "La ley."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 10,
+      "enunciado": "El artículo 160 de la Constitución Española de 1978 dispone que el Presidente del Tribunal Constitucional será nombrado entre sus miembros por el Rey, a propuesta del mismo Tribunal en pleno, por un período de:",
+      "opciones": [
+        "Tres años.",
+        "Seis años.",
+        "Dos años."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 10,
-      "enunciado": "Conforme al artículo 92.2 de la Constitución Española de 1978, el referéndum será convocado por:",
-      "opciones": [
-        "El Rey, a propuesta del Presidente del Gobierno, previa autorización del Congreso de los Diputados.",
-        "El Rey, a propuesta del Presidente del Gobierno, previa autorización de las Cortes Generales.",
-        "El Presidente del Gobierno, previa autorización del Congreso de los Diputados."
-      ],
-      "respuesta_correcta": 2
-    },
-    {
       "id_p": 11,
-      "enunciado": "Según el artículo 77 de la Constitución Española de 1978, las Cámaras pueden recibir:",
+      "enunciado": "Según la literalidad del artículo 68.6 de la Constitución Española de 1978, el Congreso electo deberá ser convocado:",
       "opciones": [
-        "Solo peticiones individuales por escrito.",
-        "Peticiones individuales y colectivas por escrito.",
-        "Peticiones individuales y colectivas, por escrito y verbales."
+        "Dentro de los 15 días siguientes a la celebración de las elecciones.",
+        "Dentro de los 30 días siguientes a la celebración de las elecciones.",
+        "Dentro de los 25 días siguientes a la celebración de las elecciones."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 3
     },
     {
       "id_p": 12,
-      "enunciado": "Según el artículo 118 de la Constitución Española de 1978, es obligatorio:",
+      "enunciado": "El artículo 71.3 de la Constitución Española de 1978 establece que en las causas contra Diputados y Senadores será competente:",
       "opciones": [
-        "El cumplimiento de las sentencias y demás resoluciones firmes de los Jueces y Tribunales, así como la colaboración en el curso del proceso y en la ejecución de lo resuelto.",
-        "El cumplimiento de las sentencias y demás resoluciones firmes de los Jueces y Tribunales, salvo si el Gobierno ha ejercido la prerrogativa de gracia.",
-        "El cumplimiento de las sentencias y demás resoluciones firmes de los Jueces y Tribunales, así como la colaboración de la Administración en el curso del proceso."
+        "La Sala de lo Penal del Tribunal Supremo.",
+        "El Tribunal Constitucional.",
+        "La Sala de lo Penal del Tribunal Superior de Justicia de la Comunidad Autónoma que corresponda."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 13,
-      "enunciado": "Según el artículo 117.1 de la Constitución Española de 1978, la Justicia emana:",
+      "enunciado": "Según lo dispuesto en el artículo 57.3 de la Constitución Española de 1978, extinguidas todas las líneas llamadas en Derecho, las Cortes Generales proveerán a la sucesión en la corona:",
       "opciones": [
-        "Del pueblo y se administra en nombre del Rey por Jueces y Magistrados integrantes del poder judicial.",
-        "Del pueblo español y se administra en nombre del Rey por Jueces y Magistrados.",
-        "Del pueblo español y se administra en nombre del Rey por Jueces y Magistrados que conforman el Tribunal Supremo."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 14,
-      "enunciado": "Según el artículo 70.2 de la Constitución Española de 1978, las Cámaras determinarán las causas de incompatibilidad de los Diputados y Senadores, además de las ya previstas en la Constitución, por:",
-      "opciones": [
-        "Reglamento.",
-        "Ley Ordinaria.",
-        "Ley Orgánica."
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id_p": 15,
-      "enunciado": "Según el artículo 104.1 de la Constitución Española de 1978, el Ministerio Fiscal tiene por misión promover la acción de la Justicia en defensa:",
-      "opciones": [
-        "De la legalidad, de los derechos de los ciudadanos y del interés público tutelado por la ley.",
-        "De la legalidad, de los derechos del ciudadano y del interés público, pero no del interés privado.",
-        "De la legalidad y del interés privado y público tutelado por la ley."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 16,
-      "enunciado": "Según el artículo 111 de la Constitución Española de 1978, las Cámaras y sus Comisiones podrán recabar, a través de sus Presidentes, la información y ayuda que precisen del Gobierno y de sus Departamentos y de:",
-      "opciones": [
-        "Cualesquiera autoridades del Estado y de las Comunidades Autónomas.",
-        "Cualquier autoridad pública.",
-        "Cualquier autoridad, incluidas las privadas."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 17,
-      "enunciado": "De acuerdo con el artículo 75.2 de la Constitución Española de 1978, lo acordado definitivamente en Comisión en las Cámaras:",
-      "opciones": [
-        "Tendrá carácter de Ley, salvo que sea materia de reforma constitucional, cuestiones internacionales o leyes orgánicas.",
-        "Tendrán carácter de Ley, salvo que sea materia de reforma constitucional, cuestiones internacionales, leyes orgánicas o leyes de bases.",
-        "Tendrán carácter de Ley, salvo que sea materia de reforma constitucional, cuestiones internacionales, leyes orgánicas o la ley de presupuestos."
+        "En la forma que más convenga a los intereses de España.",
+        "Atendiendo a lo dispuesto en una ley orgánica.",
+        "Atendiendo a lo dispuesto en la ley, previa consulta al Presidente del Gobierno."
       ],
       "respuesta_correcta": 2
     },
     {
-      "id_p": 18,
-      "enunciado": "Según el artículo 79 de la Constitución Española de 1978, para adoptar acuerdos en las Cámaras, se requerirá la presencia de:",
+      "id_p": 14,
+      "enunciado": "En virtud de lo establecido literalmente en el artículo 20.5 de la Constitución Española de 1978, el secuestro de publicaciones, grabaciones y otros medios de información, solo podrá acordarse:",
       "opciones": [
-        "La mitad más uno de sus miembros.",
-        "La mayoría de los miembros de cada Cámara.",
-        "La mayoría de los miembros de la Cámara, sin que pueda superar el 50%."
+        "Si vulnera los derechos fundamentales.",
+        "En virtud de resolución judicial.",
+        "Si es contraria a lo dispuesto en la Constitución Española de 1978."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 15,
+      "enunciado": "Atendiendo a lo dispuesto en el artículo 54 de la Constitución Española de 1978, la institución del Defensor del Pueblo se regulará por:",
+      "opciones": [
+        "Una ley de bases.",
+        "Una ley orgánica.",
+        "Un Decreto Ley."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 16,
+      "enunciado": "A tenor de lo establecido en el artículo 154 de la Constitución Española de 1978, dirigirá la Administración del Estado en el territorio de la Comunidad Autónoma y la coordinará, cuando proceda, con la administración propia de la Comunidad:",
+      "opciones": [
+        "Un delegado nombrado por el Presidente del Gobierno.",
+        "Un delegado nombrado por el Gobierno.",
+        "Un delegado nombrado por el ministro del Interior."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 17,
+      "enunciado": "Según la vigente Constitución Española del 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá:",
+      "opciones": [
+        "Por el Gobierno, previo dictamen del Consejo de Estado, el del ejercicio de funciones delegadas a que se refiere el apartado 2 del artículo 154.",
+        "Por el Tribunal Constitucional, el relativo a la inconstitucionalidad de las leyes.",
+        "Por el Tribunal de Cuentas, el económico y presupuestario."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 18,
+      "enunciado": "RESERVA 1. Conforme a lo dispuesto en el artículo 157 de la Constitución Española del 1978, los recursos de las Comunidades Autónomas estarán constituidos entre otros por:",
+      "opciones": [
+        "El producto de las operaciones de crédito.",
+        "Las transferencias del Fondo de Garantía Social.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 19,
-      "enunciado": "Según el artículo 117.3 de la Constitución Española de 1978, el ejercicio de la potestad jurisdiccional en todo tipo de procesos, juzgando y haciendo ejecutar lo juzgado, corresponde:",
+      "enunciado": "En los términos previstos en el artículo 54 de la Constitución Española de 1978, la institución del Defensor del Pueblo podrá supervisar la actividad de la Administración, dando cuenta:",
       "opciones": [
-        "Exclusivamente a los Juzgados y Tribunales determinados por las leyes, según las normas de competencia y procedimiento que las mismas establezcan.",
-        "Al Poder Judicial, que juzga y hace ejecutar lo juzgado, según las normas de competencia y procedimiento que las leyes establezcan.",
-        "Exclusivamente a los Juzgados y Tribunales determinados por las leyes, según las normas de competencia que las mismas establezcan."
+        "A las Cortes Generales.",
+        "Al Presidente del Gobierno.",
+        "A los jueces y magistrados en los procesos correspondientes."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 20,
-      "enunciado": "Según el artículo 124.3 de la Constitución Española de 1978, la ley regulará:",
+      "enunciado": "Atendiendo al artículo 168.1 de la Constitución Española de 1978, cuando se propusiere la revisión total de la Constitución, se procederá a la aprobación del principio:",
       "opciones": [
-        "La organización, funciones y estatuto del Ministerio Fiscal.",
-        "Las funciones y estatuto del Ministerio Fiscal.",
-        "La organización, funciones y estatuto del Ministerio Fiscal, así como la elección del Fiscal General del Estado."
+        "Por mayoría de dos tercios de ambas Cámaras reunidas en sesión conjunta.",
+        "Por mayoría de dos tercios de cada Cámara.",
+        "Por mayoría absoluta de ambas Cámaras reunidas en sesión conjunta."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 2
     },
     {
       "id_p": 21,
-      "enunciado": "Según el artículo 94 de la Constitución Española de 1978, la prestación del consentimiento del Estado para obligarse por medio de tratados o convenios requerirá la previa autorización de las Cortes Generales cuando afecten a:",
+      "enunciado": "Conforme a lo dispuesto en el artículo 166 de la Constitución Española de 1978, la iniciativa de reforma constitucional se ejercerá en los términos previstos en los apartados:",
       "opciones": [
-        "Tratados o convenios de carácter político, militar, que afecten a la integridad territorial o a los derechos y deberes fundamentales establecidos en el Título I.",
-        "Tratados o convenios de carácter político, militar, que afecten a la integridad territorial o a los derechos y deberes fundamentales establecidos en la Constitución.",
-        "Tratados o convenios de carácter político, que afecten a la integridad territorial y a los derechos y deberes fundamentales establecidos en el Título I."
+        "1 y 2 del artículo 86.",
+        "1 y 2 del artículo 87.",
+        "1 y 2 del artículo 89."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 22,
+      "enunciado": "A tenor de lo establecido en el artículo 143.2 de la Constitución Española de 1978, los requisitos relativos a la iniciativa del proceso autonómico regulados en dicho artículo deberán ser cumplidos en el plazo de:",
+      "opciones": [
+        "Seis meses desde el primer acuerdo adoptado al respecto por alguna de las Corporaciones locales interesadas.",
+        "Seis meses desde el último acuerdo adoptado al respecto por alguna de las Corporaciones locales interesadas.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 22,
-      "enunciado": "Según el artículo 72.1 de la Constitución Española de 1978, las Cámaras:",
-      "opciones": [
-        "Elaboran sus propios presupuestos y aprueban sus estatutos.",
-        "Establecen sus propios Reglamentos, aprueban sus presupuestos y, de común acuerdo, regulan el Estatuto del Personal de las Cortes Generales.",
-        "Establecen sus propios Reglamentos, aprueban sus presupuestos y, de común acuerdo, regulan el Estatuto del Personal de las Cámaras."
-      ],
-      "respuesta_correcta": 2
-    },
-    {
       "id_p": 23,
-      "enunciado": "Según el artículo 66.2 de la Constitución Española de 1978, las Cortes Generales controlan la acción del Gobierno:",
+      "enunciado": "Conforme al artículo 147.2 de la vigente Constitución Española de 1978, los estatutos de autonomía deberán contener:",
       "opciones": [
-        "Con arreglo a los procedimientos ordinarios.",
-        "Con arreglo a la Constitución y las leyes.",
-        "Con arreglo a la Constitución."
+        "Las bases para el traspaso de competencias asumidas.",
+        "La denominación de la Comunidad que mejor corresponda a su identidad histórica.",
+        "La creación y funcionamiento de sus instituciones de autogobierno."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 3
     },
     {
       "id_p": 24,
-      "enunciado": "Según el artículo 108 de la Constitución Española de 1978, el Gobierno responde de su gestión:",
+      "enunciado": "Según el tenor literal del artículo 148 de la Constitución Española de 1978, las Comunidades Autónomas podrán asumir competencias en las siguientes materias:",
       "opciones": [
-        "Políticamente ante el Congreso de los Diputados.",
-        "Políticamente ante las Cortes Generales.",
-        "Políticamente ante el Congreso de los Diputados y el Senado."
+        "Fomento y promoción del turismo.",
+        "Fomento y coordinación general de la investigación científica y técnica.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 25,
-      "enunciado": "Según el artículo 99.1 de la Constitución Española de 1978, después de cada renovación del Congreso de los Diputados y en los demás supuestos constitucionales en que así proceda, el Rey:",
+      "enunciado": "Conforme a lo establecido en el artículo 124.4 de la Constitución Española de 1978, el Fiscal General del Estado será nombrado por el Rey:",
       "opciones": [
-        "Nombrará al Presidente del Gobierno, previa consulta al Congreso de los Diputados.",
-        "Nombrará al Presidente del Gobierno, previa consulta con los representantes designados por los grupos políticos con representación parlamentaria.",
-        "Propondrá candidato a Presidente del Gobierno, previa consulta con los representantes designados por los grupos políticos con representación parlamentaria."
+        "A propuesta del Consejo General del Poder Judicial, en la forma que determine la ley.",
+        "A propuesta del Gobierno, oído el Consejo General del Poder Judicial.",
+        "A propuesta del Consejo General del Poder Judicial, ratificado por el Gobierno en Consejo de Ministros."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 2
     },
     {
       "id_p": 26,
-      "enunciado": "De acuerdo con el artículo 79 de la Constitución Española de 1978, los acuerdos de las Cámaras serán válidos:",
+      "enunciado": "Según lo establecido en el artículo 121 de la Constitución Española de 1978, darán derecho a una indemnización a cargo del Estado, conforme a la ley:",
       "opciones": [
-        "Cuando reúnan la mayoría de los miembros de cada Cámara, sin que pueda superar el 50% de los votos.",
-        "Cuando reúnan la mayoría de los miembros presentes, sin que pueda superar el 50% de los votos.",
-        "Cuando reúnan la mayoría de los miembros presentes, sin perjuicio de las mayorías especiales que establezcan la Constitución o las leyes."
+        "Los daños causados por la Administración de Justicia provocados por sentencias erróneas que hayan sido anuladas por el Tribunal Supremo.",
+        "Los daños causados por error judicial, así como los que sean consecuencia del funcionamiento anormal de la Administración de Justicia.",
+        "Los daños causados por error judicial que sean consecuencia del funcionamiento normal de la Administración de Justicia."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 2
     },
     {
       "id_p": 27,
-      "enunciado": "Según el artículo 71.1 de la Constitución Española de 1978, los Diputados y Senadores gozarán de inviolabilidad por las opiniones manifestadas en el ejercicio de sus funciones:",
+      "enunciado": "Conforme a lo dispuesto en los artículos 34.2 y 22.4 de la Constitución Española de 1978:",
       "opciones": [
-        "Desde que son elegidos hasta que dejan de serlo, siempre que estén relacionadas con su función.",
-        "Incluso después de haber cesado en su mandato, no pudiendo ser inculpados ni procesados.",
-        "Incluso después de haber cesado en su mandato."
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id_p": 28,
-      "enunciado": "Según el artículo 73.1 de la Constitución Española de 1978, las Cámaras se reunirán anualmente en:",
-      "opciones": [
-        "Dos períodos ordinarios de sesiones: de septiembre a diciembre y de febrero a junio.",
-        "Dos períodos ordinarios de sesiones: de octubre a diciembre y de febrero a mayo.",
-        "Dos períodos ordinarios de sesiones: de septiembre a diciembre y de febrero a mayo."
+        "Las fundaciones para fines de interés general sólo podrán ser disueltas o suspendidas en sus actividades en virtud de resolución judicial motivada.",
+        "Se prohíben las fundaciones para fines de interés general de carácter paramilitar.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 29,
-      "enunciado": "Según el artículo 68.3 de la Constitución Española de 1978, nadie podrá ser elegido:",
+      "id_p": 28,
+      "enunciado": "RESERVA 10. Según el artículo 103.2 de la Constitución Española de 1978, los órganos de la administración del Estado:",
       "opciones": [
-        "Diputado por más de dos circunscripciones.",
-        "Diputado y Senador al mismo tiempo.",
-        "Diputado más de dos veces."
+        "Son creados, regidos y coordinados de acuerdo con la ley.",
+        "Sirven con objetividad a los intereses generales.",
+        "Tienen pleno sometimiento a la ley y al derecho."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 29,
+      "enunciado": "De conformidad con el artículo 103.3 de la Constitución Española de 1978, la ley regulará el acceso a la función pública de acuerdo con los principios de:",
+      "opciones": [
+        "Igualdad y mérito.",
+        "Mérito y capacidad.",
+        "Eficacia y jerarquía."
       ],
       "respuesta_correcta": 2
     },
     {
       "id_p": 30,
-      "enunciado": "Según el artículo 68.1 de la Constitución Española de 1978, el Congreso de los Diputados se compone de:",
+      "enunciado": "Se puede recabar la tutela a través de un recurso de amparo ante el Tribunal Constitucional del derecho:",
       "opciones": [
-        "Un mínimo de 300 y un máximo de 400 Diputados.",
-        "Un mínimo de 350 y un máximo de 400 Diputados.",
-        "Un máximo de 400 Diputados."
+        "Al matrimonio.",
+        "A la propiedad privada.",
+        "A la objeción de conciencia."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 31,
-      "enunciado": "Según el artículo 117.4 de la Constitución Española de 1978, los Jueces y Magistrados no podrán desempeñar más funciones que las jurisdiccionales y las que le son propias en la Ley Orgánica del Poder Judicial, y:",
+      "enunciado": "El Tribunal Constitucional se compone de:",
       "opciones": [
-        "No podrán recibir condecoraciones.",
-        "No podrán ocupar otros cargos públicos.",
-        "No podrán pertenecer a partidos políticos o sindicatos."
+        "15 miembros.",
+        "16 miembros.",
+        "12 miembros."
       ],
       "respuesta_correcta": 3
     },
     {
       "id_p": 32,
-      "enunciado": "Conforme al artículo 124.2 de la Constitución Española de 1978, el Fiscal General del Estado es nombrado:",
+      "enunciado": "Según la Constitución española de 1978, si no hubiere ninguna persona a quien corresponda la Regencia, ésta será nombrada por las Cortes Generales y se compondrá siempre de:",
       "opciones": [
-        "Por el Rey, a propuesta del Gobierno, oído el Consejo General del Poder Judicial.",
-        "Por el Rey, a propuesta del Gobierno, oído el Consejo de Ministros.",
-        "Por el Gobierno, oído el Consejo de Ministros."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 33,
-      "enunciado": "Según el artículo 98.2 de la Constitución Española de 1978, la condición de miembro del Gobierno es incompatible con el ejercicio de:",
-      "opciones": [
-        "Otras funciones representativas que no sean el mandato parlamentario.",
-        "Cualquier otra función pública que no derive de su mandato, así como de cualquier actividad profesional o mercantil.",
-        "Cualquier otra función pública y con cualquier actividad profesional o mercantil."
+        "Una sola persona.",
+        "Una o tres personas.",
+        "Una, tres o cinco personas."
       ],
       "respuesta_correcta": 2
     },
     {
-      "id_p": 34,
-      "enunciado": "De acuerdo con el artículo 70.1 de la Constitución Española de 1978, los Senadores y Diputados no podrán ser miembros del Tribunal Constitucional:",
+      "id_p": 33,
+      "enunciado": "Según los artículos 148 y 149 de la Constitución española de 1978, las Comunidades Autónomas pueden asumir competencias en materia de:",
       "opciones": [
-        "En ningún caso.",
-        "Sí podrán si llevan más de cinco años en el cargo.",
-        "Sí podrán si lo autoriza el Congreso o el Senado."
+        "Fomento y coordinación general de la investigación científica y técnica.",
+        "Matriculación de aeronaves.",
+        "Los montes y aprovechamientos forestales."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 34,
+      "enunciado": "Según el artículo 54 de la Constitución española de 1978, el Defensor del Pueblo dará cuenta de su gestión:",
+      "opciones": [
+        "A las Cortes Generales.",
+        "Al Gobierno y al Congreso de los Diputados.",
+        "Al Congreso de los Diputados."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 35,
-      "enunciado": "Según el artículo 78.2 de la Constitución Española de 1978, la Mesa de las Cortes Generales estará formada por:",
+      "enunciado": "Según el artículo 124 de la Constitución Española, el Fiscal General del Estado será nombrado por:",
       "opciones": [
-        "El Presidente de la Cámara, tres Vicepresidentes y cuatro Secretarios elegidos por la Cámara.",
-        "El Presidente de las Cortes Generales, tres Vicepresidentes y cuatro Secretarios.",
-        "El Presidente de las Cortes Generales y los Presidentes de ambas Cámaras."
+        "El Rey, a propuesta del Gobierno, oídas las Cortes Generales.",
+        "El Rey, a propuesta de las Cortes Generales, oído el Consejo General del Poder Judicial.",
+        "El Rey, a propuesta del Gobierno, oído el Consejo General del Poder Judicial."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 3
     },
     {
       "id_p": 36,
-      "enunciado": "Según el artículo 116.1 de la Constitución Española de 1978, el estado de alarma será declarado por:",
+      "enunciado": "Según el artículo 29 de la Constitución española de 1978, los miembros de las Fuerzas o Institutos armados o de los Cuerpos sometidos a disciplina militar:",
       "opciones": [
-        "El Gobierno, mediante decreto, con un plazo máximo de quince días, dando cuenta al Congreso de los Diputados.",
-        "El Gobierno, mediante decreto, con un plazo máximo de quince días, dando cuenta al Congreso, que se reunirá inmediatamente al efecto.",
-        "El Gobierno, mediante decreto, dando cuenta al Congreso, que se reunirá inmediatamente al efecto."
+        "Pueden ejercer el derecho de petición tanto individual como colectivamente.",
+        "Solo pueden ejercer el derecho de petición individualmente.",
+        "No pueden ejercer el derecho de petición."
       ],
       "respuesta_correcta": 2
     },
     {
       "id_p": 37,
-      "enunciado": "Según el artículo 116.3 de la Constitución Española de 1978, el estado de sitio será declarado por:",
+      "enunciado": "En el marco del derecho a la reunión pacífica y sin armas del artículo 21 de la vigente Constitución española, en los casos de reuniones en lugares de tránsito público y manifestaciones:",
       "opciones": [
-        "El Congreso de los Diputados por mayoría de dos tercios, a propuesta del Gobierno.",
-        "El Congreso de los Diputados por mayoría absoluta, a propuesta exclusiva del Gobierno.",
-        "El Congreso de los Diputados por mayoría absoluta, a propuesta exclusiva del Gobierno o del Presidente del Gobierno."
+        "Se dará comunicación previa a la autoridad, que sólo podrá prohibirlas cuando existan razones fundadas de alteración del orden público, con peligro para personas o bienes.",
+        "No podrán prohibirse en ningún caso.",
+        "Sólo podrán prohibirse por orden judicial."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 38,
+      "enunciado": "Según el artículo 160 de la vigente Constitución española, el Presidente del Tribunal Constitucional será nombrado entre sus miembros por el Rey a propuesta del mismo Tribunal en pleno y por un periodo de:",
+      "opciones": [
+        "Cuatro años.",
+        "Tres años.",
+        "Dos años."
       ],
       "respuesta_correcta": 2
     },
     {
-      "id_p": 38,
-      "enunciado": "Según el artículo 122.2 de la Constitución Española de 1978, la Ley Orgánica del Poder Judicial determinará la constitución, funcionamiento y gobierno de los Juzgados y Tribunales, así como:",
+      "id_p": 39,
+      "enunciado": "El artículo 141 de la Constitución española de 1978",
       "opciones": [
-        "El Estatuto jurídico de los Jueces y Magistrados de carrera, que formarán un cuerpo único.",
-        "El Estatuto jurídico de los Jueces y Magistrados.",
-        "El Estatuto jurídico de los Jueces y Magistrados de carrera."
+        "No permite más agrupación de municipios que la provincia.",
+        "Permite agrupaciones de municipios diferentes de la provincia.",
+        "Permite agrupaciones de municipios diferentes de la provincia, exigiendo para su creación una ley orgánica."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 40,
+      "enunciado": "La Constitución española de 1978 establece que los profesores, los padres y en su caso, los alumnos intervendrán en el control y gestión de todos los centros sostenidos por la Administración con fondos públicos, en los términos que la ley establezca, en el:",
+      "opciones": [
+        "Artículo 27.7.",
+        "Artículo 28.1.",
+        "Artículo 26.5."
       ],
       "respuesta_correcta": 1
+    },
+    {
+      "id_p": 41,
+      "enunciado": "Conforme a lo dispuesto en el artículo 168.1 de la Constitución española de 1978, cuando se propusiere la revisión parcial de la Constitución que afecte a la Sección primera del Titulo I, se procederá a la aprobación del principio por:",
+      "opciones": [
+        "Mayoría de dos tercios de cada Cámara, y a la disolución inmediata de las Cortes.",
+        "Mayoría de dos quintos de cada Cámara, y a la disolución inmediata de las Cortes.",
+        "Mayoría absoluta de cada Cámara, y a la disolución inmediata de las Cortes."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 42,
+      "enunciado": "Conforme a lo dispuesto en el artículo 162 de la Constitución española de 1978, no están legitimados para interponer el recurso de inconstitucionalidad:",
+      "opciones": [
+        "El Presidente del Gobierno.",
+        "El Ministerio Fiscal.",
+        "50 Senadores."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 43,
+      "enunciado": "RESERVA 7. Según lo dispuesto en el artículo 27.3 de la Constitución española de 1978, los poderes públicos garantizan el derecho que asiste a los padres para que sus hijos reciban la formación:",
+      "opciones": [
+        "Integral que esté de acuerdo con sus propios ideales.",
+        "Religiosa y moral que esté de acuerdo con sus ideales.",
+        "Religiosa y moral que esté de acuerdo con sus propias convicciones."
+      ],
+      "respuesta_correcta": 3
     }
   ]
 }

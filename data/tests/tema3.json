@@ -1,246 +1,426 @@
 {
   "id": 3,
-  "titulo": "Tema 3. La Constitución Española (III): Organización Territorial del Estado",
+  "titulo": "Tema 3. La Constitución Española (III)",
   "preguntas": [
     {
       "id_p": 1,
-      "enunciado": "Según el artículo 68.2 de la Constitución Española de 1978, la circunscripción electoral es la:",
+      "enunciado": "Conforme al tenor literal del artículo 62 de la Constitución Española de 1978 le corresponde al Rey:",
       "opciones": [
-        "Comunidad Autónoma.",
-        "Provincia.",
-        "Comarca."
+        "Ser informado de los asuntos de Estado y presidir, a estos efectos, las sesiones del Consejo de Ministros, cuando lo estime oportuno, a petición del Presidente del Gobierno.",
+        "Ser informado de los asuntos de Estado y dirigir, a estos efectos, las sesiones del Consejo de Ministros, a petición del Presidente del Gobierno.",
+        "Ser informado de los asuntos de Estado y presidir, las sesiones del Consejo de Ministros, a petición del Presidente del Gobierno."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 1
     },
     {
       "id_p": 2,
-      "enunciado": "Según el artículo 156.1 de la Constitución Española de 1978, las Haciendas de las Comunidades Autónomas deben gozar de la autonomía financiera que le es propia, de acuerdo con:",
+      "enunciado": "RESERVA 10. Según el artículo 8 de la Constitución Española de 1978:",
       "opciones": [
-        "La Constitución y la Ley Orgánica de Financiación de las Comunidades Autónomas (LOFCA).",
-        "La Constitución.",
-        "El Estatuto de Autonomía de cada Comunidad Autónoma."
+        "Una ley orgánica regulará las bases de la organización militar.",
+        "Una ley ordinaria regulará las bases de la organización militar.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 3,
-      "enunciado": "Conforme al artículo 141.2 de la Constitución Española de 1978, el Gobierno de las Provincias está encomendado a:",
+      "enunciado": "De conformidad con el artículo 29 de la Constitución Española de 1978, los miembros de las Fuerzas o Institutos armados o de los Cuerpos sometidos a disciplina militar podrán ejercer el derecho de petición:",
       "opciones": [
-        "La Diputación Provincial.",
-        "Diputaciones u otras Corporaciones de carácter representativo.",
-        "La Asamblea Provincial."
+        "De forma individual y colectiva, por escrito, en la forma y con los efectos que determine la ley.",
+        "No podrán ejercer el derecho de petición.",
+        "Sólo individualmente y con arreglo a lo dispuesto en su legislación específica."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 3
     },
     {
       "id_p": 4,
-      "enunciado": "Según el artículo 155.1 de la Constitución Española de 1978, si una Comunidad Autónoma no cumpliere las obligaciones que la Constitución u otras leyes le impongan, o actuare de forma que atente gravemente al interés general de España, el Gobierno podrá:",
+      "enunciado": "De acuerdo con el artículo 159 de la Constitución Española de 1978 los miembros del Tribunal Constitucional serán:",
       "opciones": [
-        "Requerir al Presidente de la Comunidad Autónoma y, en caso de no ser atendido, solicitará la aprobación por mayoría absoluta del Senado para adoptar medidas.",
-        "Requerir al Presidente de la Comunidad Autónoma para que cese en el incumplimiento o en la actuación.",
-        "Solicitar la aprobación por mayoría absoluta del Congreso y del Senado."
+        "Objetivos en el ejercicio de su mandato.",
+        "Dependientes e inamovibles en el ejercicio de su mandato.",
+        "Independientes e inamovibles en el ejercicio de su mandato."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 5,
+      "enunciado": "Según el artículo 13 de la Constitución Española de 1978, la extradición se concederá en cumplimiento de un tratado o de la ley, atendiendo al principio de:",
+      "opciones": [
+        "Reciprocidad.",
+        "Seguridad Jurídica.",
+        "Justicia."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 5,
-      "enunciado": "De acuerdo con el artículo 153.a) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal Constitucional en lo relativo a:",
-      "opciones": [
-        "La legalidad de sus actos.",
-        "El control económico y presupuestario.",
-        "La constitucionalidad de sus disposiciones normativas con fuerza de ley."
-      ],
-      "respuesta_correcta": 3
-    },
-    {
       "id_p": 6,
-      "enunciado": "Según el artículo 150.2 de la Constitución Española de 1978, el Estado podrá transferir o delegar a las Comunidades Autónomas, mediante Ley Orgánica, facultades correspondientes a materia de titularidad estatal que por su propia naturaleza sean susceptibles de transferencia o delegación. La ley preverá en cada caso:",
+      "enunciado": "¿En qué artículo de la Constitución Española de 1978 se reconoce el derecho a la propiedad privada y a la herencia?",
       "opciones": [
-        "La correspondiente transferencia de medios financieros, así como las formas de control que se reserve el Estado.",
-        "La correspondiente transferencia de medios financieros.",
-        "La correspondiente transferencia de medios financieros y las formas de control que se reserve el Estado."
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id_p": 7,
-      "enunciado": "De acuerdo con el artículo 153.c) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por la Jurisdicción Contencioso-Administrativa en lo relativo a:",
-      "opciones": [
-        "La constitucionalidad de sus disposiciones normativas con fuerza de ley.",
-        "La legalidad de su Administración.",
-        "El control económico y presupuestario."
+        "En el artículo 32.",
+        "En el artículo 33.",
+        "En el artículo 34."
       ],
       "respuesta_correcta": 2
     },
     {
-      "id_p": 8,
-      "enunciado": "Según el artículo 68.2 de la Constitución Española de 1978, a cada provincia se le asigna un número mínimo inicial de Diputados:",
+      "id_p": 7,
+      "enunciado": "De acuerdo con el tenor literal del artículo 68 de la Constitución Española de 1978 el Congreso se compone:",
       "opciones": [
-        "Dos.",
-        "Tres.",
-        "Cuatro."
+        "De un mínimo de 300 y un máximo de 400 Diputados, elegidos por sufragio universal, en los términos que establezca la ley.",
+        "De un mínimo de 300 y un máximo de 400 Diputados, elegidos por sufragio universal, libre, igual, directo y secreto; en los términos que establezca la ley.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 9,
-      "enunciado": "De acuerdo con el artículo 69.5 de la Constitución Española de 1978, las Comunidades Autónomas designarán, además, un Senador y otro más por cada millón de habitantes de su respectivo territorio. La designación corresponderá:",
+      "id_p": 8,
+      "enunciado": "Según el artículo 13 de la Constitución Española de 1978, ¿en qué casos pueden los ciudadanos extranjeros ejercer el derecho de sufragio activo en elecciones municipales?",
       "opciones": [
-        "Al Gobierno de la Comunidad Autónoma.",
-        "A la Asamblea legislativa de la Comunidad Autónoma.",
-        "Al Presidente de la Comunidad Autónoma."
+        "Solo pueden ejercer el sufragio activo si son ciudadanos de un país miembro de la Unión Europea y su país de origen ha firmado un acuerdo bilateral con España, atendiendo al principio de igualdad.",
+        "Es necesario que acrediten llevar residiendo en España al menos cinco años, sin necesidad de acuerdos internacionales.",
+        "Podrán ser titulares del derecho de sufragio activo siempre que así se establezca por tratado o por ley, atendiendo a criterios de reciprocidad."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 9,
+      "enunciado": "RESERVA 3. Según lo dispuesto en el artículo 167 de la Constitución Española de 1978, los proyectos de reforma constitucional deberán ser aprobados por una mayoría de:",
+      "opciones": [
+        "Dos tercios.",
+        "Tres quintos.",
+        "El artículo 167 no se refiere a la reforma constitucional."
       ],
       "respuesta_correcta": 2
     },
     {
       "id_p": 10,
-      "enunciado": "Según el artículo 143.2 de la Constitución Española de 1978, la iniciativa del proceso autonómico en el caso de provincias limítrofes con características históricas, culturales y económicas comunes la adoptará:",
+      "enunciado": "Según el artículo 138 de la Constitución Española de 1978, las diferencias entre los Estatutos de las distintas Comunidades Autónomas no podrán implicar, en ningún caso:",
       "opciones": [
-        "Todas las Diputaciones y las dos terceras partes de los municipios cuya población represente la mayoría del censo electoral de cada provincia.",
-        "Las tres cuartas partes de los municipios cuya población represente la mayoría del censo electoral de cada provincia.",
-        "Todas las Diputaciones y las dos terceras partes de los municipios cuya población represente al menos la mayoría del censo electoral de cada provincia."
+        "Privilegios económicos o sociales.",
+        "Privilegios en la gestión de sus intereses.",
+        "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 1
     },
     {
       "id_p": 11,
-      "enunciado": "Según el artículo 141.1 de la Constitución Española de 1978, la provincia es una entidad local con personalidad jurídica propia, determinada por:",
+      "enunciado": "El Consejo General del Poder Judicial, según el artículo 122 de la Constitución Española de 1978, estará integrado por el Presidente del Tribunal Supremo, que lo presidirá, y por veinte miembros nombrados por el Rey por un periodo de:",
       "opciones": [
-        "La agrupación de municipios.",
-        "La agrupación de municipios limítrofes.",
-        "La agrupación de municipios limítrofes y con características comunes."
+        "Cinco años.",
+        "Cuatro años.",
+        "Tres años."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 12,
-      "enunciado": "Según el artículo 147.3 de la Constitución Española de 1978, la reforma de los Estatutos se ajustará a lo establecido en:",
+      "enunciado": "Conforme a lo dispuesto en los artículos 13 y 23 de la Constitución Española de 1978:",
       "opciones": [
-        "El Estatuto, y requerirá en todo caso la aprobación por las Cortes Generales mediante Ley Orgánica.",
-        "El Estatuto.",
-        "El Estatuto, y requerirá en todo caso la aprobación por las Cortes Generales mediante Ley Ordinaria."
+        "Un extranjero puede ser nombrado ministro del gobierno de España.",
+        "Un extranjero solo puede ser nombrado ministro del gobierno de España si es nacional de un Estado miembro de la Unión Europea.",
+        "Un extranjero no puede ser nombrado ministro del gobierno de España."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Conforme a lo dispuesto en la Constitución Española de 1978, la sucesión en el trono seguirá el orden regular:",
+      "opciones": [
+        "De primogenitura y representación, siendo preferida siempre la línea anterior a las posteriores; en la misma línea, el grado más próximo al más remoto; en el mismo grado, el varón a la mujer, y en el mismo sexo, la persona de más edad a la de menos.",
+        "De primogenitura y representación, siendo preferida siempre la línea posterior a las anteriores; en la misma línea, el grado más próximo al más remoto; en el mismo grado, el varón a la mujer, y en el mismo sexo, la persona de más edad a la de menos.",
+        "De primogenitura y representación, siendo preferida siempre la línea anterior a las posteriores; en la misma línea, el grado más próximo al más remoto; en el mismo grado, el varón a la mujer, y en el mismo sexo, la persona de menos edad a la de más."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 13,
-      "enunciado": "Según el artículo 134.3 de la Constitución Española de 1978, el Gobierno deberá presentar ante el Congreso de los Diputados los Presupuestos Generales del Estado:",
-      "opciones": [
-        "Al menos tres meses antes de la expiración de los del año anterior.",
-        "Al menos dos meses antes de la expiración de los del año anterior.",
-        "Al menos un mes antes de la expiración de los del año anterior."
-      ],
-      "respuesta_correcta": 2
-    },
-    {
       "id_p": 14,
-      "enunciado": "Según la Disposición Adicional Quinta de la Ley Orgánica 2/2012 de Estabilidad Presupuestaria y Sostenibilidad Financiera, la Conferencia de Presidentes se configura como:",
+      "enunciado": "La gratuidad de la justicia cuando así lo disponga la ley y, en todo caso, respecto de quienes acrediten insuficiencia de recursos para litigar está garantizada en la Constitución Española de 1978 en su artículo:",
       "opciones": [
-        "Órgano de colaboración y debate político para asuntos de interés común.",
-        "Órgano de máxima colaboración política entre el Estado y las Comunidades Autónomas, con funciones de coordinación administrativa.",
-        "Órgano de máxima cooperación política entre el Estado y las Comunidades Autónomas."
+        "120.",
+        "118.",
+        "119."
       ],
       "respuesta_correcta": 3
     },
     {
       "id_p": 15,
-      "enunciado": "Según el artículo 145.2 de la Constitución Española de 1978, la celebración de convenios de colaboración entre Comunidades Autónomas, para la gestión y prestación de servicios propios de las mismas, requerirá la comunicación a:",
+      "enunciado": "Conforme al apartado dos del artículo 167 de la Constitución Española de 1978:",
       "opciones": [
-        "Las Cortes Generales.",
-        "Las Cortes Generales, y podrán ser sometidos a la Comisión de las Comunidades Autónomas del Senado.",
-        "El Congreso de los Diputados."
+        "Los proyectos de reforma constitucional únicamente pueden aprobarse por una mayoría de tres quintos de cada una de las Cámaras.",
+        "Los proyectos de reforma constitucional, siempre que hubieren obtenido el voto favorable de la mayoría absoluta en una de las Cámaras, podrán ser aprobados por mayoría de dos tercios de la otra Cámara.",
+        "Los proyectos de reforma constitucional, siempre que hubieren obtenido el voto favorable de la mayoría absoluta del Senado, podrán ser aprobados con una mayoría de dos tercios del Congreso de los Diputados."
       ],
       "respuesta_correcta": 2
     },
     {
       "id_p": 16,
-      "enunciado": "De acuerdo con el artículo 153.b) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal de Cuentas en lo relativo a:",
+      "enunciado": "Según la Constitución Española de 1978, tras la aprobación en principio por ambas Cámaras de una reforma constitucional que afectara al Capítulo segundo, Sección segunda del Título I de la Constitución Española:",
       "opciones": [
-        "La legalidad de su Administración.",
-        "El control económico y presupuestario.",
-        "La constitucionalidad de sus disposiciones normativas con fuerza de ley."
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id_p": 17,
-      "enunciado": "Según el artículo 157.3 de la Constitución Española de 1978, la Ley Orgánica que regule el ejercicio de las competencias financieras de las Comunidades Autónomas se aprobará por:",
-      "opciones": [
-        "Mayoría absoluta del Congreso y mayoría simple del Senado.",
-        "Mayoría absoluta de cada una de las Cámaras.",
-        "Mayoría de tres quintos de ambas Cámaras."
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id_p": 18,
-      "enunciado": "Según el artículo 150.3 de la Constitución Española de 1978, el Estado podrá dictar leyes que establezcan los principios necesarios para armonizar las disposiciones normativas de las Comunidades Autónomas, aun en el caso de materias atribuidas a la competencia de éstas, cuando así lo exija:",
-      "opciones": [
-        "El interés general.",
-        "El interés de la mayoría de las Comunidades Autónomas.",
-        "La urgencia por motivos de estabilidad presupuestaria."
+        "Se procederá a la disolución inmediata de las Cortes.",
+        "Se someterá necesariamente a la ratificación mediante referéndum.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1
     },
     {
-      "id_p": 19,
-      "enunciado": "Conforme al artículo 147.2.b) de la Constitución Española de 1978, los Estatutos de Autonomía deberán contener la delimitación del territorio de la Comunidad Autónoma:",
+      "id_p": 17,
+      "enunciado": "Conforme al tenor literal del artículo 162.1,a) de la Constitución Española de 1978, para interponer el recurso de inconstitucionalidad están legitimados:",
       "opciones": [
-        "De conformidad con los límites de las provincias existentes.",
-        "De conformidad con los límites de las provincias limítrofes.",
-        "De conformidad con los límites de las provincias."
+        "El Presidente del Gobierno, el Defensor del Pueblo, el Fiscal General del Estado, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas.",
+        "El Presidente del Gobierno, el Defensor del Pueblo, los Defensores del Pueblo de las Comunidades Autónomas, el Fiscal General del Estado, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas.",
+        "El Presidente del Gobierno, el Defensor del Pueblo, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 18,
+      "enunciado": "En la Constitución Española de 1978, entre los derechos fundamentales y las libertades públicas, no se encuentra incluido:",
+      "opciones": [
+        "El derecho a la producción y creación literaria, artística, científica y técnica.",
+        "El derecho a la propiedad privada y a la herencia.",
+        "El derecho a la libertad de cátedra."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 19,
+      "enunciado": "Según el artículo 21 de la Constitución Española de 1978:",
+      "opciones": [
+        "Solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de comunicación previa a la autoridad, pero no necesitarán autorización previa.",
+        "Solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de autorización previa por la autoridad, pudiendo denegarse esta última cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
+        "Solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de autorización previa por la autoridad, sin que quepa prohibirlas en ningún caso."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 20,
-      "enunciado": "Según el artículo 137 de la Constitución Española de 1978, el Estado se organiza territorialmente en:",
+      "enunciado": "Según el artículo 60 de la Constitución Española de 1978, siempre que sea mayor de edad y español de nacimiento:",
       "opciones": [
-        "Municipios, Provincias y Comunidades Autónomas.",
-        "Provincias y Comunidades Autónomas.",
-        "Municipios y Provincias."
+        "Con carácter preferente, será tutor del Rey menor el padre o la madre, si existieran, mientras permanezcan viudos.",
+        "Será tutor del Rey menor el padre o la madre mientras permanezcan viudos, solo en el caso de que el Rey difunto no hubiese nombrado en su testamento tutor del Rey menor.",
+        "Si el Rey difunto no hubiese nombrado en su testamento tutor del Rey menor, lo nombrarán las Cortes Generales."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 21,
-      "enunciado": "Según el artículo 107 de la Constitución Española de 1978, el Consejo de Estado es el supremo órgano consultivo del Gobierno. Su composición y competencia serán reguladas por:",
+      "enunciado": "RESERVA 1. Según el artículo 60 de la Constitución Española:",
       "opciones": [
-        "Ley Ordinaria.",
-        "El Reglamento de Régimen Interno.",
-        "Ley Orgánica."
+        "No podrán acumularse en ningún caso los cargos de Regente y de tutor del Rey menor.",
+        "Solo podrán acumularse los cargos de Regente y de tutor del Rey menor en el padre, madre o ascendientes directos del Rey.",
+        "Solo podrán acumularse los cargos de Regente y de tutor del Rey menor cuando a este último lo haya nombrado en su testamento el Rey difunto."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 1
     },
     {
       "id_p": 22,
-      "enunciado": "De acuerdo con el artículo 153.a) de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal Constitucional en lo relativo a:",
+      "enunciado": "Según la Constitución Española de 1978, a la isla de Menorca le corresponde elegir:",
       "opciones": [
-        "La constitucionalidad de sus disposiciones normativas con fuerza de Ley.",
-        "La legalidad de su administración.",
-        "El control económico y presupuestario."
+        "Un senador.",
+        "Dos senadores.",
+        "Tres senadores."
       ],
       "respuesta_correcta": 1
     },
     {
       "id_p": 23,
-      "enunciado": "Según el artículo 138.1 de la Constitución Española de 1978, el Estado garantiza la realización efectiva del principio de solidaridad consagrado en el artículo 2, velando por el establecimiento de un equilibrio económico, adecuado y justo entre las diversas partes del territorio español y atendiendo en particular a:",
+      "enunciado": "Según la Constitución Española de 1978, la población de Ceuta elige:",
       "opciones": [
-        "Las circunstancias de las Islas y las Comunidades Autónomas uniprovinciales.",
-        "Las circunstancias del hecho insular.",
-        "Las circunstancias insulares."
+        "El mismo número de senadores que la isla de Tenerife.",
+        "El mismo número de senadores que la isla de Menorca.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 24,
+      "enunciado": "Según la Constitución Española de 1978, las sesiones conjuntas de las dos Cámaras (Congreso y Senado):",
+      "opciones": [
+        "Se regirán por el Reglamento del Congreso de los Diputados.",
+        "Se regirán por el Reglamento de las Cortes Generales.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 25,
+      "enunciado": "Las causas de inelegibilidad e incompatibilidad de los Diputados y Senadores:",
+      "opciones": [
+        "Se regulan exclusivamente en la Constitución Española de 1978.",
+        "Se regulan exclusivamente en la ley electoral.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Según la Constitución española de 1978:",
+      "opciones": [
+        "Cualquier alteración de los límites provinciales habrá de ser aprobada por las Cortes Generales mediante ley orgánica.",
+        "Cualquier alteración de los límites provinciales habrá de ser aprobada por las Cortes Generales mediante ley ordinaria.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 27,
+      "enunciado": "A tenor de lo establecido en el art. 154 de la Constitución Española de 1978, dirigirá la Administración del Estado en el territorio de la Comunidad Autónoma y la coordinará, cuando proceda, con la administración propia de la Comunidad:",
+      "opciones": [
+        "El Presidente del Gobierno de la Comunidad Autónoma.",
+        "Un delegado nombrado por el Gobierno.",
+        "El Ministro de Política Territorial."
       ],
       "respuesta_correcta": 2
     },
     {
-      "id_p": 24,
-      "enunciado": "Según el artículo 153 de la Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá por el Tribunal de Cuentas, el Tribunal Constitucional y:",
+      "id_p": 28,
+      "enunciado": "Según la vigente Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá:",
       "opciones": [
-        "El Tribunal Supremo.",
-        "El Gobierno, previo acuerdo del Senado.",
-        "La Jurisdicción Contencioso-Administrativa."
+        "Por el Gobierno, previo dictamen del Consejo de Estado, el del ejercicio de funciones delegadas a que se refiere el apartado 2 del artículo 154 de la Constitución.",
+        "Por el Tribunal Constitucional, el relativo a la inconstitucionalidad de las leyes.",
+        "Por el Tribunal de Cuentas, el económico y presupuestario."
       ],
       "respuesta_correcta": 3
+    },
+    {
+      "id_p": 29,
+      "enunciado": "Conforme al artículo 167.3 de la Constitución Española, aprobada la reforma constitucional por las Cortes Generales, será sometida a referéndum para su ratificación cuando así lo soliciten, dentro de los quince días siguientes a su aprobación:",
+      "opciones": [
+        "Una décima parte de los miembros de cualquiera de las Cámaras.",
+        "La mayoría absoluta de los miembros de cualquiera de las Cámaras.",
+        "La mayoría absoluta del Congreso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 30,
+      "enunciado": "Conforme a lo establecido en el artículo 158.2 de la Constitución Española de 1978, con el fin de corregir desequilibrios económicos interterritoriales y hacer efectivo el principio de solidaridad, se constituirá un Fondo de Compensación con destino a:",
+      "opciones": [
+        "Inversiones de capital.",
+        "Gastos de inversión.",
+        "Operaciones de crédito."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 31,
+      "enunciado": "La inviolabilidad del domicilio está reconocida en la Constitución Española de 1978:",
+      "opciones": [
+        "En el artículo 18.2.",
+        "En el artículo 18.4",
+        "En el artículo 18.3."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 32,
+      "enunciado": "De conformidad con lo establecido en el artículo 6 de la Constitución Española de 1978, los partidos políticos:",
+      "opciones": [
+        "Expresan el pluralismo político, concurren a la formación y manifestación de la voluntad popular y son instrumento fundamental para la participación ciudadana.",
+        "Su creación y el ejercicio de su actividad son libres dentro del respeto a la Constitución y a la ley.",
+        "Su estructura interna y funcionamiento deberán ser regulados por ley."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 33,
+      "enunciado": "Conforme a lo dispuesto en el artículo 122. 3 de la Constitución Española de 1978, el Consejo General del Poder Judicial :",
+      "opciones": [
+        "Es el órgano de gobierno del mismo. Mediante ley ordinaria se establecerá su estatuto, régimen de incompatibilidades de sus miembros y funciones.",
+        "Está integrado por el Presidente del Tribunal Supremo y por 25 miembros nombrados a propuesta del Gobierno por un periodo de cinco años.",
+        "Está integrado por el Presidente del Tribunal Supremo, que lo presidirá, y por 20 miembros nombrados por el Rey por un periodo de cinco años."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 34,
+      "enunciado": "De conformidad con el artículo 137 de la vigente Constitución Española de 1978, el Estado se organiza territorialmente en:",
+      "opciones": [
+        "Cabildos, comarcas y las provincias que se constituyan.",
+        "Municipios, comarcas y las provincias que se constituyan.",
+        "Municipios, provincias y comunidades autónomas que se constituyan."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 35,
+      "enunciado": "Conforme a lo dispuesto en el artículo 153 de la vigente Constitución Española de 1978, el control de la actividad de los órganos de las Comunidades Autónomas se ejercerá:",
+      "opciones": [
+        "Por la jurisdicción contencioso-administrativa, el de la administración autónoma y sus normas reglamentarias.",
+        "Por el Presidente del Gobierno.",
+        "Por las Cortes Generales."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 36,
+      "enunciado": "Conforme a lo dispuesto en el artículo 140 de la vigente Constitución Española de 1978, el gobierno y administración de los municipios corresponde a:",
+      "opciones": [
+        "Sus respectivos Ayuntamientos, integrados por los alcaldes y concejales.",
+        "La Junta de Gobierno Local.",
+        "El alcalde y tenientes de alcalde."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 37,
+      "enunciado": "Según el artículo 10.2 de la Constitución española de 1978, las normas relativas a los derechos fundamentales y a las libertades que la Constitución reconoce se interpretarán de conformidad con:",
+      "opciones": [
+        "Los acuerdos y los Tratados internacionales firmados por España.",
+        "Las directivas y los reglamentos aprobados sobre las mismas materias por la Unión Europea.",
+        "La Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 38,
+      "enunciado": "Conforme a lo dispuesto en el artículo 161.1 de la Constitución española de 1978, el Tribunal Constitucional es competente para conocer:",
+      "opciones": [
+        "De los conflictos de competencias entre las Comunidades Autónomas entre sí.",
+        "De los conflictos de competencias entre las Diputaciones Provinciales y los Municipios.",
+        "Del recurso de amparo por violación de los principios rectores de la política social y económica del país."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 39,
+      "enunciado": "En la Constitución Española de 1978 no se incluyen entre los derechos fundamentales y las libertades públicas:",
+      "opciones": [
+        "El derecho a la producción y creación literaria, artística, científica y técnica.",
+        "El derecho a la propiedad privada y a la herencia.",
+        "El derecho a la libertad de enseñanza."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id_p": 40,
+      "enunciado": "Según la Constitución Española de 1978, no será susceptible de recurso de amparo ante el Tribunal Constitucional los derechos a:",
+      "opciones": [
+        "La libertad de creación de centros docentes.",
+        "La libertad de cátedra.",
+        "La libertad de empresa en el marco de la economía de mercado."
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id_p": 41,
+      "enunciado": "Según el artículo 21 de la Constitución Española de 1978, solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de:",
+      "opciones": [
+        "Comunicación previa a la autoridad, pero no requerirán autorización previa.",
+        "Autorización previa por la autoridad, y podrán prohibirse cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
+        "Autorización previa por la autoridad, sin que quepa prohibirlas en ningún caso."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id_p": 42,
+      "enunciado": "Según el artículo 11 de la vigente Constitución española de 1978, un español de origen puede ser privado de su nacionalidad:",
+      "opciones": [
+        "Únicamente en caso de resolución judicial motivada.",
+        "En ningún caso.",
+        "En casos de delitos de terrorismo."
+      ],
+      "respuesta_correcta": 2
     }
   ]
 }

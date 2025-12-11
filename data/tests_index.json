@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "titulo": "Tema 1. La Constitución Española (I): Derechos y Deberes Fundamentales, TC y Reforma",
+    "titulo": "Tema 1. La Constitución Española (I)",
     "fichero": "tests/tema1.json",
-    "num_preguntas": 42
+    "num_preguntas": 43
   },
   {
     "id": 2,
-    "titulo": "Tema 2. La Constitución Española (II): Corona, Cortes, Gobierno y Poder Judicial",
+    "titulo": "Tema 2. La Constitución Española (II)",
     "fichero": "tests/tema2.json",
-    "num_preguntas": 38
+    "num_preguntas": 43
   },
   {
     "id": 3,
-    "titulo": "Tema 3. La Constitución Española (III): Organización Territorial del Estado",
+    "titulo": "Tema 3. La Constitución Española (III)",
     "fichero": "tests/tema3.json",
-    "num_preguntas": 24
+    "num_preguntas": 42
   },
   {
     "id": 4,
