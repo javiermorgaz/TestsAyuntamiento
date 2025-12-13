@@ -66,7 +66,7 @@
         "De un mínimo de 300 y un máximo de 400 diputados.",
         "De un mínimo de 350 y un máximo de 450 diputados."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 3
     },
     {
       "id_p": 7,
@@ -125,17 +125,6 @@
     },
     {
       "id_p": 12,
-      "enunciado": "Conforme a lo dispuesto en el artículo 81.2 de la Constitución española de 1978, la aprobación, modificación o derogación de las leyes orgánicas exigirá:",
-      "opciones": [
-        "Mayoría de dos tercios de Congreso y Senado.",
-        "Mayoría absoluta del Congreso, en una votación final sobre el conjunto del proyecto.",
-        "Mayoría absoluta del Congreso y del Senado, en una votación final sobre el conjunto del proyecto.",
-        "Mayoría de tres quintos del Congreso."
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id_p": 13,
       "enunciado": "No es fundamento del orden político y de la paz social, de los recogidos en el artículo 10 de la Constitución española de 1978:",
       "opciones": [
         "El libre desarrollo de la personalidad.",
@@ -146,7 +135,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id_p": 14,
+      "id_p": 13,
       "enunciado": "RESERVA 2. El artículo 140 de la Constitución española de 1978 establece que los Alcaldes serán elegidos por:",
       "opciones": [
         "Sólo los concejales.",
@@ -154,10 +143,10 @@
         "Los concejales o los vecinos.",
         "Las respuestas a) b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 3
     },
     {
-      "id_p": 15,
+      "id_p": 14,
       "enunciado": "Si no hubiere ninguna persona a quien corresponda la Regencia, ésta será nombrada por las Cortes Generales, y se compondrá de:",
       "opciones": [
         "Únicamente de una persona español y mayor de edad.",
@@ -168,7 +157,7 @@
       "respuesta_correcta": 4
     },
     {
-      "id_p": 16,
+      "id_p": 15,
       "enunciado": "La Constitución española de 1978 contempla la posibilidad de adoptar medidas necesarias para obligar a una Comunidad Autónoma al cumplimiento forzoso de las obligaciones que la Constitución u otras leyes le impongan, en el artículo:",
       "opciones": [
         "157.",
@@ -179,7 +168,7 @@
       "respuesta_correcta": 4
     },
     {
-      "id_p": 17,
+      "id_p": 16,
       "enunciado": "El Fiscal General del Estado será nombrado por:",
       "opciones": [
         "El Gobierno, oído el Consejo General del Poder Judicial.",
@@ -190,7 +179,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 18,
+      "id_p": 17,
       "enunciado": "Las Comunidades Autónomas gozarán de autonomía financiera para el desarrollo y ejecución de sus competencias, con arreglo a los principios de:",
       "opciones": [
         "Coordinación con la Hacienda estatal y de solidaridad entre todos los españoles.",
@@ -201,7 +190,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id_p": 19,
+      "id_p": 18,
       "enunciado": "Los derechos reconocidos en el Título I de la Constitución española de 1978 que no pueden ser suspendidos, aun cuando se declare el estado de excepción o de sitio en los términos previstos en la Constitución, son:",
       "opciones": [
         "El derecho al honor, a la intimidad personal y familiar y a la propia imagen.",
@@ -212,7 +201,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id_p": 20,
+      "id_p": 19,
       "enunciado": "El Estado podrá transferir o delegar en las Comunidades Autónomas facultades correspondientes a materia de titularidad estatal que sean susceptibles de transferencia o delegación mediante:",
       "opciones": [
         "Ley de bases.",
@@ -223,7 +212,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 21,
+      "id_p": 20,
       "enunciado": "Conforme a lo dispuesto en el artículo 7 de la Constitución española de 1978, la estructura interna y el funcionamiento de las asociaciones empresariales deben ser:",
       "opciones": [
         "Organizados.",
@@ -234,18 +223,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 22,
-      "enunciado": "Conforme al tenor literal del artículo 112 de la Constitución Española de 1978, la cuestión de confianza planteada por el Presidente del Gobierno ante al Congreso de los Diputados sobre su programa se entenderá otorgada cuando vote a favor de la misma:",
-      "opciones": [
-        "La mayoría simple de los Diputados.",
-        "La mayoría absoluta de los Diputados.",
-        "Una mayoría de 3/5 de los Diputados.",
-        "Una mayoría de grupos parlamentarios."
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id_p": 23,
+      "id_p": 21,
       "enunciado": "Conforme lo dispuesto en el artículo 149.1 de la Constitución Española de 1978, el Estado tiene competencia exclusiva sobre:",
       "opciones": [
         "Los montes y aprovechamientos forestales.",
@@ -256,7 +234,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 24,
+      "id_p": 22,
       "enunciado": "Según el artículo 59.4 de la Constitución Española de 1978, para ejercer la Regencia es preciso ser:",
       "opciones": [
         "Sucesor de S. M. Don Juan Carlos I de Borbón.",
@@ -267,7 +245,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id_p": 25,
+      "id_p": 23,
       "enunciado": "Según el artículo 150.3 de la Constitución Española de 1978, el Estado podrá dictar leyes que establezcan los principios necesarios para armonizar las disposiciones normativas de las Comunidades Autónomas, aun en el caso de materias atribuidas a la competencia de éstas, cuando así lo exija:",
       "opciones": [
         "La seguridad nacional.",
@@ -278,7 +256,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 26,
+      "id_p": 24,
       "enunciado": "El artículo 158.2 de la Constitución Española de 1978 establece que con el fin de corregir desequilibrios económicos interterritoriales y hacer efectivo el principio de solidaridad, se constituirá:",
       "opciones": [
         "Un Fondo Soberano con destino a gastos de inversión.",
@@ -289,7 +267,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id_p": 27,
+      "id_p": 25,
       "enunciado": "Conforme a lo dispuesto en el artículo 20.5 de la Constitución Española de 1978, sólo podrá acordarse el secuestro de publicaciones, grabaciones y otros medios de información en virtud de resolución:",
       "opciones": [
         "Administrativa.",
@@ -300,7 +278,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 28,
+      "id_p": 26,
       "enunciado": "El derecho a la igualdad de género se reconoce en la Constitución Española de 1978 en el artículo:",
       "opciones": [
         "17.",
@@ -311,7 +289,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 29,
+      "id_p": 27,
       "enunciado": "Según lo dispuesto en el artículo 1.2 de la Constitución Española de 1978 la soberanía nacional reside en:",
       "opciones": [
         "Las Cortes Generales.",
@@ -322,18 +300,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id_p": 30,
-      "enunciado": "Conforme a lo dispuesto en el artículo 86.1 de la Constitución Española de 1978, en caso de extraordinaria y urgente necesidad, el Gobierno podrá dictar disposiciones legislativas provisionales que tomarán la forma de:",
-      "opciones": [
-        "Órdenes legislativas.",
-        "Textos refundidos.",
-        "Decretos-leyes.",
-        "Proposiciones de ley."
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id_p": 31,
+      "id_p": 28,
       "enunciado": "Según el artículo 141.1 de la Constitución Española de 1978, cualquier alteración de los límites provinciales habrá de ser aprobada por:",
       "opciones": [
         "El Gobierno mediante Decreto.",
@@ -344,7 +311,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id_p": 32,
+      "id_p": 29,
       "enunciado": "Conforme al tenor literal del artículo 120.3 de la Constitución Española de 1978, las sentencias:",
       "opciones": [
         "Serán siempre motivadas y se pronunciarán en audiencia pública.",
@@ -355,7 +322,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id_p": 33,
+      "id_p": 30,
       "enunciado": "De acuerdo con el artículo 100 de la Constitución Española de 1978, los ministros son nombrados por el:",
       "opciones": [
         "Congreso de los Diputados a propuesta del presidente del Gobierno.",
@@ -366,7 +333,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 34,
+      "id_p": 31,
       "enunciado": "El plazo señalado en el artículo 99.5 de la Constitución Española de 1978 para que el Rey disuelva ambas Cámaras y convoque nuevas elecciones, con el refrendo del Presidente del Gobierno, si ningún candidato hubiere obtenido la confianza del Congreso, a partir de la primera votación de investidura, es de:",
       "opciones": [
         "Sesenta días.",
@@ -377,7 +344,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 35,
+      "id_p": 32,
       "enunciado": "De acuerdo con el artículo 31.3 de la Constitución Española de 1978, las prestaciones personales o patrimoniales de carácter público sólo podrán establecerse:",
       "opciones": [
         "Con arreglo a la ley.",
@@ -388,7 +355,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id_p": 36,
+      "id_p": 33,
       "enunciado": "Conforme a lo dispuesto en el artículo 122.3 de la Constitución Española de 1978, el Consejo General del Poder Judicial estará integrado por el Presidente del Tribunal Supremo, que lo presidirá, y por:",
       "opciones": [
         "Dieciséis miembros nombrados por el Rey por un período de cuatro años.",
@@ -399,7 +366,7 @@
       "respuesta_correcta": 4
     },
     {
-      "id_p": 37,
+      "id_p": 34,
       "enunciado": "Según lo dispuesto en el artículo 78.1 de la Constitución Española de 1978, la Diputación Permanente del Senado estará compuesta por un mínimo de:",
       "opciones": [
         "Veinte miembros.",
@@ -410,7 +377,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 38,
+      "id_p": 35,
       "enunciado": "Según lo dispuesto en el artículo 60.1 de la Constitución Española de 1978, en el supuesto de que el Rey difunto no hubiese nombrado tutor del Rey menor, será tutor el padre o la madre:",
       "opciones": [
         "Siempre que hayan nacido en España.",
@@ -421,7 +388,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id_p": 39,
+      "id_p": 36,
       "enunciado": "Conforme a lo dispuesto en el artículo 149 de la Constitución Española de 1978, no es competencia exclusiva del Estado:",
       "opciones": [
         "Nacionalidad, inmigración, extranjería y derecho de asilo.",
@@ -432,7 +399,7 @@
       "respuesta_correcta": 4
     },
     {
-      "id_p": 40,
+      "id_p": 37,
       "enunciado": "De acuerdo con lo dispuesto en el artículo 117.5 de la Constitución Española de 1978, la base de la organización y funcionamiento de los Tribunales es:",
       "opciones": [
         "El principio de independencia judicial.",
@@ -443,7 +410,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 41,
+      "id_p": 38,
       "enunciado": "Según establece el artículo 23.2 de la Constitución Española de 1978, los ciudadanos tienen derecho a acceder a las funciones y cargos públicos:",
       "opciones": [
         "En condiciones de mérito y capacidad.",
@@ -451,10 +418,10 @@
         "En condiciones de igualdad, mérito, capacidad y transparencia.",
         "En condiciones de igualdad, mérito, capacidad y publicidad."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 2
     },
     {
-      "id_p": 42,
+      "id_p": 39,
       "enunciado": "Conforme a lo dispuesto en el artículo 150.2 de la Constitución Española de 1978, el Estado podrá transferir o delegar en una Comunidad Autónoma facultades correspondientes a materias de titularidad estatal mediante:",
       "opciones": [
         "Ley de bases.",
@@ -465,7 +432,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id_p": 43,
+      "id_p": 40,
       "enunciado": "El derecho a la libertad y seguridad individual se contiene en la Constitución Española de 1978 en el artículo:",
       "opciones": [
         "21.",
