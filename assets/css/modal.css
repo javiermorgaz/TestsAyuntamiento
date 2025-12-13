@@ -180,3 +180,31 @@
         padding: 0.75rem;
     }
 }
+
+/* Dark Mode Support */
+html.dark .modal {
+    background: #1f2937;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .modal-title {
+    color: #f3f4f6;
+}
+
+html.dark .modal-header,
+html.dark .modal-footer {
+    border-color: #374151;
+}
+
+html.dark .modal-message {
+    color: #d1d5db;
+}
+
+html.dark .modal-btn-secondary {
+    background-color: #4b5563;
+    color: #e5e7eb;
+}
+
+html.dark .modal-btn-secondary:hover {
+    background-color: #374151;
+}

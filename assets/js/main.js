@@ -17,9 +17,9 @@ async function cargarListadoTests() {
                 <div class="space-y-6">
                     ${[1, 2, 3, 4].map(() => `
                         <div class="glass-card p-6 animate-pulse">
-                            <div class="h-6 bg-white/30 rounded w-3/4 mb-4"></div>
-                            <div class="h-4 bg-white/20 rounded w-1/2 mb-6"></div>
-                            <div class="h-12 bg-white/25 rounded"></div>
+                            <div class="h-6 bg-white/30 rounded w-3/4 mb-4 dark:bg-gray-700/50"></div>
+                            <div class="h-4 bg-white/20 rounded w-1/2 mb-6 dark:bg-gray-700/30"></div>
+                            <div class="h-12 bg-white/25 rounded dark:bg-gray-700/40"></div>
                         </div>
                     `).join('')}
                 </div>
@@ -68,10 +68,10 @@ async function renderizarListado(tests) {
             progresoHTML = `
                 <div class="mb-4">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-medium text-gray-700">📝 En progreso</span>
+                        <span class="text-sm font-medium text-gray-700 dark:text-gray-300">📝 En progreso</span>
                         <span class="text-sm font-semibold text-primary">${respondidas}/${progreso.total_questions}</span>
                     </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full transition-all duration-300" style="width: ${porcentaje}%"></div>
                     </div>
                 </div>
@@ -101,8 +101,8 @@ async function renderizarListado(tests) {
 
         htmlContent += `
             <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 select-none">
-                <h3 class="text-xl font-bold text-dark mb-3">${test.titulo}</h3>
-                <p class="text-gray-600 mb-4 flex items-center gap-2">
+                <h3 class="text-xl font-bold text-dark mb-3 dark:!text-white">${test.titulo}</h3>
+                <p class="text-gray-600 mb-4 flex items-center gap-2 dark:text-gray-300">
                     <span class="text-2xl">📋</span>
                     <span class="font-medium">${test.num_preguntas} preguntas</span>
                 </p>
