@@ -334,3 +334,16 @@ async function deleteTestProgress(resultId) {
         throw error;
     }
 }
+
+if (typeof module !== 'undefined') {
+    module.exports = {
+        fetchTestsFromSupabase,
+        fetchTestById,
+        fetchTestInProgress,
+        saveTestProgress,
+        completeTestSupabase,
+        fetchTestHistory,
+        fetchAllResults,
+        deleteTestProgress
+    };
+}

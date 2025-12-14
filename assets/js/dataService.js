@@ -282,3 +282,17 @@ async function checkStatus() {
     console.log(`   Supabase: ${status.supabase ? '✅' : '❌'}`);
     console.log(`   localStorage: ${status.localStorage ? '✅' : '❌'}`);
 })();
+
+if (typeof module !== 'undefined') {
+    module.exports = {
+        fetchTests,
+        fetchHistory,
+        findTestProgress,
+        saveProgress,
+        deleteProgress,
+        completeTest,
+        checkStatus,
+        isSupabaseAvailable,
+        saveToLocalStorage
+    };
+}

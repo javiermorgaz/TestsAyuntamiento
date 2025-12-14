@@ -7,7 +7,7 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 ## 🎯 Características
 
 ### Funcionalidades Actuales
-- ✅ **17 temas** de oposiciones (482 preguntas totales)
+- ✅ **17 temas** de oposiciones (493 preguntas totales)
 - ✅ **Tests interactivos** con preguntas de opción múltiple
 - ✅ **Corrección automática** con detalle de aciertos y errores
 - ✅ **Historial de intentos** guardado localmente y en la nube
@@ -28,34 +28,25 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 
 ### Temas Disponibles
 
-#### Bloque Constitucional
-1. **Tema 1**: La Constitución Española (I) - Derechos y Deberes Fundamentales (42 preguntas)
-2. **Tema 2**: La Constitución Española (II) - Corona, Cortes, Gobierno y Poder Judicial (38 preguntas)
-3. **Tema 3**: La Constitución Española (III) - Organización Territorial (24 preguntas)
-4. **Tema 4**: Estatuto de Autonomía para Andalucía (26 preguntas)
-5. **Tema 5**: La Unión Europea (14 preguntas)
+1. **Tema 1. La Constitución Española (I)** (40 preguntas)
+2. **Tema 2. La Constitución Española (II)** (43 preguntas)
+3. **Tema 3. La Constitución Española (III)** (42 preguntas)
+4. **Tema 4. El Estatuto de Autonomía para Andalucía** (16 preguntas)
+5. **Tema 5. La Unión Europea: Instituciones y Libre Circulación** (14 preguntas)
+6. **Tema 6. Ley Reguladora de las Bases del Régimen Local (LBRL)** (41 preguntas)
+7. **Tema 7. Ley 39/2015 (I): Interesados, Registros, Plazos y Copias** (36 preguntas)
+8. **Tema 8. Ley 39/2015 (II): Actos Administrativos, Notificación y Vicios** (39 preguntas)
+9. **Tema 9. Ley 39/2015 (III): Los Recursos Administrativos** (31 preguntas)
+10. **Tema 10. Ley Orgánica 3/2018 (LOPD-GDD): Principios y Derechos** (18 preguntas)
+11. **Tema 11. Ley 40/2015 (LRJSP): Órganos, Competencia y R. Patrimonial** (24 preguntas)
+12. **Tema 12. Ley 19/2013 (Transparencia): Publicidad Activa y Acceso a la Información** (28 preguntas)
+13. **Tema 13. Organización y Funcionamiento del Ayuntamiento de Sevilla** (12 preguntas)
+14. **Tema 14. Personal al Servicio de Entidades Locales (I): Clases, Derechos y Acceso** (32 preguntas)
+15. **Tema 15. Personal al Servicio de Entidades Locales (II): Retribuciones, Movilidad y Disciplinario** (35 preguntas)
+16. **Tema 16. Igualdad y Violencia de Género** (17 preguntas)
+17. **Tema 17. El Presupuesto Municipal** (25 preguntas)
 
-#### Administración Local
-6. **Tema 6**: Ley de Bases del Régimen Local (LBRL) (41 preguntas)
-7. **Tema 13**: Organización del Ayuntamiento de Sevilla (12 preguntas)
-
-#### Procedimiento Administrativo
-7. **Tema 7**: Ley 39/2015 (I) - Interesados, Registros, Plazos (36 preguntas)
-8. **Tema 8**: Ley 39/2015 (II) - Actos Administrativos (39 preguntas)
-9. **Tema 9**: Ley 39/2015 (III) - Recursos Administrativos (31 preguntas)
-
-#### Régimen Jurídico
-10. **Tema 10**: Ley Orgánica 3/2018 (LOPD-GDD) (18 preguntas)
-11. **Tema 11**: Ley 40/2015 (LRJSP) (24 preguntas)
-12. **Tema 12**: Ley 19/2013 de Transparencia (28 preguntas)
-
-#### Personal y Presupuestos
-14. **Tema 14**: Personal de Entidades Locales (I) (32 preguntas)
-15. **Tema 15**: Personal de Entidades Locales (II) (35 preguntas)
-16. **Tema 16**: Igualdad y Violencia de Género (17 preguntas)
-17. **Tema 17**: Presupuesto Municipal (25 preguntas)
-
-**Total**: 482 preguntas distribuidas en 17 temas
+**Total**: 493 preguntas distribuidas en 17 temas
 
 ---
 
@@ -122,16 +113,21 @@ TestsAyuntamiento/
 │       ├── storage.js              # Gestión de localStorage
 │       ├── supabase-config.js      # Configuración de Supabase
 │       ├── supabase-service.js     # Servicios de Supabase
-│       └── dataService.js          # Capa de abstracción
+│       ├── dataService.js          # Capa de abstracción
+│       └── tailwind-config.js      # Configuración de Tailwind (extraído)
 ├── data/
 │   ├── tests_index.json            # Índice de tests
 │   └── tests/
 │       ├── tema1.json              # Preguntas del tema 1
-│       ├── tema2.json              # Preguntas del tema 2
-│       └── ... (tema3 - tema17)
+│       └── ...
+├── db/
+│   └── schema.sql                  # Documentación del esquema de la BD
+├── tests/
+│   ├── dataService.test.js         # Tests unitarios de lógica de datos
+│   └── supabaseService.test.js     # Tests de verificación de esquema
 ├── scripts/
 │   └── build-index.js              # Script de sincronización
-├── package.json                    # Dependencias
+├── package.json                    # Dependencias y scripts
 ├── README.md                       # Este archivo
 └── docs/
     ├── SUPABASE_INTEGRATION.md     # Documentación técnica
@@ -156,6 +152,8 @@ cd TestsAyuntamiento
 # Instalar dependencias
 npm install
 ```
+
+Esto instalará también las dependencias de desarrollo necesarias para los tests (Jest).
 
 ### Script de Sincronización
 
@@ -244,6 +242,33 @@ answers_data        JSONB
 ```
 
 Ver [SUPABASE_INTEGRATION.md](./SUPABASE_INTEGRATION.md) para la API completa.
+
+### ⚠️ Importante: Sincronización de Esquema
+El archivo `db/schema.sql` actúa como **contrato** para los tests unitarios. Este archivo **NO** se sincroniza automáticamente con Supabase.
+
+**Si modificas la estructura de la base de datos en Supabase:**
+1. Actualiza manualmente `db/schema.sql` para reflejar los cambios.
+2. Ejecuta `npm test` para asegurar que el código sigue siendo compatible con el nuevo esquema.
+
+---
+
+## 🧪 Testing
+
+El proyecto cuenta con **tests unitarios** para garantizar la estabilidad del código, especialmente en la capa de datos y la integración con la base de datos.
+- **Librería**: [Jest](https://jestjs.io/)
+- **Entorno**: JSDOM (para simular el navegador)
+
+### Ejecutar Tests
+
+Para ejecutar todos los tests disponibles:
+
+```bash
+npm test
+```
+
+### Estructura de Tests
+- `tests/dataService.test.js`: Verifica la lógica de `assets/js/dataService.js` (mocks de Supabase y localStorage).
+- `tests/supabaseService.test.js`: Verifica que `assets/js/supabase-service.js` cumple con el esquema de la base de datos (`db/schema.sql`).
 
 ---
 
