@@ -8,6 +8,7 @@
 
 let supabaseClient = null;
 let supabaseConfig = null;
+let initializationPromise = null;
 
 /**
  * Carga las credenciales desde el archivo de configuración
@@ -63,26 +64,50 @@ async function loadSupabaseCredentials() {
  * @returns {Promise<Object>} Cliente de Supabase
  */
 async function initSupabase() {
-    if (!supabaseClient) {
-        if (typeof supabase === 'undefined') {
-            console.error('⚠️ El SDK de Supabase no está cargado. Asegúrate de incluir el script CDN en el HTML.');
+    if (supabaseClient) return supabaseClient;
+
+    // Si ya hay una inicialización en curso, devolver esa promesa
+    if (initializationPromise) return initializationPromise;
+
+    // Crear nueva promesa de inicialización
+    initializationPromise = (async () => {
+        try {
+            if (typeof supabase === 'undefined') {
+                console.error('⚠️ El SDK de Supabase no está cargado. Asegúrate de incluir el script CDN en el HTML.');
+                return null;
+            }
+
+            // Cargar credenciales si no están cargadas
+            if (!supabaseConfig) {
+                supabaseConfig = await loadSupabaseCredentials();
+            }
+
+            if (!supabaseConfig) {
+                console.warn('⚠️ No se pudo inicializar Supabase. Modo offline activado.');
+                return null;
+            }
+
+            // Configuración del cliente
+            const options = {
+                auth: {
+                    persistSession: true,
+                    autoRefreshToken: true,
+                    detectSessionInUrl: true
+                }
+            };
+
+            supabaseClient = supabase.createClient(supabaseConfig.SUPABASE_URL, supabaseConfig.SUPABASE_KEY, options);
+            console.log('✅ Cliente de Supabase inicializado correctamente (Singleton)');
+            return supabaseClient;
+        } catch (error) {
+            console.error('Error durante la inicialización de Supabase:', error);
             return null;
+        } finally {
+            initializationPromise = null; // Limpiar promesa al terminar
         }
+    })();
 
-        // Cargar credenciales si no están cargadas
-        if (!supabaseConfig) {
-            supabaseConfig = await loadSupabaseCredentials();
-        }
-
-        if (!supabaseConfig) {
-            console.warn('⚠️ No se pudo inicializar Supabase. Modo offline activado.');
-            return null;
-        }
-
-        supabaseClient = supabase.createClient(supabaseConfig.SUPABASE_URL, supabaseConfig.SUPABASE_KEY);
-        console.log('✅ Cliente de Supabase inicializado correctamente');
-    }
-    return supabaseClient;
+    return initializationPromise;
 }
 
 /**
@@ -90,8 +115,6 @@ async function initSupabase() {
  * @returns {Promise<Object>} Cliente de Supabase
  */
 async function getSupabaseClient() {
-    if (!supabaseClient) {
-        return await initSupabase();
-    }
-    return supabaseClient;
+    if (supabaseClient) return supabaseClient;
+    return await initSupabase();
 }

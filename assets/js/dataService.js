@@ -243,8 +243,8 @@ function saveToLocalStorage(data) {
         errores: data.total_questions - data.total_correct,
         blancos: 0,
         total: data.total_questions,
-        respuestas: data.answers_data.map(a => a.selected_option),
-        detalle: data.answers_data
+        respuestas: data.answers_data, // It is already a simple array now
+        detalle: null // We don't need complex detail here for now
     };
 
     // Usar función de storage.js

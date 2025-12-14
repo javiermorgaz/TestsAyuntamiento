@@ -88,7 +88,7 @@ async function fetchTestInProgress(testId) {
             .from('results')
             .select('*')
             .eq('test_id', testId)
-            .eq('status', 'in_progress')
+            // .eq('status', 'in_progress') // REMOVED: Fetch latest result regardless of status
             .order('id', { ascending: false })
             .limit(1);
 
@@ -195,7 +195,7 @@ async function completeTestSupabase(resultData) {
             const { data, error } = await client
                 .from('results')
                 .update({
-                    status: 'completed',
+                    status: 'in_progress', // Keep as in_progress to allow modifications
                     score_percentage: resultData.score_percentage,
                     total_correct: resultData.total_correct,
                     total_questions: resultData.total_questions,
@@ -209,16 +209,16 @@ async function completeTestSupabase(resultData) {
                 throw error;
             }
 
-            console.log(`✅ Test completado (actualizado ID: ${resultData.id})`);
+            console.log(`✅ Test evaluado (actualizado ID: ${resultData.id})`);
             return data;
 
         } else {
-            // Crear nuevo resultado completado
+            // Crear nuevo resultado evaluado
             const { data, error } = await client
                 .from('results')
                 .insert({
                     test_id: resultData.test_id,
-                    status: 'completed',
+                    status: 'in_progress', // Keep as in_progress
                     score_percentage: resultData.score_percentage,
                     total_correct: resultData.total_correct,
                     total_questions: resultData.total_questions,

@@ -310,13 +310,8 @@ async function gradeTest() {
     const totalPreguntas = currentTest.preguntas.length;
     const percentage = (correctCount / totalPreguntas) * 100;
 
-    // Preparar answers_data con información de corrección para Supabase
-    const answersData = userResponses.map((respuesta, index) => ({
-        q_id: currentTest.preguntas[index].id_p,
-        selected_option: respuesta,
-        is_correct: respuesta === currentTest.preguntas[index].respuesta_correcta,
-        correct_option: currentTest.preguntas[index].respuesta_correcta
-    }));
+    // Data simplification: User only wants the array of values, not complex objects
+    // const answersData = userResponses.map(...) - REMOVED
 
     try {
         // Guardar en Supabase
@@ -326,7 +321,7 @@ async function gradeTest() {
             total_correct: correctCount,
             total_questions: totalPreguntas,
             score_percentage: percentage,
-            answers_data: answersData
+            answers_data: userResponses // Send simple array directly
         });
 
         console.log('✅ Resultado guardado en Supabase');
