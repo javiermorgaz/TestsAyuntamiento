@@ -7,7 +7,7 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 ## 🎯 Características
 
 ### Funcionalidades Actuales
-**Total**: 499 preguntas distribuidas en 17 temas
+- ✅ **17 temas** de oposiciones (499 preguntas totales)
 - ✅ **Tests interactivos** con preguntas de opción múltiple
 - ✅ **Corrección automática** con detalle de aciertos y errores
 - ✅ **Historial de intentos** guardado localmente y en la nube
@@ -32,7 +32,7 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 2. **Tema 2. La Constitución Española (II)** (43 preguntas)
 3. **Tema 3. La Constitución Española (III)** (42 preguntas)
 4. **Tema 4. El Estatuto de Autonomía para Andalucía** (16 preguntas)
-5. **Tema 5. La Unión Europea: Instituciones y Libre Circulación (versión depurada BOE)** (20 preguntas)
+5. **Tema 5. La Unión Europea: Instituciones y Libre Circulación** (20 preguntas)
 6. **Tema 6. Ley Reguladora de las Bases del Régimen Local (LBRL)** (41 preguntas)
 7. **Tema 7. Ley 39/2015 (I): Interesados, Registros, Plazos y Copias** (36 preguntas)
 8. **Tema 8. Ley 39/2015 (II): Actos Administrativos, Notificación y Vicios** (39 preguntas)
@@ -46,7 +46,7 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 16. **Tema 16. Igualdad y Violencia de Género** (17 preguntas)
 17. **Tema 17. El Presupuesto Municipal** (25 preguntas)
 
-**Total**: 493 preguntas distribuidas en 17 temas
+**Total**: 499 preguntas distribuidas en 17 temas
 
 ---
 
