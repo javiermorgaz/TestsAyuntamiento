@@ -25,9 +25,9 @@
   },
   {
     "id": 5,
-    "titulo": "Tema 5. La Unión Europea: Instituciones y Libre Circulación",
+    "titulo": "Tema 5. La Unión Europea: Instituciones y Libre Circulación (versión depurada BOE)",
     "fichero": "tests/tema5.json",
-    "num_preguntas": 14
+    "num_preguntas": 20
   },
   {
     "id": 6,
