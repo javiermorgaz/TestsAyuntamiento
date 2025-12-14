@@ -8,7 +8,7 @@ const testsContainer = document.getElementById('tests-container');
  * Carga el archivo de índice de tests y llama a la función de renderizado.
  * Usa dataService para intentar Supabase primero, luego fallback a JSON local.
  */
-async function cargarListadoTests() {
+async function loadTestsList() {
     try {
         // Mostrar skeleton loader moderno con texto
         testsContainer.innerHTML = `
@@ -27,9 +27,9 @@ async function cargarListadoTests() {
         `;
 
         // Usar dataService (intenta Supabase → fallback JSON)
-        const tests = await obtenerTests();
+        const tests = await fetchTests(); // fetchTests in dataService
 
-        await renderizarListado(tests);
+        await renderTestsList(tests);
 
     } catch (error) {
         console.error("Error crítico al cargar listado:", error);
@@ -43,7 +43,7 @@ async function cargarListadoTests() {
  * Ahora usa Tailwind CSS para un diseño moderno con glassmorphism.
  * @param {Array<Object>} tests - Array de objetos de tests.
  */
-async function renderizarListado(tests) {
+async function renderTestsList(tests) {
     if (tests.length === 0) {
         testsContainer.innerHTML = '<p class="text-white text-center">No hay tests disponibles.</p>';
         return;
@@ -54,46 +54,46 @@ async function renderizarListado(tests) {
     // Procesar cada test de forma asíncrona
     for (const test of tests) {
         // Buscar si hay progreso en curso
-        const progreso = await buscarProgresoTest(test.id);
+        const progress = await findTestProgress(test.id);
 
-        let progresoHTML = '';
-        let botonHTML = '';
-        let botonResetHTML = '';
+        let progressHTML = '';
+        let buttonHTML = '';
+        let resetButtonHTML = '';
 
         // Mostrar indicador de progreso si existe
-        if (progreso) {
-            const respondidas = progreso.answers_data.filter(a => a !== null).length;
-            const porcentaje = Math.round((respondidas / progreso.total_questions) * 100);
+        if (progress) {
+            const answeredCount = progress.answers_data.filter(a => a !== null).length;
+            const percentage = Math.round((answeredCount / progress.total_questions) * 100);
 
-            progresoHTML = `
+            progressHTML = `
                 <div class="mb-4">
                     <div class="flex items-center justify-between mb-2">
                         <span class="text-sm font-medium text-gray-700 dark:text-gray-300">📝 En progreso</span>
-                        <span class="text-sm font-semibold text-primary">${respondidas}/${progreso.total_questions}</span>
+                        <span class="text-sm font-semibold text-primary">${answeredCount}/${progress.total_questions}</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full transition-all duration-300" style="width: ${porcentaje}%"></div>
+                        <div class="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full transition-all duration-300" style="width: ${percentage}%"></div>
                     </div>
                 </div>
             `;
 
             // Botón para continuar (verde)
-            botonHTML = `
-                <button class="flex-1 bg-gradient-to-r from-accent to-green-600 hover:from-green-600 hover:to-accent text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="iniciarTest(${test.id}, '${test.fichero}')">
+            buttonHTML = `
+                <button class="flex-1 bg-gradient-to-r from-accent to-green-600 hover:from-green-600 hover:to-accent text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="startTest(${test.id}, '${test.fichero}')">
                     ▶️ Continuar Test
                 </button>
             `;
 
             // Botón para resetear (naranja)
-            botonResetHTML = `
-                <button class="flex-1 bg-gradient-to-r from-reset to-orange-600 hover:from-orange-600 hover:to-reset text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="resetearTest(${test.id}, '${test.fichero}')">
+            resetButtonHTML = `
+                <button class="flex-1 bg-gradient-to-r from-reset to-orange-600 hover:from-orange-600 hover:to-reset text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="resetTest(${test.id}, '${test.fichero}')">
                     🔄 Empezar de Nuevo
                 </button>
             `;
         } else {
             // Botón normal para comenzar (azul)
-            botonHTML = `
-                <button class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="iniciarTest(${test.id}, '${test.fichero}')">
+            buttonHTML = `
+                <button class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="startTest(${test.id}, '${test.fichero}')">
                     🚀 Comenzar Test
                 </button>
             `;
@@ -106,10 +106,10 @@ async function renderizarListado(tests) {
                     <span class="text-2xl">📋</span>
                     <span class="font-medium">${test.num_preguntas} preguntas</span>
                 </p>
-                ${progresoHTML}
-                <div class="flex gap-3 ${progreso ? 'flex-col sm:flex-row' : ''}">
-                    ${botonHTML}
-                    ${botonResetHTML}
+                ${progressHTML}
+                <div class="flex gap-3 ${progress ? 'flex-col sm:flex-row' : ''}">
+                    ${buttonHTML}
+                    ${resetButtonHTML}
                 </div>
             </div>
         `;
@@ -121,19 +121,19 @@ async function renderizarListado(tests) {
 
 // Función para iniciar el test
 // Ahora detecta si hay progreso anterior y lo carga directamente
-async function iniciarTest(testId, fileName) {
+async function startTest(testId, fileName) {
     try {
         // Buscar progreso existente en Supabase
-        const progreso = await buscarProgresoTest(testId);
+        const progress = await findTestProgress(testId);
 
-        if (progreso) {
+        if (progress) {
             // Continuar test con progreso guardado directamente
             testsListSection.style.display = 'none';
             document.getElementById('test-view').style.display = 'block';
-            document.getElementById('resultado-view').style.display = 'none';
+            document.getElementById('result-view').style.display = 'none';
             window.scrollTo(0, 0);
 
-            await cargarTestConProgreso(testId, fileName, progreso);
+            await loadTestWithProgress(testId, fileName, progress);
             return;
         }
     } catch (error) {
@@ -143,11 +143,11 @@ async function iniciarTest(testId, fileName) {
     // Continuar con flujo normal (test nuevo)
     testsListSection.style.display = 'none';
     document.getElementById('test-view').style.display = 'block';
-    document.getElementById('resultado-view').style.display = 'none';
+    document.getElementById('result-view').style.display = 'none';
     window.scrollTo(0, 0);
 
     // Llamar a la función que cargará el test real (definida en test.js)
-    cargarTest(testId, fileName);
+    loadTest(testId, fileName);
 }
 
 /**
@@ -156,30 +156,30 @@ async function iniciarTest(testId, fileName) {
  * @param {number} testId - ID del test a resetear
  * @param {string} fileName - Nombre del archivo del test
  */
-async function resetearTest(testId, fileName) {
+async function resetTest(testId, fileName) {
     try {
-        const confirmar = await showConfirm(
+        const isConfirmed = await showConfirm(
             '¿Estás seguro de que quieres eliminar el progreso de este test?\n\nEsta acción no se puede deshacer.',
             'Confirmar Reseteo'
         );
 
-        if (confirmar) {
+        if (isConfirmed) {
             // Buscar el progreso actual
-            const progreso = await buscarProgresoTest(testId);
+            const progress = await findTestProgress(testId);
 
-            if (progreso) {
+            if (progress) {
                 // Eliminar el progreso
-                await eliminarProgreso(progreso.id);
+                await deleteProgress(progress.id);
                 console.log('🗑️ Progreso eliminado, iniciando test nuevo');
 
                 // Navegar directamente al test
                 testsListSection.style.display = 'none';
                 document.getElementById('test-view').style.display = 'block';
-                document.getElementById('resultado-view').style.display = 'none';
+                document.getElementById('result-view').style.display = 'none';
                 window.scrollTo(0, 0);
 
                 // Cargar el test
-                cargarTest(testId, fileName);
+                loadTest(testId, fileName);
             }
         }
     } catch (error) {
@@ -189,4 +189,4 @@ async function resetearTest(testId, fileName) {
 }
 
 // Ejecutar la carga al iniciar la aplicación
-cargarListadoTests();
+loadTestsList();

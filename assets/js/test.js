@@ -15,7 +15,7 @@ let autoSaveInterval = null; // Intervalo de auto-guardado periódico
  * Función para volver al listado de tests
  * Ahora limpia los intervalos y variables de auto-guardado
  */
-function volverAlListado() {
+function returnToList() {
     // Limpiar auto-guardado periódico
     if (autoSaveInterval) {
         clearInterval(autoSaveInterval);
@@ -35,7 +35,7 @@ function volverAlListado() {
 
     const testsListSection = document.getElementById('tests-list');
     const testView = document.getElementById('test-view');
-    const resultadoView = document.getElementById('resultado-view');
+    const resultadoView = document.getElementById('result-view');
 
     // Mostrar listado y ocultar otras vistas
     if (testsListSection) testsListSection.style.display = 'block';
@@ -46,23 +46,23 @@ function volverAlListado() {
     window.scrollTo(0, 0);
 
     // Recargar el listado para mostrar nuevos resultados
-    if (typeof cargarListadoTests === 'function') {
-        cargarListadoTests();
+    if (typeof loadTestsList === 'function') {
+        loadTestsList();
     }
 }
 
 // Hacer la función disponible globalmente
-window.volverAlListado = volverAlListado;
+window.returnToList = returnToList;
 
 // Referencias a elementos del DOM
 const testView = document.getElementById('test-view');
-const resultadoView = document.getElementById('resultado-view');
-const testTitulo = document.getElementById('test-titulo');
+const resultadoView = document.getElementById('result-view');
+const testTitleEl = document.getElementById('test-title');
 const questionsContainer = document.getElementById('questions-container');
-const resultadoContainer = document.getElementById('resultado-container');
+const resultadoContainer = document.getElementById('result-container');
 const btnFinish = document.getElementById('btn-finish');
-const btnVolverInicio = document.getElementById('btn-volver-inicio');
-const btnVolverInicioResultado = document.getElementById('btn-volver-inicio-resultado');
+const btnBackHome = document.getElementById('btn-back-home');
+const btnBackHomeResult = document.getElementById('btn-back-home-result');
 
 /**
  * Carga un test desde su archivo JSON
@@ -70,7 +70,7 @@ const btnVolverInicioResultado = document.getElementById('btn-volver-inicio-resu
  * @param {number} testId - ID del test
  * @param {string} fileName - Nombre del archivo JSON
  */
-async function cargarTest(testId, fileName) {
+async function loadTest(testId, fileName) {
     try {
         const response = await fetch(`./data/${fileName}`);
 
@@ -84,16 +84,16 @@ async function cargarTest(testId, fileName) {
         userResponses = new Array(currentTest.preguntas.length).fill(null);
 
         // Actualizar título
-        testTitulo.textContent = currentTest.titulo;
+        testTitleEl.textContent = currentTest.titulo;
 
         // Renderizar todas las preguntas
-        renderizarTodasLasPreguntas();
+        renderAllQuestions();
 
         // NUEVO: Iniciar auto-guardado periódico cada 30 segundos
         if (autoSaveInterval) clearInterval(autoSaveInterval);
 
         autoSaveInterval = setInterval(async () => {
-            await autoGuardarProgreso();
+            await autoSaveProgress();
         }, 30000); // 30 segundos
 
         console.log('🔄 Sistema de auto-guardado activado (cada 30s)');
@@ -110,22 +110,22 @@ async function cargarTest(testId, fileName) {
  * @param {string} fileName - Nombre del archivo JSON
  * @param {Object} progreso - Objeto con el progreso guardado
  */
-async function cargarTestConProgreso(testId, fileName, progreso) {
+async function loadTestWithProgress(testId, fileName, progress) {
     try {
         // Primero cargar el test normalmente
-        await cargarTest(testId, fileName);
+        await loadTest(testId, fileName);
 
         // Restaurar el ID de progreso
-        currentProgressId = progreso.id;
+        currentProgressId = progress.id;
 
         // Restaurar las respuestas guardadas
-        userResponses = progreso.answers_data;
+        userResponses = progress.answers_data;
 
         // Marcar las respuestas en el formulario
-        progreso.answers_data.forEach((respuesta, index) => {
-            if (respuesta !== null) {
+        progress.answers_data.forEach((answer, index) => {
+            if (answer !== null) {
                 const radio = document.querySelector(
-                    `input[name="pregunta-${index}"][value="${respuesta}"]`
+                    `input[name="pregunta-${index}"][value="${answer}"]`
                 );
                 if (radio) {
                     radio.checked = true;
@@ -133,8 +133,8 @@ async function cargarTestConProgreso(testId, fileName, progreso) {
             }
         });
 
-        const respondidas = userResponses.filter(r => r !== null).length;
-        console.log(`✅ Test restaurado con ${respondidas}/${currentTest.preguntas.length} respuestas`);
+        const answeredCount = userResponses.filter(r => r !== null).length;
+        console.log(`✅ Test restaurado con ${answeredCount}/${currentTest.preguntas.length} respuestas`);
 
     } catch (error) {
         console.error("Error al cargar test con progreso:", error);
@@ -144,7 +144,7 @@ async function cargarTestConProgreso(testId, fileName, progreso) {
 /**
  * Renderiza todas las preguntas del test a la vez
  */
-function renderizarTodasLasPreguntas() {
+function renderAllQuestions() {
     if (!currentTest) return;
 
     let html = '<div class="space-y-6">';
@@ -160,14 +160,14 @@ function renderizarTodasLasPreguntas() {
         `;
 
         pregunta.opciones.forEach((opcion, opcionIndex) => {
-            const valorOpcion = opcionIndex + 1;
+            const optionValue = opcionIndex + 1;
             html += `
                 <label class="flex items-start p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-primary/10 hover:border-primary border-2 border-transparent transition-all duration-200 group dark:bg-gray-700/50 dark:hover:bg-primary/20 dark:hover:border-primary/50">
                     <input
                         type="radio"
                         name="pregunta-${index}"
-                        value="${valorOpcion}"
-                        onchange="guardarRespuesta(${index}, ${valorOpcion})"
+                        value="${optionValue}"
+                        onchange="saveAnswer(${index}, ${optionValue})"
                         class="mt-1 w-5 h-5 text-primary focus:ring-primary focus:ring-2 cursor-pointer dark:bg-gray-600 dark:border-gray-500"
                     >
                     <span class="ml-3 text-gray-700 group-hover:text-dark font-medium flex-1 dark:text-gray-300 dark:group-hover:text-gray-100">${opcion}</span>
@@ -189,15 +189,15 @@ function renderizarTodasLasPreguntas() {
  * Auto-guarda el progreso actual del test en Supabase
  * Se ejecuta periódicamente y cuando el usuario cambia una respuesta
  */
-async function autoGuardarProgreso() {
+async function autoSaveProgress() {
     if (!currentTest) return;
 
     // Solo guardar si hay al menos una respuesta
-    const respondidas = userResponses.filter(r => r !== null).length;
-    if (respondidas === 0) return;
+    const answeredCount = userResponses.filter(r => r !== null).length;
+    if (answeredCount === 0) return;
 
     try {
-        const resultado = await guardarProgreso({
+        const resultado = await saveProgress({
             id: currentProgressId,           // null la primera vez
             test_id: currentTest.id,
             answers_data: userResponses,
@@ -209,7 +209,7 @@ async function autoGuardarProgreso() {
             currentProgressId = resultado.id;
         }
 
-        console.log(`💾 Progreso guardado: ${respondidas}/${currentTest.preguntas.length} preguntas`);
+        console.log(`💾 Progreso guardado: ${answeredCount}/${currentTest.preguntas.length} preguntas`);
 
         // Mostrar indicador visual de guardado
         showSaveIndicator();
@@ -255,7 +255,7 @@ function showSaveIndicator() {
  * @param {number} preguntaIndex - Índice de la pregunta
  * @param {number} opcionSeleccionada - Índice de la opción (1-based)
  */
-async function guardarRespuesta(preguntaIndex, opcionSeleccionada) {
+async function saveAnswer(preguntaIndex, opcionSeleccionada) {
     userResponses[preguntaIndex] = opcionSeleccionada;
 
     // Trigger auto-guardado inmediato (debounced)
@@ -263,7 +263,7 @@ async function guardarRespuesta(preguntaIndex, opcionSeleccionada) {
     if (window.autoSaveTimeout) clearTimeout(window.autoSaveTimeout);
 
     window.autoSaveTimeout = setTimeout(async () => {
-        await autoGuardarProgreso();
+        await autoSaveProgress();
     }, 2000); // 2 segundos
 }
 
@@ -271,44 +271,44 @@ async function guardarRespuesta(preguntaIndex, opcionSeleccionada) {
  * Corrige el test y calcula la puntuación
  * Ahora guarda en Supabase además de localStorage
  */
-async function corregirTest() {
+async function gradeTest() {
     // Limpiar auto-guardado
     if (autoSaveInterval) {
         clearInterval(autoSaveInterval);
         autoSaveInterval = null;
     }
 
-    let aciertos = 0;
-    let errores = 0;
-    let blancos = 0;
+    let correctCount = 0;
+    let errorCount = 0;
+    let unansweredCount = 0;
 
-    const detalleRespuestas = [];
+    const answerDetails = [];
 
     currentTest.preguntas.forEach((pregunta, index) => {
-        const respuestaUsuario = userResponses[index];
-        const esCorrecta = respuestaUsuario === pregunta.respuesta_correcta;
-        const enBlanco = respuestaUsuario === null;
+        const userAnswer = userResponses[index];
+        const isCorrect = userAnswer === pregunta.respuesta_correcta;
+        const isUnanswered = userAnswer === null;
 
-        if (enBlanco) {
-            blancos++;
-        } else if (esCorrecta) {
-            aciertos++;
+        if (isUnanswered) {
+            unansweredCount++;
+        } else if (isCorrect) {
+            correctCount++;
         } else {
-            errores++;
+            errorCount++;
         }
 
-        detalleRespuestas.push({
+        answerDetails.push({
             pregunta: pregunta.enunciado,
             opciones: pregunta.opciones,
-            respuestaUsuario: respuestaUsuario,
+            respuestaUsuario: userAnswer,
             respuestaCorrecta: pregunta.respuesta_correcta,
-            esCorrecta: esCorrecta,
-            enBlanco: enBlanco
+            esCorrecta: isCorrect,
+            enBlanco: isUnanswered
         });
     });
 
     const totalPreguntas = currentTest.preguntas.length;
-    const porcentaje = (aciertos / totalPreguntas) * 100;
+    const percentage = (correctCount / totalPreguntas) * 100;
 
     // Preparar answers_data con información de corrección para Supabase
     const answersData = userResponses.map((respuesta, index) => ({
@@ -320,12 +320,12 @@ async function corregirTest() {
 
     try {
         // Guardar en Supabase
-        await completarTest({
+        await completeTest({
             id: currentProgressId,              // Actualizar progreso existente
             test_id: currentTest.id,
-            total_correct: aciertos,
+            total_correct: correctCount,
             total_questions: totalPreguntas,
-            score_percentage: porcentaje,
+            score_percentage: percentage,
             answers_data: answersData
         });
 
@@ -340,30 +340,30 @@ async function corregirTest() {
         testId: currentTest.id,
         titulo: currentTest.titulo,
         fecha: new Date().toISOString(),
-        aciertos: aciertos,
-        errores: errores,
-        blancos: blancos,
+        aciertos: correctCount,
+        errores: errorCount,
+        blancos: unansweredCount,
         total: totalPreguntas,
         respuestas: [...userResponses],
-        detalle: detalleRespuestas
+        detalle: answerDetails
     };
 
     // También guardar en localStorage como backup
-    guardarResultado(resultado);
+    saveResult(resultado);
 
     // Resetear ID de progreso
     currentProgressId = null;
 
     // Mostrar resultado
-    mostrarResultado(resultado);
+    displayResult(resultado);
 }
 
 /**
  * Muestra el resultado del test con detalle de cada pregunta
  * @param {Object} resultado - Objeto con la información del resultado
  */
-function mostrarResultado(resultado) {
-    const porcentaje = ((resultado.aciertos / resultado.total) * 100).toFixed(1);
+function displayResult(resultado) {
+    const percentage = ((resultado.aciertos / resultado.total) * 100).toFixed(1);
 
     let html = `
         <div class="glass-card p-8">
@@ -387,7 +387,7 @@ function mostrarResultado(resultado) {
                 </div>
                 <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-4 text-white shadow-lg">
                     <div class="text-xs font-medium mb-1 opacity-90">Puntuación</div>
-                    <div class="text-2xl md:text-3xl font-bold">${porcentaje}%</div>
+                    <div class="text-2xl md:text-3xl font-bold">${percentage}%</div>
                 </div>
             </div>
 
@@ -398,16 +398,16 @@ function mostrarResultado(resultado) {
     `;
 
     resultado.detalle.forEach((detalle, index) => {
-        const esCorrecta = detalle.esCorrecta;
-        const enBlanco = detalle.enBlanco;
-        const iconoEstado = enBlanco ? '⚪' : (esCorrecta ? '✅' : '❌');
-        const borderColor = enBlanco ? 'border-yellow-400' : (esCorrecta ? 'border-green-500' : 'border-red-500');
-        const bgColor = enBlanco ? 'bg-yellow-50' : (esCorrecta ? 'bg-green-50' : 'bg-red-50');
+        const isCorrect = detalle.esCorrecta;
+        const isUnanswered = detalle.enBlanco;
+        const statusIcon = isUnanswered ? '⚪' : (isCorrect ? '✅' : '❌');
+        const borderColor = isUnanswered ? 'border-yellow-400' : (isCorrect ? 'border-green-500' : 'border-red-500');
+        const bgColor = isUnanswered ? 'bg-yellow-50' : (isCorrect ? 'bg-green-50' : 'bg-red-50');
 
         html += `
             <div class="bg-white rounded-xl shadow-md p-6 border-l-4 ${borderColor} dark:bg-gray-800">
                 <div class="flex items-center gap-2 mb-4">
-                    <span class="text-2xl">${iconoEstado}</span>
+                    <span class="text-2xl">${statusIcon}</span>
                     <span class="font-semibold text-dark dark:text-gray-100">Pregunta ${index + 1}</span>
                 </div>
                 <p class="text-gray-700 font-medium mb-4 dark:text-gray-300">${detalle.pregunta}</p>
@@ -416,28 +416,28 @@ function mostrarResultado(resultado) {
 
         // Mostrar opciones con indicadores
         detalle.opciones.forEach((opcion, opcionIndex) => {
-            const valorOpcion = opcionIndex + 1;
-            const esRespuestaUsuario = valorOpcion === detalle.respuestaUsuario;
-            const esRespuestaCorrecta = valorOpcion === detalle.respuestaCorrecta;
+            const optionValue = opcionIndex + 1;
+            const isUserAnswer = optionValue === detalle.respuestaUsuario;
+            const isCorrectAnswer = optionValue === detalle.respuestaCorrecta;
 
-            let claseOpcion = 'p-3 rounded-lg border-2 ';
+            let optionClass = 'p-3 rounded-lg border-2 ';
             let marcador = '';
             let iconoOpcion = '';
 
-            if (esRespuestaCorrecta) {
-                claseOpcion += 'bg-green-100 border-green-500 text-green-900 dark:bg-green-900/40 dark:text-green-300';
+            if (isCorrectAnswer) {
+                optionClass += 'bg-green-100 border-green-500 text-green-900 dark:bg-green-900/40 dark:text-green-300';
                 marcador = '✓';
                 iconoOpcion = '✅';
-            } else if (esRespuestaUsuario && !esRespuestaCorrecta) {
-                claseOpcion += 'bg-red-100 border-red-500 text-red-900 dark:bg-red-900/40 dark:text-red-300';
+            } else if (isUserAnswer && !isCorrectAnswer) {
+                optionClass += 'bg-red-100 border-red-500 text-red-900 dark:bg-red-900/40 dark:text-red-300';
                 marcador = '✗';
                 iconoOpcion = '❌';
             } else {
-                claseOpcion += 'bg-gray-50 border-gray-200 text-gray-700 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400';
+                optionClass += 'bg-gray-50 border-gray-200 text-gray-700 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400';
             }
 
             html += `
-                <div class="${claseOpcion} flex items-center gap-2">
+                <div class="${optionClass} flex items-center gap-2">
                     ${iconoOpcion ? `<span class="text-lg">${iconoOpcion}</span>` : ''}
                     <span class="font-medium">${marcador ? marcador + ' ' : ''}${opcion}</span>
                 </div>
@@ -468,14 +468,14 @@ function mostrarResultado(resultado) {
 // Event Listeners - Verificar que los elementos existan antes de añadir listeners
 if (btnFinish) {
     btnFinish.addEventListener('click', async () => {
-        await corregirTest();
+        await gradeTest();
     });
 }
 
-if (btnVolverInicio) {
-    btnVolverInicio.addEventListener('click', volverAlListado);
+if (btnBackHome) {
+    btnBackHome.addEventListener('click', returnToList);
 }
 
-if (btnVolverInicioResultado) {
-    btnVolverInicioResultado.addEventListener('click', volverAlListado);
+if (btnBackHomeResult) {
+    btnBackHomeResult.addEventListener('click', returnToList);
 }

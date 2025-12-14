@@ -34,12 +34,12 @@ async function isSupabaseAvailable() {
  * Intenta desde Supabase, fallback a JSON local
  * @returns {Promise<Array>} Lista de tests
  */
-async function obtenerTests() {
+async function fetchTests() {
     try {
         // Intentar desde Supabase
         if (await isSupabaseAvailable()) {
             console.log('📡 Cargando tests desde Supabase...');
-            const tests = await obtenerTestsDesdeSupabase();
+            const tests = await fetchTestsFromSupabase();
             if (tests && tests.length > 0) {
                 console.log(`✅ ${tests.length} tests cargados desde Supabase`);
                 return tests;
@@ -72,14 +72,14 @@ async function obtenerTests() {
  * @param {number} limit - Cantidad máxima de resultados (default: 3)
  * @returns {Promise<Array>} Lista de resultados
  */
-async function obtenerHistorial(testId, limit = 3) {
+async function fetchHistory(testId, limit = 3) {
     try {
         // Intentar desde Supabase
         if (await isSupabaseAvailable()) {
-            const historial = await obtenerHistorialTest(testId, limit);
-            if (historial && historial.length > 0) {
-                console.log(`📊 Historial cargado desde Supabase: ${historial.length} resultados`);
-                return historial.map(resultado => ({
+            const history = await fetchTestHistory(testId, limit);
+            if (history && history.length > 0) {
+                console.log(`📊 Historial cargado desde Supabase: ${history.length} resultados`);
+                return history.map(resultado => ({
                     fecha: resultado.created_at,
                     aciertos: resultado.total_correct,
                     total: resultado.total_questions,
@@ -93,8 +93,8 @@ async function obtenerHistorial(testId, limit = 3) {
 
     // Fallback: cargar desde localStorage
     try {
-        const todosLosResultados = obtenerResultados(); // Función de storage.js
-        const resultadosTest = todosLosResultados
+        const allResults = getResults(); // Function from storage.js
+        const testResults = allResults
             .filter(r => r.testId === testId)
             .slice(0, limit)
             .map(r => ({
@@ -104,8 +104,8 @@ async function obtenerHistorial(testId, limit = 3) {
                 porcentaje: ((r.aciertos / r.total) * 100).toFixed(1)
             }));
 
-        console.log(`💾 Historial cargado desde localStorage: ${resultadosTest.length} resultados`);
-        return resultadosTest;
+        console.log(`💾 Historial cargado desde localStorage: ${testResults.length} resultados`);
+        return testResults;
     } catch (error) {
         console.error('❌ Error al cargar historial:', error);
         return [];
@@ -121,13 +121,13 @@ async function obtenerHistorial(testId, limit = 3) {
  * @param {number} testId - ID del test
  * @returns {Promise<Object|null>} Objeto con progreso o null
  */
-async function buscarProgresoTest(testId) {
+async function findTestProgress(testId) {
     try {
         if (await isSupabaseAvailable()) {
-            const progreso = await obtenerTestEnProgreso(testId);
-            if (progreso) {
-                console.log(`🔄 Test en progreso encontrado (${progreso.answers_data.filter(a => a !== null).length} respuestas)`);
-                return progreso;
+            const progress = await fetchTestInProgress(testId);
+            if (progress) {
+                console.log(`🔄 Test en progreso encontrado (${progress.answers_data.filter(a => a !== null).length} respuestas)`);
+                return progress;
             }
         }
     } catch (error) {
@@ -146,10 +146,10 @@ async function buscarProgresoTest(testId) {
  * @param {number} data.total_questions - Total de preguntas del test
  * @returns {Promise<Object>} Resultado guardado
  */
-async function guardarProgreso(data) {
+async function saveProgress(data) {
     try {
         if (await isSupabaseAvailable()) {
-            const resultado = await guardarProgresoTest(data);
+            const resultado = await saveTestProgress(data);
             console.log(`💾 Progreso guardado en Supabase (ID: ${resultado.id})`);
             return resultado;
         }
@@ -174,11 +174,11 @@ async function guardarProgreso(data) {
  * @param {number} progressId - ID del progreso a eliminar
  * @returns {Promise<boolean>} True si se eliminó correctamente
  */
-async function eliminarProgreso(progressId) {
+async function deleteProgress(progressId) {
     try {
         if (await isSupabaseAvailable()) {
-            const eliminado = await eliminarProgresoTest(progressId);
-            if (eliminado) {
+            const isDeleted = await deleteTestProgress(progressId);
+            if (isDeleted) {
                 console.log('🗑️ Progreso eliminado de Supabase');
                 return true;
             }
@@ -205,18 +205,18 @@ async function eliminarProgreso(progressId) {
  * @param {Array} data.answers_data - Array con todas las respuestas y correcciones
  * @returns {Promise<Object>} Resultado guardado
  */
-async function completarTest(data) {
-    let guardadoEnSupabase = false;
+async function completeTest(data) {
+    let savedToSupabase = false;
 
     // Intentar guardar en Supabase
     try {
         if (await isSupabaseAvailable()) {
-            const resultado = await completarTestEnSupabase(data);
+            const resultado = await completeTestSupabase(data);
             console.log('✅ Resultado guardado en Supabase');
-            guardadoEnSupabase = true;
+            savedToSupabase = true;
 
             // También guardar en localStorage como backup
-            guardarEnLocalStorage(data);
+            saveToLocalStorage(data);
 
             return resultado;
         }
@@ -225,9 +225,9 @@ async function completarTest(data) {
     }
 
     // Fallback: guardar solo en localStorage
-    if (!guardadoEnSupabase) {
+    if (!savedToSupabase) {
         console.log('💾 Resultado guardado solo en localStorage');
-        return guardarEnLocalStorage(data);
+        return saveToLocalStorage(data);
     }
 }
 
@@ -235,7 +235,7 @@ async function completarTest(data) {
  * Guarda resultado en localStorage (función auxiliar)
  * @private
  */
-function guardarEnLocalStorage(data) {
+function saveToLocalStorage(data) {
     const resultado = {
         testId: data.test_id,
         fecha: new Date().toISOString(),
@@ -248,7 +248,7 @@ function guardarEnLocalStorage(data) {
     };
 
     // Usar función de storage.js
-    guardarResultado(resultado);
+    saveResult(resultado);
 
     return resultado;
 }
@@ -261,12 +261,12 @@ function guardarEnLocalStorage(data) {
  * Verifica el estado de la conexión
  * @returns {Promise<Object>} Estado de la conexión
  */
-async function verificarEstado() {
+async function checkStatus() {
     const supabaseDisponible = await isSupabaseAvailable();
 
     return {
         supabase: supabaseDisponible,
-        localStorage: typeof(Storage) !== "undefined",
+        localStorage: typeof (Storage) !== "undefined",
         modo: supabaseDisponible ? 'online' : 'offline'
     };
 }
@@ -276,9 +276,9 @@ async function verificarEstado() {
 // ============================================
 
 (async function inicializarDataService() {
-    const estado = await verificarEstado();
+    const status = await checkStatus();
     console.log('🚀 Data Service inicializado');
-    console.log(`   Modo: ${estado.modo.toUpperCase()}`);
-    console.log(`   Supabase: ${estado.supabase ? '✅' : '❌'}`);
-    console.log(`   localStorage: ${estado.localStorage ? '✅' : '❌'}`);
+    console.log(`   Modo: ${status.modo.toUpperCase()}`);
+    console.log(`   Supabase: ${status.supabase ? '✅' : '❌'}`);
+    console.log(`   localStorage: ${status.localStorage ? '✅' : '❌'}`);
 })();

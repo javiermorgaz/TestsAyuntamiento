@@ -13,7 +13,7 @@
  * Obtiene todos los tests disponibles desde Supabase
  * @returns {Promise<Array>} Array de tests
  */
-async function obtenerTestsDesdeSupabase() {
+async function fetchTestsFromSupabase() {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -43,7 +43,7 @@ async function obtenerTestsDesdeSupabase() {
  * @param {number} testId - ID del test
  * @returns {Promise<Object>} Test
  */
-async function obtenerTestPorId(testId) {
+async function fetchTestById(testId) {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -77,7 +77,7 @@ async function obtenerTestPorId(testId) {
  * @param {number} testId - ID del test
  * @returns {Promise<Object|null>} Resultado en progreso o null
  */
-async function obtenerTestEnProgreso(testId) {
+async function fetchTestInProgress(testId) {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -117,7 +117,7 @@ async function obtenerTestEnProgreso(testId) {
  * @param {number} [progressData.id] - ID del resultado (si es actualización)
  * @returns {Promise<Object>} Resultado guardado
  */
-async function guardarProgresoTest(progressData) {
+async function saveTestProgress(progressData) {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -183,7 +183,7 @@ async function guardarProgresoTest(progressData) {
  * @param {Array} resultData.answers_data - Array completo con las respuestas
  * @returns {Promise<Object>} Resultado completado
  */
-async function completarTest(resultData) {
+async function completeTestSupabase(resultData) {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -247,7 +247,7 @@ async function completarTest(resultData) {
  * @param {number} [limit=10] - Límite de resultados a obtener
  * @returns {Promise<Array>} Array de resultados completados
  */
-async function obtenerHistorialTest(testId, limit = 10) {
+async function fetchTestHistory(testId, limit = 10) {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -279,7 +279,7 @@ async function obtenerHistorialTest(testId, limit = 10) {
  * Obtiene todos los resultados completados (para estadísticas generales)
  * @returns {Promise<Array>} Array de todos los resultados completados
  */
-async function obtenerTodosLosResultados() {
+async function fetchAllResults() {
     try {
         const client = await getSupabaseClient();
         if (!client) {
@@ -310,7 +310,7 @@ async function obtenerTodosLosResultados() {
  * @param {number} resultId - ID del resultado a eliminar
  * @returns {Promise<boolean>} true si se eliminó correctamente
  */
-async function eliminarProgresoTest(resultId) {
+async function deleteTestProgress(resultId) {
     try {
         const client = await getSupabaseClient();
         if (!client) {
