@@ -10,7 +10,8 @@
         "Todas las personas jurídicas y físicas.",
         "Todas las personas físicas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Garantizar el derecho de acceso a la información.",
         "Potenciar el control de la actuación pública."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "La adquisición se haya realizado con cargo a los presupuestos públicos.",
         "La adquisición se haya realizado con cargo a los presupuestos de la Comunidad Autónoma."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "A los miembros del Gobierno y a los Altos Cargos de las Administraciones Públicas.",
         "A los miembros del Gobierno, a los Altos Cargos y a los Directivos de las Entidades del Sector Público."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Con carácter general o significativo a los ciudadanos.",
         "A un número relevante de personas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Un mes.",
         "Veinte días hábiles."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Solo a las Administraciones Públicas.",
         "Solo a los organismos autónomos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Clara y estructurada.",
         "Clara, estructurada y comprensible."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "La sede electrónica de la Administración Pública.",
         "El Portal de Transparencia."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Consejo de Transparencia y Buen Gobierno.",
         "Consejo de Transparencia y Buen Gobierno, y en las Comunidades Autónomas, al órgano que determine la Ley autonómica."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "La identidad del solicitante y la motivación de la solicitud.",
         "La identidad del solicitante y la información que se solicita."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Las Entidades que integran la Administración Local, sin excepción.",
         "Las Entidades que integran la Administración Local, con excepción de los municipios de Gran Población."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "La solicitud se refiere a información que requiera una reelaboración de la información.",
         "La solicitud se refiere a información que está en curso de elaboración o de publicación general."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "La seguridad nacional.",
         "La protección del medio ambiente."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "Estadística, en los términos previstos en el Plan de Estadística Nacional.",
         "Estadística, en los términos previstos en la Ley de Presupuestos Generales del Estado."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "La Ley de Patrimonio de las Administraciones Públicas.",
         "La normativa específica."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Relación de puestos de trabajo y las indemnizaciones por razón del servicio.",
         "Relación de puestos de trabajo, las retribuciones anuales y las indemnizaciones por razón del servicio."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Las directrices, instrucciones, circulares o respuestas a consultas planteadas por los particulares, siempre que sean de interés público.",
         "Las directrices, circulares y memorias que afecten a la legalidad vigente."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "Interponer recurso de alzada.",
         "Presentar reclamación ante el Consejo de Transparencia y Buen Gobierno."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "Por escrito, con indicación del órgano al que se dirige, la identificación del solicitante y la motivación de la solicitud.",
         "Por cualquier medio que permita su constancia."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "El control de la actividad económica.",
         "Las obligaciones de buen gobierno."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "Planes y programas anuales y plurianuales, con indicación de los objetivos de gestión y de los resultados de su evaluación.",
         "Planes y programas anuales y plurianuales, sin indicación de los objetivos de gestión."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "Todos los contratos, con independencia del procedimiento de adjudicación, y el importe de adjudicación.",
         "Solo los contratos de obras y servicios."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Las partes firmantes, el objeto, la duración, las modificaciones realizadas, los obligados a realizarlas y las obligaciones económicas convenidas.",
         "Las partes firmantes, el objeto, la duración y el importe."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -250,7 +274,8 @@
         "La Administración General del Estado, las de las Comunidades Autónomas y las Entidades Locales.",
         "La Administración General del Estado y las de las Comunidades Autónomas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -260,7 +285,8 @@
         "Justificada, proporcional y necesaria en una sociedad democrática.",
         "Justificada, proporcional y motivada."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -270,7 +296,8 @@
         "La información estadística necesaria para el cumplimiento de sus funciones.",
         "La información estadística y de gestión."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -280,7 +307,8 @@
         "El control de la aplicación de la Ley, en el ámbito de todas las Administraciones Públicas.",
         "La promoción de la transparencia y el acceso a la información."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     }
   ]
 }

@@ -10,7 +10,8 @@
         "Por decreto del Consejo de Gobierno.",
         "Por ley."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Deberá realizarse por ley, aprobada por mayoría absoluta, siempre con la necesaria suficiencia financiera para poder desarrollarla, quedando en el ámbito de la Junta de Andalucía la planificación y control de las mismas.",
         "Deberá realizarse mediante convenio administrativo y siempre teniendo en cuenta la suficiencia financiera para que se pueda desarrollar, quedando la planificación y control de las competencias a lo que disponga el convenio formalizado a tal efecto."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "La interposición de recursos de amparo y conflictos de competencia de acuerdo con lo que establezcan las leyes.",
         "El control de los medios de comunicación social dependientes de la Comunidad Autónoma."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -41,7 +44,8 @@
         "La interposición de conflictos de competencia.",
         "El examen y aprobación de la Cuenta General de la Comunidad Autónoma, sin perjuicio del control atribuido a la Cámara de Cuentas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -51,7 +55,8 @@
         "Cuestiones políticas que afecten a su ámbito territorial.",
         "Cuestiones competenciales que afecten a su ámbito territorial."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -61,7 +66,8 @@
         "Ante la Sala de lo Penal de la Audiencia Nacional.",
         "Ante el Tribunal Constitucional."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -71,7 +77,8 @@
         "Al Presidente o Presidenta de la Junta y al Consejo de Gobierno.",
         "Al Consejo de Gobierno y a cada uno de sus miembros."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -81,7 +88,8 @@
         "Consejo de Gobierno.",
         "Presidente o consejeros del Consejo de Gobierno, indistintamente."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -91,7 +99,8 @@
         "Mayoría de dos tercios.",
         "Mayoría simple."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -101,7 +110,8 @@
         "En colaboración con el Consejo de Gobierno.",
         "En colaboración con las demás entidades y corporaciones de derecho público no integradas en la Administración de la Junta de Andalucía."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -111,7 +121,8 @@
         "La Junta de Andalucía, de los entes locales y del resto del sector público de Andalucía.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -121,7 +132,8 @@
         "Es el órgano de control interno de la actividad económica y presupuestaria de la Junta de Andalucía, de los entes locales y del resto del sector público de Andalucía.",
         "Ejerce sus funciones con autonomía orgánica y funcional."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -131,7 +143,8 @@
         "Por sus propios Estatutos.",
         "Por una ley del Parlamento."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -142,7 +155,8 @@
         "Al Consejo de Gobierno y a cada uno de sus miembros.",
         "Las respuestas a), b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -153,7 +167,8 @@
         "Municipios, provincias, comarcas y demás entidades territoriales que puedan crearse por ley.",
         "Municipios, provincias y demás entidades territoriales que puedan crearse por ley."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -164,7 +179,8 @@
         "Al Presidente de la Junta de Andalucía.",
         "Al presidente del Tribunal Superior de Justicia de Andalucía."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     }
   ]
 }

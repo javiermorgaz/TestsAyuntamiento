@@ -10,7 +10,8 @@
         "El Alcalde.",
         "La Junta de Gobierno Local."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Órganos de gestión descentralizada.",
         "Órganos de gestión delegada."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "Convocar y presidir las sesiones del Pleno, y ordenar los debates.",
         "Convocar y presidir las sesiones del Pleno, y moderar y dirigir los debates."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Mayoría de dos tercios.",
         "Mayoría simple."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "El Alcalde y los Tenientes de Alcalde, sin que su número pueda superar un tercio de los Concejales.",
         "El Alcalde y un número de Concejales no superior a un cuarto del número legal de Concejales."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Gestión de servicios de proximidad y participación ciudadana.",
         "Ordenación del tráfico y seguridad ciudadana."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Un Concejal designado al efecto.",
         "Un Concejal, sin que quepa la delegación en los Tenientes de Alcalde."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Solo en los Tenientes de Alcalde y Concejales.",
         "Solo en los Tenientes de Alcalde y, en su caso, en los titulares de las Direcciones y Gerencias."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Entidades públicas empresariales.",
         "Sociedades mercantiles de capital íntegramente local."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "La Junta de Gobierno Local, a propuesta del Alcalde.",
         "El Alcalde, entre los miembros del Pleno."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "El Pleno, a propuesta del Alcalde.",
         "La Junta de Gobierno Local."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Organismos de carácter autónomo, dotados de personalidad jurídica propia.",
         "Sociedades mercantiles de capital íntegramente local."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     }
   ]
 }

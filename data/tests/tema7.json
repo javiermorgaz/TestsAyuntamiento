@@ -10,7 +10,8 @@
         "Obtener copias y certificaciones de los documentos contenidos en los procedimientos en los que tengan la condición de interesado.",
         "Acceder a la información pública, archivos y registros."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Se tenga por desistido al interesado.",
         "Se tenga por realizado el acto de que se trate, siempre que se subsane en un plazo de diez días hábiles."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "Las entidades de derecho público con personalidad jurídica propia vinculadas o dependientes de las Administraciones Públicas.",
         "Las sociedades mercantiles que desarrollen actividades de gestión."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "A la última hora del día.",
         "A la hora en que se registró la entrada de la solicitud."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas de procedimiento.",
         "Solo las personas jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Las personas jurídicas, las entidades sin personalidad jurídica y quienes representen a un interesado obligado a relacionarse electrónicamente.",
         "Todas las personas físicas o jurídicas que desarrollen actividad económica."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Quienes sin haber iniciado el procedimiento, tengan derechos que puedan resultar afectados por la decisión que en el mismo se adopte.",
         "Quienes lo promuevan como titulares de derechos o intereses legítimos, individuales o colectivos, y aquellos cuyos derechos o intereses legítimos puedan resultar afectados."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Quince días.",
         "Cinco días."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Que se opongan a la consulta o que la Administración justifique la imposibilidad de consultarlos.",
         "Que se opongan a la consulta, siempre que la Administración justifique la imposibilidad de consultarlos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Será plenamente interoperable, garantizando la compatibilidad de los distintos sistemas registrales.",
         "Se regirá por las normas de cada Comunidad Autónoma."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "Los documentos que se encuentren en poder de la propia Administración o de otra distinta, o los elaborados por las Administraciones, siempre que no se oponga el interesado.",
         "Los documentos que se encuentren en poder de la propia Administración o de otra distinta."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Al año de su publicación en el Boletín Oficial del Estado.",
         "Al año de su entrada en vigor, salvo los artículos 68 y 70."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "Que se opongan a la consulta de los documentos, o que la Administración justifique la imposibilidad de consultarlos.",
         "Que se opongan a la consulta de los documentos, o que la Administración justifique la imposibilidad de consultarlos, aun cuando la solicitud ya esté en curso."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "Por medio de representante, y se le presumirá autorizado para realizar todas las actuaciones administrativas, salvo que se trate de un acto personalísimo.",
         "Por medio de representante, sin que se pueda entender con este las actuaciones administrativas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "Siempre que se trate de procedimientos iniciados de oficio.",
         "En defecto de la respectiva normativa sectorial."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "Las bases del régimen jurídico de las Administraciones Públicas, los principios del procedimiento administrativo común y la potestad sancionadora y la responsabilidad patrimonial de las Administraciones Públicas.",
         "Las bases del régimen jurídico de las Administraciones Públicas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Se entenderá que el plazo expira el primer día del mes siguiente.",
         "Se entenderá que el plazo expira el día anterior al del inicio del mes."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Diez días.",
         "Quince días."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "Las Corporaciones de Derecho Público, en el ejercicio de funciones privadas.",
         "Los órganos constitucionales."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "El doble del plazo inicialmente fijado.",
         "La misma duración del plazo inicialmente fijado."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "A no presentar documentos que ya se encuentren en poder de la Administración actuante.",
         "A la protección de sus datos personales, sin excepción."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "Días naturales.",
         "Días laborables."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "Los sábados, domingos y los declarados festivos.",
         "Los domingos y festivos, de ámbito nacional y autonómico."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Solo en el diario oficial de la Comunidad Autónoma.",
         "En el diario oficial de la Comunidad Autónoma y en el de la provincia respectiva."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -250,7 +274,8 @@
         "Las normas estatales o autonómicas.",
         "Las normas autonómicas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -260,7 +285,8 @@
         "En soporte no electrónico en las oficinas de Correos, conforme a la legislación vigente.",
         "Solo en soporte electrónico a través de los Registros Electrónicos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -270,7 +296,8 @@
         "La fecha y hora oficial del Tribunal Superior de Justicia.",
         "La fecha y hora oficial de la sede electrónica de acceso, siendo en todo caso los mismos para todas las Comunidades Autónomas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -280,7 +307,8 @@
         "Conformidad con el original y la autenticidad de la copia, con la garantía de la identidad del órgano que ha realizado la copia.",
         "Conformidad con el original y que la copia sea electrónica."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -290,7 +318,8 @@
         "Ser informados de la gestión municipal.",
         "Ser oídos en el procedimiento."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -300,7 +329,8 @@
         "Los organismos públicos y entidades de derecho público vinculados o dependientes de las Administraciones Públicas.",
         "Los órganos de las Comunidades Autónomas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -310,7 +340,8 @@
         "El interesado lo solicita y no se perjudican derechos de tercero.",
         "Las circunstancias lo aconsejan y se motiva."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 32,
@@ -320,7 +351,8 @@
         "Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles, las entidades sin personalidad jurídica y los menores de edad para el ejercicio de sus derechos.",
         "Solo las personas jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 33,
@@ -330,7 +362,8 @@
         "El doble del plazo inicialmente fijado.",
         "La misma duración del plazo inicialmente fijado."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 34,
@@ -340,7 +373,8 @@
         "La acreditación de la representación, sin que sea necesaria la manifestación expresa de la voluntad del interesado.",
         "La acreditación de la representación, siempre que el interesado no esté presente."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 35,
@@ -350,7 +384,8 @@
         "Horas hábiles.",
         "Horas naturales."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 36,
@@ -360,7 +395,8 @@
         "La información personal que se encuentre en poder de las Administraciones Públicas.",
         "Los datos que formen parte de los expedientes en los que sean interesados."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     }
   ]
 }

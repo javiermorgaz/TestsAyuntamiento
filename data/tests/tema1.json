@@ -11,7 +11,8 @@
         "Sancionar y promulgar las leyes.",
         "El Patronazgo de las fundaciones."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -22,7 +23,8 @@
         "España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico, entre otros, la pluralidad ideológica.",
         "España se constituye en un Estado constitucional y parlamentario, que propugna como valores superiores de su ordenamiento jurídico la libertad, entre otros, la justicia."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -33,7 +35,8 @@
         "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría de dos tercios.",
         "Las respuestas a), b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -44,7 +47,8 @@
         "El derecho a fundar sindicatos.",
         "El derecho a sindicarse libremente sin excepción ni limitación alguna."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -55,7 +59,8 @@
         "Ley de bases.",
         "Un Real Decreto Legislativo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -66,7 +71,8 @@
         "De un mínimo de 300 y un máximo de 400 diputados.",
         "De un mínimo de 350 y un máximo de 450 diputados."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -77,7 +83,8 @@
         "Por el Gobierno, y podrá componerse de una, tres o cinco personas.",
         "Por las Cortes Generales, y podrá componerse de una sola persona."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -88,7 +95,8 @@
         "Si el Rey difunto no hubiese nombrado en su testamento tutor del Rey menor, lo nombrarán las Cortes Generales.",
         "Las respuestas a), b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -99,7 +107,8 @@
         "Sólo entre Magistrados, Fiscales, Profesores de Universidad y funcionarios públicos, todos ellos juristas de reconocida competencia con más de veinte años de ejercicio profesional.",
         "Las respuestas a), b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -110,7 +119,8 @@
         "50 Diputados.",
         "Los Presidentes de las Comunidades Autónomas."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -121,7 +131,8 @@
         "Cuatro años.",
         "Cinco años."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -132,7 +143,8 @@
         "La seguridad jurídica.",
         "La dignidad de la persona."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -143,7 +155,8 @@
         "Los concejales o los vecinos.",
         "Las respuestas a) b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -154,7 +167,8 @@
         "Una, tres o cinco personas nacidas en España y mayores de edad.",
         "Una, tres o cinco personas españoles y mayores de edad."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -165,7 +179,8 @@
         "159.",
         "155."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -176,7 +191,8 @@
         "El Consejo General del Poder Judicial, a propuesta del Presidente del Tribunal Supremo.",
         "El Presidente del Gobierno, a propuesta del Ministerio de Justicia."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -187,7 +203,8 @@
         "Eficacia y Jerarquía.",
         "Sostenibilidad financiera."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -198,7 +215,8 @@
         "El derecho a expresar y difundir libremente los pensamientos, ideas y opiniones mediante la palabra, el escrito o cualquier otro medio de reproducción.",
         "El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -209,7 +227,8 @@
         "Ley marco.",
         "Ley ordinaria."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -220,7 +239,8 @@
         "Estructurados.",
         "Jerarquizados."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -231,7 +251,8 @@
         "Ordenación del territorio, urbanismo y vivienda.",
         "La gestión en materia de protección del medio ambiente."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -242,7 +263,8 @@
         "Español y mayor de edad.",
         "Príncipe o Princesa de Asturias."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -253,7 +275,8 @@
         "El interés de los agentes sociales.",
         "Las respuestas a), b) y c) no son correctas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -264,7 +287,8 @@
         "Un Fondo de Compensación con destino a gastos de inversión.",
         "Una Bolsa de Cooperación con destino a gastos de inversión."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -275,7 +299,8 @@
         "Social.",
         "Las respuestas a), b) y c) no son correctas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -286,7 +311,8 @@
         "20.",
         "31."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -297,7 +323,8 @@
         "El pueblo español.",
         "El Estado."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -308,7 +335,8 @@
         "Las Cortes Generales mediante Ley orgánica.",
         "El Congreso de los Diputados mediante Decreto Legislativo."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -319,7 +347,8 @@
         "Serán motivadas y no se pronunciarán en audiencia pública.",
         "Sólo serán motivadas cuando rechacen pruebas propuestas por las partes."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -330,7 +359,8 @@
         "Presidente del Gobierno.",
         "Rey a propuesta de las Cortes Generales."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -341,7 +371,8 @@
         "Noventa días.",
         "Tres meses."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 32,
@@ -352,7 +383,8 @@
         "Por acuerdo del órgano competente.",
         "Las respuestas a), b) y c) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 33,
@@ -363,7 +395,8 @@
         "Dieciséis miembros nombrados por el Rey por un período de cinco años.",
         "Veinte miembros nombrados por el Rey por un período de cinco años."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 34,
@@ -374,7 +407,8 @@
         "Veinticinco miembros, en proporción a la importancia numérica de los grupos parlamentarios.",
         "Treinta y cinco miembros."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 35,
@@ -385,7 +419,8 @@
         "Mientras permanezcan viudos.",
         "Lo autoricen las Cortes Generales."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 36,
@@ -396,7 +431,8 @@
         "Administración de Justicia.",
         "Ordenación del territorio y urbanismo."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 37,
@@ -407,7 +443,8 @@
         "El libre acceso a los mismos.",
         "El principio de publicidad de las actuaciones judiciales."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 38,
@@ -418,7 +455,8 @@
         "En condiciones de igualdad, mérito, capacidad y transparencia.",
         "En condiciones de igualdad, mérito, capacidad y publicidad."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 39,
@@ -429,7 +467,8 @@
         "Ley marco.",
         "Real decreto-legislativo."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 40,
@@ -440,7 +479,8 @@
         "18.",
         "20."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     }
   ]
 }

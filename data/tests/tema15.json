@@ -10,7 +10,8 @@
         "El sueldo y el complemento de destino.",
         "El sueldo, los trienios y las pagas extraordinarias."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Las decisiones de las Administraciones Públicas que afecten a sus potestades de organización, si no se afectan las condiciones de trabajo de los empleados públicos.",
         "La regulación del ejercicio de los derechos de los ciudadanos y de los usuarios de los servicios públicos."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "Solo a los puestos de trabajo que se determinen por ley.",
         "A los puestos de trabajo que se determinen por ley, en atención a su naturaleza."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Temporal, durante al menos un año.",
         "Temporal, durante al menos seis meses."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Dos años.",
         "Cuatro años."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Falta grave.",
         "Falta muy grave."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Servicios en otras Administraciones Públicas.",
         "Servicios especiales."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "El nivel del puesto de trabajo y la carrera profesional.",
         "La dedicación del puesto de trabajo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Mediante la negociación de convenios y acuerdos.",
         "Mediante la negociación de acuerdos."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "La reserva del puesto de trabajo que ocupaba, y la percepción de las retribuciones básicas y complementarias.",
         "La reserva del puesto de trabajo y al cómputo del tiempo que permanezca en tal situación a efectos de ascensos, trienios y derechos pasivos."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "La especial dificultad técnica, el riesgo o la responsabilidad.",
         "La especial dificultad técnica, la dedicación o el riesgo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Una relación de puestos de trabajo, sin que quepa la dotación presupuestaria.",
         "Una relación de puestos de trabajo, dotada presupuestariamente."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "Tres años, para el cuidado de cada hijo, y dos años para el cuidado de otros familiares.",
         "Dos años, para el cuidado de cada hijo, y tres años para el cuidado de otros familiares."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "Falta grave.",
         "Falta leve."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "Faltas graves y muy graves.",
         "Faltas muy graves."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "Concurso y libre designación, y su convocatoria se hará pública.",
         "Concurso, libre designación y redistribución."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Excepcionales, y no podrán ser fijas en su cuantía.",
         "Excepcionales, y no podrán ser periódicas en su devengo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Dos años.",
         "Cinco años."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "Tres años.",
         "Cuatro años."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "El complemento de destino y el complemento específico.",
         "El complemento de destino, el complemento específico y los trienios."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "La libre designación, como regla general.",
         "El concurso, como procedimiento normal."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "El especial rendimiento, la actividad extraordinaria y el interés o iniciativa con que se desempeñen los puestos de trabajo.",
         "El especial rendimiento y la dedicación del empleado."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "No devenga retribuciones, pero le es computable el tiempo que permanezca en tal situación a efectos de trienios.",
         "No devenga retribuciones, pero le es computable el tiempo que permanezca en tal situación a efectos de ascensos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Los méritos y capacidades, conforme al sistema de méritos.",
         "Los méritos y capacidades, conforme al sistema de méritos y capacidades."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -250,7 +274,8 @@
         "El incumplimiento del deber de atender a los ciudadanos.",
         "El acoso laboral y el acoso sexual."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -260,7 +285,8 @@
         "Servicios especiales.",
         "Excedencia forzosa."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -270,7 +296,8 @@
         "El desarrollo de la carrera profesional, conforme al sistema de carrera vertical.",
         "El desarrollo de la carrera profesional y la dedicación del empleado."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -280,7 +307,8 @@
         "Seis años, si es por falta muy grave.",
         "Tres años."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -290,7 +318,8 @@
         "Un mes.",
         "Seis meses."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -300,7 +329,8 @@
         "Es nombrado como alto cargo en una Entidad Local.",
         "Es nombrado como personal eventual."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -310,7 +340,8 @@
         "Contradicción, audiencia y presunción de inocencia.",
         "Contradicción y presunción de inocencia."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 32,
@@ -320,7 +351,8 @@
         "El nivel del puesto de trabajo.",
         "La especial dificultad técnica, la dedicación, la incompatibilidad, la responsabilidad, el riesgo o las condiciones en que se desarrolle el trabajo."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 33,
@@ -330,7 +362,8 @@
         "En los supuestos previstos en la Ley, y sin reserva del puesto de trabajo.",
         "Solo en los casos de incompatibilidad."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 34,
@@ -340,7 +373,8 @@
         "La Ley de la Función Pública de cada Administración.",
         "Reglamento de la Administración Pública."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 35,
@@ -350,7 +384,8 @@
         "Retribuciones básicas, retribuciones complementarias y servicios extraordinarios.",
         "Retribuciones básicas y retribuciones complementarias, sin que quepa la retribución por servicios extraordinarios."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     }
   ]
 }

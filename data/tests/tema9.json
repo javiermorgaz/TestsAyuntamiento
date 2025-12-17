@@ -10,7 +10,8 @@
         "El mismo órgano que dictó el acto que se impugna.",
         "El Tribunal Contencioso-Administrativo."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Que pongan fin a la vía administrativa.",
         "Que sean nulos de pleno derecho."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "Actos que no pongan fin a la vía administrativa.",
         "Actos firmes en vía administrativa, siempre que concurran las circunstancias tasadas previstas en la Ley."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Tres meses.",
         "Seis meses."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Necesario.",
         "Potestativo."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Un mes a partir del día siguiente a aquel en que se entienda desestimado por silencio.",
         "Tres meses a partir del día siguiente a aquel en que se entienda desestimado por silencio."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "No suspenderá la ejecución del acto impugnado, salvo que se disponga lo contrario.",
         "Suspenderá la ejecución del acto impugnado, salvo que la ley disponga lo contrario."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Los remita en el plazo de quince días.",
         "Los remita en el plazo de diez días."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Tres meses desde el conocimiento de los documentos, si es posterior.",
         "Un año desde el conocimiento de los documentos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Los que resuelvan el recurso de alzada.",
         "Los que resuelvan el recurso de alzada y los que resuelvan el recurso de revisión."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "Se interponga el recurso extraordinario de revisión sin alegar alguno de los motivos legalmente previstos o contra actos que no pongan fin a la vía administrativa.",
         "Se interponga el recurso extraordinario de revisión sin alegar alguno de los motivos legalmente previstos o se interponga contra actos no susceptibles de recurso."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "El órgano competente no ha dictado resolución expresa sobre la suspensión, y no ha solicitado informe a otro órgano.",
         "El órgano competente no ha dictado resolución expresa sobre la suspensión, y no se perjudican derechos de terceros."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "Implica que el interesado ha renunciado al recurso, y el procedimiento continúa por el órgano competente.",
         "Implica que el interesado ha renunciado al recurso."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "El recurso de alzada, el recurso de reposición y la reclamación previa.",
         "El recurso de alzada, el recurso de reposición y el recurso de revisión."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "Un mes, a contar desde el día siguiente al de la notificación de aquél.",
         "Dos meses, a contar desde el día siguiente al de la notificación de aquél."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "El órgano superior jerárquico que dictó el acto.",
         "El mismo órgano que dictó el acto."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Dos meses.",
         "Tres meses."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Ante el órgano que dictó el acto, o ante el competente para resolverlo.",
         "Ante el órgano superior jerárquico, exclusivamente."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "Se entenderá estimado, salvo que la ley establezca el silencio negativo.",
         "Se podrá entender desestimado, salvo que se trate de procedimientos iniciados a solicitud del interesado."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "Error de derecho.",
         "Infracción manifiesta de la legalidad."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "Lo tramitará como si se hubiera interpuesto el recurso procedente, siempre que se cumplan los requisitos básicos.",
         "Lo tramitará como si se hubiera interpuesto el recurso procedente."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "Que decidan directa o indirectamente el fondo del asunto.",
         "Que decidan directa o indirectamente el fondo del asunto o la terminación del procedimiento."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "Se entenderá desestimado por silencio administrativo, salvo que la ley establezca el silencio positivo.",
         "Se podrá entender desestimado por silencio administrativo."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Los recursos que procedan en vía administrativa o contencioso-administrativa.",
         "Los recursos de alzada y potestativo de reposición."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -250,7 +274,8 @@
         "Un mes.",
         "Un mes, a contar desde el día siguiente al de su notificación."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -260,7 +285,8 @@
         "Cinco días.",
         "Quince días."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -270,7 +296,8 @@
         "Un mes, a contar desde el día siguiente al de la interposición del recurso.",
         "Dos meses."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -280,7 +307,8 @@
         "Se interponga el recurso contra actos que no sean susceptibles de recurso.",
         "Se interponga el recurso extraordinario de revisión contra actos que no pongan fin a la vía administrativa."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -290,7 +318,8 @@
         "Tres meses desde el conocimiento de los documentos o sentencias.",
         "Seis meses desde el conocimiento de los documentos."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -300,7 +329,8 @@
         "La reposición del acto que no pone fin a la vía administrativa.",
         "La reposición del acto que pone fin a la vía administrativa, salvo que se trate de un recurso de alzada."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -310,7 +340,8 @@
         "Que una disposición legal establezca lo contrario o que el interesado renuncie expresamente.",
         "Que una disposición legal establezca lo contrario, sin perjuicio de la interposición del recurso contencioso-administrativo."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     }
   ]
 }

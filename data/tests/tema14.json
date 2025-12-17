@@ -10,7 +10,8 @@
         "El acceso al empleo público.",
         "La provisión de puestos de trabajo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "La Ley de la Función Pública de la Comunidad Autónoma y la legislación básica del Estado.",
         "La legislación básica del Estado, las leyes de las Comunidades Autónomas y las normas que dicte la Corporación respectiva."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "Por el órgano competente de la Administración Pública, atendiendo a criterios de competencia profesional y experiencia.",
         "Por el órgano superior de la Administración Pública."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Fijo y temporal.",
         "Fijo y por tiempo indefinido."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "La ejecución de programas de carácter temporal.",
         "La cobertura temporal de un puesto de trabajo hasta su provisión definitiva."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Determine la legislación de la Función Pública de cada Administración, con sujeción a la Ley.",
         "Determine la Ley Orgánica de la Función Pública."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Tener la nacionalidad española o la de un Estado miembro de la Unión Europea.",
         "Tener la nacionalidad española, salvo en los casos que prevea la Ley de la Función Pública."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "El personal laboral, fijo, por tiempo indefinido y temporal.",
         "Los funcionarios de carrera, los funcionarios interinos, el personal laboral y el personal eventual."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Servicios profesionales retribuidos de carácter permanente.",
         "Funciones directivas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Reservadas a personal laboral.",
         "Propias de funcionarios de carrera."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "El órgano administrativo competente, previa negociación colectiva.",
         "El Consejo de Gobierno de la Comunidad Autónoma."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Funciones de apoyo y asesoramiento.",
         "Funciones expresamente calificadas como de confianza o asesoramiento especial."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "Objetividad, integridad y austeridad.",
         "Objetividad e imparcialidad."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "Sin discriminación por razón de nacimiento, origen racial o étnico, género, orientación sexual, religión, discapacidad o cualquier otra condición o circunstancia personal o social.",
         "Sin discriminación por razón de nacimiento, origen racial o étnico, género, orientación sexual, religión, discapacidad o cualquier otra condición o circunstancia personal o social, y a la prevención del acoso sexual y por razón de sexo."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "Podrá realizarse por los medios y procedimientos que se determinen por Ley.",
         "Podrá realizarse por los medios y procedimientos que se determinen por acuerdo de las Comunidades Autónomas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "Mediante convocatoria pública, a través de concurso-oposición.",
         "Mediante convocatoria pública, y su régimen de selección será el previsto en el artículo 61.1, 61.2 y 61.3."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "El Gobierno de la Nación, previa consulta con las Comunidades Autónomas y Entidades Locales.",
         "El Consejo de Ministros."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "La legislación básica del Estado, las leyes de la Comunidad Autónoma y las normas que dicten las Corporaciones respectivas.",
         "La legislación básica del Estado, con sujeción a la Ley de la Función Pública de la Comunidad Autónoma."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "La Ley de la Función Pública de la Comunidad Autónoma.",
         "La legislación básica del Estado y las normas que dicte la Corporación respectiva."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "Guardar el debido sigilo respecto a los asuntos que conozca por razón de su cargo, con independencia de su calificación.",
         "Guardar el debido sigilo respecto a los asuntos que conozca por razón de su cargo, y no divulgar información."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "Es causa de exclusión, salvo que se recupere en el plazo de un año.",
         "Es causa de exclusión, sin que quepa excepción."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "Oposición, concurso-oposición y concurso.",
         "Oposición y concurso."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "El acceso a la Función Pública local y el régimen de selección.",
         "El régimen de selección, la provisión de puestos de trabajo y las situaciones administrativas de los funcionarios locales."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Siete por ciento de las plazas ofertadas, siempre que superen los procesos selectivos y acrediten su discapacidad.",
         "Diez por ciento de las plazas ofertadas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -250,7 +274,8 @@
         "Una relación estatutaria regulada por el Derecho Administrativo.",
         "Una relación estatutaria regulada por el Derecho Administrativo, para el desempeño de servicios profesionales retribuidos de carácter permanente."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -260,7 +285,8 @@
         "La cobertura transitoria de un puesto de trabajo hasta su provisión definitiva.",
         "La sustitución transitoria de los titulares."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -270,7 +296,8 @@
         "Libremente por el órgano competente, y cesará automáticamente cuando cese la autoridad que lo nombró, sin que quepa indemnización alguna.",
         "Libremente por el órgano competente, sin que cese automáticamente."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -280,7 +307,8 @@
         "Funciones directivas.",
         "Funciones de asesoramiento, salvo que lo autorice la Ley de Presupuestos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -290,7 +318,8 @@
         "Reserva sobre los asuntos que conozca por razón de su cargo.",
         "Debido sigilo respecto a los asuntos que conozca por razón de su cargo, con independencia de su calificación."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -300,7 +329,8 @@
         "El Capítulo II del Título III del EBEP, y se basa en los principios éticos.",
         "La Ley de la Función Pública."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -310,7 +340,8 @@
         "Concurso y libre designación.",
         "Concurso, sin que quepa la libre designación."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 32,
@@ -320,7 +351,8 @@
         "El Derecho Laboral y el Administrativo, y su nombramiento atiende a criterios de competencia profesional y experiencia.",
         "El Derecho Administrativo."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     }
   ]
 }

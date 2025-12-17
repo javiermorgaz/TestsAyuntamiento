@@ -10,7 +10,8 @@
         "Que la información a los afectados sea clara y concisa.",
         "Que la información a los afectados sea concisa, transparente, inteligible y de fácil acceso."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Limitación de la finalidad.",
         "Integridad y confidencialidad."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "El tratamiento de datos por parte de las empresas privadas.",
         "El tratamiento de datos personales y la garantía de los derechos digitales."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Un derecho fundamental de la persona.",
         "Un derecho subjetivo, que la ley desarrolla en el marco del artículo 18.4 de la Constitución Española."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Catorce años, salvo que se trate de servicios de la sociedad de la información, en cuyo caso será a partir de los dieciséis años.",
         "Dieciséis años."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Mediante petición al responsable del tratamiento, sin que quepa la negativa.",
         "Mediante petición al responsable del tratamiento, a través de cualquier medio."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "El cumplimiento de una obligación legal, con excepción de los datos especialmente protegidos.",
         "La ejecución de un contrato o para la satisfacción de intereses legítimos."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Inexactos o incompletos, atendiendo a los fines del tratamiento.",
         "Inexactos, incompletos o inadecuados."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Gratuito, con excepción de los costes de notificación al interesado.",
         "Gratuito."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Se aplicará a quienes intervengan en cualquier fase del tratamiento, salvo que se trate de datos de acceso público.",
         "Solo se aplicará al responsable y al encargado del tratamiento."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "La Autoridad de Control, y notificados al interesado.",
         "La Autoridad de Control, y publicados de forma adecuada."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Los trabajadores por cuenta ajena y a los empleados públicos.",
         "Solo a los trabajadores por cuenta ajena."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "Por sí mismos, si tienen catorce años cumplidos.",
         "Por medio de sus representantes legales."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "En el plazo de un mes desde la solicitud, ampliable a dos meses.",
         "En el plazo de quince días desde la solicitud, ampliable a un mes."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "El interesado revoque el consentimiento en que se basa el tratamiento.",
         "Concurra alguna de las circunstancias tasadas del artículo 17.1."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "Lícita y transparente en relación con el interesado.",
         "Lícita y leal en relación con el interesado."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Un derecho subjetivo.",
         "Un derecho de la personalidad."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Inexactos o incompletos, atendiendo a los fines del tratamiento.",
         "Inexactos, incompletos o inadecuados."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     }
   ]
 }

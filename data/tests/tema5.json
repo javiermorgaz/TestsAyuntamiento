@@ -10,7 +10,8 @@
         "El Consejo Europeo, por mayoría cualificada, teniendo en cuenta las elecciones al Parlamento Europeo.",
         "El Parlamento Europeo, por mayoría simple."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "El respeto del Derecho en la interpretación de los Tratados.",
         "El respeto del Derecho en la aplicación de los Tratados."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "Estados miembros y terceros países.",
         "Entre Estados miembros y entre Estados miembros y terceros países."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Un representante de cada Estado miembro de rango ministerial, facultado para comprometer a su Gobierno.",
         "Un representante de cada Estado miembro de rango ministerial, facultado para comprometer al Gobierno del Estado miembro al que represente y para ejercer el derecho de voto."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Representantes de los ciudadanos de los Estados miembros.",
         "Representantes de los ciudadanos de la Unión."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Legislativa y de control.",
         "Presupuestaria y de control."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Los Jefes de Estado o de Gobierno de los Estados miembros.",
         "Los Jefes de Estado o de Gobierno de los Estados miembros, así como por su Presidente y el Presidente de la Comisión, con voz y sin voto."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Legislativa y presupuestaria.",
         "Legislativa y ejecutiva."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Al Consejo.",
         "A la Comisión."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "La prohibición entre los Estados miembros de los derechos de aduana de importación y de todas las exacciones de efecto equivalente.",
         "La prohibición entre los Estados miembros de los derechos de aduana de importación y exportación y de todas las exacciones de efecto equivalente."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "Respeto de la dignidad humana, libertad, democracia, igualdad, Estado de Derecho y respeto de los derechos humanos.",
         "Libertad, democracia, igualdad, Estado de Derecho y respeto de los derechos humanos."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Un número de miembros que será igual al número de Estados miembros, incluido el Presidente.",
         "Un número de miembros que será igual al número de Estados miembros."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "Respeto de la dignidad humana, libertad, democracia, igualdad, Estado de Derecho y respeto de los derechos humanos, incluidos los derechos de las personas pertenecientes a minorías.",
         "Progreso económico y social, cohesión y solidaridad entre los Estados miembros."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "El comercio con terceros países.",
         "La libre competencia empresarial."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "El Presidente del Consejo Europeo.",
         "El Presidente del Parlamento Europeo."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "736 más el Presidente.",
         "751 diputados, incluido el Presidente."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Cinco años.",
         "Seis años."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Estará compuesto por dos jueces por cada Estado miembro.",
         "Estará asistido por ocho Abogados Generales."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "El derecho a residir en el territorio de un Estado miembro únicamente si se dispone de un contrato indefinido.",
         "La creación de un estatuto único del trabajador europeo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "La prohibición, entre los Estados miembros, de los derechos de aduana de importación y exportación y de todas las exacciones de efecto equivalente.",
         "La libertad de fijación de aranceles por cada Estado miembro frente a terceros."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     }
   ]
 }

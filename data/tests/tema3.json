@@ -10,7 +10,8 @@
         "Ser informado de los asuntos de Estado y dirigir, a estos efectos, las sesiones del Consejo de Ministros, a petición del Presidente del Gobierno.",
         "Ser informado de los asuntos de Estado y presidir, las sesiones del Consejo de Ministros, a petición del Presidente del Gobierno."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "Una ley ordinaria regulará las bases de la organización militar.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "No podrán ejercer el derecho de petición.",
         "Sólo individualmente y con arreglo a lo dispuesto en su legislación específica."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "Dependientes e inamovibles en el ejercicio de su mandato.",
         "Independientes e inamovibles en el ejercicio de su mandato."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Seguridad Jurídica.",
         "Justicia."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "En el artículo 33.",
         "En el artículo 34."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "De un mínimo de 300 y un máximo de 400 Diputados, elegidos por sufragio universal, libre, igual, directo y secreto; en los términos que establezca la ley.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Es necesario que acrediten llevar residiendo en España al menos cinco años, sin necesidad de acuerdos internacionales.",
         "Podrán ser titulares del derecho de sufragio activo siempre que así se establezca por tratado o por ley, atendiendo a criterios de reciprocidad."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "Tres quintos.",
         "El artículo 167 no se refiere a la reforma constitucional."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Privilegios en la gestión de sus intereses.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "Cuatro años.",
         "Tres años."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Un extranjero solo puede ser nombrado ministro del gobierno de España si es nacional de un Estado miembro de la Unión Europea.",
         "Un extranjero no puede ser nombrado ministro del gobierno de España."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "De primogenitura y representación, siendo preferida siempre la línea posterior a las anteriores; en la misma línea, el grado más próximo al más remoto; en el mismo grado, el varón a la mujer, y en el mismo sexo, la persona de más edad a la de menos.",
         "De primogenitura y representación, siendo preferida siempre la línea anterior a las posteriores; en la misma línea, el grado más próximo al más remoto; en el mismo grado, el varón a la mujer, y en el mismo sexo, la persona de menos edad a la de más."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "118.",
         "119."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "Los proyectos de reforma constitucional, siempre que hubieren obtenido el voto favorable de la mayoría absoluta en una de las Cámaras, podrán ser aprobados por mayoría de dos tercios de la otra Cámara.",
         "Los proyectos de reforma constitucional, siempre que hubieren obtenido el voto favorable de la mayoría absoluta del Senado, podrán ser aprobados con una mayoría de dos tercios del Congreso de los Diputados."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "Se someterá necesariamente a la ratificación mediante referéndum.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "El Presidente del Gobierno, el Defensor del Pueblo, los Defensores del Pueblo de las Comunidades Autónomas, el Fiscal General del Estado, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas.",
         "El Presidente del Gobierno, el Defensor del Pueblo, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "El derecho a la propiedad privada y a la herencia.",
         "El derecho a la libertad de cátedra."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "Solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de autorización previa por la autoridad, pudiendo denegarse esta última cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
         "Solo las reuniones en lugares de tránsito público y manifestaciones deben ser objeto de autorización previa por la autoridad, sin que quepa prohibirlas en ningún caso."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "Será tutor del Rey menor el padre o la madre mientras permanezcan viudos, solo en el caso de que el Rey difunto no hubiese nombrado en su testamento tutor del Rey menor.",
         "Si el Rey difunto no hubiese nombrado en su testamento tutor del Rey menor, lo nombrarán las Cortes Generales."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "Solo podrán acumularse los cargos de Regente y de tutor del Rey menor en el padre, madre o ascendientes directos del Rey.",
         "Solo podrán acumularse los cargos de Regente y de tutor del Rey menor cuando a este último lo haya nombrado en su testamento el Rey difunto."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "Dos senadores.",
         "Tres senadores."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "El mismo número de senadores que la isla de Menorca.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Se regirán por el Reglamento de las Cortes Generales.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -250,7 +274,8 @@
         "Se regulan exclusivamente en la ley electoral.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -260,7 +285,8 @@
         "Cualquier alteración de los límites provinciales habrá de ser aprobada por las Cortes Generales mediante ley ordinaria.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -270,7 +296,8 @@
         "Un delegado nombrado por el Gobierno.",
         "El Ministro de Política Territorial."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -280,7 +307,8 @@
         "Por el Tribunal Constitucional, el relativo a la inconstitucionalidad de las leyes.",
         "Por el Tribunal de Cuentas, el económico y presupuestario."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -290,7 +318,8 @@
         "La mayoría absoluta de los miembros de cualquiera de las Cámaras.",
         "La mayoría absoluta del Congreso."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -300,7 +329,8 @@
         "Gastos de inversión.",
         "Operaciones de crédito."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -310,7 +340,8 @@
         "En el artículo 18.4",
         "En el artículo 18.3."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 32,
@@ -320,7 +351,8 @@
         "Su creación y el ejercicio de su actividad son libres dentro del respeto a la Constitución y a la ley.",
         "Su estructura interna y funcionamiento deberán ser regulados por ley."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 33,
@@ -330,7 +362,8 @@
         "Está integrado por el Presidente del Tribunal Supremo y por 25 miembros nombrados a propuesta del Gobierno por un periodo de cinco años.",
         "Está integrado por el Presidente del Tribunal Supremo, que lo presidirá, y por 20 miembros nombrados por el Rey por un periodo de cinco años."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 34,
@@ -340,7 +373,8 @@
         "Municipios, comarcas y las provincias que se constituyan.",
         "Municipios, provincias y comunidades autónomas que se constituyan."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 35,
@@ -350,7 +384,8 @@
         "Por el Presidente del Gobierno.",
         "Por las Cortes Generales."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 36,
@@ -360,7 +395,8 @@
         "La Junta de Gobierno Local.",
         "El alcalde y tenientes de alcalde."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 37,
@@ -370,7 +406,8 @@
         "Las directivas y los reglamentos aprobados sobre las mismas materias por la Unión Europea.",
         "La Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 38,
@@ -380,7 +417,8 @@
         "De los conflictos de competencias entre las Diputaciones Provinciales y los Municipios.",
         "Del recurso de amparo por violación de los principios rectores de la política social y económica del país."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 39,
@@ -390,7 +428,8 @@
         "El derecho a la propiedad privada y a la herencia.",
         "El derecho a la libertad de enseñanza."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 40,
@@ -400,7 +439,8 @@
         "La libertad de cátedra.",
         "La libertad de empresa en el marco de la economía de mercado."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 41,
@@ -410,7 +450,8 @@
         "Autorización previa por la autoridad, y podrán prohibirse cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
         "Autorización previa por la autoridad, sin que quepa prohibirlas en ningún caso."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 42,
@@ -420,7 +461,8 @@
         "En ningún caso.",
         "En casos de delitos de terrorismo."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     }
   ]
 }

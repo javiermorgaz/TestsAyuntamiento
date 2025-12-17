@@ -10,7 +10,8 @@
         "Los órganos constitucionales.",
         "Las Corporaciones de Derecho Público."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -20,7 +21,8 @@
         "El interesado.",
         "El superior jerárquico, sin que quepa la iniciativa del interesado."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -30,7 +32,8 @@
         "La lesión que sufran los particulares en sus bienes y derechos, a consecuencia del funcionamiento normal o anormal de los servicios públicos.",
         "La lesión que sufran los particulares en cualquiera de sus bienes y derechos, salvo en casos de fuerza mayor."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -40,7 +43,8 @@
         "El principio de legalidad y proporcionalidad.",
         "El principio de legalidad, con carácter general."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -50,7 +54,8 @@
         "Los principios de legalidad, irretroactividad, tipicidad, responsabilidad, proporcionalidad, prescripción y non bis in ídem.",
         "Los principios de legalidad, irretroactividad y tipicidad."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -60,7 +65,8 @@
         "Solo de forma presencial, salvo que su reglamento interno establezca lo contrario.",
         "Solo de forma presencial."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -70,7 +76,8 @@
         "Declararse incompetentes, con carácter general.",
         "Abstenerse de intervenir en el procedimiento y comunicarlo a su superior jerárquico."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -80,7 +87,8 @@
         "Al órgano administrativo que la tenga atribuida legalmente.",
         "Al órgano administrativo superior jerárquico de la Administración."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -90,7 +98,8 @@
         "El órgano superior, de forma motivada y en supuestos de excepcionalidad.",
         "El órgano superior, de forma motivada."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -100,7 +109,8 @@
         "Ostentar la representación del órgano y moderar los debates.",
         "Acordar la convocatoria de las sesiones y moderar los debates."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -110,7 +120,8 @@
         "Los titulares de los órganos superiores y los inferiores, si la delegación es necesaria.",
         "Los órganos dependientes, y no alterará la competencia del órgano delegante."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -120,7 +131,8 @@
         "Anulabilidad del acto administrativo.",
         "Nulidad del acto administrativo."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -130,7 +142,8 @@
         "La actividad o actividades a realizar, el plazo de vigencia y la naturaleza y el alcance de la gestión encomendada.",
         "La actividad o actividades a realizar, el plazo de vigencia y los medios materiales para su cumplimiento."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -140,7 +153,8 @@
         "La legislación civil y la Ley 39/2015.",
         "La legislación administrativa."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -150,7 +164,8 @@
         "El órgano administrativo del que dependa el suplido.",
         "La persona que designe el órgano competente para el nombramiento de aquéllos o el superior jerárquico común."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -160,7 +175,8 @@
         "El Boletín Oficial del Estado, el de la Comunidad Autónoma o de la Provincia, según el ámbito territorial del órgano delegante, y surtirá efecto a partir del día siguiente al de su publicación.",
         "El Boletín Oficial del Estado o en el de la Comunidad Autónoma correspondiente, y surtirá efecto a partir del día siguiente al de su publicación."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -170,7 +186,8 @@
         "Reglamentaria.",
         "Funcional."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -180,7 +197,8 @@
         "Solo son aplicables las disposiciones sancionadoras vigentes en el momento de producirse los hechos, salvo si la disposición posterior es más favorable al presunto infractor.",
         "Solo son aplicables las disposiciones sancionadoras vigentes en el momento de producirse los hechos, si la disposición posterior es más favorable al presunto infractor."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -190,7 +208,8 @@
         "Según lo dispuesto en las leyes que las establezcan.",
         "En el plazo de tres, dos o un año, según la gravedad de la sanción."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -200,7 +219,8 @@
         "Las bases del régimen jurídico de las Administraciones Públicas y la potestad sancionadora.",
         "Las bases del régimen jurídico de las Administraciones Públicas, sin perjuicio de la Ley 39/2015."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -210,7 +230,8 @@
         "Por escrito, en cualquier momento del procedimiento, y debe estar motivada.",
         "Por escrito, tan pronto como se tenga conocimiento de la causa y debe estar motivada."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -220,7 +241,8 @@
         "Se publicarán en el boletín oficial correspondiente.",
         "Se publicarán en el boletín oficial correspondiente y surtirán efecto a partir de su firma."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -230,7 +252,8 @@
         "Nombrado y separado por el titular del órgano al que pertenezca el órgano colegiado.",
         "Elegido por los miembros del órgano colegiado."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -240,7 +263,8 @@
         "Material, de la competencia de los órganos o entidades, por otros órganos o entidades de la misma o de distinta Administración.",
         "Material, técnico o de servicios, de la competencia de los órganos o entidades, por otros órganos o entidades de la misma o de distinta Administración."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     }
   ]
 }

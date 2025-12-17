@@ -11,7 +11,8 @@
         "Solo de la Diputación Permanente o de la mayoría de los miembros de cualquiera de las Cámaras.",
         "Del Gobierno, de la Diputación Permanente o de la mayoría absoluta de los miembros de cualquiera de las Cámaras."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 2,
@@ -22,7 +23,8 @@
         "Consultivo.",
         "De ratificación."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 3,
@@ -33,7 +35,8 @@
         "La ley que regule este derecho establecerá las garantías precisas para asegurar el mantenimiento de los servicios esenciales de transporte, sanidad, educación y seguridad ciudadana.",
         "La ley que regule el ejercicio de este derecho establecerá las garantías precisas para asegurar el mantenimiento de los servicios esenciales de la comunidad."
       ],
-      "respuesta_correcta": 4
+      "respuesta_correcta": 4,
+      "autogenerado": false
     },
     {
       "id_p": 4,
@@ -43,7 +46,8 @@
         "El Presidente del Gobierno, el Defensor del Pueblo, los Defensores del Pueblo de las Comunidades Autónomas, el Fiscal General del Estado, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas.",
         "El Presidente del Gobierno, el Defensor del Pueblo, 50 Diputados, 50 Senadores, los órganos colegiados ejecutivos de las Comunidades Autónomas y, en su caso, las Asambleas de las mismas."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 5,
@@ -53,7 +57,8 @@
         "Nueve años y se renovarán por terceras partes cada dos.",
         "Seis años y se renovarán por terceras partes cada tres."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 6,
@@ -63,7 +68,8 @@
         "Autorizar la constitución de una comunidad autónoma integrada por municipios de distintas provincias.",
         "Autorizar o acordar, en su caso, un Estatuto de autonomía para comarcas no integradas en ninguna organización provincial o municipal."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 7,
@@ -73,7 +79,8 @@
         "Su afiliación política.",
         "Su ideología, religión o creencias."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 8,
@@ -83,7 +90,8 @@
         "Tienen el valor de cosa juzgada desde la fecha de publicación de la sentencia en el boletín oficial del Estado.",
         "Tienen el valor de cosa juzgada a partir del día siguiente de su publicación en el boletín oficial del Estado."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 9,
@@ -93,7 +101,8 @@
         "El reglamento aprobado a tal efecto.",
         "La ley."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 10,
@@ -103,7 +112,8 @@
         "Seis años.",
         "Dos años."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 11,
@@ -113,7 +123,8 @@
         "Dentro de los 30 días siguientes a la celebración de las elecciones.",
         "Dentro de los 25 días siguientes a la celebración de las elecciones."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 12,
@@ -123,7 +134,8 @@
         "El Tribunal Constitucional.",
         "La Sala de lo Penal del Tribunal Superior de Justicia de la Comunidad Autónoma que corresponda."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 13,
@@ -133,7 +145,8 @@
         "Atendiendo a lo dispuesto en una ley orgánica.",
         "Atendiendo a lo dispuesto en la ley, previa consulta al Presidente del Gobierno."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 14,
@@ -143,7 +156,8 @@
         "En virtud de resolución judicial.",
         "Si es contraria a lo dispuesto en la Constitución Española de 1978."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 15,
@@ -153,7 +167,8 @@
         "Una ley orgánica.",
         "Un Decreto Ley."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 16,
@@ -163,7 +178,8 @@
         "Un delegado nombrado por el Gobierno.",
         "Un delegado nombrado por el ministro del Interior."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 17,
@@ -173,7 +189,8 @@
         "Por el Tribunal Constitucional, el relativo a la inconstitucionalidad de las leyes.",
         "Por el Tribunal de Cuentas, el económico y presupuestario."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 18,
@@ -183,7 +200,8 @@
         "Las transferencias del Fondo de Garantía Social.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 19,
@@ -193,7 +211,8 @@
         "Al Presidente del Gobierno.",
         "A los jueces y magistrados en los procesos correspondientes."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 20,
@@ -203,7 +222,8 @@
         "Por mayoría de dos tercios de cada Cámara.",
         "Por mayoría absoluta de ambas Cámaras reunidas en sesión conjunta."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 21,
@@ -213,7 +233,8 @@
         "1 y 2 del artículo 87.",
         "1 y 2 del artículo 89."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 22,
@@ -223,7 +244,8 @@
         "Seis meses desde el último acuerdo adoptado al respecto por alguna de las Corporaciones locales interesadas.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 23,
@@ -233,7 +255,8 @@
         "La denominación de la Comunidad que mejor corresponda a su identidad histórica.",
         "La creación y funcionamiento de sus instituciones de autogobierno."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 24,
@@ -243,7 +266,8 @@
         "Fomento y coordinación general de la investigación científica y técnica.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 25,
@@ -253,7 +277,8 @@
         "A propuesta del Gobierno, oído el Consejo General del Poder Judicial.",
         "A propuesta del Consejo General del Poder Judicial, ratificado por el Gobierno en Consejo de Ministros."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 26,
@@ -263,7 +288,8 @@
         "Los daños causados por error judicial, así como los que sean consecuencia del funcionamiento anormal de la Administración de Justicia.",
         "Los daños causados por error judicial que sean consecuencia del funcionamiento normal de la Administración de Justicia."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 27,
@@ -273,7 +299,8 @@
         "Se prohíben las fundaciones para fines de interés general de carácter paramilitar.",
         "Las respuestas a) y b) son incorrectas."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 28,
@@ -283,7 +310,8 @@
         "Sirven con objetividad a los intereses generales.",
         "Tienen pleno sometimiento a la ley y al derecho."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 29,
@@ -293,7 +321,8 @@
         "Mérito y capacidad.",
         "Eficacia y jerarquía."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 30,
@@ -303,7 +332,8 @@
         "A la propiedad privada.",
         "A la objeción de conciencia."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 31,
@@ -313,7 +343,8 @@
         "16 miembros.",
         "12 miembros."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 32,
@@ -323,7 +354,8 @@
         "Una o tres personas.",
         "Una, tres o cinco personas."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 33,
@@ -333,7 +365,8 @@
         "Matriculación de aeronaves.",
         "Los montes y aprovechamientos forestales."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 34,
@@ -343,7 +376,8 @@
         "Al Gobierno y al Congreso de los Diputados.",
         "Al Congreso de los Diputados."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 35,
@@ -353,7 +387,8 @@
         "El Rey, a propuesta de las Cortes Generales, oído el Consejo General del Poder Judicial.",
         "El Rey, a propuesta del Gobierno, oído el Consejo General del Poder Judicial."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     },
     {
       "id_p": 36,
@@ -363,7 +398,8 @@
         "Solo pueden ejercer el derecho de petición individualmente.",
         "No pueden ejercer el derecho de petición."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 37,
@@ -373,7 +409,8 @@
         "No podrán prohibirse en ningún caso.",
         "Sólo podrán prohibirse por orden judicial."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 38,
@@ -383,7 +420,8 @@
         "Tres años.",
         "Dos años."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 39,
@@ -393,7 +431,8 @@
         "Permite agrupaciones de municipios diferentes de la provincia.",
         "Permite agrupaciones de municipios diferentes de la provincia, exigiendo para su creación una ley orgánica."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 40,
@@ -403,7 +442,8 @@
         "Artículo 28.1.",
         "Artículo 26.5."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 41,
@@ -413,7 +453,8 @@
         "Mayoría de dos quintos de cada Cámara, y a la disolución inmediata de las Cortes.",
         "Mayoría absoluta de cada Cámara, y a la disolución inmediata de las Cortes."
       ],
-      "respuesta_correcta": 1
+      "respuesta_correcta": 1,
+      "autogenerado": false
     },
     {
       "id_p": 42,
@@ -423,7 +464,8 @@
         "El Ministerio Fiscal.",
         "50 Senadores."
       ],
-      "respuesta_correcta": 2
+      "respuesta_correcta": 2,
+      "autogenerado": false
     },
     {
       "id_p": 43,
@@ -433,7 +475,8 @@
         "Religiosa y moral que esté de acuerdo con sus ideales.",
         "Religiosa y moral que esté de acuerdo con sus propias convicciones."
       ],
-      "respuesta_correcta": 3
+      "respuesta_correcta": 3,
+      "autogenerado": false
     }
   ]
 }
