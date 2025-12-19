@@ -16,6 +16,9 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 - ✅ **Auto-guardado** de progreso durante el test (cada 30s + al cambiar respuesta)
 - ✅ **Continuación de tests** - retomar donde lo dejaste desde cualquier dispositivo
 - ✅ **Sincronización entre dispositivos** vía Supabase
+- ✅ **Modo Slider (Presentación)** - vista tipo diapositiva optimizada para móviles
+- ✅ **Sincronización Bi-direccional** - cambia de vista sin perder tu posición
+
 
 ### Futuras Mejoras
 - 📊 Estadísticas avanzadas por tema
@@ -124,7 +127,8 @@ TestsAyuntamiento/
 │   └── schema.sql                  # Documentación del esquema de la BD
 ├── tests/
 │   ├── dataService.test.js         # Tests unitarios de lógica de datos
-│   └── supabaseService.test.js     # Tests de verificación de esquema
+│   ├── supabaseService.test.js     # Tests de verificación de esquema
+│   └── sliderLogic.test.js         # Tests de sincronización y altura del Slider
 ├── scripts/
 │   └── build-index.js              # Script de sincronización
 ├── package.json                    # Dependencias y scripts
@@ -269,6 +273,7 @@ npm test
 ### Estructura de Tests
 - `tests/dataService.test.js`: Verifica la lógica de `assets/js/dataService.js` (mocks de Supabase y localStorage).
 - `tests/supabaseService.test.js`: Verifica que `assets/js/supabase-service.js` cumple con el esquema de la base de datos (`db/schema.sql`).
+- `tests/sliderLogic.test.js`: Verifica la resiliencia de la sincronización y la adaptación de altura del modo Slider.
 
 ---
 
@@ -319,12 +324,16 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 ### Próximas Versiones
 
 **v1.1** ✅ **COMPLETADO** (2025-12-08)
-- ✅ Auto-guardado de progreso (cada 30s + debounce 2s)
-- ✅ Continuación de tests desde cualquier dispositivo
-- ✅ Sincronización entre dispositivos vía Supabase
-- ✅ Modo híbrido online/offline
+- ✅ Auto-guardado, sincronización Supabase y continuación de tests.
 
-**v1.2** (Planificado)
+**v1.2** ✅ **COMPLETADO** (2025-12-19)
+- ✅ **Modo Slider**: Experiencia tipo diapositiva optimizada para móviles.
+- ✅ **Navegación Robusta**: Solucionados problemas de scroll en iOS Safari.
+- ✅ **Sincronización Inteligente**: Algoritmo de punto focal para cambio de vista.
+- ✅ **Suite de Tests**: Nueva suite para lógica de interfaz de usuario.
+- ✅ **Versionado**: Footer dinámico para verificar despliegues exitosos.
+
+**v1.3** (Planificado)
 - Estadísticas por tema
 - Modo de estudio
 - Gráficos de progreso
@@ -344,4 +353,4 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 
 ---
 
-**Última actualización**: 2025-12-08
+**Última actualización**: 2025-12-19

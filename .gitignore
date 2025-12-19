@@ -32,3 +32,6 @@ npm-debug.log*
 
 # Archivos de lock de paquetes (opcional)
 # package-lock.json    # Descomenta si no quieres incluirlo
+
+# AI Context Files
+GEMINI.md
