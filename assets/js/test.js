@@ -839,3 +839,18 @@ const btnToggleNow = document.getElementById('view-mode-toggle');
 if (btnToggleNow) {
     btnToggleNow.addEventListener('click', toggleViewMode);
 }
+
+// Enable testing if running in Node environment
+if (typeof module !== 'undefined') {
+    module.exports = {
+        getCurrentQuestionIndexInListMode,
+        updateSliderContainerHeight,
+        scrollSlider,
+        toggleViewMode,
+        updateViewModeUI,
+        renderAllQuestions,
+        // Helper to access/set currentViewMode for testing
+        getCurrentViewMode: () => currentViewMode,
+        setCurrentViewMode: (mode) => currentViewMode = mode
+    };
+}
