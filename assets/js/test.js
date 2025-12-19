@@ -11,6 +11,7 @@ let userResponses = []; // Array para almacenar las respuestas del usuario
 let currentProgressId = null; // ID del progreso en Supabase
 let autoSaveInterval = null; // Intervalo de auto-guardado periódico
 let currentViewMode = 'list'; // 'list' or 'slider'
+let lastSliderIndex = -1; // Track active index to avoid redundant layout updates
 
 /**
  * Función para volver al listado de tests
@@ -753,6 +754,16 @@ function updateSliderButtonsVisibility() {
     const offsetWidth = questionsContainer.offsetWidth;
     const scrollWidth = questionsContainer.scrollWidth;
 
+    // Filter specifically for question cards and results controls to calculate sync index correctly
+    const items = Array.from(questionsContainer.children).filter(el =>
+        (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+    );
+    if (items.length === 0) return;
+
+    // Calculate scrollUnit considering gaps
+    const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : offsetWidth;
+    const currentIndex = Math.round(scrollLeft / scrollUnit);
+
     // Calculate max scroll with some tolerance
     const maxScroll = scrollWidth - offsetWidth;
 
@@ -761,15 +772,15 @@ function updateSliderButtonsVisibility() {
     btnPrev.style.display = isFirst ? 'none' : 'flex';
 
     // Show/Hide Next & Finish (last slide)
-    // Tolerance of 5px to account for rounding errors on high-DPI screens
     const isLast = scrollLeft >= (maxScroll - 5);
     btnNext.style.display = isLast ? 'none' : 'flex';
     btnFinish.style.display = isLast ? 'flex' : 'none';
 
-    // Update the container height based on the active slide
-    updateSliderContainerHeight();
-
-    console.log(`[Slider] Pos: ${scrollLeft}, Max: ${maxScroll}, First: ${isFirst}, Last: ${isLast}`);
+    // IMPORTANT: Only update height if the index has changed to avoid interrupting Safari's snap physics
+    if (currentIndex !== lastSliderIndex) {
+        lastSliderIndex = currentIndex;
+        updateSliderContainerHeight(currentIndex, items);
+    }
 }
 
 /**
