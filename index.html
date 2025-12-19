@@ -22,15 +22,6 @@
                 @apply bg-white/90 backdrop-blur-sm border border-white/20 shadow-lg rounded-xl dark:bg-gray-800/90 dark:border-gray-700 dark:text-gray-100;
             }
         }
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #2c3e50;
-        }
-        .dark body {
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            color: #e2e8f0;
-        }
     </style>
     <!-- Custom CSS (Legacy - migrating to Tailwind) -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -70,7 +61,26 @@
                     class="text-primary hover:text-secondary transition-colors flex items-center gap-2 font-medium bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg">
                     ← Volver al Inicio
                 </button>
-                <div id="save-indicator-container"></div>
+                <div class="flex items-center gap-3">
+                    <div id="save-indicator-container"></div>
+                    <button id="view-mode-toggle"
+                        class="p-2 rounded-lg text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                        aria-label="Cambiar vista">
+                        <!-- Icon: Cards/Slider (Show when in List mode) -->
+                        <svg id="icon-view-slider" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                        <!-- Icon: List (Show when in Slider mode) -->
+                        <svg id="icon-view-list" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <h2 id="test-title" class="text-lg md:text-xl font-semibold text-dark text-center mb-6 dark:text-gray-100">
             </h2>
@@ -80,7 +90,7 @@
             </form>
 
             <div id="test-controls" class="mt-10 flex justify-center">
-                <button id="btn-finish"
+                <button id="btn-finish" type="button"
                     class="bg-primary hover:bg-secondary text-white font-medium text-sm py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 w-full md:w-auto min-w-[200px]">
                     Finalizar y Corregir
                 </button>

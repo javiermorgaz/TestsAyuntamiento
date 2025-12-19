@@ -7,10 +7,23 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #2c3e50;
     line-height: 1.6;
+    min-height: 100vh;
+    overflow-y: scroll;
+    /* Prevent layout shift */
+}
+
+/* Dark mode background */
+.dark body {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    background-attachment: fixed;
+    color: #e2e8f0;
 }
 
 header {
@@ -653,3 +666,179 @@ button:disabled {
         height: 20px;
     }
 }
+
+/* Slider Mode Styles (Scroll Snap) */
+.slider-mode {
+    display: flex;
+    flex-flow: row nowrap;
+    /* Force single row */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding-bottom: 5px;
+    width: 100%;
+    /* Full width */
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider-mode::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ensure direct children (questions) take full width and don't shrink */
+.slider-mode>div {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+    /* Center alignment is usually safer for gaps */
+    scroll-snap-stop: always;
+    /* Force stop at each slide */
+    width: 100%;
+}
+
+/* Fullscreen Slider Layout */
+body.slider-view-active {
+    overflow-y: scroll !important;
+    /* Force scrollbar track to stay visible, preventing layout jump */
+}
+
+body.slider-view-active main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px !important;
+    /* Space for the fixed bottom buttons at the end of scroll */
+    max-width: 100%;
+}
+
+body.slider-view-active #test-view {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    margin-bottom: 2rem;
+}
+
+/* Ensure sticky header fits perfectly at top */
+body.slider-view-active #test-view>.sticky {
+    margin: 0 !important;
+    border-radius: 0.75rem 0.75rem 0 0;
+    width: 100%;
+}
+
+/* Re-add spacing for Title since parent padding is gone */
+/* Apply styling to title universally (List and Slider modes) */
+#test-title {
+    margin-top: 0.5rem !important;
+    /* Restore top spacing */
+    text-align: left !important;
+    /* Force Left Alignment (overrides Tailwind text-center) */
+}
+
+body.slider-view-active #test-title {
+    padding: 0 0.75rem !important;
+    /* Match card p-3 (mobile) - Only needed when parent padding is 0 */
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #test-title {
+        padding: 0 1rem !important;
+        /* Match card md:p-4 */
+    }
+}
+
+body.slider-view-active #questions-form {
+    position: relative;
+    padding: 0 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #questions-form {
+        padding: 0 1rem !important;
+    }
+}
+
+/* Individual slide padding - Restore Original p-3 / md:p-4 */
+body.slider-view-active #questions-container>div {
+    padding: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #questions-container>div {
+        padding: 1rem !important;
+    }
+}
+
+/* Slider Mode Container */
+.slider-mode {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: auto !important;
+    width: 100% !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 0 !important;
+}
+
+.slider-mode::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual slides */
+.slider-mode>div {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
+}
+
+/* Controls container - Fixed at bottom of viewport */
+body.slider-view-active .slider-controls-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, transparent 100%);
+    backdrop-filter: blur(8px);
+    padding: 20px 1rem 30px 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark body.slider-view-active .slider-controls-container {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.7) 60%, transparent 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.slider-view-active .slider-controls-container button {
+    pointer-events: auto;
+    min-width: 140px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hide original inline controls in Slider Mode - we use the fixed footer instead */
+body.slider-view-active #test-controls {
+    display: none !important;
+}
+
+body.slider-view-active #slider-finish {
+    min-width: 160px;
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #slider-finish {
+        min-width: 200px;
+    }
+}
+
+/* Add gradient fade at bottom to indicate scroll? Optional. */
