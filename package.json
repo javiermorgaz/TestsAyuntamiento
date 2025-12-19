@@ -1,6 +1,6 @@
 {
   "name": "test-app-oposiciones",
-  "version": "1.1.0",
+  "version": "1.2.5",
   "description": "Aplicación de tests para oposiciones de ayuntamiento",
   "scripts": {
     "build-index": "node scripts/build-index.js",

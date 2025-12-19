@@ -671,14 +671,20 @@ button:disabled {
 .slider-mode {
     display: flex;
     flex-flow: row nowrap;
-    /* Force single row */
     overflow-x: auto;
+    /* Enable native scroll */
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 1.5rem;
+    /* Strict snap points */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth momentum scroll on iOS */
+    gap: 0;
+    /* Remove gap strictly */
+    padding-inline: 0;
+    /* Remove padding strictly */
     padding-bottom: 5px;
     width: 100%;
-    /* Full width */
+    align-items: flex-start;
+    /* Stop items from stretching vertically */
 
     /* Hide scrollbar */
     scrollbar-width: none;
@@ -689,15 +695,16 @@ button:disabled {
     display: none;
 }
 
-/* Ensure direct children (questions) take full width and don't shrink */
+/* Ensure direct children (questions) take full width */
 .slider-mode>div {
     flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
-    /* Center alignment is usually safer for gaps */
+    /* Force exact width of container */
+    scroll-snap-align: start;
+    /* Align to start (left edge) */
     scroll-snap-stop: always;
     /* Force stop at each slide */
-    width: 100%;
+
+    /* REMOVED: margin and width hacks */
 }
 
 /* Fullscreen Slider Layout */
@@ -751,7 +758,9 @@ body.slider-view-active #test-title {
 
 body.slider-view-active #questions-form {
     position: relative;
-    padding: 0 0.75rem !important;
+    padding: 0 1rem !important;
+    overflow: hidden;
+    /* CRITICAL: Enables height clipping */
 }
 
 @media (min-width: 768px) {
@@ -771,29 +780,15 @@ body.slider-view-active #questions-container>div {
     }
 }
 
-/* Slider Mode Container */
+/* Slider Mode Container Redundant Check - kept for specificity if needed */
 .slider-mode {
     display: flex !important;
     flex-flow: row nowrap !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
-    scroll-behavior: auto !important;
-    -webkit-overflow-scrolling: touch;
-    /* Momentum scroll for iOS */
+    gap: 0 !important;
+    padding-inline: 0 !important;
     align-items: flex-start !important;
-    width: 100% !important;
-    /* Removed transition: height 0.3s ease to make it instantaneous */
-    overflow-y: hidden !important;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    gap: 2.5rem !important;
-    padding: 1rem 0 2rem 0 !important;
-    /* Visual breathing room for the cards */
-    /* Visual separation between slides */
-}
-
-.slider-mode::-webkit-scrollbar {
-    display: none;
 }
 
 /* Individual slides */

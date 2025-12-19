@@ -12,6 +12,7 @@ let currentProgressId = null; // ID del progreso en Supabase
 let autoSaveInterval = null; // Intervalo de auto-guardado periódico
 let currentViewMode = 'list'; // 'list' or 'slider'
 let lastSliderIndex = -1; // Track active index to avoid redundant layout updates
+let sliderObserver = null; // IntersectionObserver for slider items
 
 /**
  * Función para volver al listado de tests
@@ -593,27 +594,14 @@ function updateViewModeUI() {
                 const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
                 const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
 
-                // Decisive fix: Temporarily disable snap and behavior to ensure it's instant
-                const originalSnap = questionsContainer.style.scrollSnapType;
-                questionsContainer.style.scrollSnapType = 'none';
-                questionsContainer.style.scrollBehavior = 'auto';
-
+                // Sync scroll position: Just set strictly
                 questionsContainer.scrollTo({
                     left: syncIndex * scrollUnit,
                     behavior: 'auto'
                 });
 
-                // Restore snap for manual navigation
-                requestAnimationFrame(() => {
-                    if (questionsContainer) {
-                        questionsContainer.style.scrollSnapType = originalSnap;
-                        questionsContainer.style.scrollBehavior = '';
-                    }
-                });
-
-                updateSliderButtonsVisibility();
-                // Update container height for the initial slide
-                updateSliderContainerHeight();
+                // Update controls state for the initial slide
+                updateSliderControlsState(syncIndex);
             }
         });
 
@@ -632,6 +620,10 @@ function updateViewModeUI() {
             testControls.style.minWidth = '';
             testControls.style.flex = '';
         }
+
+        // Reset heights to auto for List Mode
+        if (questionsContainer) questionsContainer.style.height = '';
+        if (form) form.style.height = '';
 
         // Remove Slider Navigation
         removeSliderNavigation();
@@ -668,16 +660,19 @@ function getCurrentQuestionIndexInListMode() {
     const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
     if (items.length === 0) return 0;
 
-    // Focus point (40% of viewport height)
-    const focusPoint = window.innerHeight * 0.7;
+    // 1. Fast path: If we are near the top of the page, assume the first question
+    if (window.scrollY < 150) return 0;
+
+    // 2. Focus point strategy: Find the first question that occupies the "reading area"
+    // We lower the threshold to 25% of the viewport height.
+    // This means: "Find the first question whose bottom edge ends AFTER the top quarter of the screen"
+    // If a question's bottom is above this line, it's mostly scrolled off-screen.
+    const focusPoint = window.innerHeight * 0.5;
 
     for (let i = 0; i < items.length; i++) {
         const rect = items[i].getBoundingClientRect();
 
-        // Resilient Logic: The first question whose bottom is BELOW the focus point 
-        // is the one the user is primarily focused on.
-        // This naturally handles gaps: if the focus point is in a gap between Q1 and Q2,
-        // Q1's bottom will be ABOVE the point, and Q2's bottom will be BELOW, correctly picking Q2.
+        // If the bottom of the card is below our focus line, it's the one the user is seeing.
         if (rect.bottom > focusPoint) {
             return i;
         }
@@ -733,98 +728,128 @@ function addSliderNavigation() {
 
     // Always ensure the listener is present when showing the navigation
     if (questionsContainer) {
-        questionsContainer.removeEventListener('scroll', updateSliderButtonsVisibility);
-        questionsContainer.addEventListener('scroll', updateSliderButtonsVisibility);
+        // SETUP: Use IntersectionObserver for performant, non-blocking updates
+        setupSliderObserver();
     }
 
     nav.style.display = 'flex';
-    updateSliderButtonsVisibility();
+    // Initial visibility check (will be handled by observer almost immediately, 
+    // but we can force one check via standard logic if needed, or just let observer do it)
 }
 
 /**
- * Updates visibility of prev/next buttons based on scroll position
+ * Sets up an IntersectionObserver to track which slide is active
+ * This runs off the main thread and DOES NOT interrupt scrolling.
  */
-function updateSliderButtonsVisibility() {
-    const btnPrev = document.getElementById('slider-prev');
-    const btnNext = document.getElementById('slider-next');
-    const btnFinish = document.getElementById('slider-finish');
-    if (!btnPrev || !btnNext || !btnFinish || !questionsContainer || questionsContainer.offsetWidth === 0) return;
+function setupSliderObserver() {
+    if (sliderObserver) {
+        sliderObserver.disconnect();
+    }
 
-    const scrollLeft = questionsContainer.scrollLeft;
-    const offsetWidth = questionsContainer.offsetWidth;
-    const scrollWidth = questionsContainer.scrollWidth;
+    const options = {
+        root: questionsContainer,
+        threshold: 0.6 // Trigger when 60% of the slide is visible
+    };
 
-    // Filter specifically for question cards and results controls to calculate sync index correctly
+    sliderObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Determine which question this is
+                const targetId = entry.target.id;
+                let newIndex = -1;
+
+                if (targetId === 'test-controls') {
+                    // The controls are the last item
+                    const items = Array.from(questionsContainer.children).filter(el =>
+                        (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+                    );
+                    newIndex = items.findIndex(el => el.id === 'test-controls');
+                } else if (targetId && targetId.startsWith('pregunta-')) {
+                    newIndex = parseInt(targetId.replace('pregunta-', ''));
+                }
+
+                if (newIndex !== -1 && newIndex !== lastSliderIndex) {
+                    lastSliderIndex = newIndex;
+
+                    // Reset vertical scroll to top so the new card starts from the beginning
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+
+                    // Update UI (Buttons) - Cheap operation
+                    updateSliderControlsState(newIndex);
+
+                    // SETTLED HEIGHT SYNC (Parent Clipping)
+                    // We target the PARENT form, not the scroll container.
+                    // Delay 300ms ensures the snap movement is 100% finished.
+                    setTimeout(() => {
+                        const form = document.getElementById('questions-form');
+                        if (form && entry.isIntersecting) {
+                            form.style.height = entry.target.offsetHeight + 10 + 'px';
+                        }
+                    }, 300);
+                }
+            }
+        });
+    }, options);
+
+    // Observe all children (questions + controls)
     const items = Array.from(questionsContainer.children).filter(el =>
         (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
     );
-    if (items.length === 0) return;
 
-    // Calculate scrollUnit considering gaps
-    const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : offsetWidth;
-    const currentIndex = Math.round(scrollLeft / scrollUnit);
-
-    // Calculate max scroll with some tolerance
-    const maxScroll = scrollWidth - offsetWidth;
-
-    // Show/Hide Previous (first slide)
-    const isFirst = scrollLeft < 10;
-    btnPrev.style.display = isFirst ? 'none' : 'flex';
-
-    // Show/Hide Next & Finish (last slide)
-    const isLast = scrollLeft >= (maxScroll - 5);
-    btnNext.style.display = isLast ? 'none' : 'flex';
-    btnFinish.style.display = isLast ? 'flex' : 'none';
-
-    // IMPORTANT: Only update height if the index has changed to avoid interrupting Safari's snap physics
-    if (currentIndex !== lastSliderIndex) {
-        lastSliderIndex = currentIndex;
-        updateSliderContainerHeight(currentIndex, items);
-    }
+    items.forEach(item => sliderObserver.observe(item));
 }
 
 /**
- * Adjusts the height of the questionsContainer to match the current active slide's content.
- * @param {number} forcedIndex - (Optional) Force a specific index
- * @param {Array} forcedItems - (Optional) Force a specific items array
+ * Updates button visibility based on the active index
+ * Pure logic, no bounding client rects.
  */
-function updateSliderContainerHeight(forcedIndex = null, forcedItems = null) {
-    if (currentViewMode !== 'slider' || !questionsContainer) return;
+function updateSliderControlsState(activeIndex) {
+    const btnPrev = document.getElementById('slider-prev');
+    const btnNext = document.getElementById('slider-next');
+    const btnFinish = document.getElementById('slider-finish');
 
-    let items = forcedItems;
-    if (!items) {
-        items = Array.from(questionsContainer.children).filter(el =>
-            (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
-        );
+    if (!btnPrev || !btnNext || !btnFinish) return;
+
+    // Get total items count
+    const items = Array.from(questionsContainer.children).filter(el =>
+        (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+    );
+    const totalItems = items.length;
+
+    // First Item
+    if (activeIndex === 0) {
+        btnPrev.style.display = 'none';
+    } else {
+        btnPrev.style.display = 'flex';
     }
-    if (items.length === 0) return;
 
-    let currentIndex = forcedIndex;
-    if (currentIndex === null) {
-        const scrollLeft = questionsContainer.scrollLeft;
-        const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
-        if (scrollUnit === 0) return;
-        currentIndex = Math.round(scrollLeft / scrollUnit);
-    }
-
-    const activeItem = items[currentIndex];
-
-    if (activeItem) {
-        // Add vertical padding (1rem top + 1rem bottom = 2rem approx 32px)
-        const verticalPadding = 32;
-        const height = activeItem.offsetHeight + verticalPadding;
-        questionsContainer.style.height = `${height}px`;
+    // Last Item
+    if (activeIndex === totalItems - 1) {
+        btnNext.style.display = 'none';
+        btnFinish.style.display = 'flex';
+    } else {
+        btnNext.style.display = 'flex';
+        btnFinish.style.display = 'none';
     }
 }
+
+
+
+
 
 function removeSliderNavigation() {
     const nav = document.getElementById('slider-nav-controls');
     if (nav) {
         nav.style.display = 'none';
     }
-    if (questionsContainer) {
-        questionsContainer.removeEventListener('scroll', updateSliderButtonsVisibility);
+
+    // Disconnect Observer
+    if (sliderObserver) {
+        sliderObserver.disconnect();
+        sliderObserver = null;
     }
+
+
 }
 
 function scrollSlider(direction) {
@@ -873,7 +898,6 @@ if (btnToggleNow) {
 if (typeof module !== 'undefined') {
     module.exports = {
         getCurrentQuestionIndexInListMode,
-        updateSliderContainerHeight,
         scrollSlider,
         toggleViewMode,
         updateViewModeUI,
