@@ -541,7 +541,9 @@ function updateViewModeUI() {
     } else {
         // We are EXITING Slider Mode, find where we were in the slider
         if (questionsContainer) {
-            const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+            const items = Array.from(questionsContainer.children).filter(el =>
+                (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+            );
             const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
 
             if (scrollUnit > 0) {
@@ -778,8 +780,10 @@ function updateSliderContainerHeight() {
     if (currentViewMode !== 'slider' || !questionsContainer) return;
 
     const scrollLeft = questionsContainer.scrollLeft;
-    // Filter specifically for question cards to ignore title/controls
-    const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+    // Filter specifically for question cards and results controls
+    const items = Array.from(questionsContainer.children).filter(el =>
+        (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+    );
 
     if (items.length === 0) return;
 
@@ -792,8 +796,9 @@ function updateSliderContainerHeight() {
     const activeItem = items[currentIndex];
 
     if (activeItem) {
-        // Use scrollHeight to get the natural height of the content inside the card
-        const height = activeItem.offsetHeight;
+        // Add vertical padding (1rem top + 2rem bottom = 3rem approx 48px)
+        const verticalPadding = 32;
+        const height = activeItem.offsetHeight + verticalPadding;
         questionsContainer.style.height = `${height}px`;
     }
 }
@@ -808,20 +813,30 @@ function removeSliderNavigation() {
     }
 }
 
-/**
- * Scrolls the slider container
- * @param {number} direction -1 for prev, 1 for next
- */
 function scrollSlider(direction) {
     if (!questionsContainer) return;
 
-    const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+    // Get all slides including question cards and the results controls
+    const items = Array.from(questionsContainer.children).filter(el =>
+        (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+    );
+    if (items.length === 0) return;
+
+    const scrollLeft = questionsContainer.scrollLeft;
+    // Calculate distance between cards (includes gap)
     const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
 
-    console.log(`Action: ${direction > 0 ? 'Next' : 'Prev'} | Unit: ${scrollUnit}`);
+    // Determine current index and target index
+    const currentIndex = Math.round(scrollLeft / scrollUnit);
+    const targetIndex = Math.max(0, Math.min(items.length - 1, currentIndex + direction));
 
-    questionsContainer.scrollBy({
-        left: direction * scrollUnit,
+    // Targeted offset for absolute precision
+    const targetOffset = items[targetIndex].offsetLeft;
+
+    console.log(`Action: ${direction > 0 ? 'Next' : 'Prev'} | Target: ${targetIndex} | Offset: ${targetOffset}`);
+
+    questionsContainer.scrollTo({
+        left: targetOffset,
         behavior: 'smooth'
     });
 }

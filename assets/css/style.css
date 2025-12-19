@@ -778,6 +778,8 @@ body.slider-view-active #questions-container>div {
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
     scroll-behavior: auto !important;
+    -webkit-overflow-scrolling: touch;
+    /* Momentum scroll for iOS */
     align-items: flex-start !important;
     width: 100% !important;
     /* Removed transition: height 0.3s ease to make it instantaneous */
@@ -785,6 +787,8 @@ body.slider-view-active #questions-container>div {
     scrollbar-width: none;
     -ms-overflow-style: none;
     gap: 2.5rem !important;
+    padding: 1rem 0 2rem 0 !important;
+    /* Visual breathing room for the cards */
     /* Visual separation between slides */
 }
 
@@ -796,7 +800,8 @@ body.slider-view-active #questions-container>div {
 .slider-mode>div {
     flex: 0 0 100% !important;
     min-width: 100% !important;
-    scroll-snap-align: center !important;
+    scroll-snap-align: start !important;
+    /* Start is more reliable for Safari + Gaps */
     scroll-snap-stop: always !important;
 }
 
