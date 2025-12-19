@@ -540,8 +540,13 @@ function updateViewModeUI() {
         syncIndex = getCurrentQuestionIndexInListMode();
     } else {
         // We are EXITING Slider Mode, find where we were in the slider
-        if (questionsContainer && questionsContainer.offsetWidth > 0) {
-            syncIndex = Math.round(questionsContainer.scrollLeft / questionsContainer.offsetWidth);
+        if (questionsContainer) {
+            const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+            const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
+
+            if (scrollUnit > 0) {
+                syncIndex = Math.round(questionsContainer.scrollLeft / scrollUnit);
+            }
         }
     }
 
@@ -582,12 +587,30 @@ function updateViewModeUI() {
                 // Reset vertical scroll to ensure the question starts from the top
                 window.scrollTo(0, 0);
 
-                const scrollAmount = questionsContainer.offsetWidth;
+                const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+                const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
+
+                // Decisive fix: Temporarily disable snap and behavior to ensure it's instant
+                const originalSnap = questionsContainer.style.scrollSnapType;
+                questionsContainer.style.scrollSnapType = 'none';
+                questionsContainer.style.scrollBehavior = 'auto';
+
                 questionsContainer.scrollTo({
-                    left: syncIndex * scrollAmount,
+                    left: syncIndex * scrollUnit,
                     behavior: 'auto'
                 });
+
+                // Restore snap for manual navigation
+                requestAnimationFrame(() => {
+                    if (questionsContainer) {
+                        questionsContainer.style.scrollSnapType = originalSnap;
+                        questionsContainer.style.scrollBehavior = '';
+                    }
+                });
+
                 updateSliderButtonsVisibility();
+                // Update container height for the initial slide
+                updateSliderContainerHeight();
             }
         });
 
@@ -624,6 +647,9 @@ function updateViewModeUI() {
                 });
             }
         });
+
+        // Reset container height when leaving slider mode
+        if (questionsContainer) questionsContainer.style.height = '';
     }
 }
 
@@ -639,29 +665,23 @@ function getCurrentQuestionIndexInListMode() {
     const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
     if (items.length === 0) return 0;
 
-    // We define a "focus point" in the viewport (slightly above center feels more natural)
-    const focusPoint = window.innerHeight * 0.5;
+    // Focus point (40% of viewport height)
+    const focusPoint = window.innerHeight * 0.7;
 
     for (let i = 0; i < items.length; i++) {
         const rect = items[i].getBoundingClientRect();
 
-        // If the question spans across our focus point, it's the dominant one
-        if (rect.top <= focusPoint && rect.bottom >= focusPoint) {
-            return i;
-        }
-
-        // Edge case: if we are at the very beginning and the first question is below the focus point
-        if (i === 0 && rect.top > focusPoint) {
-            return 0;
-        }
-
-        // Edge case: if we are at the very end and the last question is above the focus point
-        if (i === items.length - 1 && rect.bottom < focusPoint) {
+        // Resilient Logic: The first question whose bottom is BELOW the focus point 
+        // is the one the user is primarily focused on.
+        // This naturally handles gaps: if the focus point is in a gap between Q1 and Q2,
+        // Q1's bottom will be ABOVE the point, and Q2's bottom will be BELOW, correctly picking Q2.
+        if (rect.bottom > focusPoint) {
             return i;
         }
     }
 
-    return 0;
+    // Default to the last question if everything is above the focus point
+    return items.length - 1;
 }
 
 /**
@@ -744,7 +764,38 @@ function updateSliderButtonsVisibility() {
     btnNext.style.display = isLast ? 'none' : 'flex';
     btnFinish.style.display = isLast ? 'flex' : 'none';
 
+    // Update the container height based on the active slide
+    updateSliderContainerHeight();
+
     console.log(`[Slider] Pos: ${scrollLeft}, Max: ${maxScroll}, First: ${isFirst}, Last: ${isLast}`);
+}
+
+/**
+ * Adjusts the height of the questionsContainer to match the current active slide's content.
+ * This ensures the "glass box" is always perfectly sized.
+ */
+function updateSliderContainerHeight() {
+    if (currentViewMode !== 'slider' || !questionsContainer) return;
+
+    const scrollLeft = questionsContainer.scrollLeft;
+    // Filter specifically for question cards to ignore title/controls
+    const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+
+    if (items.length === 0) return;
+
+    // Calculate the distance between elements (includes horizontal gap)
+    const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
+    if (scrollUnit === 0) return;
+
+    // Use a small buffer to avoid flipping height while scrolling between slides
+    const currentIndex = Math.round(scrollLeft / scrollUnit);
+    const activeItem = items[currentIndex];
+
+    if (activeItem) {
+        // Use scrollHeight to get the natural height of the content inside the card
+        const height = activeItem.offsetHeight;
+        questionsContainer.style.height = `${height}px`;
+    }
 }
 
 function removeSliderNavigation() {
@@ -764,12 +815,13 @@ function removeSliderNavigation() {
 function scrollSlider(direction) {
     if (!questionsContainer) return;
 
-    // Ensure we scroll exactly by container width
-    const scrollAmount = questionsContainer.offsetWidth;
-    console.log(`Action: ${direction > 0 ? 'Next' : 'Prev'} | Amount: ${scrollAmount}`);
+    const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
+    const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
+
+    console.log(`Action: ${direction > 0 ? 'Next' : 'Prev'} | Unit: ${scrollUnit}`);
 
     questionsContainer.scrollBy({
-        left: direction * scrollAmount,
+        left: direction * scrollUnit,
         behavior: 'smooth'
     });
 }

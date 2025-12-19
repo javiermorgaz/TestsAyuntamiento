@@ -778,10 +778,14 @@ body.slider-view-active #questions-container>div {
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
     scroll-behavior: auto !important;
+    align-items: flex-start !important;
     width: 100% !important;
+    /* Removed transition: height 0.3s ease to make it instantaneous */
+    overflow-y: hidden !important;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    gap: 0 !important;
+    gap: 2.5rem !important;
+    /* Visual separation between slides */
 }
 
 .slider-mode::-webkit-scrollbar {
