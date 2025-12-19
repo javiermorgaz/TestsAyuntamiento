@@ -785,29 +785,32 @@ function updateSliderButtonsVisibility() {
 
 /**
  * Adjusts the height of the questionsContainer to match the current active slide's content.
- * This ensures the "glass box" is always perfectly sized.
+ * @param {number} forcedIndex - (Optional) Force a specific index
+ * @param {Array} forcedItems - (Optional) Force a specific items array
  */
-function updateSliderContainerHeight() {
+function updateSliderContainerHeight(forcedIndex = null, forcedItems = null) {
     if (currentViewMode !== 'slider' || !questionsContainer) return;
 
-    const scrollLeft = questionsContainer.scrollLeft;
-    // Filter specifically for question cards and results controls
-    const items = Array.from(questionsContainer.children).filter(el =>
-        (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
-    );
-
+    let items = forcedItems;
+    if (!items) {
+        items = Array.from(questionsContainer.children).filter(el =>
+            (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+        );
+    }
     if (items.length === 0) return;
 
-    // Calculate the distance between elements (includes horizontal gap)
-    const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
-    if (scrollUnit === 0) return;
+    let currentIndex = forcedIndex;
+    if (currentIndex === null) {
+        const scrollLeft = questionsContainer.scrollLeft;
+        const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
+        if (scrollUnit === 0) return;
+        currentIndex = Math.round(scrollLeft / scrollUnit);
+    }
 
-    // Use a small buffer to avoid flipping height while scrolling between slides
-    const currentIndex = Math.round(scrollLeft / scrollUnit);
     const activeItem = items[currentIndex];
 
     if (activeItem) {
-        // Add vertical padding (1rem top + 2rem bottom = 3rem approx 48px)
+        // Add vertical padding (1rem top + 1rem bottom = 2rem approx 32px)
         const verticalPadding = 32;
         const height = activeItem.offsetHeight + verticalPadding;
         questionsContainer.style.height = `${height}px`;

@@ -5,6 +5,21 @@ const testsListSection = document.getElementById('tests-list');
 const testsContainer = document.getElementById('tests-container');
 
 /**
+ * Actualiza la fecha de la versión de forma dinámica
+ */
+function updateAppVersionDate() {
+    const dateEl = document.getElementById('app-date');
+    if (!dateEl) return;
+
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear();
+
+    dateEl.textContent = `${day}/${month}/${year}`;
+}
+
+/**
  * Carga el archivo de índice de tests y llama a la función de renderizado.
  * Usa dataService para intentar Supabase primero, luego fallback a JSON local.
  */
@@ -189,4 +204,5 @@ async function resetTest(testId, fileName) {
 }
 
 // Ejecutar la carga al iniciar la aplicación
+updateAppVersionDate();
 loadTestsList();

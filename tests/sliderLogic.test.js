@@ -145,7 +145,8 @@ describe('Slider Mode Logic (Unit Tests)', () => {
 
             testUI.updateSliderContainerHeight();
 
-            expect(questionsContainer.style.height).toBe('450px');
+            // Expecting 450px (card) + 32px (verticalPadding) = 482px
+            expect(questionsContainer.style.height).toBe('482px');
         });
     });
 
