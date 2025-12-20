@@ -952,3 +952,4 @@ window.returnToList = returnToList;
 window.saveAnswer = saveAnswer;
 window.gradeTest = gradeTest;
 window.restartTest = restartTest;
+window.loadTestWithProgress = loadTestWithProgress;
