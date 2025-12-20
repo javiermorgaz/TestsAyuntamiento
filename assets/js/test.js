@@ -946,6 +946,14 @@ if (typeof module !== 'undefined') {
     };
 }
 
+
+/**
+ * Restarts the current test by reloading the page
+ */
+function restartTest() {
+    window.location.reload();
+}
+
 // Hacer disponible globalmente
 window.loadTest = loadTest;
 window.returnToList = returnToList;
