@@ -77,7 +77,9 @@ npm run build
 npm run preview
 ```
 
-Luego abre en el navegador: `http://localhost:8000`
+Luego abre en el navegador:
+- **Dev**: `http://localhost:5173`
+- **Preview**: `http://localhost:4173`
 
 ### Realizar un Test
 
