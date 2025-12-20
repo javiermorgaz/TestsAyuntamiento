@@ -949,3 +949,6 @@ if (typeof module !== 'undefined') {
 // Hacer disponible globalmente
 window.loadTest = loadTest;
 window.returnToList = returnToList;
+window.saveAnswer = saveAnswer;
+window.gradeTest = gradeTest;
+window.restartTest = restartTest;

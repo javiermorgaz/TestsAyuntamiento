@@ -224,6 +224,8 @@ updateAppVersionInfo();
 loadTestsList();
 
 // Expose functions to window for legacy onclick handlers
+window.loadTestsList = loadTestsList;
 window.startTest = startTest;
 window.resetTest = resetTest;
-window.loadTestsList = loadTestsList;
+window.updateAppVersionInfo = updateAppVersionInfo;
+window.updateAppVersionDate = updateAppVersionDate;
