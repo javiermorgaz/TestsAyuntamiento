@@ -5,18 +5,33 @@ const testsListSection = document.getElementById('tests-list');
 const testsContainer = document.getElementById('tests-container');
 
 /**
- * Actualiza la fecha de la versión de forma dinámica
+ * Actualiza la información de la versión y fecha de forma dinámica
  */
-function updateAppVersionDate() {
+async function updateAppVersionInfo() {
+    const versionEl = document.getElementById('app-version');
     const dateEl = document.getElementById('app-date');
-    if (!dateEl) return;
 
-    const now = new Date();
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const year = now.getFullYear();
+    // Actualizar fecha
+    if (dateEl) {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        dateEl.textContent = `${day}/${month}/${year}`;
+    }
 
-    dateEl.textContent = `${day}/${month}/${year}`;
+    // Cargar versión desde package.json
+    try {
+        const response = await fetch('./package.json');
+        if (!response.ok) throw new Error('Falló carga package.json');
+        const pkg = await response.json();
+        if (versionEl) {
+            versionEl.textContent = `Versión ${pkg.version}`;
+        }
+    } catch (error) {
+        console.warn('⚠️ No se pudo cargar la versión desde package.json:', error);
+        if (versionEl) versionEl.textContent = 'Versión 1.2.6'; // Fallback
+    }
 }
 
 /**
@@ -146,6 +161,7 @@ async function startTest(testId, fileName) {
             testsListSection.style.display = 'none';
             document.getElementById('test-view').style.display = 'block';
             document.getElementById('result-view').style.display = 'none';
+            document.getElementById('app-footer').style.display = 'none';
             window.scrollTo(0, 0);
 
             await loadTestWithProgress(testId, fileName, progress);
@@ -159,6 +175,7 @@ async function startTest(testId, fileName) {
     testsListSection.style.display = 'none';
     document.getElementById('test-view').style.display = 'block';
     document.getElementById('result-view').style.display = 'none';
+    document.getElementById('app-footer').style.display = 'none';
     window.scrollTo(0, 0);
 
     // Llamar a la función que cargará el test real (definida en test.js)
@@ -204,5 +221,5 @@ async function resetTest(testId, fileName) {
 }
 
 // Ejecutar la carga al iniciar la aplicación
-updateAppVersionDate();
+updateAppVersionInfo();
 loadTestsList();

@@ -47,6 +47,10 @@ function returnToList() {
     if (testView) testView.style.display = 'none';
     if (resultadoView) resultadoView.style.display = 'none';
 
+    // Mostrar footer en pantalla principal
+    const appFooter = document.getElementById('app-footer');
+    if (appFooter) appFooter.style.display = 'block';
+
     // Scroll al inicio
     window.scrollTo(0, 0);
 
