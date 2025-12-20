@@ -1,0 +1,813 @@
+/* assets/css/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-y: scroll;
+    /* Prevent layout shift */
+}
+
+/* Dark mode background */
+.dark body {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Indicador de guardado automático */
+.save-indicator {
+    background-color: #27ae60;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.save-indicator.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Cuando está en el body (fallback) */
+body>.save-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+main h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+#tests-list ul {
+    list-style: none;
+}
+
+#tests-list li {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#tests-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#tests-list h3 {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+#tests-list p {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    background-color: #1c5985;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* Botón para continuar test (verde/naranja) */
+.btn-continuar {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-continuar:hover {
+    background-color: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+/* Botón para resetear test */
+.btn-reset {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-reset:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+/* Contenedor de acciones del test */
+.test-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Indicador de progreso */
+.progreso-indicator {
+    margin: 0.75rem 0;
+}
+
+.badge-progreso {
+    display: inline-block;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid #ffc107;
+    font-weight: 500;
+}
+
+/* Header del test */
+.test-header {
+    margin-bottom: 2rem;
+}
+
+.test-header h2 {
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+/* Estilos para la vista del test */
+.preguntas-listado {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pregunta-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.pregunta-numero {
+    color: #3498db;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.enunciado {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.opcion-label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.opcion-label:hover {
+    background-color: #d5dbdb;
+    transform: translateX(5px);
+}
+
+.opcion-label input[type="radio"] {
+    margin-right: 1rem;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.opcion-texto {
+    flex: 1;
+}
+
+/* Controles de navegación */
+#test-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#test-controls button {
+    min-width: 250px;
+}
+
+/* Estilos para el resultado */
+.resultado-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.resultado-card h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.resultado-card h3 {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.resultado-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+}
+
+.stat.aciertos {
+    background-color: #d5f4e6;
+    border: 2px solid #27ae60;
+}
+
+.stat.errores {
+    background-color: #fadbd8;
+    border: 2px solid #e74c3c;
+}
+
+.stat.blancos {
+    background-color: #fef5e7;
+    border: 2px solid #f39c12;
+}
+
+.stat.total {
+    background-color: #d6eaf8;
+    border: 2px solid #3498db;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Detalle de respuestas */
+.detalle-titulo {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.detalle-preguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.detalle-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #95a5a6;
+}
+
+.detalle-item.correcto {
+    border-left-color: #27ae60;
+    background-color: #f0f9f4;
+}
+
+.detalle-item.incorrecto {
+    border-left-color: #e74c3c;
+    background-color: #fef5f5;
+}
+
+.detalle-item.blanco {
+    border-left-color: #f39c12;
+    background-color: #fef9f0;
+}
+
+.detalle-header {
+    margin-bottom: 0.75rem;
+}
+
+.detalle-numero {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.detalle-enunciado {
+    color: #34495e;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.detalle-opcion {
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+.detalle-opcion.opcion-correcta {
+    background-color: #d5f4e6;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.detalle-opcion.opcion-incorrecta {
+    background-color: #fadbd8;
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+
+/* Tablets y pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 1rem 1rem;
+    }
+
+    main {
+        padding: 0 0.75rem;
+        margin: 1rem auto;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    #tests-list h3 {
+        font-size: 1.1rem;
+    }
+
+    #tests-list li {
+        padding: 1rem;
+    }
+
+    /* Botones en columna en móviles */
+    .test-actions {
+        flex-direction: column;
+    }
+
+    .test-actions button {
+        width: 100%;
+    }
+
+    /* Indicador de guardado más pequeño */
+    .save-indicator {
+        top: 10px;
+        right: 10px;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Stats en 2 columnas */
+    .resultado-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    /* Botón de finalizar a ancho completo */
+    #test-controls button {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    /* Preguntas más compactas */
+    .pregunta-item {
+        padding: 1rem;
+    }
+
+    .enunciado {
+        font-size: 1rem;
+    }
+
+    .opcion-label {
+        padding: 0.75rem;
+    }
+
+    .opcion-label input[type="radio"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Detalle de resultados más compacto */
+    .detalle-item {
+        padding: 1rem;
+    }
+
+    .detalle-enunciado {
+        font-size: 0.95rem;
+    }
+
+    .detalle-opcion {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    header {
+        padding: 0.75rem 0.5rem;
+    }
+
+    main {
+        padding: 0 0.5rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    #tests-list h3 {
+        font-size: 1rem;
+    }
+
+    #tests-list li {
+        padding: 0.75rem;
+    }
+
+    #tests-list p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .badge-progreso {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* Stats en 1 columna en móviles muy pequeños */
+    .resultado-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .pregunta-numero {
+        font-size: 0.9rem;
+    }
+
+    .enunciado {
+        font-size: 0.95rem;
+    }
+
+    .opcion-label {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .save-indicator {
+        top: 5px;
+        right: 5px;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablets horizontales y pantallas medianas (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        max-width: 800px;
+    }
+
+    .resultado-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    main {
+        max-width: 900px;
+    }
+
+    .resultado-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Mejorar hover effects solo en desktop */
+    .opcion-label:hover {
+        transform: translateX(8px);
+    }
+
+    #tests-list li:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Ajustes para landscape en móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    main {
+        margin: 0.5rem auto;
+    }
+
+    .pregunta-item {
+        padding: 1rem;
+    }
+
+    .save-indicator {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* Mejoras de accesibilidad y touch targets */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Dispositivos táctiles - aumentar área de toque */
+    button {
+        min-height: 44px;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .opcion-label {
+        min-height: 50px;
+    }
+
+    .opcion-label input[type="radio"] {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Slider Mode Styles (Scroll Snap) */
+.slider-mode {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    /* Enable native scroll */
+    scroll-snap-type: x mandatory;
+    /* Strict snap points */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth momentum scroll on iOS */
+    gap: 0;
+    /* Remove gap strictly */
+    padding-inline: 0;
+    /* Remove padding strictly */
+    padding-bottom: 5px;
+    width: 100%;
+    align-items: flex-start;
+    /* Stop items from stretching vertically */
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider-mode::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ensure direct children (questions) take full width */
+.slider-mode>div {
+    flex: 0 0 100%;
+    /* Force exact width of container */
+    scroll-snap-align: start;
+    /* Align to start (left edge) */
+    scroll-snap-stop: always;
+    /* Force stop at each slide */
+
+    /* REMOVED: margin and width hacks */
+}
+
+/* Fullscreen Slider Layout */
+body.slider-view-active {
+    overflow-y: scroll !important;
+    /* Force scrollbar track to stay visible, preventing layout jump */
+}
+
+/* Remove parent padding in Slider Mode to enable full-width slides */
+body.slider-view-active #test-view {
+    padding: 0 !important;
+}
+
+/* Restore sticky header to full width */
+body.slider-view-active #test-view>.sticky {
+    margin: 0 !important;
+    border-radius: 0.75rem 0.75rem 0 0;
+    width: 100%;
+}
+
+body.slider-view-active #questions-form {
+    position: relative;
+    overflow: hidden;
+    /* CRITICAL: Enables height clipping */
+    padding: 0 0.75rem !important;
+    /* Mobile - matches p-3 */
+    min-height: 90vh;
+    /* Force minimum height to enable scroll even with short questions */
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #questions-form {
+        padding: 0 1rem !important;
+        /* Desktop - matches md:p-4 */
+    }
+}
+
+
+/* Slider Mode Container Redundant Check - kept for specificity if needed */
+.slider-mode {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 0.5rem !important;
+    /* Space between cards */
+    padding-inline: 0 !important;
+    align-items: flex-start !important;
+}
+
+/* Individual slides */
+.slider-mode>div {
+    flex: 0 0 calc(100% - 0.5rem) !important;
+    /* Adjust for gap */
+    min-width: calc(100% - 0.5rem) !important;
+    scroll-snap-align: start !important;
+    /* Start is more reliable for Safari + Gaps */
+    scroll-snap-stop: always !important;
+}
+
+/* Controls container - Fixed at bottom of viewport */
+body.slider-view-active .slider-controls-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, transparent 100%);
+    backdrop-filter: blur(8px);
+    padding: 20px 1rem 30px 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark body.slider-view-active .slider-controls-container {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.7) 60%, transparent 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.slider-view-active .slider-controls-container button {
+    pointer-events: auto;
+    min-width: 140px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hide original inline controls in Slider Mode - we use the fixed footer instead */
+body.slider-view-active #test-controls {
+    display: none !important;
+}
+
+body.slider-view-active #slider-finish {
+    min-width: 160px;
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #slider-finish {
+        min-width: 200px;
+    }
+}
+
+/* Add gradient fade at bottom to indicate scroll? Optional. */
