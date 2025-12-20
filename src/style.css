@@ -1,0 +1,421 @@
+@import "tailwindcss";
+
+/* 1. SOURCE SCANNING */
+@source "../index.html";
+@source "../assets/js/**/*.js";
+
+/* 2. THEME CONFIGURATION */
+@theme {
+    /* VIBRANT COLORS (Matched to Screenshots) */
+    --color-primary: #5c6ac4;
+    --color-secondary: #4f46e5;
+
+    --color-accent: #27ae60;
+    --color-reset: #e67e22;
+
+    --color-dark: #2c3e50;
+    --color-light: #f4f6f9;
+    --color-dark-bg: #1a202c;
+    --color-dark-card: #2d3748;
+    --color-dark-text: #e2e8f0;
+
+    --font-sans: "Poppins", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+
+    /* ALIASES to match Legacy Design with Tailwind classes */
+    --color-gray-800: #2d3748;
+    --color-gray-900: #1a202c;
+    --color-text-dark: #2c3e50;
+
+    /* RESTORE LEGACY FEEDBACK COLORS */
+    --color-green-100: #d5f4e6;
+    --color-green-500: #27ae60;
+    --color-red-100: #fadbd8;
+    --color-red-500: #e74c3c;
+}
+
+/* 3. MANUALLY DEFINED CRITICAL UTILITIES */
+
+/* BACKGROUNDS */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-white\/95 {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.bg-white\/90 {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+.bg-white\/30 {
+    background-color: rgba(255, 255, 255, 0.30);
+}
+
+.bg-white\/25 {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bg-white\/20 {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+.bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+/* SLATE PALETTE (Light Mode) */
+.bg-gray-50 {
+    background-color: #f8fafc;
+}
+
+.bg-gray-100 {
+    background-color: #f1f5f9;
+}
+
+.bg-gray-200 {
+    background-color: #e2e8f0;
+}
+
+/* BRAND COLORS */
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-primary\/10 {
+    background-color: rgba(92, 106, 196, 0.1);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+/* GRADIENTS */
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-primary {
+    --tw-gradient-stops: var(--color-primary), var(--tw-gradient-to, rgba(92, 106, 196, 0));
+}
+
+.to-secondary {
+    --tw-gradient-to: var(--color-secondary);
+}
+
+.from-accent {
+    --tw-gradient-stops: var(--color-accent), var(--tw-gradient-to, rgba(39, 174, 96, 0));
+}
+
+.to-green-600 {
+    --tw-gradient-to: #16a34a;
+}
+
+.from-reset {
+    --tw-gradient-stops: var(--color-reset), var(--tw-gradient-to, rgba(230, 126, 34, 0));
+}
+
+.to-orange-600 {
+    --tw-gradient-to: #ea580c;
+}
+
+
+/* DARK MODE BACKGROUND OVERRIDES */
+.dark .dark\:bg-gray-900\/90 {
+    background-color: rgba(26, 32, 44, 0.9);
+}
+
+.dark .dark\:bg-gray-800 {
+    background-color: rgba(45, 55, 72, 0.95);
+}
+
+.dark .dark\:bg-gray-800\/95 {
+    background-color: rgba(45, 55, 72, 0.95);
+}
+
+.dark .dark\:bg-gray-800\/90 {
+    background-color: rgba(45, 55, 72, 0.90);
+}
+
+.dark .dark\:bg-gray-700 {
+    background-color: #374151;
+}
+
+.dark .dark\:bg-gray-700\/50 {
+    background-color: rgba(55, 65, 81, 0.5);
+}
+
+.dark .dark\:bg-gray-700\/40 {
+    background-color: rgba(55, 65, 81, 0.4);
+}
+
+.dark .dark\:bg-gray-700\/30 {
+    background-color: rgba(55, 65, 81, 0.3);
+}
+
+/* TEXT COLORS */
+.text-white {
+    color: #ffffff;
+}
+
+.text-gray-600 {
+    color: #475569;
+}
+
+.text-gray-700 {
+    color: #334155;
+}
+
+.text-gray-800 {
+    color: #1e293b;
+}
+
+/* Legacy Utility for Text Dark (Mapped to Slate-800) */
+.text-dark {
+    color: #1e293b !important;
+}
+
+/* DARK MODE TEXT OVERRIDES */
+.dark .dark\:text-white {
+    color: #ffffff;
+}
+
+.dark .dark\:text-gray-100 {
+    color: #f3f4f6;
+}
+
+.dark .dark\:text-gray-200 {
+    color: #e5e7eb;
+}
+
+.dark .dark\:text-gray-300 {
+    color: #d1d5db;
+}
+
+.dark .dark\:text-gray-400 {
+    color: #9ca3af;
+}
+
+.dark .text-dark {
+    color: #e2e8f0 !important;
+}
+
+/* BORDERS */
+
+/* CUSTOM FEEDBACK UTILITIES (Legacy Color Restore) */
+.bg-success-light {
+    background-color: #d5f4e6;
+}
+
+.text-success-bright {
+    color: #27ae60 !important;
+}
+
+.border-success-bright {
+    border-color: #27ae60 !important;
+}
+
+.bg-danger-light {
+    background-color: #fadbd8;
+}
+
+.text-danger-bright {
+    color: #e74c3c !important;
+}
+
+.border-danger-bright {
+    border-color: #e74c3c !important;
+}
+
+.border-gray-200 {
+    border-color: #e2e8f0;
+}
+
+.dark .dark\:border-gray-700 {
+    border-color: #374151;
+}
+
+/* 4. RESTORED COMPONENTS */
+
+/* Validated Save Indicator (Restored from Legacy) */
+.save-indicator {
+    background-color: var(--color-green-500);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.save-indicator.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dark .save-indicator {
+    background-color: rgba(39, 174, 96, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+@utility glass-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    @apply backdrop-blur-sm border border-white/20 shadow-lg rounded-xl p-6;
+}
+
+.dark .glass-card {
+    background-color: rgba(45, 55, 72, 0.90);
+    @apply border-gray-700 text-gray-100;
+}
+
+@utility glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.dark .glass {
+    @apply bg-gray-800/50 border-gray-700;
+}
+
+
+/* 5. GLOBAL STYLES */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-dark);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+}
+
+.dark body {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: var(--color-dark-text);
+}
+
+/* 6. SLIDER MODE STYLES */
+.slider-mode {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px !important;
+    padding-inline: 0 !important;
+    padding-bottom: 5px;
+    width: 100%;
+    min-height: 100vh;
+    align-items: flex-start !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider-mode::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-mode>div {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: auto !important;
+    height: auto !important;
+    margin-bottom: 140px;
+}
+
+/* Utilities Fallback */
+@utility p-6 {
+    padding: 1.5rem;
+}
+
+@utility gap-6 {
+    gap: 1.5rem;
+}
+
+@utility space-y-6 {
+    &>*+* {
+        margin-top: 1.5rem;
+    }
+}
+
+@utility mb-4 {
+    margin-bottom: 1rem;
+}
+
+@utility mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+@utility mt-10 {
+    margin-top: 2.5rem;
+}
+
+/* Slider View Body State */
+body.slider-view-active {
+    overflow-y: scroll !important;
+}
+
+body.slider-view-active #test-view {
+    padding: 0 !important;
+}
+
+body.slider-view-active #test-view>.sticky {
+    margin: 0 !important;
+    border-radius: 0.75rem 0.75rem 0 0;
+    width: 100%;
+}
+
+body.slider-view-active #questions-form {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0.75rem !important;
+    min-height: 90vh;
+}
+
+@media (min-width: 768px) {
+    body.slider-view-active #questions-form {
+        padding: 0 1rem !important;
+    }
+}
+
+/* Slider Controls */
+body.slider-view-active .slider-controls-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, transparent 100%);
+    backdrop-filter: blur(8px);
+    padding: 20px 1rem 30px 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark body.slider-view-active .slider-controls-container {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.7) 60%, transparent 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.slider-view-active .slider-controls-container button {
+    pointer-events: auto;
+    min-width: 140px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.slider-view-active #test-controls {
+    display: none !important;
+}

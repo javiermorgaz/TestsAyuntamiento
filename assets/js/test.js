@@ -183,12 +183,12 @@ function renderAllQuestions() {
             : '';
 
         html += `
-            <div class="bg-white rounded-xl shadow-md p-3 md:p-4 border-l-4 ${borderClass} hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800" id="pregunta-${index}">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8 border-l-4 ${borderClass} hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800" id="pregunta-${index}">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="${numberBgClass} text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">${index + 1}</span>
                     ${autoBadge}
                 </div>
-                <p class="text-base md:text-lg text-dark font-medium mb-5 leading-relaxed dark:text-gray-200">${pregunta.enunciado}</p>
+                <p class="text-base md:text-lg text-dark font-medium mb-5 leading-relaxed">${pregunta.enunciado}</p>
                 <div class="space-y-3">
         `;
 
@@ -396,8 +396,8 @@ function displayResult(resultado) {
     let html = `
         <div class="glass-card p-8">
             <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-dark mb-2 dark:text-gray-100">🎯 Resultado del Test</h2>
-                <h3 class="text-xl text-dark/80 dark:text-gray-300">${resultado.titulo}</h3>
+                <h2 class="text-3xl font-bold text-dark mb-2">🎯 Resultado del Test</h2>
+                <h3 class="text-xl text-dark dark:text-gray-300">${resultado.titulo}</h3>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
@@ -419,7 +419,7 @@ function displayResult(resultado) {
                 </div>
             </div>
 
-            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-2 dark:text-gray-100">
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-2">
                 <span>📝</span> Detalle de respuestas
             </h3>
             <div class="space-y-4">
@@ -438,7 +438,7 @@ function displayResult(resultado) {
                     <span class="text-2xl">${statusIcon}</span>
                     <span class="font-semibold text-dark dark:text-gray-100">Pregunta ${index + 1}</span>
                 </div>
-                <p class="text-gray-700 font-medium mb-4 dark:text-gray-300">${detalle.pregunta}</p>
+                <p class="text-dark font-medium mb-4 dark:text-gray-300">${detalle.pregunta}</p>
                 <div class="space-y-2">
         `;
 
@@ -453,11 +453,11 @@ function displayResult(resultado) {
             let iconoOpcion = '';
 
             if (isCorrectAnswer) {
-                optionClass += 'bg-green-100 border-green-500 text-green-900 dark:bg-green-900/40 dark:text-green-300';
+                optionClass += 'bg-success-light border-success-bright text-success-bright dark:bg-green-900/40 dark:text-green-300';
                 marcador = '✓';
                 iconoOpcion = '✅';
             } else if (isUserAnswer && !isCorrectAnswer) {
-                optionClass += 'bg-red-100 border-red-500 text-red-900 dark:bg-red-900/40 dark:text-red-300';
+                optionClass += 'bg-danger-light border-danger-bright text-danger-bright dark:bg-red-900/40 dark:text-red-300';
                 marcador = '✗';
                 iconoOpcion = '❌';
             } else {
@@ -526,7 +526,9 @@ if (btnBackHomeResult) {
  * Toggles between List and Slider view modes
  */
 function toggleViewMode() {
+    console.log('🔄 Toggling View Mode from:', currentViewMode);
     currentViewMode = currentViewMode === 'list' ? 'slider' : 'list';
+    console.log('➡️ New View Mode:', currentViewMode);
     updateViewModeUI();
 }
 
@@ -534,6 +536,7 @@ function toggleViewMode() {
  * Updates the UI based on the current view mode
  */
 function updateViewModeUI() {
+    console.log('🎨 UpdateViewModeUI executing...');
     const listIcon = document.getElementById('icon-view-list');
     const sliderIcon = document.getElementById('icon-view-slider');
     const testControls = document.getElementById('test-controls');
@@ -558,6 +561,8 @@ function updateViewModeUI() {
         }
     }
 
+    console.log('📍 Sync Index:', syncIndex);
+
     // Toggle Button Icons
     if (listIcon && sliderIcon) {
         if (currentViewMode === 'slider') {
@@ -580,12 +585,15 @@ function updateViewModeUI() {
         window.scrollTo(0, savedScrollY);
 
         if (questionsContainer) {
+            console.log('Applying slider-mode class to container:', questionsContainer);
             questionsContainer.classList.add('slider-mode');
             questionsContainer.classList.remove('space-y-6');
 
             // Ensure no conflicting inline styles
             questionsContainer.style.display = '';
             questionsContainer.style.flexFlow = '';
+        } else {
+            console.error('❌ questionsContainer NOT FOUND');
         }
 
         // Move Finalize button into slider as the last slide
@@ -808,7 +816,9 @@ function setupSliderObserver(startIndex = 0) {
                     setTimeout(() => {
                         const form = document.getElementById('questions-form');
                         if (form && entry.isIntersecting) {
-                            form.style.height = entry.target.offsetHeight + 10 + 'px';
+                            // CRITICAL FIX: Add buffer (150px) for fixed footer controls
+                            // offsetHeight excludes margin, so we must add the space explicitly
+                            form.style.height = (entry.target.offsetHeight + 150) + 'px';
                         }
                     }, 300);
                 }

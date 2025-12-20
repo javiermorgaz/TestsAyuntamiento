@@ -1,4 +1,5 @@
 // assets/js/main.js
+import '/src/style.css';
 
 const TESTS_INDEX_URL = './data/tests_index.json';
 const testsListSection = document.getElementById('tests-list');
@@ -131,7 +132,7 @@ async function renderTestsList(tests) {
 
         htmlContent += `
             <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 select-none">
-                <h3 class="text-xl font-bold text-dark mb-3 dark:!text-white">${test.titulo}</h3>
+                <h3 class="text-xl font-bold text-dark mb-3">${test.titulo}</h3>
                 <p class="text-gray-600 mb-4 flex items-center gap-2 dark:text-gray-300">
                     <span class="text-2xl">📋</span>
                     <span class="font-medium">${test.num_preguntas} preguntas</span>
@@ -223,3 +224,8 @@ async function resetTest(testId, fileName) {
 // Ejecutar la carga al iniciar la aplicación
 updateAppVersionInfo();
 loadTestsList();
+
+// Expose functions to window for legacy onclick handlers
+window.startTest = startTest;
+window.resetTest = resetTest;
+window.loadTestsList = loadTestsList;
