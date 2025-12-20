@@ -1,4 +1,5 @@
 // assets/js/supabase-config.js
+import { createClient } from '@supabase/supabase-js';
 
 /**
  * Configuración del cliente de Supabase
@@ -72,11 +73,6 @@ async function initSupabase() {
     // Crear nueva promesa de inicialización
     initializationPromise = (async () => {
         try {
-            if (typeof supabase === 'undefined') {
-                console.error('⚠️ El SDK de Supabase no está cargado. Asegúrate de incluir el script CDN en el HTML.');
-                return null;
-            }
-
             // Cargar credenciales si no están cargadas
             if (!supabaseConfig) {
                 supabaseConfig = await loadSupabaseCredentials();
@@ -96,8 +92,8 @@ async function initSupabase() {
                 }
             };
 
-            supabaseClient = supabase.createClient(supabaseConfig.SUPABASE_URL, supabaseConfig.SUPABASE_KEY, options);
-            console.log('✅ Cliente de Supabase inicializado correctamente (Singleton)');
+            supabaseClient = createClient(supabaseConfig.SUPABASE_URL, supabaseConfig.SUPABASE_KEY, options);
+            console.log('✅ Cliente de Supabase inicializado correctamente via NPM (Singleton)');
             return supabaseClient;
         } catch (error) {
             console.error('Error durante la inicialización de Supabase:', error);
@@ -118,3 +114,6 @@ async function getSupabaseClient() {
     if (supabaseClient) return supabaseClient;
     return await initSupabase();
 }
+
+// Hacer disponible globalmente
+window.getSupabaseClient = getSupabaseClient;

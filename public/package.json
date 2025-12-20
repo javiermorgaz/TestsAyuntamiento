@@ -1,6 +1,6 @@
 {
   "name": "test-app-oposiciones",
-  "version": "2.0.3",
+  "version": "2.0.0",
   "description": "Aplicación de tests para oposiciones de ayuntamiento",
   "scripts": {
     "dev": "vite",

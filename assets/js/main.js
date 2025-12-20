@@ -1,5 +1,6 @@
 // assets/js/main.js
 import '/src/style.css';
+import pkg from '../../package.json';
 
 const TESTS_INDEX_URL = './data/tests_index.json';
 const testsListSection = document.getElementById('tests-list');
@@ -21,17 +22,14 @@ async function updateAppVersionInfo() {
         dateEl.textContent = `${day}/${month}/${year}`;
     }
 
-    // Cargar versión desde package.json
+    // Cargar versión desde el import de Vite
     try {
-        const response = await fetch('./package.json');
-        if (!response.ok) throw new Error('Falló carga package.json');
-        const pkg = await response.json();
-        if (versionEl) {
+        if (versionEl && pkg) {
             versionEl.textContent = `Versión ${pkg.version}`;
         }
     } catch (error) {
-        console.warn('⚠️ No se pudo cargar la versión desde package.json:', error);
-        if (versionEl) versionEl.textContent = 'Versión 1.2.6'; // Fallback
+        console.warn('⚠️ No se pudo cargar la versión:', error);
+        if (versionEl) versionEl.textContent = 'Versión 2.0.3'; // Fallback
     }
 }
 
@@ -58,7 +56,7 @@ async function loadTestsList() {
         `;
 
         // Usar dataService (intenta Supabase → fallback JSON)
-        const tests = await fetchTests(); // fetchTests in dataService
+        const tests = await window.fetchTests(); // fetchTests in dataService (attached to window)
 
         await renderTestsList(tests);
 
@@ -85,7 +83,7 @@ async function renderTestsList(tests) {
     // Procesar cada test de forma asíncrona
     for (const test of tests) {
         // Buscar si hay progreso en curso
-        const progress = await findTestProgress(test.id);
+        const progress = await window.findTestProgress(test.id);
 
         let progressHTML = '';
         let buttonHTML = '';
@@ -155,7 +153,7 @@ async function renderTestsList(tests) {
 async function startTest(testId, fileName) {
     try {
         // Buscar progreso existente en Supabase
-        const progress = await findTestProgress(testId);
+        const progress = await window.findTestProgress(testId);
 
         if (progress) {
             // Continuar test con progreso guardado directamente
@@ -165,7 +163,7 @@ async function startTest(testId, fileName) {
             document.getElementById('app-footer').style.display = 'none';
             window.scrollTo(0, 0);
 
-            await loadTestWithProgress(testId, fileName, progress);
+            await window.loadTestWithProgress(testId, fileName, progress);
             return;
         }
     } catch (error) {
@@ -180,7 +178,7 @@ async function startTest(testId, fileName) {
     window.scrollTo(0, 0);
 
     // Llamar a la función que cargará el test real (definida en test.js)
-    loadTest(testId, fileName);
+    window.loadTest(testId, fileName);
 }
 
 /**
@@ -191,18 +189,18 @@ async function startTest(testId, fileName) {
  */
 async function resetTest(testId, fileName) {
     try {
-        const isConfirmed = await showConfirm(
+        const isConfirmed = await window.showConfirm(
             '¿Estás seguro de que quieres eliminar el progreso de este test?\n\nEsta acción no se puede deshacer.',
             'Confirmar Reseteo'
         );
 
         if (isConfirmed) {
             // Buscar el progreso actual
-            const progress = await findTestProgress(testId);
+            const progress = await window.findTestProgress(testId);
 
             if (progress) {
                 // Eliminar el progreso
-                await deleteProgress(progress.id);
+                await window.deleteProgress(progress.id);
                 console.log('🗑️ Progreso eliminado, iniciando test nuevo');
 
                 // Navegar directamente al test
@@ -212,12 +210,12 @@ async function resetTest(testId, fileName) {
                 window.scrollTo(0, 0);
 
                 // Cargar el test
-                loadTest(testId, fileName);
+                window.loadTest(testId, fileName);
             }
         }
     } catch (error) {
         console.error('Error al resetear test:', error);
-        await showModal('Hubo un error al resetear el test. Por favor, inténtalo de nuevo.', 'Error');
+        await window.showModal('Hubo un error al resetear el test. Por favor, inténtalo de nuevo.', 'Error');
     }
 }
 

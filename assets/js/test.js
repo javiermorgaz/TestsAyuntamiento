@@ -55,8 +55,8 @@ function returnToList() {
     window.scrollTo(0, 0);
 
     // Recargar el listado para mostrar nuevos resultados
-    if (typeof loadTestsList === 'function') {
-        loadTestsList();
+    if (typeof window.loadTestsList === 'function') {
+        window.loadTestsList();
     }
 }
 
@@ -230,7 +230,7 @@ async function autoSaveProgress() {
     if (answeredCount === 0) return;
 
     try {
-        const resultado = await saveProgress({
+        const resultado = await window.saveProgress({
             id: currentProgressId,           // null la primera vez
             test_id: currentTest.id,
             answers_data: userResponses,
@@ -348,7 +348,7 @@ async function gradeTest() {
 
     try {
         // Guardar en Supabase
-        await completeTest({
+        await window.completeTest({
             id: currentProgressId,              // Actualizar progreso existente
             test_id: currentTest.id,
             total_correct: correctCount,
@@ -377,7 +377,7 @@ async function gradeTest() {
     };
 
     // También guardar en localStorage como backup
-    saveResult(resultado);
+    window.saveResult(resultado);
 
     // Resetear ID de progreso
     currentProgressId = null;
@@ -945,3 +945,7 @@ if (typeof module !== 'undefined') {
         setCurrentViewMode: (mode) => currentViewMode = mode
     };
 }
+
+// Hacer disponible globalmente
+window.loadTest = loadTest;
+window.returnToList = returnToList;

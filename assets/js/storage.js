@@ -42,3 +42,9 @@ function getTestResults(testId) {
 function clearResults() {
     localStorage.removeItem(STORAGE_KEY);
 }
+
+// Hacer funciones disponibles globalmente
+window.saveResult = saveResult;
+window.getResults = getResults;
+window.getTestResults = getTestResults;
+window.clearResults = clearResults;

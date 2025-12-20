@@ -17,7 +17,7 @@
  */
 async function isSupabaseAvailable() {
     try {
-        const client = await getSupabaseClient();
+        const client = await window.getSupabaseClient();
         return client !== null;
     } catch (error) {
         console.log('ℹ️ Supabase no disponible, usando modo offline');
@@ -39,7 +39,7 @@ async function fetchTests() {
         // Intentar desde Supabase
         if (await isSupabaseAvailable()) {
             console.log('📡 Cargando tests desde Supabase...');
-            const tests = await fetchTestsFromSupabase();
+            const tests = await window.fetchTestsFromSupabase();
             if (tests && tests.length > 0) {
                 console.log(`✅ ${tests.length} tests cargados desde Supabase`);
                 return tests;
@@ -76,7 +76,7 @@ async function fetchHistory(testId, limit = 3) {
     try {
         // Intentar desde Supabase
         if (await isSupabaseAvailable()) {
-            const history = await fetchTestHistory(testId, limit);
+            const history = await window.fetchTestHistory(testId, limit);
             if (history && history.length > 0) {
                 console.log(`📊 Historial cargado desde Supabase: ${history.length} resultados`);
                 return history.map(resultado => ({
@@ -93,7 +93,7 @@ async function fetchHistory(testId, limit = 3) {
 
     // Fallback: cargar desde localStorage
     try {
-        const allResults = getResults(); // Function from storage.js
+        const allResults = window.getResults(); // Function from storage.js
         const testResults = allResults
             .filter(r => r.testId === testId)
             .slice(0, limit)
@@ -124,7 +124,7 @@ async function fetchHistory(testId, limit = 3) {
 async function findTestProgress(testId) {
     try {
         if (await isSupabaseAvailable()) {
-            const progress = await fetchTestInProgress(testId);
+            const progress = await window.fetchTestInProgress(testId);
             if (progress) {
                 console.log(`🔄 Test en progreso encontrado (${progress.answers_data.filter(a => a !== null).length} respuestas)`);
                 return progress;
@@ -149,7 +149,7 @@ async function findTestProgress(testId) {
 async function saveProgress(data) {
     try {
         if (await isSupabaseAvailable()) {
-            const resultado = await saveTestProgress(data);
+            const resultado = await window.saveTestProgress(data);
             console.log(`💾 Progreso guardado en Supabase (ID: ${resultado.id})`);
             return resultado;
         }
@@ -177,7 +177,7 @@ async function saveProgress(data) {
 async function deleteProgress(progressId) {
     try {
         if (await isSupabaseAvailable()) {
-            const isDeleted = await deleteTestProgress(progressId);
+            const isDeleted = await window.deleteTestProgress(progressId);
             if (isDeleted) {
                 console.log('🗑️ Progreso eliminado de Supabase');
                 return true;
@@ -211,7 +211,7 @@ async function completeTest(data) {
     // Intentar guardar en Supabase
     try {
         if (await isSupabaseAvailable()) {
-            const resultado = await completeTestSupabase(data);
+            const resultado = await window.completeTestSupabase(data);
             console.log('✅ Resultado guardado en Supabase');
             savedToSupabase = true;
 
@@ -248,7 +248,7 @@ function saveToLocalStorage(data) {
     };
 
     // Usar función de storage.js
-    saveResult(resultado);
+    window.saveResult(resultado);
 
     return resultado;
 }
@@ -283,16 +283,13 @@ async function checkStatus() {
     console.log(`   localStorage: ${status.localStorage ? '✅' : '❌'}`);
 })();
 
-if (typeof module !== 'undefined') {
-    module.exports = {
-        fetchTests,
-        fetchHistory,
-        findTestProgress,
-        saveProgress,
-        deleteProgress,
-        completeTest,
-        checkStatus,
-        isSupabaseAvailable,
-        saveToLocalStorage
-    };
-}
+// Hacer disponible globalmente
+window.fetchTests = fetchTests;
+window.fetchHistory = fetchHistory;
+window.findTestProgress = findTestProgress;
+window.saveProgress = saveProgress;
+window.deleteProgress = deleteProgress;
+window.completeTest = completeTest;
+window.checkStatus = checkStatus;
+window.isSupabaseAvailable = isSupabaseAvailable;
+window.saveToLocalStorage = saveToLocalStorage;
