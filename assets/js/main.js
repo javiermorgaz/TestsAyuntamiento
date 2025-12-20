@@ -29,7 +29,7 @@ async function updateAppVersionInfo() {
         }
     } catch (error) {
         console.warn('⚠️ No se pudo cargar la versión:', error);
-        if (versionEl) versionEl.textContent = 'Versión 2.0.3'; // Fallback
+        if (versionEl) versionEl.textContent = 'Versión 2.1.1'; // Fallback
     }
 }
 
