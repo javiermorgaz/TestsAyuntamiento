@@ -29,7 +29,7 @@ async function updateAppVersionInfo() {
         }
     } catch (error) {
         console.warn('⚠️ No se pudo cargar la versión:', error);
-        if (versionEl) versionEl.textContent = 'Versión 2.1.1'; // Fallback
+        if (versionEl) versionEl.textContent = 'Versión (N/D)'; // Fallback genérico
     }
 }
 
@@ -130,10 +130,10 @@ async function renderTestsList(tests) {
 
         htmlContent += `
             <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 select-none">
-                <h3 class="text-xl font-bold text-dark mb-3">${test.titulo}</h3>
-                <p class="text-gray-600 mb-4 flex items-center gap-2 dark:text-gray-300">
-                    <span class="text-2xl">📋</span>
-                    <span class="font-medium">${test.num_preguntas} preguntas</span>
+                <h3 class="text-base font-bold text-dark mb-2">${test.titulo}</h3>
+                <p class="text-sm text-gray-500 mb-4 flex items-center gap-2 dark:text-gray-400">
+                    <span class="text-xl">📋</span>
+                    <span>${test.num_preguntas} preguntas</span>
                 </p>
                 ${progressHTML}
                 <div class="flex gap-3 ${progress ? 'flex-col sm:flex-row' : ''}">
