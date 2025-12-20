@@ -567,7 +567,14 @@ function updateViewModeUI() {
 
     // Container Styles
     if (currentViewMode === 'slider') {
+        // SAVE current scroll position before CSS changes
+        const savedScrollY = window.pageYOffset || window.scrollY;
+
         document.body.classList.add('slider-view-active');
+
+        // IMMEDIATELY restore scroll position (before browser recalculates layout)
+        window.scrollTo(0, savedScrollY);
+
         if (questionsContainer) {
             questionsContainer.classList.add('slider-mode');
             questionsContainer.classList.remove('space-y-6');
@@ -581,27 +588,24 @@ function updateViewModeUI() {
         if (testControls && questionsContainer && testControls.parentNode !== questionsContainer) {
             questionsContainer.appendChild(testControls);
         }
-
         // Add Slider Navigation Controls
-        addSliderNavigation();
+        addSliderNavigation(syncIndex);
 
         // Fix: Sync scroll position to the stored index
+        // All height/button UI sync is now handled by the Observer in setupSliderObserver
         requestAnimationFrame(() => {
-            if (questionsContainer) {
-                // Reset vertical scroll to ensure the question starts from the top
-                window.scrollTo(0, 0);
+            // RESTORE vertical scroll position again (in case layout shift happened)
+            window.scrollTo(0, savedScrollY);
 
+            if (questionsContainer) {
                 const items = Array.from(questionsContainer.children).filter(el => el.id && el.id.startsWith('pregunta-'));
                 const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
 
-                // Sync scroll position: Just set strictly
+                // Sync horizontal scroll position
                 questionsContainer.scrollTo({
                     left: syncIndex * scrollUnit,
                     behavior: 'auto'
                 });
-
-                // Update controls state for the initial slide
-                updateSliderControlsState(syncIndex);
             }
         });
 
@@ -684,8 +688,9 @@ function getCurrentQuestionIndexInListMode() {
 
 /**
  * Injects navigation controls for slider mode
+ * @param {number} startIndex - The index to initialize the observer with
  */
-function addSliderNavigation() {
+function addSliderNavigation(startIndex = 0) {
     let nav = document.getElementById('slider-nav-controls');
     if (!nav) {
         nav = document.createElement('div');
@@ -729,7 +734,7 @@ function addSliderNavigation() {
     // Always ensure the listener is present when showing the navigation
     if (questionsContainer) {
         // SETUP: Use IntersectionObserver for performant, non-blocking updates
-        setupSliderObserver();
+        setupSliderObserver(startIndex);
     }
 
     nav.style.display = 'flex';
@@ -739,12 +744,17 @@ function addSliderNavigation() {
 
 /**
  * Sets up an IntersectionObserver to track which slide is active
+ * @param {number} startIndex - The index that is already focal (to avoid immediate resets)
  * This runs off the main thread and DOES NOT interrupt scrolling.
  */
-function setupSliderObserver() {
+function setupSliderObserver(startIndex = 0) {
     if (sliderObserver) {
         sliderObserver.disconnect();
     }
+
+    // Initialize to -1 to ensure AND ALLOW the first intersection to trigger UI sync
+    // (height adjustment and button visibility)
+    lastSliderIndex = -1;
 
     const options = {
         root: questionsContainer,
@@ -771,8 +781,19 @@ function setupSliderObserver() {
                 if (newIndex !== -1 && newIndex !== lastSliderIndex) {
                     lastSliderIndex = newIndex;
 
-                    // Reset vertical scroll to top so the new card starts from the beginning
-                    window.scrollTo({ top: 0, behavior: 'instant' });
+                    // Scroll to ideal position: show question from the beginning
+                    // Use same logic as when returning to List Mode (line 638-645)
+                    const targetEl = document.getElementById(`pregunta-${newIndex}`);
+                    if (targetEl) {
+                        const headerOffset = 100; // Account for sticky header
+                        const elementPosition = targetEl.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'instant'
+                        });
+                    }
 
                     // Update UI (Buttons) - Cheap operation
                     updateSliderControlsState(newIndex);
@@ -823,8 +844,11 @@ function updateSliderControlsState(activeIndex) {
         btnPrev.style.display = 'flex';
     }
 
-    // Last Item
-    if (activeIndex === totalItems - 1) {
+    // Last Item Logic
+    // totalItems includes the question cards + the 'test-controls' final slide.
+    // We want the 'Finalizar' button to appear when we reach the last question card 
+    // (which is at index totalItems - 2) or the final controls slide.
+    if (activeIndex >= totalItems - 2) {
         btnNext.style.display = 'none';
         btnFinish.style.display = 'flex';
     } else {

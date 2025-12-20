@@ -713,72 +713,35 @@ body.slider-view-active {
     /* Force scrollbar track to stay visible, preventing layout jump */
 }
 
-body.slider-view-active main {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 120px !important;
-    /* Space for the fixed bottom buttons at the end of scroll */
-    max-width: 100%;
-}
-
+/* Remove parent padding in Slider Mode to enable full-width slides */
 body.slider-view-active #test-view {
-    display: flex;
-    flex-direction: column;
     padding: 0 !important;
-    margin-bottom: 2rem;
 }
 
-/* Ensure sticky header fits perfectly at top */
+/* Restore sticky header to full width */
 body.slider-view-active #test-view>.sticky {
     margin: 0 !important;
     border-radius: 0.75rem 0.75rem 0 0;
     width: 100%;
 }
 
-/* Re-add spacing for Title since parent padding is gone */
-/* Apply styling to title universally (List and Slider modes) */
-#test-title {
-    margin-top: 0.5rem !important;
-    /* Restore top spacing */
-    text-align: left !important;
-    /* Force Left Alignment (overrides Tailwind text-center) */
-}
-
-body.slider-view-active #test-title {
-    padding: 0 0.75rem !important;
-    /* Match card p-3 (mobile) - Only needed when parent padding is 0 */
-}
-
-@media (min-width: 768px) {
-    body.slider-view-active #test-title {
-        padding: 0 1rem !important;
-        /* Match card md:p-4 */
-    }
-}
-
 body.slider-view-active #questions-form {
     position: relative;
-    padding: 0 1rem !important;
     overflow: hidden;
     /* CRITICAL: Enables height clipping */
+    padding: 0 0.75rem !important;
+    /* Mobile - matches p-3 */
+    min-height: 100vh;
+    /* Force minimum height to enable scroll even with short questions */
 }
 
 @media (min-width: 768px) {
     body.slider-view-active #questions-form {
         padding: 0 1rem !important;
+        /* Desktop - matches md:p-4 */
     }
 }
 
-/* Individual slide padding - Restore Original p-3 / md:p-4 */
-body.slider-view-active #questions-container>div {
-    padding: 0.75rem !important;
-}
-
-@media (min-width: 768px) {
-    body.slider-view-active #questions-container>div {
-        padding: 1rem !important;
-    }
-}
 
 /* Slider Mode Container Redundant Check - kept for specificity if needed */
 .slider-mode {
