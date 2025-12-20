@@ -1,384 +1,95 @@
-# Integración con Supabase - Documentación
+# Integración con Supabase - Documentación Técnica
 
-## Estructura de las Tablas
+Este documento detalla la integración técnica con Supabase, incluyendo el esquema de datos y los servicios de comunicación.
 
-### 1. Tabla `tests` (Datos Estáticos/Índice)
+---
 
-Almacena el catálogo de tests disponibles.
+## 🏛️ Estructura de las Tablas
 
-| Columna | Tipo | Propiedades | Descripción |
-|---------|------|-------------|-------------|
-| id | INT | PRIMARY KEY | Identificador único del test |
-| titulo | TEXT | NOT NULL | Nombre completo del test |
-| fichero | TEXT | NOT NULL | Ruta al archivo JSON con las preguntas |
-| num_preguntas | INT | NOT NULL | Cantidad total de preguntas |
+### 1. Tabla `tests` (Catálogo)
+Almacena el índice de tests disponibles.
 
-### 2. Tabla `results` (Datos Dinámicos/Progreso)
+| Columna | Tipo | Descripción |
+|---------|------|-------------|
+| id | INT | PRIMARY KEY |
+| titulo | TEXT | Nombre del tema |
+| fichero | TEXT | Nombre del archivo JSON (ej: `tema1.json`) |
+| num_preguntas | INT | Total de preguntas del test |
 
-Almacena el historial de intentos y el progreso actual de los tests.
+### 2. Tabla `results` (Progreso y Resultados)
+Almacena tanto los tests en curso como los finalizados.
 
-| Columna | Tipo | Propiedades | Descripción |
-|---------|------|-------------|-------------|
-| id | BIGINT | PRIMARY KEY, AUTO | ID único del intento |
-| test_id | INT | FOREIGN KEY | Referencia al test en tabla `tests` |
-| status | test_status (ENUM) | NOT NULL | Estado: 'in_progress' o 'completed' |
-| score_percentage | NUMERIC | NULL | Porcentaje de aciertos (si está completado) |
-| total_correct | INT | NULL | Respuestas correctas (si está completado) |
-| total_questions | INT | NULL | Total de preguntas contestadas |
-| answers_data | JSONB | NOT NULL | Array con las respuestas: `[{q_id, selected_option, ...}]` |
+| Columna | Tipo | Descripción |
+|---------|------|-------------|
+| id | BIGINT | PRIMARY KEY (Auto-incremental) |
+| test_id | INT | Relación con `tests.id` |
+| status | ENUM | 'in_progress' o 'completed' |
+| score_percentage | NUMERIC | Nota final (0-100) |
+| total_correct | INT | Aciertos |
+| total_questions | INT | Total de preguntas respondidas |
+| answers_data | JSONB | Estado de las respuestas: `[{q_id, selected_option, is_correct, ...}]` |
 
-## API de Servicios
+---
 
-### Configuración
+## ⚙️ Configuración e Inicialización
 
-El archivo `supabase-config.js` inicializa el cliente de Supabase cargando las credenciales desde un archivo de configuración (`supabaseAuth.txt` ubicado en la carpeta `config/` del proyecto):
+### Inyección de Credenciales (Vite)
+A diferencia de versiones anteriores, el cliente se inicializa usando variables de entorno nativas de Vite. No se requieren archivos de texto externos ni peticiones `fetch`.
 
-**IMPORTANTE:** Las credenciales NO están hardcoded en el código. Se cargan dinámicamente desde un archivo de configuración para facilitar el mantenimiento.
-
-```javascript
-// Inicializar cliente (async)
-const client = await getSupabaseClient();
-```
-
-El archivo de credenciales debe tener el formato:
-```
-NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
-NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_clave_aqui
-```
-
-o
-
-```
-NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_SERVICE_KEY=tu_service_key_aqui
-```
-
-### Servicios Disponibles
-
-#### 📚 Gestión de Tests
-
-##### `obtenerTestsDesdeSupabase()`
-Obtiene todos los tests disponibles ordenados por ID.
+**Point of Configuration**: `assets/js/supabase-config.js`
 
 ```javascript
-const tests = await obtenerTestsDesdeSupabase();
-// Retorna: [{id, titulo, fichero, num_preguntas}, ...]
-```
-
-##### `obtenerTestPorId(testId)`
-Obtiene un test específico por su ID.
-
-```javascript
-const test = await obtenerTestPorId(1);
-// Retorna: {id, titulo, fichero, num_preguntas}
+// Cliente inicializado automáticamente vía ENV
+const supabase = createClient(
+    import.meta.env.VITE_SUPABASE_URL,
+    import.meta.env.VITE_SUPABASE_ANON_KEY
+);
 ```
 
 ---
 
-#### 📝 Gestión de Progreso y Resultados
+## 🛠️ Servicios Disponibles (Globales)
 
-##### `obtenerTestEnProgreso(testId)`
-Busca si existe un test en progreso para continuar donde se dejó.
+Debido a la arquitectura modular, los servicios se exponen en el objeto `window` para garantizar la interoperabilidad entre módulos sin dependencias circulares.
 
-```javascript
-const progreso = await obtenerTestEnProgreso(1);
-// Retorna: {id, test_id, status, answers_data, ...} o null
-```
+### 📚 Gestión de Tests (`supabase-service.js`)
 
-##### `guardarProgresoTest(progressData)`
-Guarda o actualiza el progreso de un test.
+#### `window.fetchTestsFromSupabase()`
+Obtiene el catálogo completo de tests.
 
-```javascript
-// Crear nuevo progreso
-await guardarProgresoTest({
-    test_id: 1,
-    answers_data: [
-        {q_id: 1, selected_option: 'A'},
-        {q_id: 2, selected_option: 'B'}
-    ],
-    total_questions: 10
-});
+#### `window.fetchTestById(id)`
+Obtiene los detalles de un test específico por su ID.
 
-// Actualizar progreso existente
-await guardarProgresoTest({
-    id: 123,  // ID del resultado en progreso
-    answers_data: [...],
-    total_questions: 10
-});
-```
+### 📝 Gestión de Resultados (`supabase-service.js`)
 
-##### `completarTest(resultData)`
-Marca un test como completado y guarda la nota final.
+#### `window.fetchTestInProgress(testId)`
+Recupera el estado actual de un test que el usuario no ha terminado.
 
-```javascript
-await completarTest({
-    id: 123,  // ID del resultado en progreso (opcional)
-    test_id: 1,
-    total_correct: 8,
-    total_questions: 10,
-    score_percentage: 80.0,
-    answers_data: [
-        {q_id: 1, selected_option: 'A', is_correct: true},
-        {q_id: 2, selected_option: 'B', is_correct: false},
-        // ...
-    ]
-});
-```
+#### `window.saveTestProgress(data)`
+Guarda el estado actual del test (respuestas seleccionadas) sin finalizarlo.
 
-##### `obtenerHistorialTest(testId, limit = 10)`
-Obtiene el historial de resultados completados de un test específico.
+#### `window.finishTest(data)`
+Registra un test como completado y guarda la nota final.
 
-```javascript
-const historial = await obtenerHistorialTest(1, 5);
-// Retorna: últimos 5 resultados del test 1
-```
-
-##### `obtenerTodosLosResultados()`
-Obtiene todos los resultados completados de todos los tests.
-
-```javascript
-const todosLosResultados = await obtenerTodosLosResultados();
-// Útil para estadísticas generales
-```
-
-##### `eliminarProgresoTest(resultId)`
-Elimina un resultado en progreso (para empezar de nuevo).
-
-```javascript
-await eliminarProgresoTest(123);
-// Retorna: true si se eliminó correctamente
-```
+#### `window.fetchTestHistory(testId)`
+Obtiene los últimos intentos realizados para un tema específico.
 
 ---
 
-## Flujo de Trabajo Típico
+## 🔄 Flujo de Sincronización Híbrida
 
-### 1️⃣ Cargar Lista de Tests
+La aplicación utiliza `dataService.js` como orquestador para decidir entre Supabase (Nube) y LocalStorage (Local):
 
-```javascript
-async function cargarTests() {
-    try {
-        // Obtener tests desde Supabase
-        const tests = await obtenerTestsDesdeSupabase();
-
-        // Renderizar en la interfaz
-        renderizarListado(tests);
-    } catch (error) {
-        console.error('Error:', error);
-        // Fallback a archivo local si falla Supabase
-        const response = await fetch('./data/tests_index.json');
-        const tests = await response.json();
-        renderizarListado(tests);
-    }
-}
-```
-
-### 2️⃣ Iniciar o Continuar un Test
-
-```javascript
-async function iniciarTest(testId) {
-    try {
-        // Verificar si hay progreso guardado
-        const progreso = await obtenerTestEnProgreso(testId);
-
-        if (progreso) {
-            // Preguntar al usuario si quiere continuar
-            const continuar = confirm('Tienes un test en progreso. ¿Quieres continuar?');
-
-            if (continuar) {
-                // Restaurar respuestas desde answers_data
-                cargarTestConProgreso(testId, progreso.answers_data, progreso.id);
-            } else {
-                // Eliminar progreso y empezar de nuevo
-                await eliminarProgresoTest(progreso.id);
-                cargarTestNuevo(testId);
-            }
-        } else {
-            // Empezar test nuevo
-            cargarTestNuevo(testId);
-        }
-    } catch (error) {
-        console.error('Error:', error);
-    }
-}
-```
-
-### 3️⃣ Guardar Progreso Periódicamente
-
-```javascript
-let progresoId = null; // ID del resultado en progreso
-
-async function guardarProgresoActual() {
-    const respuestas = obtenerRespuestasActuales(); // Función que obtiene las respuestas del formulario
-
-    try {
-        const resultado = await guardarProgresoTest({
-            id: progresoId, // null la primera vez
-            test_id: testIdActual,
-            answers_data: respuestas,
-            total_questions: totalPreguntas
-        });
-
-        // Guardar el ID para futuras actualizaciones
-        if (!progresoId) {
-            progresoId = resultado.id;
-        }
-
-        console.log('✅ Progreso guardado');
-    } catch (error) {
-        console.error('Error al guardar:', error);
-    }
-}
-
-// Guardar progreso cada 30 segundos
-setInterval(guardarProgresoActual, 30000);
-```
-
-### 4️⃣ Finalizar y Corregir Test
-
-```javascript
-async function finalizarTest() {
-    const respuestas = obtenerRespuestasActuales();
-    const { correctas, totalPreguntas } = corregirRespuestas(respuestas);
-    const porcentaje = (correctas / totalPreguntas) * 100;
-
-    try {
-        await completarTest({
-            id: progresoId, // Si existía progreso
-            test_id: testIdActual,
-            total_correct: correctas,
-            total_questions: totalPreguntas,
-            score_percentage: porcentaje,
-            answers_data: respuestas // Con información de corrección
-        });
-
-        console.log('✅ Test completado');
-        mostrarResultados(correctas, totalPreguntas, porcentaje);
-    } catch (error) {
-        console.error('Error al completar:', error);
-    }
-}
-```
-
-### 5️⃣ Mostrar Historial en la Lista
-
-```javascript
-async function renderizarConHistorial(test) {
-    try {
-        // Obtener últimos 3 intentos
-        const historial = await obtenerHistorialTest(test.id, 3);
-
-        // Renderizar historial
-        historial.forEach(resultado => {
-            console.log(`${resultado.score_percentage}% - ${resultado.total_correct}/${resultado.total_questions}`);
-        });
-    } catch (error) {
-        console.error('Error:', error);
-    }
-}
-```
+1.  **Prioridad Nube**: Siempre se intenta leer/escribir en Supabase primero.
+2.  **Fallback Transparente**: Si Supabase no está disponible (offline o sin claves), la aplicación degrada automáticamente a LocalStorage sin interrumpir al usuario.
+3.  **Sincronización al Inicio**: Al cargar un test, se busca la versión más reciente del progreso en ambos sistemas.
 
 ---
 
-## Estructura de `answers_data`
+## 🧪 Verificación de Integridad
 
-El campo `answers_data` es un array JSON con la siguiente estructura:
-
-### Durante el Progreso (in_progress)
-
-```json
-[
-  {
-    "q_id": 1,
-    "selected_option": "A"
-  },
-  {
-    "q_id": 2,
-    "selected_option": "C"
-  }
-]
-```
-
-### Después de Completar (completed)
-
-```json
-[
-  {
-    "q_id": 1,
-    "selected_option": "A",
-    "is_correct": true,
-    "correct_option": "A"
-  },
-  {
-    "q_id": 2,
-    "selected_option": "C",
-    "is_correct": false,
-    "correct_option": "B"
-  }
-]
-```
+El archivo `db/schema.sql` contiene la definición exacta de las tablas. Los tests unitarios (`tests/supabaseService.test.js`) validan que cualquier cambio en el código siga siendo compatible con este esquema maestro.
 
 ---
 
-## Manejo de Errores
-
-Todas las funciones lanzan errores que deben ser capturados:
-
-```javascript
-try {
-    const tests = await obtenerTestsDesdeSupabase();
-} catch (error) {
-    console.error('Error al cargar tests:', error);
-    // Implementar fallback o mostrar mensaje al usuario
-}
-```
-
----
-
-## Sincronización entre Dispositivos
-
-El sistema permite sincronización automática:
-
-1. **Usuario inicia test en dispositivo A** → Se crea registro con `status: 'in_progress'`
-2. **Usuario abre app en dispositivo B** → Se detecta el progreso y puede continuar
-3. **Usuario completa en dispositivo B** → Se actualiza a `status: 'completed'`
-
----
-
-## Migración desde localStorage
-
-Si ya tienes datos en localStorage, puedes migrarlos:
-
-```javascript
-async function migrarResultadosASupabase() {
-    const resultadosLocales = obtenerResultados(); // Función de storage.js
-
-    for (const resultado of resultadosLocales) {
-        await completarTest({
-            test_id: resultado.testId,
-            total_correct: resultado.aciertos,
-            total_questions: resultado.total,
-            score_percentage: (resultado.aciertos / resultado.total) * 100,
-            answers_data: resultado.respuestas || []
-        });
-    }
-
-    console.log('✅ Migración completada');
-}
-```
-
----
-
-## Notas Importantes
-
-1. **Credenciales**: Las credenciales se cargan desde un archivo de configuración (`config/supabaseAuth.txt`). Este archivo contiene únicamente claves públicas de Supabase, que son seguras para incluir en el repositorio.
-
-2. **Modo Offline**: Si no se pueden cargar las credenciales, la aplicación automáticamente funciona en modo offline (sin sincronización con Supabase). Los datos se guardarán solo localmente.
-
-3. **Row Level Security (RLS)**: Asegúrate de configurar políticas de seguridad en Supabase para que los usuarios solo puedan ver/editar sus propios resultados.
-
-4. **Fallback**: Todas las funciones de servicio devuelven `null` si Supabase no está disponible. Implementa siempre un fallback a localStorage.
-
-5. **Performance**: El servicio usa `console.log` para debugging. Considera eliminar en producción para mejorar performance.
-
-6. **CORS**: Si ejecutas la app desde `file://`, es posible que tengas problemas de CORS al cargar el archivo de credenciales. Se recomienda usar un servidor local (como Live Server de VS Code).
+**Última revisión**: Versión 2.2.4 (Diciembre 2025)

@@ -1,146 +1,72 @@
 # Seguridad y Gestión de Credenciales
 
-## Ubicación del Archivo de Credenciales
+Este documento describe cómo se gestionan de forma segura las credenciales de Supabase en el proyecto, siguiendo prácticas modernas de desarrollo web.
 
-Las credenciales de Supabase se almacenan en un archivo de configuración **dentro del proyecto** en la carpeta `config/`.
+---
 
-### Ubicación
-```
-config/supabaseAuth.txt
-```
+## 🔐 Nuevo Modelo de Seguridad (V2.1.0+)
 
-### Estructura del Proyecto
-```
-TestsAyuntamiento/
-├── config/
-│   └── supabaseAuth.txt          ← Archivo de credenciales (claves públicas)
-├── assets/
-│   └── js/
-│       ├── supabase-config.js    (carga credenciales desde ./config/supabaseAuth.txt)
-│       └── supabase-service.js
-├── scripts/
-│   └── build-index.js            (carga credenciales desde ../config/supabaseAuth.txt)
-├── .gitignore
-└── ...
+A partir de la versión 2.1.0, el proyecto ha migrado de archivos de texto planos a un sistema robusto de **Variables de Entorno**. 
+
+### 1. Desarrollo Local (.env)
+En local, las credenciales se almacenan en un archivo `.env` en la raíz del proyecto. Este archivo está **excluido de Git** vía `.gitignore` para evitar fugas de datos.
+
+**Variables requeridas:**
+```bash
+VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
+VITE_SUPABASE_ANON_KEY=tu_clave_anon_aqui
 ```
 
-### Nota sobre Seguridad
+### 2. Producción (GitHub Secrets)
+Para despliegues públicos (como GitHub Pages), las credenciales se almacenan en los **Secrets de GitHub** e inyectan durante el proceso de build mediante GitHub Actions.
 
-Este archivo contiene **únicamente claves públicas** de Supabase (anon key), que son seguras para incluir en el repositorio. Las claves públicas están diseñadas para ser expuestas en aplicaciones del lado del cliente.
+---
 
-## Formato del Archivo de Credenciales
+## 📁 Archivos Involucrados
 
-El archivo `supabaseAuth.txt` debe contener las siguientes variables en formato `KEY=VALUE`:
-
-```
-NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
-NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_clave_publicable
-```
-
-O, si tienes la clave de servicio:
-
-```
-NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_SERVICE_KEY=tu_clave_de_servicio
-```
-
-### Notas sobre las Claves
-
-- **NEXT_PUBLIC_SUPABASE_URL**: URL de tu proyecto de Supabase
-- **NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY**: Clave pública (anon key) - segura para el frontend
-- **SUPABASE_SERVICE_KEY**: Clave privada de servicio - solo para scripts backend (como build-index.js)
-
-## Archivos que Usan las Credenciales
-
-### 1. Script de Generación de Índices (Node.js)
-**Archivo**: `scripts/build-index.js`
+### `assets/js/supabase-config.js`
+Es el punto central de configuración. Utiliza `import.meta.env` (nativo de Vite) para acceder a las claves:
 
 ```javascript
-const AUTH_FILE_PATH = path.join(__dirname, '..', 'config', 'supabaseAuth.txt');
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 ```
 
-Este script lee el archivo usando `fs.readFileSync` (Node.js).
+### `.github/workflows/deploy.yml`
+El flujo de CI/CD inyecta los secretos en el entorno de build:
 
-### 2. Configuración de Supabase (Browser)
-**Archivo**: `assets/js/supabase-config.js`
-
-```javascript
-const AUTH_FILE_URL = './config/supabaseAuth.txt';
-const response = await fetch(AUTH_FILE_URL);
+```yaml
+env:
+  VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+  VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 ```
 
-Este archivo lee el archivo usando `fetch` (navegador).
+---
 
-## Seguridad
+## 🛡️ Mejores Prácticas Implementadas
 
-### ✅ Prácticas Seguras Implementadas
+1.  **Exposición Mínima**: Solo se exponen claves públicas (`anon_key`). Si una clave se viera comprometida, el impacto está limitado por las políticas de **Row Level Security (RLS)** de Supabase.
+2.  **No Hardcoding**: Las claves nunca se escriben directamente en el código fuente.
+3.  **Historial Limpio**: Se ha realizado una purga total del historial de Git (`git filter-branch`) para eliminar rastros de archivos de configuración antiguos (`supabaseAuth.txt`).
+4.  **Vite Bundling**: Al usar Vite, las variables de entorno se inyectan en tiempo de compilación, lo que es más eficiente y seguro que realizar peticiones `fetch` adicionales en tiempo de ejecución.
 
-1. **Claves públicas**: Solo se usan claves públicas (anon key), seguras para el frontend
-2. **Modo offline**: Si no se encuentran credenciales, la app funciona localmente
-3. **Separación de configuración**: Las credenciales están en un archivo de configuración separado
-4. **Fallback automático**: La app funciona sin Supabase si no hay credenciales
+---
 
-### ⚠️ Consideraciones Importantes
+## 🚀 Cómo Configurar un Nuevo Entorno
 
-1. **Solo claves públicas**: Este archivo debe contener SOLO la clave pública (anon key), nunca la service key
-2. **Backups**: Haz backup del archivo de credenciales en un lugar seguro
-3. **Servidor local**: Para desarrollo, usa un servidor local (Live Server) en lugar de abrir `index.html` directamente
-4. **Row Level Security**: Asegúrate de configurar RLS en Supabase para proteger tus datos
+1.  **Clonar el repo**.
+2.  **Crear archivo `.env`** en la raíz.
+3.  **Copiar tus claves** desde el Dashboard de Supabase (Settings -> API).
+4.  **Asegurar RLS**: Verifica que tus tablas en Supabase tengan activado el RLS para que la `anon_key` solo permita las acciones deseadas.
 
-## Regenerar Credenciales
+---
 
-Si necesitas regenerar las credenciales:
+## ⚠️ Resolución de Problemas
 
-1. Ve a tu proyecto en [Supabase Dashboard](https://app.supabase.com)
-2. Settings → API
-3. Copia las nuevas claves
-4. Actualiza el archivo `supabaseAuth.txt`
+### Error: "VITE_SUPABASE_URL is not defined"
+**Causa**: No se ha creado el archivo `.env` o las variables no tienen el prefijo `VITE_`.
+**Solución**: Crea el `.env` y asegúrate de que las variables empiecen por `VITE_`.
 
-## Despliegue en Producción
-
-Para desplegar en producción (por ejemplo, en Netlify, Vercel, etc.):
-
-### Opción 1: Variables de Entorno (Recomendado)
-
-Modifica `supabase-config.js` para usar variables de entorno:
-
-```javascript
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
-```
-
-Configura las variables en tu plataforma de hosting.
-
-### Opción 2: Build-time Injection
-
-Durante el build, reemplaza las credenciales usando herramientas como `dotenv` o configuración específica de la plataforma.
-
-## Troubleshooting
-
-### Error: "No se pudo cargar el archivo de credenciales"
-
-**Causa**: El archivo no existe o la ruta es incorrecta
-
-**Solución**:
-1. Verifica que el archivo existe en `config/supabaseAuth.txt`
-2. Verifica los permisos del archivo
-3. Asegúrate de estar usando un servidor local (Live Server, http-server, etc.)
-
-### Error de CORS al cargar credenciales
-
-**Causa**: Restricciones de CORS del navegador al usar `file://`
-
-**Solución**:
-1. Usa un servidor local como Live Server (VS Code)
-2. O usa `python -m http.server 8000` en el directorio del proyecto
-3. Accede a `http://localhost:8000` en lugar de `file://`
-
-### La app funciona pero no sincroniza con Supabase
-
-**Causa**: Las credenciales no se cargaron correctamente
-
-**Solución**:
-1. Abre la consola del navegador (F12)
-2. Busca mensajes de error relacionados con Supabase
-3. Verifica que el archivo `supabaseAuth.txt` tiene el formato correcto
-4. Verifica que las credenciales son válidas en Supabase Dashboard
+### 404 en GitHub Pages (Supabase no conecta)
+**Causa**: No se han configurado los Secrets en el repositorio de GitHub.
+**Solución**: Ve a tu repositorio en GitHub -> Settings -> Secrets and variables -> Actions -> New repository secret. Añade `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`.

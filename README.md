@@ -18,6 +18,8 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 - ✅ **Sincronización entre dispositivos** vía Supabase
 - ✅ **Modo Slider (Presentación)** - vista tipo diapositiva optimizada para móviles
 - ✅ **Sincronización Bi-direccional** - cambia de vista sin perder tu posición
+- ✅ **Seguridad Robusta** - Gestión de claves vía variables de entorno (`.env`) y GitHub Secrets
+- ✅ **Estética Premium** - Modo Oscuro profesional ("Deep Charcoal") con Glassmorphism avanzado
 
 
 ### Futuras Mejoras
@@ -57,29 +59,22 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 
 ### Abrir la Aplicación
 
-#### Opción 1: Abrir directamente
+#### Opción 1: Desarrollo local (Recomendado)
 ```bash
-# Navega al directorio del proyecto
-cd TestsAyuntamiento
+# Instala las dependencias
+npm install
 
-# Abre index.html en tu navegador
-open index.html  # macOS
-# o
-start index.html  # Windows
-# o
-xdg-open index.html  # Linux
+# Inicia el servidor de desarrollo (Vite)
+npm run dev
 ```
 
-#### Opción 2: Servidor local (recomendado)
+#### Opción 2: Construcción para producción
 ```bash
-# Con Python 3
-python -m http.server 8000
+# Genera la carpeta dist/ optimizada
+npm run build
 
-# O con Node.js (si tienes http-server instalado)
-npx http-server
-
-# O con Live Server en VS Code
-# Clic derecho en index.html → "Open with Live Server"
+# Previsualiza el resultado localmente
+npm run preview
 ```
 
 Luego abre en el navegador: `http://localhost:8000`
@@ -104,34 +99,23 @@ La aplicación guarda automáticamente tus últimos intentos de cada test. Puede
 
 ```
 TestsAyuntamiento/
-├── index.html                      # Página principal
-├── config/
-│   └── supabaseAuth.txt            # Credenciales de Supabase (claves públicas)
-├── assets/
-│   ├── css/
-│   │   └── style.css               # Estilos
-│   └── js/
-│       ├── main.js                 # Lógica principal
-│       ├── test.js                 # Lógica de tests
-│       ├── storage.js              # Gestión de localStorage
-│       ├── supabase-config.js      # Configuración de Supabase
-│       ├── supabase-service.js     # Servicios de Supabase
-│       ├── dataService.js          # Capa de abstracción
-│       └── tailwind-config.js      # Configuración de Tailwind (extraído)
-├── data/
-│   ├── tests_index.json            # Índice de tests
-│   └── tests/
-│       ├── tema1.json              # Preguntas del tema 1
-│       └── ...
-├── db/
-│   └── schema.sql                  # Documentación del esquema de la BD
-├── tests/
-│   ├── dataService.test.js         # Tests unitarios de lógica de datos
-│   ├── supabaseService.test.js     # Tests de verificación de esquema
-│   └── sliderLogic.test.js         # Tests de sincronización y altura del Slider
-├── scripts/
-│   └── build-index.js              # Script de sincronización
-├── package.json                    # Dependencias y scripts
+├── index.html                      # Punto de entrada
+├── src/
+│   └── style.css                   # Estilos (Tailwind CSS v4)
+├── assets/js/
+│   ├── main.js                     # Inicialización (tipo module)
+│   ├── test.js                     # Lógica de ejecución de tests
+│   ├── storage.js                  # Persistencia local
+│   ├── supabase-config.js          # Configuración de cliente
+│   ├── supabase-service.js         # API de Supabase
+│   └── dataService.js              # Capa de abstracción híbrida
+├── public/                         # Assets estáticos (imágenes, favicons)
+├── data/                           # Contenido de los tests (JSON)
+├── db/                             # Esquema SQL de referencia
+├── tests/                          # Suite de tests (Jest)
+├── .env                            # Variables de entorno (No incluido en Git)
+├── package.json                    # Dependencias y scripts de Vite
+└── vite.config.js                  # Configuración del bundler
 ├── README.md                       # Este archivo
 └── docs/
     ├── SUPABASE_INTEGRATION.md     # Documentación técnica
@@ -206,21 +190,14 @@ npm run build-index
 
 ## 🗄️ Base de Datos (Supabase)
 
-### Configuración
+Las credenciales de Supabase se gestionan mediante variables de entorno en un archivo `.env` en la raíz del proyecto (excluido de Git):
 
-Las credenciales de Supabase se almacenan en un archivo de configuración **dentro del proyecto**:
+```bash
+VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
+VITE_SUPABASE_ANON_KEY=tu_clave_anon_aqui
+```
 
-```
-config/supabaseAuth.txt
-```
-
-Este archivo contiene las claves públicas de Supabase, por lo que es seguro incluirlo en el repositorio.
-
-Formato del archivo:
-```
-NEXT_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
-NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_clave_aqui
-```
+Para despliegues en GitHub Pages, estas claves se inyectan de forma segura a través de **GitHub Secrets**.
 
 Ver [SECURITY.md](./docs/SECURITY.md) para más detalles.
 
@@ -321,28 +298,25 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 
 ## 🗺️ Roadmap
 
-### Próximas Versiones
+**v2.0** ✅ **COMPLETADO** (2025-12-20)
+- ✅ **Migración a Vite**: Bundling moderno y entorno de desarrollo optimizado.
+- ✅ **Tailwind CSS v4**: Integración nativa sin dependencias externas duplicadas.
+- ✅ **Seguridad**: Eliminación de archivos planos por variables de entorno `.env`.
+- ✅ **Deep Dark Mode**: Nueva estética premium "True Black".
+- ✅ **Modularización JS**: Refactorización completa a módulos ES6.
 
-**v1.1** ✅ **COMPLETADO** (2025-12-08)
-- ✅ Auto-guardado, sincronización Supabase y continuación de tests.
+**v2.1** ✅ **COMPLETADO** (2025-12-20)
+- ✅ **GitHub Secrets**: Integración de despliegue seguro para repositorios públicos.
+- ✅ **Limpieza de Historial**: Purga de credenciales antiguas en el historial de Git.
 
-**v1.2** ✅ **COMPLETADO** (2025-12-19)
-- ✅ **Modo Slider**: Experiencia tipo diapositiva optimizada para móviles.
-- ✅ **Navegación Robusta**: Solucionados problemas de scroll en iOS Safari.
-- ✅ **Sincronización Inteligente**: Algoritmo de punto focal para cambio de vista.
-- ✅ **Suite de Tests**: Nueva suite para lógica de interfaz de usuario.
-- ✅ **Versionado**: Footer dinámico para verificar despliegues exitosos.
+**v2.2** ✅ **COMPLETADO** (2025-12-20)
+- ✅ **Refinamiento UX**: Ajustes de jerarquía visual y tipografía.
+- ✅ **Automatización**: Versionado dinámico sin redundancias hardcodeadas.
 
-**v1.3** (Planificado)
-- Estadísticas por tema
-- Modo de estudio
-- Gráficos de progreso
-
-**v2.0** (Futuro)
-- Sistema de usuarios
-- Tests personalizados
-- Modo examen con tiempo límite
-- Exportar resultados
+**v3.0** (Próximamente)
+- 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)
+- 📖 Modo de estudio inteligente
+- 🏆 Sistema de logros y gamificación
 
 ---
 
