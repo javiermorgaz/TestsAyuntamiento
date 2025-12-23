@@ -4,9 +4,7 @@ Este documento describe cómo se gestionan de forma segura las credenciales de S
 
 ---
 
-## 🔐 Nuevo Modelo de Seguridad (V2.1.0+)
-
-A partir de la versión 2.1.0, el proyecto ha migrado de archivos de texto planos a un sistema robusto de **Variables de Entorno**. 
+## 🔐 Modelo de Seguridad
 
 ### 1. Desarrollo Local (.env)
 En local, las credenciales se almacenan en un archivo `.env` en la raíz del proyecto. Este archivo está **excluido de Git** vía `.gitignore` para evitar fugas de datos.

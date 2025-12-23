@@ -303,7 +303,7 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 **v2.0** ✅ **COMPLETADO** (2025-12-20)
 - ✅ **Migración a Vite**: Bundling moderno y entorno de desarrollo optimizado.
 - ✅ **Tailwind CSS v4**: Integración nativa sin dependencias externas duplicadas.
-- ✅ **Seguridad**: Eliminación de archivos planos por variables de entorno `.env`.
+- ✅ **Seguridad**: Variables de entorno `.env`.
 - ✅ **Deep Dark Mode**: Nueva estética premium "True Black".
 - ✅ **Modularización JS**: Refactorización completa a módulos ES6.
 

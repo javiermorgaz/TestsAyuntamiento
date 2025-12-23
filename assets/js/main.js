@@ -228,4 +228,3 @@ window.loadTestsList = loadTestsList;
 window.startTest = startTest;
 window.resetTest = resetTest;
 window.updateAppVersionInfo = updateAppVersionInfo;
-window.updateAppVersionDate = updateAppVersionDate;

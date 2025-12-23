@@ -336,6 +336,7 @@ async function deleteTestProgress(resultId) {
 }
 
 // Hacer disponible globalmente
+// Hacer disponible globalmente
 window.fetchTestsFromSupabase = fetchTestsFromSupabase;
 window.fetchTestById = fetchTestById;
 window.fetchTestInProgress = fetchTestInProgress;
@@ -344,3 +345,17 @@ window.completeTestSupabase = completeTestSupabase;
 window.fetchTestHistory = fetchTestHistory;
 window.fetchAllResults = fetchAllResults;
 window.deleteTestProgress = deleteTestProgress;
+
+// Enable testing if running in Node environment
+if (typeof module !== 'undefined') {
+    module.exports = {
+        fetchTestsFromSupabase,
+        fetchTestById,
+        fetchTestInProgress,
+        saveTestProgress,
+        completeTestSupabase,
+        fetchTestHistory,
+        fetchAllResults,
+        deleteTestProgress
+    };
+}

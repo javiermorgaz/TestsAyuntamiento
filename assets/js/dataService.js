@@ -293,3 +293,18 @@ window.completeTest = completeTest;
 window.checkStatus = checkStatus;
 window.isSupabaseAvailable = isSupabaseAvailable;
 window.saveToLocalStorage = saveToLocalStorage;
+
+// Enable testing if running in Node environment
+if (typeof module !== 'undefined') {
+    module.exports = {
+        fetchTests,
+        fetchHistory,
+        findTestProgress,
+        saveProgress,
+        deleteProgress,
+        completeTest,
+        checkStatus,
+        isSupabaseAvailable,
+        saveToLocalStorage
+    };
+}

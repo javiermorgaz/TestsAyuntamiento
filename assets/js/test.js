@@ -5,13 +5,7 @@
  * Muestra todas las preguntas a la vez y permite corregir al final
  */
 
-// Variables globales del test actual
-let currentTest = null;
-let userResponses = []; // Array para almacenar las respuestas del usuario
-let currentProgressId = null; // ID del progreso en Supabase
-let autoSaveInterval = null; // Intervalo de auto-guardado periódico
-let currentViewMode = 'list'; // 'list' or 'slider'
-let lastSliderIndex = -1; // Track active index to avoid redundant layout updates
+// Variables globales - Ahora gestionadas por window.stateManager
 let sliderObserver = null; // IntersectionObserver for slider items
 
 /**
@@ -20,9 +14,10 @@ let sliderObserver = null; // IntersectionObserver for slider items
  */
 function returnToList() {
     // Limpiar auto-guardado periódico
+    const autoSaveInterval = window.stateManager.get('autoSaveInterval');
     if (autoSaveInterval) {
         clearInterval(autoSaveInterval);
-        autoSaveInterval = null;
+        window.stateManager.set({ autoSaveInterval: null });
     }
 
     // Limpiar timeout de guardado debounced
@@ -31,11 +26,8 @@ function returnToList() {
         window.autoSaveTimeout = null;
     }
 
-    // Resetear variables globales
-    currentTest = null;
-    userResponses = [];
-    currentProgressId = null;
-    currentViewMode = 'list';
+    // Resetear variables globales en StateManager
+    window.stateManager.reset();
     updateViewModeUI();
 
     const testsListSection = document.getElementById('tests-list');
@@ -80,7 +72,7 @@ const btnBackHomeResult = document.getElementById('btn-back-home-result');
  * @param {string} fileName - Nombre del archivo JSON
  */
 async function loadTest(testId, fileName) {
-    currentViewMode = 'list';
+    window.stateManager.set({ currentViewMode: 'list' });
     try {
         const response = await fetch(`./data/${fileName}`);
 
@@ -88,24 +80,26 @@ async function loadTest(testId, fileName) {
             throw new Error(`Error al cargar el test: ${response.status}`);
         }
 
-        currentTest = await response.json();
-
-        // Inicializar el array de respuestas del usuario (null = sin responder)
-        userResponses = new Array(currentTest.preguntas.length).fill(null);
+        const testData = await response.json();
+        window.stateManager.set({ currentTest: testData });
+        window.stateManager.initResponses(testData.preguntas.length);
 
         // Actualizar título
-        testTitleEl.textContent = currentTest.titulo;
+        testTitleEl.textContent = testData.titulo;
 
         // Renderizar todas las preguntas
         renderAllQuestions();
         updateViewModeUI();
 
         // NUEVO: Iniciar auto-guardado periódico cada 30 segundos
+        let autoSaveInterval = window.stateManager.get('autoSaveInterval');
         if (autoSaveInterval) clearInterval(autoSaveInterval);
 
         autoSaveInterval = setInterval(async () => {
             await autoSaveProgress();
         }, 30000); // 30 segundos
+
+        window.stateManager.set({ autoSaveInterval });
 
         console.log('🔄 Sistema de auto-guardado activado (cada 30s)');
 
@@ -126,11 +120,11 @@ async function loadTestWithProgress(testId, fileName, progress) {
         // Primero cargar el test normalmente
         await loadTest(testId, fileName);
 
-        // Restaurar el ID de progreso
-        currentProgressId = progress.id;
-
-        // Restaurar las respuestas guardadas
-        userResponses = progress.answers_data;
+        // Restaurar el ID de progreso y respuestas en el StateManager
+        window.stateManager.set({
+            currentProgressId: progress.id,
+            userResponses: progress.answers_data
+        });
 
         // Marcar las respuestas en el formulario
         progress.answers_data.forEach((answer, index) => {
@@ -144,7 +138,8 @@ async function loadTestWithProgress(testId, fileName, progress) {
             }
         });
 
-        const answeredCount = userResponses.filter(r => r !== null).length;
+        const currentTest = window.stateManager.get('currentTest');
+        const answeredCount = progress.answers_data.filter(r => r !== null).length;
         console.log(`✅ Test restaurado con ${answeredCount}/${currentTest.preguntas.length} respuestas`);
 
     } catch (error) {
@@ -156,6 +151,7 @@ async function loadTestWithProgress(testId, fileName, progress) {
  * Renderiza todas las preguntas del test a la vez
  */
 function renderAllQuestions() {
+    const currentTest = window.stateManager.get('currentTest');
     if (!currentTest) return;
 
     let html = '';
@@ -223,6 +219,10 @@ function renderAllQuestions() {
  * Se ejecuta periódicamente y cuando el usuario cambia una respuesta
  */
 async function autoSaveProgress() {
+    const currentTest = window.stateManager.get('currentTest');
+    const userResponses = window.stateManager.get('userResponses');
+    const currentProgressId = window.stateManager.get('currentProgressId');
+
     if (!currentTest) return;
 
     // Solo guardar si hay al menos una respuesta
@@ -239,7 +239,7 @@ async function autoSaveProgress() {
 
         // Guardar el ID para futuras actualizaciones
         if (!currentProgressId && resultado.id) {
-            currentProgressId = resultado.id;
+            window.stateManager.set({ currentProgressId: resultado.id });
         }
 
         console.log(`💾 Progreso guardado: ${answeredCount}/${currentTest.preguntas.length} preguntas`);
@@ -289,7 +289,7 @@ function showSaveIndicator() {
  * @param {number} opcionSeleccionada - Índice de la opción (1-based)
  */
 async function saveAnswer(preguntaIndex, opcionSeleccionada) {
-    userResponses[preguntaIndex] = opcionSeleccionada;
+    window.stateManager.setAnswer(preguntaIndex, opcionSeleccionada);
 
     // Trigger auto-guardado inmediato (debounced)
     // Espera 2 segundos después del último cambio antes de guardar
@@ -306,10 +306,15 @@ async function saveAnswer(preguntaIndex, opcionSeleccionada) {
  */
 async function gradeTest() {
     // Limpiar auto-guardado
+    const autoSaveInterval = window.stateManager.get('autoSaveInterval');
     if (autoSaveInterval) {
         clearInterval(autoSaveInterval);
-        autoSaveInterval = null;
+        window.stateManager.set({ autoSaveInterval: null });
     }
+
+    const currentTest = window.stateManager.get('currentTest');
+    const userResponses = window.stateManager.get('userResponses');
+    const currentProgressId = window.stateManager.get('currentProgressId');
 
     let correctCount = 0;
     let errorCount = 0;
@@ -379,8 +384,8 @@ async function gradeTest() {
     // También guardar en localStorage como backup
     window.saveResult(resultado);
 
-    // Resetear ID de progreso
-    currentProgressId = null;
+    // Resetear ID de progreso en StateManager
+    window.stateManager.set({ currentProgressId: null });
 
     // Mostrar resultado
     displayResult(resultado);
@@ -486,6 +491,7 @@ function displayResult(resultado) {
     resultadoContainer.innerHTML = html;
 
     // Clean up Slider Mode if active
+    const currentViewMode = window.stateManager.get('currentViewMode');
     if (currentViewMode === 'slider') {
         removeSliderNavigation();
         document.body.classList.remove('slider-view-active');
@@ -526,9 +532,11 @@ if (btnBackHomeResult) {
  * Toggles between List and Slider view modes
  */
 function toggleViewMode() {
+    const currentViewMode = window.stateManager.get('currentViewMode');
     console.log('🔄 Toggling View Mode from:', currentViewMode);
-    currentViewMode = currentViewMode === 'list' ? 'slider' : 'list';
-    console.log('➡️ New View Mode:', currentViewMode);
+    const newMode = currentViewMode === 'list' ? 'slider' : 'list';
+    window.stateManager.set({ currentViewMode: newMode });
+    console.log('➡️ New View Mode:', newMode);
     updateViewModeUI();
 }
 
@@ -541,6 +549,7 @@ function updateViewModeUI() {
     const sliderIcon = document.getElementById('icon-view-slider');
     const testControls = document.getElementById('test-controls');
     const form = document.getElementById('questions-form');
+    const currentViewMode = window.stateManager.get('currentViewMode');
 
     // 1. Calculate the current question index to maintain synchronization
     let syncIndex = 0;
@@ -766,7 +775,7 @@ function setupSliderObserver(startIndex = 0) {
 
     // Initialize to -1 to ensure AND ALLOW the first intersection to trigger UI sync
     // (height adjustment and button visibility)
-    lastSliderIndex = -1;
+    window.stateManager.set({ lastSliderIndex: -1 });
 
     const options = {
         root: questionsContainer,
@@ -790,8 +799,9 @@ function setupSliderObserver(startIndex = 0) {
                     newIndex = parseInt(targetId.replace('pregunta-', ''));
                 }
 
+                const lastSliderIndex = window.stateManager.get('lastSliderIndex');
                 if (newIndex !== -1 && newIndex !== lastSliderIndex) {
-                    lastSliderIndex = newIndex;
+                    window.stateManager.set({ lastSliderIndex: newIndex });
 
                     // Scroll to ideal position: show question from the beginning
                     // Use same logic as when returning to List Mode (line 638-645)
@@ -941,8 +951,8 @@ if (typeof module !== 'undefined') {
         updateViewModeUI,
         renderAllQuestions,
         // Helper to access/set currentViewMode for testing
-        getCurrentViewMode: () => currentViewMode,
-        setCurrentViewMode: (mode) => currentViewMode = mode
+        getCurrentViewMode: () => window.stateManager.get('currentViewMode'),
+        setCurrentViewMode: (mode) => window.stateManager.set({ currentViewMode: mode })
     };
 }
 
