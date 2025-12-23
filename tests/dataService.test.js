@@ -58,6 +58,18 @@ describe('Data Service (Unit Tests)', () => {
             const result = await dataService.isSupabaseAvailable();
             expect(result).toBe(true);
         });
+
+        test('should return false when client is null', async () => {
+            getSupabaseClient.mockResolvedValue(null);
+            const result = await dataService.isSupabaseAvailable();
+            expect(result).toBe(false);
+        });
+
+        test('should handle Supabase client initialization errors gracefully', async () => {
+            getSupabaseClient.mockRejectedValue(new Error('Config error'));
+            const result = await dataService.isSupabaseAvailable();
+            expect(result).toBe(false);
+        });
     });
 
     describe('fetchTests', () => {
@@ -98,6 +110,22 @@ describe('Data Service (Unit Tests)', () => {
 
             expect(result).toEqual({ id: 123 });
         });
+
+        test('should save to localStorage when offline', async () => {
+            getSupabaseClient.mockResolvedValue(null);
+
+            const now = 1234567890;
+            jest.spyOn(Date, 'now').mockReturnValue(now);
+
+            const result = await dataService.saveProgress(mockData);
+
+            expect(saveTestProgress).not.toHaveBeenCalled();
+            expect(result).toEqual({
+                id: now,
+                ...mockData,
+                status: 'in_progress'
+            });
+        });
     });
 
     describe('completeTest', () => {
@@ -116,6 +144,22 @@ describe('Data Service (Unit Tests)', () => {
 
             expect(completeTestSupabase).toHaveBeenCalledWith(mockResultData);
             expect(saveResult).toHaveBeenCalled();
+        });
+
+        test('should save ONLY to localStorage if offline', async () => {
+            getSupabaseClient.mockResolvedValue(null);
+
+            await dataService.completeTest(mockResultData);
+
+            expect(completeTestSupabase).not.toHaveBeenCalled();
+            expect(saveResult).toHaveBeenCalled();
+
+            const savedData = saveResult.mock.calls[0][0];
+            expect(savedData).toEqual(expect.objectContaining({
+                testId: 1,
+                aciertos: 5,
+                errores: 5
+            }));
         });
     });
 });
