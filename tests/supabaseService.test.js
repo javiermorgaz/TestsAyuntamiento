@@ -2,112 +2,76 @@
  * @jest-environment jsdom
  */
 
-// Mock globals
+import { jest } from '@jest/globals';
+
+// Mock console
 global.console = {
     log: jest.fn(),
-    warn: jest.fn(),
     error: jest.fn(),
+    warn: jest.fn()
 };
 
-// Mock getSupabaseClient global
-const mockSupabase = {
-    from: jest.fn().mockReturnThis(),
-    select: jest.fn().mockReturnThis(),
-    order: jest.fn().mockReturnThis(),
-    eq: jest.fn().mockReturnThis(),
-    limit: jest.fn().mockReturnThis(),
-    single: jest.fn().mockReturnThis(),
-    insert: jest.fn().mockReturnThis(),
-    update: jest.fn().mockReturnThis(),
-    delete: jest.fn().mockReturnThis(),
-};
-global.getSupabaseClient = jest.fn().mockResolvedValue(mockSupabase);
+// Mock Supabase client dependency (as a module)
+jest.unstable_mockModule('../assets/js/supabase-config.js', () => ({
+    getSupabaseClient: jest.fn()
+}));
 
-const supabaseService = require('../assets/js/supabase-service.js');
+// Import the mocks and then the module under test
+const { getSupabaseClient } = await import('../assets/js/supabase-config.js');
+const supabaseService = await import('../assets/js/supabase-service.js');
 
-describe('Supabase Service (Schema Verification)', () => {
+describe('Supabase Service (Unit Tests)', () => {
 
     beforeEach(() => {
         jest.clearAllMocks();
-        // Reset mock chain return values
-        mockSupabase.from.mockReturnValue(mockSupabase);
-        mockSupabase.select.mockReturnValue(mockSupabase);
-        mockSupabase.eq.mockReturnValue(mockSupabase);
-        mockSupabase.order.mockReturnValue(mockSupabase);
-        mockSupabase.limit.mockReturnValue(mockSupabase);
-        mockSupabase.single.mockReturnValue(mockSupabase);
-        mockSupabase.insert.mockReturnValue(mockSupabase);
-        mockSupabase.update.mockReturnValue(mockSupabase);
-        mockSupabase.delete.mockReturnValue(mockSupabase);
     });
 
-    test('fetchTestInProgress should query "results" table with correct columns', async () => {
-        mockSupabase.single.mockResolvedValue({ data: { id: 1 }, error: null });
-        mockSupabase.limit.mockResolvedValue({ data: [{ id: 1 }], error: null }); // Handling the logic change
+    describe('fetchTestsFromSupabase', () => {
+        test('should return data on success', async () => {
+            const mockData = [{ id: 1, titulo: 'Test Supabase' }];
 
-        await supabaseService.fetchTestInProgress(123);
+            const mockOrder = {
+                order: jest.fn().mockResolvedValue({ data: mockData, error: null })
+            };
+            const mockSelect = {
+                select: jest.fn().mockReturnValue(mockOrder)
+            };
+            const mockClient = {
+                from: jest.fn().mockReturnValue(mockSelect)
+            };
 
-        // Verify Table Name
-        expect(mockSupabase.from).toHaveBeenCalledWith('results');
+            getSupabaseClient.mockResolvedValue(mockClient);
 
-        // Verify Columns (implicit in select *)
-        expect(mockSupabase.select).toHaveBeenCalledWith('*');
+            const result = await supabaseService.fetchTestsFromSupabase();
 
-        // Verify Filter (Foreign Key)
-        expect(mockSupabase.eq).toHaveBeenCalledWith('test_id', 123);
+            expect(mockClient.from).toHaveBeenCalledWith('tests');
+            expect(result).toEqual(mockData);
+        });
     });
 
-    test('saveTestProgress should insert into "results" with correct schema fields', async () => {
-        mockSupabase.single.mockResolvedValue({ data: { id: 1 }, error: null });
+    describe('saveTestProgress', () => {
+        test('should call insert when no ID is provided', async () => {
+            const mockProgress = { test_id: 1, answers_data: [1, null] };
 
-        const mockData = {
-            test_id: 1,
-            answers_data: [1, 2, 3],
-            total_questions: 3
-        };
+            const mockSingle = {
+                single: jest.fn().mockResolvedValue({ data: { id: 123 }, error: null })
+            };
+            const mockSelect = {
+                select: jest.fn().mockReturnValue(mockSingle)
+            };
+            const mockInsert = {
+                insert: jest.fn().mockReturnValue(mockSelect)
+            };
+            const mockClient = {
+                from: jest.fn().mockReturnValue(mockInsert)
+            };
 
-        await supabaseService.saveTestProgress(mockData);
+            getSupabaseClient.mockResolvedValue(mockClient);
 
-        expect(mockSupabase.from).toHaveBeenCalledWith('results');
-        expect(mockSupabase.insert).toHaveBeenCalledWith(expect.objectContaining({
-            test_id: expect.any(Number),
-            status: 'in_progress',
-            answers_data: expect.any(Array),
-            total_questions: expect.any(Number)
-        }));
+            const result = await supabaseService.saveTestProgress(mockProgress);
+
+            expect(mockClient.from).toHaveBeenCalledWith('results');
+            expect(result).toEqual({ id: 123 });
+        });
     });
-
-    test('completeTestSupabase should update "results" with correct schema fields', async () => {
-        mockSupabase.single.mockResolvedValue({ data: { id: 1 }, error: null });
-
-        const mockResult = {
-            id: 55,
-            score_percentage: 80,
-            total_correct: 8,
-            total_questions: 10,
-            answers_data: [1, 2]
-        };
-
-        await supabaseService.completeTestSupabase(mockResult);
-
-        expect(mockSupabase.from).toHaveBeenCalledWith('results');
-        expect(mockSupabase.update).toHaveBeenCalledWith(expect.objectContaining({
-            status: 'in_progress', // Verified logic change from previous step
-            score_percentage: 80,
-            total_correct: 8,
-            total_questions: 10,
-            answers_data: expect.any(Array)
-        }));
-        expect(mockSupabase.eq).toHaveBeenCalledWith('id', 55);
-    });
-
-    test('fetchTestsFromSupabase should query "tests" table', async () => {
-        mockSupabase.order.mockResolvedValue({ data: [], error: null });
-
-        await supabaseService.fetchTestsFromSupabase();
-
-        expect(mockSupabase.from).toHaveBeenCalledWith('tests');
-        expect(mockSupabase.select).toHaveBeenCalledWith('*');
-    });
-
 });

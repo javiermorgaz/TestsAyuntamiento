@@ -3,29 +3,25 @@
 /**
  * Script para generar automáticamente el archivo tests_index.json
  * Lee todos los archivos JSON de /data/tests/ y genera el índice
- * Opcionalmente sincroniza con Supabase si las credenciales están disponibles
- *
- * Uso: npm run build-index
  */
 
-const fs = require('fs');
-const path = require('path');
-const { createClient } = require('@supabase/supabase-js');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createClient } from '@supabase/supabase-js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // --- 1. CONFIGURACIÓN DE RUTAS Y CONSTANTES ---
 const DATA_DIR = path.join(__dirname, '../data');
 const TESTS_DIR = path.join(DATA_DIR, 'tests');
 const OUTPUT_FILE = path.join(DATA_DIR, 'tests_index.json');
-const TESTS_TABLE = 'tests'; // Nombre de tu tabla
+const TESTS_TABLE = 'tests';
 
-// Ruta al archivo de credenciales (dentro del proyecto en config/)
 const AUTH_FILE_PATH = path.join(__dirname, '..', 'config', 'supabaseAuth.txt');
 
 // --- 2. FUNCIÓN PARA CARGAR CREDENCIALES ---
-/**
- * Carga y parsea el archivo de credenciales con formato KEY=VALUE.
- * Busca la URL pública (para la conexión) y la SERVICE_KEY (para permisos).
- */
 function loadAuthFile() {
     try {
         console.log(`🔎 Buscando credenciales en: ${AUTH_FILE_PATH}`);
@@ -33,48 +29,41 @@ function loadAuthFile() {
         const content = fs.readFileSync(AUTH_FILE_PATH, 'utf-8');
         const config = {};
 
-        // Parsea el archivo línea por línea con formato KEY=VALUE
         content.split('\n').forEach(line => {
             const trimmedLine = line.trim();
             if (trimmedLine && !trimmedLine.startsWith('#')) {
-                // Usa un regex para manejar el primer '=' y el valor
                 const match = trimmedLine.match(/^([^=]+)=(.*)$/);
                 if (match) {
                     const key = match[1].trim();
-                    // Limpia comillas del valor
                     const value = match[2].trim().replace(/['"]+/g, '');
                     config[key] = value;
                 }
             }
         });
 
-        // Validaciones necesarias para el script de sincronización
         const SUPABASE_URL = config.NEXT_PUBLIC_SUPABASE_URL;
         const SERVICE_KEY = config.SUPABASE_SERVICE_KEY || config.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
         if (!SUPABASE_URL || !SERVICE_KEY) {
-            throw new Error(`El archivo debe contener NEXT_PUBLIC_SUPABASE_URL y (SUPABASE_SERVICE_KEY o NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY).`);
+            throw new Error(`El archivo debe contener NEXT_PUBLIC_SUPABASE_URL y credentials.`);
         }
 
         console.log('✅ Credenciales cargadas exitosamente.');
         return { SUPABASE_URL, SERVICE_KEY };
 
     } catch (error) {
-        console.warn(`\n⚠️ Error al cargar las credenciales desde el archivo. Solo se generará el índice local: ${error.message}`);
+        console.warn(`\n⚠️ Error al cargar las credenciales: ${error.message}`);
         return null;
     }
 }
 
 // --- 3. LÓGICA PRINCIPAL DEL SCRIPT ---
 async function buildIndexAndSync() {
-
-    // Cargar credenciales de Supabase (opcional)
     const authConfig = loadAuthFile();
     let supabase = null;
 
     if (authConfig) {
         try {
-            // Usamos la SERVICE_KEY para crear el cliente con permisos de administrador
             supabase = createClient(authConfig.SUPABASE_URL, authConfig.SERVICE_KEY);
             console.log('🔗 Cliente de Supabase inicializado con SERVICE_KEY.');
         } catch (e) {
@@ -85,10 +74,7 @@ async function buildIndexAndSync() {
     console.log('🔍 Escaneando tests en /data/tests/...\n');
 
     try {
-        // Leer todos los archivos en /data/tests/
         const files = fs.readdirSync(TESTS_DIR);
-
-        // Filtrar solo archivos .json que sean tests (no el index)
         const testFiles = files.filter(file =>
             file.endsWith('.json') &&
             file !== 'tests_index.json' &&
@@ -101,8 +87,6 @@ async function buildIndexAndSync() {
         }
 
         console.log(`✅ Encontrados ${testFiles.length} archivos de test:\n`);
-
-        // Procesar cada archivo y extraer metadata
         const testsIndex = [];
 
         testFiles.forEach((file, index) => {
@@ -111,10 +95,8 @@ async function buildIndexAndSync() {
 
             try {
                 const testData = JSON.parse(fileContent);
-
-                // Validar que tenga la estructura correcta
                 if (!testData.preguntas || !Array.isArray(testData.preguntas)) {
-                    console.log(`⚠️  ${file} no tiene estructura válida (falta 'preguntas')`);
+                    console.log(`⚠️  ${file} no tiene estructura válida`);
                     return;
                 }
 
@@ -126,57 +108,33 @@ async function buildIndexAndSync() {
                 };
 
                 testsIndex.push(testEntry);
-                console.log(`   📝 ${file}`);
-                console.log(`      - ID: ${testEntry.id}`);
-                console.log(`      - Título: ${testEntry.titulo}`);
-                console.log(`      - Preguntas: ${testEntry.num_preguntas}\n`);
+                console.log(`   📝 ${file} - ID: ${testEntry.id}`);
 
             } catch (parseError) {
                 console.log(`❌ Error parseando ${file}: ${parseError.message}`);
             }
         });
 
-        // Ordenar por ID
         testsIndex.sort((a, b) => a.id - b.id);
 
-        // --- 4. LÓGICA DE SINCRONIZACIÓN CON SUPABASE ---
         if (supabase && testsIndex.length > 0) {
             console.log('\n🔄 Sincronizando con Supabase...');
-
-            // Usar UPSERT en lugar de DELETE + INSERT para evitar conflictos con foreign keys
-            // UPSERT actualiza si existe (por id) o inserta si no existe
             const { data, error: upsertError } = await supabase
                 .from(TESTS_TABLE)
-                .upsert(testsIndex, {
-                    onConflict: 'id',
-                    ignoreDuplicates: false  // Actualiza si ya existe
-                })
+                .upsert(testsIndex, { onConflict: 'id' })
                 .select();
 
             if (upsertError) {
-                throw new Error(`Error al sincronizar datos en la tabla ${TESTS_TABLE}: ${upsertError.message}`);
+                throw new Error(`Error al sincronizar datos: ${upsertError.message}`);
             }
-            console.log(`   ✅ Sincronizados ${data.length} tests en Supabase (insertados/actualizados).`);
+            console.log(`   ✅ Sincronizados ${data.length} tests en Supabase.`);
         }
 
-        // --- 5. ESCRIBIR ARCHIVO LOCAL ---
-        fs.writeFileSync(
-            OUTPUT_FILE,
-            JSON.stringify(testsIndex, null, 2),
-            'utf-8'
-        );
-
-        console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-        console.log(`✅ Índice generado correctamente!`);
-        console.log(`📄 Archivo: ${OUTPUT_FILE}`);
-        console.log(`📊 Total de tests: ${testsIndex.length}`);
-        if (supabase) {
-            console.log(`🔗 Datos sincronizados con Supabase`);
-        }
-        console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(testsIndex, null, 2), 'utf-8');
+        console.log(`\n✅ Índice generado correctamente: ${OUTPUT_FILE}\n`);
 
     } catch (error) {
-        console.error('❌ Error al generar el índice:', error.message);
+        console.error('❌ Error fatal:', error.message);
         process.exit(1);
     }
 }

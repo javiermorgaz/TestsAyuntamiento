@@ -43,8 +43,10 @@ function clearResults() {
     localStorage.removeItem(STORAGE_KEY);
 }
 
-// Hacer funciones disponibles globalmente
-window.saveResult = saveResult;
-window.getResults = getResults;
-window.getTestResults = getTestResults;
-window.clearResults = clearResults;
+// Exportaciones para ES Modules
+export {
+    saveResult,
+    getResults,
+    getTestResults,
+    clearResults
+};

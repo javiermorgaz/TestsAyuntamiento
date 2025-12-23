@@ -63,5 +63,5 @@ async function getSupabaseClient() {
     return await initSupabase();
 }
 
-// Hacer disponible globalmente
-window.getSupabaseClient = getSupabaseClient;
+// Exportaciones para ES Modules
+export { getSupabaseClient };

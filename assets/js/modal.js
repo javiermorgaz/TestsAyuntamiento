@@ -144,6 +144,8 @@ function closeModal(overlay, callback) {
     }, 300); // Duración de la animación
 }
 
-// Hacer las funciones disponibles globalmente
-window.showModal = showModal;
-window.showConfirm = showConfirm;
+// Exportaciones para ES Modules
+export {
+    showModal,
+    showConfirm
+};

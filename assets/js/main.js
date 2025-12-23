@@ -1,8 +1,10 @@
 // assets/js/main.js
 import '/src/style.css';
 import pkg from '../../package.json';
+import { fetchTests, findTestProgress, deleteProgress } from './dataService.js';
+import { showConfirm, showModal } from './modal.js';
+import { loadTest, loadTestWithProgress } from './test.js';
 
-const TESTS_INDEX_URL = './data/tests_index.json';
 const testsListSection = document.getElementById('tests-list');
 const testsContainer = document.getElementById('tests-container');
 
@@ -13,7 +15,6 @@ async function updateAppVersionInfo() {
     const versionEl = document.getElementById('app-version');
     const dateEl = document.getElementById('app-date');
 
-    // Actualizar fecha
     if (dateEl) {
         const now = new Date();
         const day = String(now.getDate()).padStart(2, '0');
@@ -22,24 +23,21 @@ async function updateAppVersionInfo() {
         dateEl.textContent = `${day}/${month}/${year}`;
     }
 
-    // Cargar versión desde el import de Vite
     try {
         if (versionEl && pkg) {
             versionEl.textContent = `Versión ${pkg.version}`;
         }
     } catch (error) {
         console.warn('⚠️ No se pudo cargar la versión:', error);
-        if (versionEl) versionEl.textContent = 'Versión (N/D)'; // Fallback genérico
+        if (versionEl) versionEl.textContent = 'Versión (N/D)';
     }
 }
 
 /**
  * Carga el archivo de índice de tests y llama a la función de renderizado.
- * Usa dataService para intentar Supabase primero, luego fallback a JSON local.
  */
 async function loadTestsList() {
     try {
-        // Mostrar skeleton loader moderno con texto
         testsContainer.innerHTML = `
             <div class="col-span-full">
                 <p class="text-white drop-shadow-lg text-center text-2xl md:text-3xl font-light mb-8 animate-pulse" style="color: #ffffff;">Cargando tests...</p>
@@ -55,22 +53,18 @@ async function loadTestsList() {
             </div>
         `;
 
-        // Usar dataService (intenta Supabase → fallback JSON)
-        const tests = await window.fetchTests(); // fetchTests in dataService (attached to window)
-
+        const tests = await fetchTests();
         await renderTestsList(tests);
 
     } catch (error) {
         console.error("Error crítico al cargar listado:", error);
         testsContainer.innerHTML =
-            '<p class="text-white text-center bg-red-500/20 p-4 rounded-lg border border-red-500/50">⚠️ No se pudieron cargar los tests. Revisa la consola y las rutas de los archivos JSON.</p>';
+            '<p class="text-white text-center bg-red-500/20 p-4 rounded-lg border border-red-500/50">⚠️ No se pudieron cargar los tests. Revisa la consola.</p>';
     }
 }
 
 /**
  * Genera el HTML para mostrar la lista de tests disponibles.
- * Ahora usa Tailwind CSS para un diseño moderno con glassmorphism.
- * @param {Array<Object>} tests - Array de objetos de tests.
  */
 async function renderTestsList(tests) {
     if (tests.length === 0) {
@@ -79,17 +73,14 @@ async function renderTestsList(tests) {
     }
 
     let htmlContent = '';
+    const itemsData = [];
 
-    // Procesar cada test de forma asíncrona
     for (const test of tests) {
-        // Buscar si hay progreso en curso
-        const progress = await window.findTestProgress(test.id);
+        const progress = await findTestProgress(test.id);
 
         let progressHTML = '';
-        let buttonHTML = '';
-        let resetButtonHTML = '';
+        let buttonsHTML = '';
 
-        // Mostrar indicador de progreso si existe
         if (progress) {
             const answeredCount = progress.answers_data.filter(a => a !== null).length;
             const percentage = Math.round((answeredCount / progress.total_questions) * 100);
@@ -101,130 +92,112 @@ async function renderTestsList(tests) {
                         <span class="text-sm font-semibold text-primary">${answeredCount}/${progress.total_questions}</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full transition-all duration-300" style="width: ${percentage}%"></div>
+                        <div class="bg-gradient-to-r from-accent to-green-600 h-2.5 rounded-full" style="width: ${percentage}%"></div>
                     </div>
                 </div>
             `;
 
-            // Botón para continuar (verde)
-            buttonHTML = `
-                <button class="flex-1 bg-gradient-to-r from-accent to-green-600 hover:from-green-600 hover:to-accent text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="startTest(${test.id}, '${test.fichero}')">
-                    ▶️ Continuar Test
-                </button>
-            `;
-
-            // Botón para resetear (naranja)
-            resetButtonHTML = `
-                <button class="flex-1 bg-gradient-to-r from-reset to-orange-600 hover:from-orange-600 hover:to-reset text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="resetTest(${test.id}, '${test.fichero}')">
-                    🔄 Empezar de Nuevo
-                </button>
+            buttonsHTML = `
+                <div class="flex gap-3 flex-col sm:flex-row">
+                    <button class="btn-start-test flex-1 bg-gradient-to-r from-accent to-green-600 text-white py-2.5 px-5 rounded-lg shadow-md" data-id="${test.id}" data-file="${test.fichero}">
+                        ▶️ Continuar Test
+                    </button>
+                    <button class="btn-reset-test flex-1 bg-gradient-to-r from-reset to-orange-600 text-white py-2.5 px-5 rounded-lg shadow-md" data-id="${test.id}" data-file="${test.fichero}">
+                        🔄 Empezar de Nuevo
+                    </button>
+                </div>
             `;
         } else {
-            // Botón normal para comenzar (azul)
-            buttonHTML = `
-                <button class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-normal text-sm py-2.5 px-5 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" onclick="startTest(${test.id}, '${test.fichero}')">
+            buttonsHTML = `
+                <button class="btn-start-test w-full bg-gradient-to-r from-primary to-secondary text-white py-2.5 px-5 rounded-lg shadow-md" data-id="${test.id}" data-file="${test.fichero}">
                     🚀 Comenzar Test
                 </button>
             `;
         }
 
         htmlContent += `
-            <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 select-none">
+            <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
                 <h3 class="text-base font-bold text-dark mb-2">${test.titulo}</h3>
                 <p class="text-sm text-gray-500 mb-4 flex items-center gap-2 dark:text-gray-400">
                     <span class="text-xl">📋</span>
                     <span>${test.num_preguntas} preguntas</span>
                 </p>
                 ${progressHTML}
-                <div class="flex gap-3 ${progress ? 'flex-col sm:flex-row' : ''}">
-                    ${buttonHTML}
-                    ${resetButtonHTML}
-                </div>
+                ${buttonsHTML}
             </div>
         `;
     }
 
     testsContainer.innerHTML = htmlContent;
-}
 
+    // Vinculación de eventos (sin onclick)
+    testsContainer.querySelectorAll('.btn-start-test').forEach(btn => {
+        btn.addEventListener('click', () => startTest(parseInt(btn.dataset.id), btn.dataset.file));
+    });
 
-// Función para iniciar el test
-// Ahora detecta si hay progreso anterior y lo carga directamente
-async function startTest(testId, fileName) {
-    try {
-        // Buscar progreso existente en Supabase
-        const progress = await window.findTestProgress(testId);
-
-        if (progress) {
-            // Continuar test con progreso guardado directamente
-            testsListSection.style.display = 'none';
-            document.getElementById('test-view').style.display = 'block';
-            document.getElementById('result-view').style.display = 'none';
-            document.getElementById('app-footer').style.display = 'none';
-            window.scrollTo(0, 0);
-
-            await window.loadTestWithProgress(testId, fileName, progress);
-            return;
-        }
-    } catch (error) {
-        console.warn('⚠️ Error al verificar progreso:', error);
-    }
-
-    // Continuar con flujo normal (test nuevo)
-    testsListSection.style.display = 'none';
-    document.getElementById('test-view').style.display = 'block';
-    document.getElementById('result-view').style.display = 'none';
-    document.getElementById('app-footer').style.display = 'none';
-    window.scrollTo(0, 0);
-
-    // Llamar a la función que cargará el test real (definida en test.js)
-    window.loadTest(testId, fileName);
+    testsContainer.querySelectorAll('.btn-reset-test').forEach(btn => {
+        btn.addEventListener('click', () => resetTest(parseInt(btn.dataset.id), btn.dataset.file));
+    });
 }
 
 /**
- * Resetea el progreso de un test específico
- * Muestra confirmación antes de eliminar y navega al test
- * @param {number} testId - ID del test a resetear
- * @param {string} fileName - Nombre del archivo del test
+ * Función para iniciar el test
+ */
+async function startTest(testId, fileName) {
+    try {
+        const progress = await findTestProgress(testId);
+
+        testsListSection.style.display = 'none';
+        document.getElementById('test-view').style.display = 'block';
+        document.getElementById('result-view').style.display = 'none';
+        const appFooter = document.getElementById('app-footer');
+        if (appFooter) appFooter.style.display = 'none';
+        window.scrollTo(0, 0);
+
+        if (progress) {
+            await loadTestWithProgress(testId, fileName, progress);
+        } else {
+            await loadTest(testId, fileName);
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al iniciar test:', error);
+    }
+}
+
+/**
+ * Resetea el progreso de un test
  */
 async function resetTest(testId, fileName) {
     try {
-        const isConfirmed = await window.showConfirm(
+        const isConfirmed = await showConfirm(
             '¿Estás seguro de que quieres eliminar el progreso de este test?\n\nEsta acción no se puede deshacer.',
             'Confirmar Reseteo'
         );
 
         if (isConfirmed) {
-            // Buscar el progreso actual
-            const progress = await window.findTestProgress(testId);
-
+            const progress = await findTestProgress(testId);
             if (progress) {
-                // Eliminar el progreso
-                await window.deleteProgress(progress.id);
-                console.log('🗑️ Progreso eliminado, iniciando test nuevo');
+                await deleteProgress(progress.id);
 
-                // Navegar directamente al test
                 testsListSection.style.display = 'none';
                 document.getElementById('test-view').style.display = 'block';
                 document.getElementById('result-view').style.display = 'none';
                 window.scrollTo(0, 0);
 
-                // Cargar el test
-                window.loadTest(testId, fileName);
+                await loadTest(testId, fileName);
             }
         }
     } catch (error) {
         console.error('Error al resetear test:', error);
-        await window.showModal('Hubo un error al resetear el test. Por favor, inténtalo de nuevo.', 'Error');
+        await showModal('Hubo un error al resetear el test.', 'Error');
     }
 }
 
-// Ejecutar la carga al iniciar la aplicación
-updateAppVersionInfo();
-loadTestsList();
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+    updateAppVersionInfo();
+    loadTestsList();
+});
 
-// Expose functions to window for legacy onclick handlers
-window.loadTestsList = loadTestsList;
-window.startTest = startTest;
-window.resetTest = resetTest;
-window.updateAppVersionInfo = updateAppVersionInfo;
+// Exportaciones para compatibilidad momentánea si fuera necesario
+// window.loadTestsList = loadTestsList;

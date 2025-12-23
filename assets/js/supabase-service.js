@@ -1,4 +1,5 @@
 // assets/js/supabase-service.js
+import { getSupabaseClient } from './supabase-config.js';
 
 /**
  * Servicio para gestionar las operaciones con Supabase
@@ -15,7 +16,7 @@
  */
 async function fetchTestsFromSupabase() {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -45,7 +46,7 @@ async function fetchTestsFromSupabase() {
  */
 async function fetchTestById(testId) {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -79,7 +80,7 @@ async function fetchTestById(testId) {
  */
 async function fetchTestInProgress(testId) {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -119,7 +120,7 @@ async function fetchTestInProgress(testId) {
  */
 async function saveTestProgress(progressData) {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -185,7 +186,7 @@ async function saveTestProgress(progressData) {
  */
 async function completeTestSupabase(resultData) {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -249,7 +250,7 @@ async function completeTestSupabase(resultData) {
  */
 async function fetchTestHistory(testId, limit = 10) {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -281,7 +282,7 @@ async function fetchTestHistory(testId, limit = 10) {
  */
 async function fetchAllResults() {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -312,7 +313,7 @@ async function fetchAllResults() {
  */
 async function deleteTestProgress(resultId) {
     try {
-        const client = await window.getSupabaseClient();
+        const client = await getSupabaseClient();
         if (!client) {
             throw new Error('Cliente de Supabase no disponible');
         }
@@ -337,25 +338,17 @@ async function deleteTestProgress(resultId) {
 
 // Hacer disponible globalmente
 // Hacer disponible globalmente
-window.fetchTestsFromSupabase = fetchTestsFromSupabase;
-window.fetchTestById = fetchTestById;
-window.fetchTestInProgress = fetchTestInProgress;
-window.saveTestProgress = saveTestProgress;
-window.completeTestSupabase = completeTestSupabase;
-window.fetchTestHistory = fetchTestHistory;
-window.fetchAllResults = fetchAllResults;
-window.deleteTestProgress = deleteTestProgress;
 
-// Enable testing if running in Node environment
-if (typeof module !== 'undefined') {
-    module.exports = {
-        fetchTestsFromSupabase,
-        fetchTestById,
-        fetchTestInProgress,
-        saveTestProgress,
-        completeTestSupabase,
-        fetchTestHistory,
-        fetchAllResults,
-        deleteTestProgress
-    };
-}
+
+// Exportaciones para ES Modules
+export {
+    getSupabaseClient,
+    fetchTestsFromSupabase,
+    fetchTestById,
+    fetchTestInProgress,
+    saveTestProgress,
+    completeTestSupabase,
+    fetchTestHistory,
+    fetchAllResults,
+    deleteTestProgress
+};

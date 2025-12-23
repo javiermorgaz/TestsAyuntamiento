@@ -1,13 +1,14 @@
 {
   "name": "test-app-oposiciones",
-  "version": "2.2.5",
+  "version": "2.2.6",
+  "type": "module",
   "description": "Aplicación de tests para oposiciones de ayuntamiento",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "build-index": "node scripts/build-index.js",
-    "test": "jest tests/"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest tests/"
   },
   "keywords": [
     "tests",
