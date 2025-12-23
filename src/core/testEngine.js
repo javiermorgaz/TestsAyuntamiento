@@ -5,7 +5,7 @@
  * procesar los datos resultantes sin tocar el DOM.
  */
 
-import StateManager from './stateManager.js';
+import StateManager from '@core/stateManager.js';
 
 const TestEngine = {
     /**

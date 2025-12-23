@@ -12,7 +12,7 @@ global.console = {
 };
 
 // Import the module under test
-const StateManager = await import('../assets/js/stateManager.js');
+const StateManager = await import('../src/core/stateManager.js');
 
 describe('StateManager (State Management Tests)', () => {
 

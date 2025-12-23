@@ -1,9 +1,9 @@
 // assets/js/main.js
 import '/src/style.css';
 import pkg from '../../package.json';
-import { fetchTests, findTestProgress, deleteProgress } from './dataService.js';
-import { showConfirm, showModal } from './modal.js';
-import { loadTest, loadTestWithProgress } from './test.js';
+import { fetchTests, findTestProgress, deleteProgress } from '@services/dataService.js';
+import { showConfirm, showModal } from '@ui/modal.js';
+import { loadTest, loadTestWithProgress } from '@core/test.js';
 
 const testsListSection = document.getElementById('tests-list');
 const testsContainer = document.getElementById('tests-container');

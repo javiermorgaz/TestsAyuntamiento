@@ -6,6 +6,15 @@ export default defineConfig({
     plugins: [
         tailwindcss(),
     ],
+    resolve: {
+        alias: {
+            '@': '/src',
+            '@core': '/src/core',
+            '@services': '/src/services',
+            '@ui': '/src/ui',
+            '@config': '/src/config'
+        }
+    },
     server: {
         open: true, // Auto-open browser
     },

@@ -103,21 +103,32 @@ La aplicación guarda automáticamente tus últimos intentos de cada test. Puede
 TestsAyuntamiento/
 ├── index.html                      # Punto de entrada
 ├── src/
-│   └── style.css                   # Estilos (Tailwind CSS v4)
-├── assets/js/
-│   ├── main.js                     # Inicialización (tipo module)
-│   ├── test.js                     # Lógica de ejecución de tests
-│   ├── storage.js                  # Persistencia local
-│   ├── supabase-config.js          # Configuración de cliente
-│   ├── supabase-service.js         # API de Supabase
-│   └── dataService.js              # Capa de abstracción híbrida
+│   ├── style.css                   # Estilos principales (Tailwind CSS v4)
+│   ├── modal.css                   # Estilos de modales
+│   ├── core/                       # Lógica de negocio
+│   │   ├── stateManager.js         # Gestión de estado centralizado
+│   │   ├── testEngine.js           # Motor de evaluación de tests
+│   │   └── test.js                 # Orquestador principal
+│   ├── services/                   # Capa de datos y APIs
+│   │   ├── dataService.js          # Abstracción híbrida (Supabase + Local)
+│   │   ├── supabase-service.js     # API de Supabase
+│   │   ├── supabase-config.js      # Configuración de cliente
+│   │   └── storage.js              # Persistencia local (localStorage)
+│   ├── ui/                         # Interfaz de usuario
+│   │   ├── main.js                 # Inicialización de la app
+│   │   ├── testRenderer.js         # Renderizado del DOM
+│   │   ├── modal.js                # Diálogos modales
+│   │   └── darkMode.js             # Toggle de tema oscuro
+│   └── config/                     # Configuración
+│       └── tailwind-config.js      # Configuración de Tailwind
 ├── public/                         # Assets estáticos (imágenes, favicons)
-├── data/                           # Contenido de los tests (JSON)
+│   └── data/                       # Contenido de los tests (JSON)
 ├── db/                             # Esquema SQL de referencia
-├── tests/                          # Suite de tests (Jest)
+├── tests/                          # Suite de tests unitarios (Jest)
 ├── .env                            # Variables de entorno (No incluido en Git)
-├── package.json                    # Dependencias y scripts de Vite
-└── vite.config.js                  # Configuración del bundler
+├── jest.config.json                # Configuración de Jest
+├── package.json                    # Dependencias y scripts
+├── vite.config.js                  # Configuración de Vite + path aliases
 ├── README.md                       # Este archivo
 └── docs/
     ├── SUPABASE_INTEGRATION.md     # Documentación técnica
@@ -315,6 +326,12 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 - ✅ **Refinamiento UX**: Ajustes de jerarquía visual y tipografía.
 - ✅ **Automatización**: Versionado dinámico sin redundancias hardcodeadas.
 
+**v2.3** ✅ **COMPLETADO** (2025-12-23)
+- ✅ **Reorganización de Estructura**: Migración de `assets/js/` a `src/` con categorización (core, services, ui, config).
+- ✅ **Path Aliases**: Configuración de aliases Vite + Jest para imports limpios (`@core`, `@services`, `@ui`, `@config`).
+- ✅ **Consolidación CSS**: Eliminación de archivos duplicados, todos los estilos en `src/`.
+- ✅ **Jest Config**: Configuración de Jest para resolver path aliases.
+
 **v3.0** (Próximamente)
 - 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)
 - 📖 Modo de estudio inteligente
@@ -329,4 +346,4 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 
 ---
 
-**Última actualización**: 2025-12-19
+**Última actualización**: 2025-12-23

@@ -18,7 +18,7 @@ window.scrollTo = jest.fn();
 window.scrollBy = jest.fn();
 
 // We mock StateManager because TestRenderer uses it
-jest.unstable_mockModule('../assets/js/stateManager.js', () => ({
+jest.unstable_mockModule('../src/core/stateManager.js', () => ({
     default: {
         get: jest.fn((key) => {
             if (key === 'currentViewMode') return window._currentViewMode || 'list';
@@ -37,7 +37,7 @@ jest.unstable_mockModule('../assets/js/stateManager.js', () => ({
 Object.defineProperty(window, 'scrollY', { value: 0, writable: true });
 
 // Import the module under test (TestRenderer)
-const { default: TestRenderer } = await import('../assets/js/testRenderer.js');
+const { default: TestRenderer } = await import('../src/ui/testRenderer.js');
 
 describe('TestRenderer - Slider Logic (Unit Tests)', () => {
     let questionsContainer;

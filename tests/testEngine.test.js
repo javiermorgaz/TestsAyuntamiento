@@ -12,7 +12,7 @@ global.console = {
 };
 
 // Import the module under test
-const TestEngine = await import('../assets/js/testEngine.js');
+const TestEngine = await import('../src/core/testEngine.js');
 
 describe('TestEngine (Pure Logic Tests)', () => {
 

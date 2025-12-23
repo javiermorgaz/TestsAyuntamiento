@@ -5,11 +5,11 @@
  * interfaz de usuario (TestRenderer) utilizando el estado centralizado (StateManager).
  */
 
-import StateManager from './stateManager.js';
-import TestEngine from './testEngine.js';
-import TestRenderer from './testRenderer.js';
-import { saveProgress, completeTest } from './dataService.js';
-import { saveResult } from './storage.js';
+import StateManager from '@core/stateManager.js';
+import TestEngine from '@core/testEngine.js';
+import TestRenderer from '@ui/testRenderer.js';
+import { saveProgress, completeTest } from '@services/dataService.js';
+import { saveResult } from '@services/storage.js';
 
 let autoSaveTimeout = null;
 

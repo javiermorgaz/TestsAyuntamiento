@@ -12,7 +12,7 @@ global.console = {
 };
 
 // Mock dependencies as modules
-jest.unstable_mockModule('../assets/js/supabase-service.js', () => ({
+jest.unstable_mockModule('../src/services/supabase-service.js', () => ({
     getSupabaseClient: jest.fn(),
     fetchTestsFromSupabase: jest.fn(),
     fetchTestById: jest.fn(),
@@ -24,7 +24,7 @@ jest.unstable_mockModule('../assets/js/supabase-service.js', () => ({
     deleteTestProgress: jest.fn()
 }));
 
-jest.unstable_mockModule('../assets/js/storage.js', () => ({
+jest.unstable_mockModule('../src/services/storage.js', () => ({
     getResults: jest.fn(),
     saveResult: jest.fn(),
     getTestResults: jest.fn(),
@@ -38,11 +38,11 @@ const {
     fetchTestInProgress,
     saveTestProgress,
     completeTestSupabase
-} = await import('../assets/js/supabase-service.js');
-const { getResults, saveResult } = await import('../assets/js/storage.js');
+} = await import('../src/services/supabase-service.js');
+const { getResults, saveResult } = await import('../src/services/storage.js');
 
 // Import the module under test
-const dataService = await import('../assets/js/dataService.js');
+const dataService = await import('../src/services/dataService.js');
 
 describe('Data Service (Unit Tests)', () => {
 

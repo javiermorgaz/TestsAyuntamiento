@@ -5,7 +5,7 @@
  * Este módulo elimina la necesidad de handlers inline (onclick) en el HTML.
  */
 
-import StateManager from './stateManager.js';
+import StateManager from '@core/stateManager.js';
 
 const TestRenderer = {
     _sliderObserver: null,

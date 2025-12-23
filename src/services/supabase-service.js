@@ -1,5 +1,5 @@
 // assets/js/supabase-service.js
-import { getSupabaseClient } from './supabase-config.js';
+import { getSupabaseClient } from '@services/supabase-config.js';
 
 /**
  * Servicio para gestionar las operaciones con Supabase
