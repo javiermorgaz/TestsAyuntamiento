@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* 1. SOURCE SCANNING */
-@source "../index.html";
-@source "../assets/js/**/*.js";
+@source "../../index.html";
+@source "../**/*.{js,jsx,ts,tsx}";
 
 /* 2. THEME CONFIGURATION */
 @theme {
