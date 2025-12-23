@@ -65,7 +65,6 @@ const StateManager = (function () {
         _state.userResponses[index] = answer;
     }
 
-    // Exponer API pública al objeto window temporalmente para v2.2 compat
     return {
         get,
         set,
@@ -74,8 +73,5 @@ const StateManager = (function () {
         setAnswer
     };
 })();
-
-// Exponer globalmente
-window.stateManager = StateManager;
 
 export default StateManager;

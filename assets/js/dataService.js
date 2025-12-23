@@ -302,17 +302,6 @@ async function checkStatus() {
     console.log(`   localStorage: ${status.localStorage ? '✅' : '❌'}`);
 })();
 
-// Hacer disponible globalmente
-window.fetchTests = fetchTests;
-window.fetchHistory = fetchHistory;
-window.findTestProgress = findTestProgress;
-window.saveProgress = saveProgress;
-window.deleteProgress = deleteProgress;
-window.completeTest = completeTest;
-window.checkStatus = checkStatus;
-window.isSupabaseAvailable = isSupabaseAvailable;
-window.saveToLocalStorage = saveToLocalStorage;
-
 // Exportaciones para ES Modules
 export {
     fetchTests,

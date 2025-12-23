@@ -48,30 +48,30 @@ const supabase = createClient(
 
 ---
 
-## 🛠️ Servicios Disponibles (Globales)
+## 🛠️ Servicios Disponibles (ES Modules)
 
-Debido a la arquitectura modular, los servicios se exponen en el objeto `window` para garantizar la interoperabilidad entre módulos sin dependencias circulares.
+Con la nueva arquitectura modular (v3.0), los servicios ya no se exponen en el objeto global `window`. Se deben importar explícitamente desde sus respectivos módulos.
 
 ### 📚 Gestión de Tests (`supabase-service.js`)
 
-#### `window.fetchTestsFromSupabase()`
+#### `fetchTestsFromSupabase()`
 Obtiene el catálogo completo de tests.
 
-#### `window.fetchTestById(id)`
+#### `fetchTestById(id)`
 Obtiene los detalles de un test específico por su ID.
 
 ### 📝 Gestión de Resultados (`supabase-service.js`)
 
-#### `window.fetchTestInProgress(testId)`
+#### `fetchTestInProgress(testId)`
 Recupera el estado actual de un test que el usuario no ha terminado.
 
-#### `window.saveTestProgress(data)`
+#### `saveTestProgress(data)`
 Guarda el estado actual del test (respuestas seleccionadas) sin finalizarlo.
 
-#### `window.finishTest(data)`
+#### `finishTest(data)`
 Registra un test como completado y guarda la nota final.
 
-#### `window.fetchTestHistory(testId)`
+#### `fetchTestHistory(testId)`
 Obtiene los últimos intentos realizados para un tema específico.
 
 ---

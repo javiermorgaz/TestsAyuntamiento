@@ -23,11 +23,13 @@ Para despliegues públicos (como GitHub Pages), las credenciales se almacenan en
 ## 📁 Archivos Involucrados
 
 ### `assets/js/supabase-config.js`
-Es el punto central de configuración. Utiliza `import.meta.env` (nativo de Vite) para acceder a las claves:
+Es el punto central de configuración. Utiliza `import.meta.env` (nativo de Vite) para acceder a las claves. Al ser un módulo ES, las exporta para que otros servicios las importen de forma segura:
 
 ```javascript
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+export const getSupabaseClient = ...
 ```
 
 ### `.github/workflows/deploy.yml`
