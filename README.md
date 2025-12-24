@@ -102,6 +102,11 @@ La aplicación guarda automáticamente tus últimos intentos de cada test. Puede
 ```
 TestsAyuntamiento/
 ├── index.html                      # Punto de entrada
+├── playwright.config.js            # Configuración de Tests Visuales
+├── .github/                        # Workflows de CI/CD
+│   └── workflows/
+│       ├── deploy.yml              # Despliegue a GitHub Pages
+│       └── tests.yml               # Run Tests (Unit + UI)
 ├── src/
 │   ├── style.css                   # Estilos principales (Tailwind CSS v4)
 │   ├── modal.css                   # Estilos de modales
@@ -265,6 +270,22 @@ npm test
 - `tests/supabaseService.test.js`: Verifica que `assets/js/supabase-service.js` cumple con el esquema de la base de datos (`db/schema.sql`).
 - `tests/sliderLogic.test.js`: Verifica la resiliencia de la sincronización y la adaptación de altura del modo Slider.
 
+### Tests Visuales (E2E)
+- **Librería**: [Playwright](https://playwright.dev/)
+- **Objetivo**: Detectar regresiones visuales (pixel-perfect) y errores de integración.
+- **Ejecución**:
+  ```bash
+  npx playwright test
+  ```
+- **Reportes**: `npx playwright show-report`
+
+### Integración Continua (CI)
+El proyecto utiliza **GitHub Actions** para blindar la calidad del código:
+- **`tests.yml`**: Se ejecuta en cada `push` a `main`.
+  - Corre Tests Unitarios (Jest)
+  - Corre Tests Visuales (Playwright) en entorno macOS (para coincidir con snapshots)
+  - Sube artefactos de error automáticamente
+
 ---
 
 ## 📱 Compatibilidad
@@ -330,7 +351,16 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 - ✅ **Reorganización de Estructura**: Migración de `assets/js/` a `src/` con categorización (core, services, ui, config).
 - ✅ **Path Aliases**: Configuración de aliases Vite + Jest para imports limpios (`@core`, `@services`, `@ui`, `@config`).
 - ✅ **Consolidación CSS**: Eliminación de archivos duplicados, todos los estilos en `src/`.
+- ✅ **Consolidación CSS**: Eliminación de archivos duplicados, todos los estilos en `src/`.
 - ✅ **Jest Config**: Configuración de Jest para resolver path aliases.
+
+**v2.4** ✅ **COMPLETADO** (2025-12-24)
+- ✅ **Unified Mock System**: Provider pattern para gestión robusta de datos reales vs mock.
+- ✅ **Architecture Stability**: Refactor de lógica de Slider (Pure State-Derived).
+
+**v2.5** ✅ **COMPLETADO** (2025-12-24)
+- ✅ **Visual Regression Testing**: Suite completa Playwright (14 baselines).
+- ✅ **CI/CD Pipeline**: GitHub Actions automatizado con runner macOS.
 
 **v3.0** (Próximamente)
 - 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)
