@@ -1,0 +1,66 @@
+{
+    "1": [
+        {
+            "id_p": 1,
+            "enunciado": "De conformidad con la Constitución Española de 1978, corresponde al Rey:",
+            "opciones": [
+                "Sólo sancionar las leyes.",
+                "Sólo promulgar las leyes.",
+                "Sancionar y promulgar las leyes.",
+                "El Patronazgo de las fundaciones."
+            ],
+            "respuesta_correcta": 3,
+            "autogenerado": false
+        },
+        {
+            "id_p": 2,
+            "enunciado": "Según dispone el artículo 1 de la Constitución Española de 1978:",
+            "opciones": [
+                "España se constituye en un Estado social y democrático de Derecho, que propugna como uno de los valores superiores de su ordenamiento constitucional, la igualdad de género.",
+                "España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico, entre otros, la igualdad.",
+                "España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico, entre otros, la pluralidad ideológica.",
+                "España se constituye en un Estado constitucional y parlamentario, que propugna como valores superiores de su ordenamiento jurídico la libertad, entre otros, la justicia."
+            ],
+            "respuesta_correcta": 2,
+            "autogenerado": false
+        },
+        {
+            "id_p": 3,
+            "enunciado": "Según el artículo 72 de la Constitución Española de 1978:",
+            "opciones": [
+                "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría absoluta.",
+                "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría simple.",
+                "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría de dos tercios.",
+                "Las respuestas a), b) y c) son incorrectas."
+            ],
+            "respuesta_correcta": 1,
+            "autogenerado": false
+        }
+    ],
+    "2": [
+        {
+            "id_p": 1,
+            "enunciado": "Pregunta de Mock para Tema 4 - Pregunta 1",
+            "opciones": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "respuesta_correcta": 1,
+            "autogenerado": false
+        },
+        {
+            "id_p": 2,
+            "enunciado": "Pregunta de Mock para Tema 4 - Pregunta 2",
+            "opciones": [
+                "X",
+                "Y",
+                "Z",
+                "W"
+            ],
+            "respuesta_correcta": 2,
+            "autogenerado": false
+        }
+    ]
+}

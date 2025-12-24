@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "titulo": "Test de Mock 1 - Constitución Española",
+        "fichero": "tests/tema1.json",
+        "num_preguntas": 3
+    },
+    {
+        "id": 2,
+        "titulo": "Test de Mock 2 - Estatuto de Autonomía",
+        "fichero": "tests/tema4.json",
+        "num_preguntas": 2
+    }
+]

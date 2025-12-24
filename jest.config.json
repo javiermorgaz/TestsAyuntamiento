@@ -1,6 +1,9 @@
 {
     "testEnvironment": "jsdom",
     "transform": {},
+    "setupFiles": [
+        "<rootDir>/jest.setup.js"
+    ],
     "moduleNameMapper": {
         "^@/(.*)$": "<rootDir>/src/$1",
         "^@core/(.*)$": "<rootDir>/src/core/$1",

@@ -41,8 +41,8 @@ const {
 } = await import('../src/services/supabase-service.js');
 const { getResults, saveResult } = await import('../src/services/storage.js');
 
-// Import the module under test
-const dataService = await import('../src/services/dataService.js');
+// Import the module under test (testing the real implementation specifically)
+const dataService = await import('../src/services/realDataService.js');
 
 describe('Data Service (Unit Tests)', () => {
 
