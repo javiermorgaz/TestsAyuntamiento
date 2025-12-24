@@ -39,11 +39,11 @@ async function updateAppVersionInfo() {
 async function loadTestsList() {
     try {
         testsContainer.innerHTML = `
-            <div class="col-span-full">
+            <div class="col-span-full" id="loading-state">
                 <p class="text-white drop-shadow-lg text-center text-2xl md:text-3xl font-light mb-8 animate-pulse" style="color: #ffffff;">Cargando tests...</p>
                 <div class="space-y-6">
                     ${[1, 2, 3, 4].map(() => `
-                        <div class="glass-card p-6 animate-pulse">
+                        <div class="glass-card p-6 animate-pulse skeleton-card">
                             <div class="h-6 bg-white/30 rounded w-3/4 mb-4 dark:bg-gray-700/50"></div>
                             <div class="h-4 bg-white/20 rounded w-1/2 mb-6 dark:bg-gray-700/30"></div>
                             <div class="h-12 bg-white/25 rounded dark:bg-gray-700/40"></div>
@@ -53,7 +53,9 @@ async function loadTestsList() {
             </div>
         `;
 
+        console.log("🔗 [UI] Llamando a fetchTests()...");
         const tests = await fetchTests();
+        console.log(`✅ [UI] Tests recibidos: ${tests?.length || 0}`);
         await renderTestsList(tests);
 
     } catch (error) {
@@ -194,10 +196,16 @@ async function resetTest(testId, fileName) {
 }
 
 // Inicialización
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
     updateAppVersionInfo();
     loadTestsList();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
 
 // Exportaciones para compatibilidad momentánea si fuera necesario
 // window.loadTestsList = loadTestsList;

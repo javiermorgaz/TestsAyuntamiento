@@ -81,6 +81,24 @@ async function fetchTests() {
     }
 }
 
+/**
+ * Obtiene un test con sus preguntas
+ * @param {number} testId - ID del test
+ * @param {string} fileName - Nombre del archivo JSON (ej: "tests/tema1.json")
+ * @returns {Promise<Object>} Test con título y preguntas
+ */
+async function getTestWithQuestions(testId, fileName) {
+    try {
+        const response = await fetch(`./data/${fileName}`);
+        const testData = await response.json();
+        console.log(`✅ Test ${testId} cargado con ${testData.preguntas.length} preguntas`);
+        return testData;
+    } catch (error) {
+        console.error('❌ Error al cargar test:', error);
+        return null;
+    }
+}
+
 // ============================================
 // GESTIÓN DE HISTORIAL
 // ============================================
@@ -294,17 +312,20 @@ async function checkStatus() {
 // LOG DE INICIALIZACIÓN
 // ============================================
 
-(async function inicializarDataService() {
+// Log de inicialización manual si es necesario
+async function init() {
     const status = await checkStatus();
     console.log('🚀 Data Service inicializado');
     console.log(`   Modo: ${status.modo.toUpperCase()}`);
     console.log(`   Supabase: ${status.supabase ? '✅' : '❌'}`);
     console.log(`   localStorage: ${status.localStorage ? '✅' : '❌'}`);
-})();
+}
+// init(); // Ejecutar bajo demanda
 
 // Object export for provider
 export const realDataService = {
     fetchTests,
+    getTestWithQuestions,
     fetchHistory,
     findTestProgress,
     saveProgress,
@@ -318,6 +339,7 @@ export const realDataService = {
 // Original named exports for compatibility if needed
 export {
     fetchTests,
+    getTestWithQuestions,
     fetchHistory,
     findTestProgress,
     saveProgress,

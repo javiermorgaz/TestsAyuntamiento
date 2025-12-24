@@ -2,36 +2,36 @@
     "1": [
         {
             "id_p": 1,
-            "enunciado": "De conformidad con la Constitución Española de 1978, corresponde al Rey:",
+            "enunciado": "_De conformidad con lo establecido en la Constitución Española de 1978, en relación con las funciones constitucionales del Rey, ¿cuál de las siguientes afirmaciones describe correctamente su papel en el proceso legislativo y la sanción de las normas con rango de ley?",
             "opciones": [
-                "Sólo sancionar las leyes.",
-                "Sólo promulgar las leyes.",
-                "Sancionar y promulgar las leyes.",
-                "El Patronazgo de las fundaciones."
+                "_Corresponde al Rey únicamente la sanción de las leyes orgánicas, mientras que las leyes ordinarias son sancionadas por el Presidente del Gobierno.",
+                "_Corresponde al Rey la promulgación de las leyes, pero la sanción es competencia exclusiva de las Cortes Generales tras su aprobación definitiva.",
+                "_Corresponde al Rey sancionar y promulgar las leyes, así como expedir los decretos acordados en el Consejo de Ministros y conferir los empleos civiles y militares.",
+                "_El Rey ostenta el Patronazgo de las Reales Academias y fundaciones, pero no interviene en la fase de sanción o promulgación legislativa."
             ],
             "respuesta_correcta": 3,
             "autogenerado": false
         },
         {
             "id_p": 2,
-            "enunciado": "Según dispone el artículo 1 de la Constitución Española de 1978:",
+            "enunciado": "_Según dispone el artículo 1 de la Constitución Española de 1978, España se constituye en un Estado social y democrático de Derecho. ¿Qué valores superiores del ordenamiento jurídico propugna específicamente este artículo en su primer apartado?",
             "opciones": [
-                "España se constituye en un Estado social y democrático de Derecho, que propugna como uno de los valores superiores de su ordenamiento constitucional, la igualdad de género.",
-                "España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico, entre otros, la igualdad.",
-                "España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico, entre otros, la pluralidad ideológica.",
-                "España se constituye en un Estado constitucional y parlamentario, que propugna como valores superiores de su ordenamiento jurídico la libertad, entre otros, la justicia."
+                "_La libertad, la justicia, la igualdad de género y la fraternidad universal entre todos los pueblos que componen la nación española.",
+                "_La libertad, la justicia, la igualdad y el pluralismo político, como pilares fundamentales sobre los que se asienta el Estado de Derecho.",
+                "_La soberanía nacional, la división de poderes, la justicia social y el libre mercado dentro del marco de la Unión Europea.",
+                "_La igualdad de oportunidades, la solidaridad interterritorial, la libertad de cátedra y el derecho a una vivienda digna para todos."
             ],
             "respuesta_correcta": 2,
             "autogenerado": false
         },
         {
             "id_p": 3,
-            "enunciado": "Según el artículo 72 de la Constitución Española de 1978:",
+            "enunciado": "_De acuerdo con el artículo 72 de la Constitución Española de 1978, las Cámaras establecen sus propios Reglamentos y aprueban sus presupuestos. ¿Qué mayoría se requiere para la aprobación o reforma de dichos Reglamentos en una votación final sobre su totalidad?",
             "opciones": [
-                "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría absoluta.",
-                "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría simple.",
-                "Los Reglamentos de cada una de las Cámaras (Congreso y Senado) serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría de dos tercios.",
-                "Las respuestas a), b) y c) son incorrectas."
+                "_Los Reglamentos de cada una de las Cámaras serán sometidos a una votación final sobre su totalidad, que requerirá la mayoría absoluta de sus miembros.",
+                "_Los Reglamentos serán aprobados por mayoría simple en cualquiera de las Cámaras, siempre que exista quórum suficiente para la votación.",
+                "_Se requiere una mayoría cualificada de dos tercios de la Cámara para garantizar el consenso entre los grupos parlamentarios mayoritarios.",
+                "_La aprobación de los Reglamentos internos no requiere una votación sobre la totalidad, sino que se aprueban artículo por artículo por mayoría de presentes."
             ],
             "respuesta_correcta": 1,
             "autogenerado": false
@@ -40,24 +40,24 @@
     "2": [
         {
             "id_p": 1,
-            "enunciado": "Pregunta de Mock para Tema 4 - Pregunta 1",
+            "enunciado": "_El Estatuto de Autonomía es la norma institucional básica de cada Comunidad Autónoma, reconocida y amparada por la Constitución como parte integrante de su ordenamiento jurídico. En este contexto, ¿qué rango normativo ostenta dentro de la jerarquía jurídica?",
             "opciones": [
-                "A",
-                "B",
-                "C",
-                "D"
+                "_Tiene rango de Reglamento administrativo dependiente de las leyes estatales y subordinado al control del Gobierno de la Nación.",
+                "_Es una Ley Orgánica del Estado que goza de una rigidez superior para su reforma, requiriendo el cumplimiento de los procedimientos en él previstos.",
+                "_Es una norma de rango inferior a la ley ordinaria pero superior a las órdenes de las Consejerías de la propia Comunidad Autónoma.",
+                "_Se trata de un Decreto-Ley dictado por el Presidente de la Comunidad Autónoma que debe ser ratificado semestralmente por el Parlamento regional."
             ],
             "respuesta_correcta": 1,
             "autogenerado": false
         },
         {
             "id_p": 2,
-            "enunciado": "Pregunta de Mock para Tema 4 - Pregunta 2",
+            "enunciado": "_Dentro del marco competencial establecido por el Estatuto de Autonomía, ¿cómo se definen las competencias exclusivas de la Comunidad Autónoma frente a las competencias compartidas con el Estado?",
             "opciones": [
-                "X",
-                "Y",
-                "Z",
-                "W"
+                "_Las competencias exclusivas permiten a la Comunidad la potestad legislativa, reglamentaria y la función ejecutiva sobre las materias de su interés.",
+                "_Las competencias exclusivas son aquellas donde el Estado dicta las leyes de bases y la Comunidad Autónoma se encarga únicamente de la ejecución.",
+                "_Son exclusivas aquellas materias que no han sido mencionadas expresamente en la Constitución Española como de reserva estatal obligatoria.",
+                "_En las competencias exclusivas, la Comunidad Autónoma puede dictar reglamentos pero no normas con rango de ley, que quedan reservadas al Estado."
             ],
             "respuesta_correcta": 2,
             "autogenerado": false

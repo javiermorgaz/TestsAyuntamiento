@@ -36,3 +36,7 @@ npm-debug.log*
 
 # AI Context Files
 GEMINI.md
+
+# Playwright
+playwright-report/
+test-results/

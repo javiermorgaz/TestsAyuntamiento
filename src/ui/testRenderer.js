@@ -1,14 +1,18 @@
 /**
- * TestRenderer - Gestión del DOM y UI para el sistema de tests (v3.0)
+ * TestRenderer - Gestión del DOM y UI para el sistema de tests (v4.0)
  * 
- * Se encarga de mostrar preguntas, resultados y gestionar la vista slider.
- * Este módulo elimina la necesidad de handlers inline (onclick) en el HTML.
+ * ARQUITECTURA PLAN C: Estado Derivado Único
+ * - El estado del slider es la ÚNICA fuente de verdad
+ * - UNA SOLA función renderiza los controles basándose en el estado
+ * - El Observer y los botones solo pueden cambiar el estado, nunca el DOM directamente
  */
 
 import StateManager from '@core/stateManager.js';
 
 const TestRenderer = {
     _sliderObserver: null,
+    _sliderTotalItems: 0,
+    _lastProgrammaticScrollTime: 0,
 
     // Referencias a elementos del DOM (se obtienen dinámicamente)
     get elements() {
@@ -28,11 +32,73 @@ const TestRenderer = {
         };
     },
 
+    // ═══════════════════════════════════════════════════════════════════════
+    // PLAN C: FUNCIONES PURAS DE ESTADO
+    // ═══════════════════════════════════════════════════════════════════════
+
     /**
-     * Renderiza todas las preguntas en el contenedor
-     * @param {Array} questions - Array de preguntas
-     * @param {Function} onAnswerChange - Callback para cuando cambia una respuesta
+     * FUNCIÓN PURA: Calcula si debe mostrarse el botón de finalizar
      */
+    shouldShowFinishButton(activeIndex, totalItems) {
+        return activeIndex >= totalItems - 2;
+    },
+
+    /**
+     * ÚNICA FUNCIÓN QUE TOCA EL DOM DE LOS CONTROLES
+     * Es idempotente: puede llamarse 100 veces sin efectos secundarios
+     */
+    renderSliderControls(activeIndex, totalItems) {
+        const btnPrev = document.getElementById('slider-prev');
+        const btnNext = document.getElementById('slider-next');
+        const btnFinish = document.getElementById('slider-finish');
+
+        if (!btnPrev || !btnNext || !btnFinish) return;
+
+        const showFinish = this.shouldShowFinishButton(activeIndex, totalItems);
+
+        btnPrev.style.display = activeIndex === 0 ? 'none' : 'flex';
+        btnNext.style.display = showFinish ? 'none' : 'flex';
+        btnFinish.style.display = showFinish ? 'flex' : 'none';
+    },
+
+    /**
+     * ÚNICA FUNCIÓN QUE CAMBIA EL ESTADO DEL ÍNDICE
+     * Cualquier fuente (botón, observer) DEBE pasar por aquí
+     */
+    setActiveIndex(nextIndex, options = {}) {
+        const currentIndex = StateManager.get('lastSliderIndex') ?? 0;
+        const totalItems = this._sliderTotalItems;
+
+        // Validar límites
+        if (nextIndex < 0) nextIndex = 0;
+        if (nextIndex >= totalItems) nextIndex = totalItems - 1;
+
+        // Si viene del Observer y quiere retroceder, solo bloquearlo si acabamos de hacer
+        // un scroll programático (para evitar "ecos"). Después de 500ms permitimos retroceso.
+        if (options.fromObserver && nextIndex < currentIndex) {
+            const timeSinceLastScroll = Date.now() - this._lastProgrammaticScrollTime;
+            if (timeSinceLastScroll < 1000) {
+                return; // Bloquear eco de scroll programático
+            }
+            // Si pasó más tiempo, es un swipe manual legítimo, permitir
+        }
+
+        // Si el índice no cambia, no hacer nada
+        if (nextIndex === currentIndex) {
+            return;
+        }
+
+        // CAMBIAR ESTADO
+        StateManager.set({ lastSliderIndex: nextIndex });
+
+        // RENDERIZAR UI (única llamada al DOM)
+        this.renderSliderControls(nextIndex, totalItems);
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // RENDERIZADO DE PREGUNTAS
+    // ═══════════════════════════════════════════════════════════════════════
+
     renderQuestions(questions, onAnswerChange) {
         const { questionsContainer } = this.elements;
         if (!questionsContainer) return;
@@ -77,7 +143,6 @@ const TestRenderer = {
 
         questionsContainer.innerHTML = html;
 
-        // Añadir listeners para las respuestas
         questionsContainer.querySelectorAll('.question-option').forEach(input => {
             input.addEventListener('change', (e) => {
                 const qIndex = parseInt(e.target.name.split('-')[1]);
@@ -87,11 +152,10 @@ const TestRenderer = {
         });
     },
 
-    /**
-     * Muestra el resultado del test
-     * @param {Object} results - Objeto con datos del resultado (generado por TestEngine)
-     * @param {string} title - Título del test
-     */
+    // ═══════════════════════════════════════════════════════════════════════
+    // RESULTADOS
+    // ═══════════════════════════════════════════════════════════════════════
+
     displayResult(results, title) {
         const { resultadoContainer, testView, resultadoView, questionsContainer } = this.elements;
         if (!resultadoContainer) return;
@@ -179,7 +243,6 @@ const TestRenderer = {
         html += `</div></div>`;
         resultadoContainer.innerHTML = html;
 
-        // Limpiar navegación de slider si estaba activa
         this.removeSliderNavigation();
         document.body.classList.remove('slider-view-active');
         if (questionsContainer) {
@@ -187,15 +250,15 @@ const TestRenderer = {
             questionsContainer.classList.add('space-y-6');
         }
 
-        // Cambiar vistas
         if (testView) testView.style.display = 'none';
         if (resultadoView) resultadoView.style.display = 'block';
         window.scrollTo(0, 0);
     },
 
-    /**
-     * Sincroniza la UI con el modo de vista actual
-     */
+    // ═══════════════════════════════════════════════════════════════════════
+    // GESTIÓN DE MODOS DE VISTA
+    // ═══════════════════════════════════════════════════════════════════════
+
     updateViewModeUI(onGradeTest, onScrollSlider) {
         const { listIcon, sliderIcon, questionsContainer, testControls, form } = this.elements;
         const currentViewMode = StateManager.get('currentViewMode');
@@ -229,7 +292,16 @@ const TestRenderer = {
                 if (testControls && testControls.parentNode !== questionsContainer) {
                     questionsContainer.appendChild(testControls);
                 }
+
+                // Inicializar estado del slider
+                const items = Array.from(questionsContainer.children).filter(el =>
+                    (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+                );
+                this._sliderTotalItems = items.length;
+                StateManager.set({ lastSliderIndex: syncIndex });
+
                 this.addSliderNavigation(syncIndex, onGradeTest, onScrollSlider);
+                this.renderSliderControls(syncIndex, this._sliderTotalItems);
             }
 
             requestAnimationFrame(() => {
@@ -277,6 +349,10 @@ const TestRenderer = {
         return items.length - 1;
     },
 
+    // ═══════════════════════════════════════════════════════════════════════
+    // NAVEGACIÓN SLIDER
+    // ═══════════════════════════════════════════════════════════════════════
+
     addSliderNavigation(startIndex, onGradeTest, onScrollSlider) {
         let nav = document.getElementById('slider-nav-controls');
         if (!nav) {
@@ -312,7 +388,10 @@ const TestRenderer = {
             this._sliderObserver.disconnect();
         }
 
-        StateManager.set({ lastSliderIndex: -1 });
+        const items = Array.from(questionsContainer.children).filter(el =>
+            (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
+        );
+        this._sliderTotalItems = items.length;
 
         const options = {
             root: questionsContainer,
@@ -323,28 +402,20 @@ const TestRenderer = {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const targetId = entry.target.id;
-                    let newIndex = -1;
 
-                    if (targetId === 'test-controls') {
-                        const items = Array.from(questionsContainer.children).filter(el =>
-                            (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
-                        );
-                        newIndex = items.findIndex(el => el.id === 'test-controls');
-                    } else if (targetId && targetId.startsWith('pregunta-')) {
-                        newIndex = parseInt(targetId.replace('pregunta-', ''));
-                    }
+                    // IMPORTANTE: Usar siempre el índice en el array de items, NO el número del ID
+                    const newIndex = items.findIndex(el => el.id === targetId);
 
-                    const lastSliderIndex = StateManager.get('lastSliderIndex');
-                    if (newIndex !== -1 && newIndex !== lastSliderIndex) {
-                        StateManager.set({ lastSliderIndex: newIndex });
+                    if (newIndex !== -1) {
+                        // PLAN C: Observer solo llama a setActiveIndex, NUNCA toca DOM
+                        this.setActiveIndex(newIndex, { fromObserver: true });
 
+                        // Ajustes visuales del scroll vertical y altura (estos SÍ pueden estar aquí)
                         const targetEl = document.getElementById(targetId);
                         if (targetEl) {
                             const offsetPosition = targetEl.getBoundingClientRect().top + window.scrollY - 100;
                             window.scrollTo({ top: offsetPosition, behavior: 'instant' });
                         }
-
-                        this.updateSliderControlsState(newIndex);
 
                         setTimeout(() => {
                             if (form && entry.isIntersecting) {
@@ -356,34 +427,12 @@ const TestRenderer = {
             });
         }, options);
 
-        const items = Array.from(questionsContainer.children).filter(el =>
-            (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
-        );
         items.forEach(item => this._sliderObserver.observe(item));
     },
 
+    // DEPRECATED: Mantenida por compatibilidad, pero no debe usarse
     updateSliderControlsState(activeIndex) {
-        const { questionsContainer } = this.elements;
-        const btnPrev = document.getElementById('slider-prev');
-        const btnNext = document.getElementById('slider-next');
-        const btnFinish = document.getElementById('slider-finish');
-
-        if (!btnPrev || !btnNext || !btnFinish || !questionsContainer) return;
-
-        const items = Array.from(questionsContainer.children).filter(el =>
-            (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
-        );
-        const totalItems = items.length;
-
-        btnPrev.style.display = activeIndex === 0 ? 'none' : 'flex';
-
-        if (activeIndex >= totalItems - 2) {
-            btnNext.style.display = 'none';
-            btnFinish.style.display = 'flex';
-        } else {
-            btnNext.style.display = 'flex';
-            btnFinish.style.display = 'none';
-        }
+        this.renderSliderControls(activeIndex, this._sliderTotalItems);
     },
 
     removeSliderNavigation() {
@@ -395,17 +444,34 @@ const TestRenderer = {
         if (nav) nav.remove();
     },
 
+    /**
+     * PLAN C: El botón llama a setActiveIndex y hace scroll
+     */
     scrollSlider(direction) {
         const { questionsContainer } = this.elements;
         if (!questionsContainer) return;
 
+        const currentIndex = StateManager.get('lastSliderIndex') || 0;
+        const newIndex = currentIndex + direction;
+
+        // Refrescar totalItems desde el DOM para garantizar cálculo correcto
         const items = Array.from(questionsContainer.children).filter(el =>
             (el.id && el.id.startsWith('pregunta-')) || el.id === 'test-controls'
         );
+        this._sliderTotalItems = items.length;
+
+        // PLAN C: Marcar el timestamp del scroll programático
+        this._lastProgrammaticScrollTime = Date.now();
+
+        // Cambiar estado (esto renderiza la UI automáticamente)
+        this.setActiveIndex(newIndex);
+
+        // Hacer scroll visual (reutilizamos items ya calculado)
         const scrollUnit = (items.length >= 2) ? (items[1].offsetLeft - items[0].offsetLeft) : questionsContainer.offsetWidth;
 
-        questionsContainer.scrollBy({
-            left: direction * scrollUnit,
+        const finalIndex = StateManager.get('lastSliderIndex');
+        questionsContainer.scrollTo({
+            left: finalIndex * scrollUnit,
             behavior: 'smooth'
         });
     }

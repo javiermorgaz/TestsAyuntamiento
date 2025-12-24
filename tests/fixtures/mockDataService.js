@@ -22,6 +22,17 @@ export const mockDataService = {
 
     async findTestProgress(testId) {
         console.log(`🧪 [MOCK] findTestProgress for test ${testId}`);
+        if (testId === 2) {
+            // Mock 10 answers for a 40 question test
+            const answers = Array(40).fill(null);
+            for (let i = 0; i < 10; i++) answers[i] = (i % 3) + 1;
+            return {
+                id: 888,
+                test_id: 2,
+                answers_data: answers,
+                updated_at: new Date().toISOString()
+            };
+        }
         return null; // No progress by default in mock
     },
 

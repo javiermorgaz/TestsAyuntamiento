@@ -1,37 +1,29 @@
 /**
  * Data Service Provider
  * Resolves which implementation to use: Real or Mock
- * 
- * SECURITY: The mock implementation is physically removed from the production build
- * using Vite's tree-shaking (Dead Code Elimination) and dynamic imports.
  */
 
 import { realDataService } from './realDataService.js';
 
+// We check test mode synchronously to avoid Top-Level Await delays if possible,
+// but for security we still want dynamic import for the mock data in production.
+const IS_TEST_MODE =
+    globalThis.__TEST_MODE__ === true ||
+    (typeof process !== 'undefined' && process.env && process.env.__TEST_MODE__ === 'true');
+
+const IS_PROD = typeof import.meta.env !== 'undefined' ? import.meta.env.PROD : false;
+
 let implementation = realDataService;
 
-/**
- * We check if we are in production.
- * Vite replaces 'import.meta.env.MODE' with a literal string during build.
- * In Jest, import.meta.env is undefined, so we fallback to 'development'.
- */
-const isProduction = (typeof import.meta.env !== 'undefined')
-    ? import.meta.env.MODE === 'production'
-    : (typeof process !== 'undefined' && process.env.NODE_ENV === 'production');
-
-if (!isProduction) {
-    const isTestMode =
-        globalThis.__TEST_MODE__ === true ||
-        (typeof process !== 'undefined' && process.env && process.env.__TEST_MODE__ === 'true');
-
-    if (isTestMode) {
-        // Dynamic import ensures the mock code and its large JSON fixtures 
-        // are not even part of the main production bundle route.
-        const { mockDataService } = await import('../../tests/fixtures/mockDataService.js');
-        implementation = mockDataService;
-    }
+// If we are in test mode and NOT in production, we'll try to use the mock.
+// Note: In Vite, top-level await is supported, so this is safe and will block 
+// modules importing this until the mock is loaded.
+if (IS_TEST_MODE && !IS_PROD) {
+    console.log('🧪 [PROVIDER] Test Mode detected, loading mocks...');
+    const { mockDataService } = await import('../../tests/fixtures/mockDataService.js');
+    implementation = mockDataService;
 }
 
 export const dataService = implementation;
 
-console.log(`🔌 [PROVIDER] Using ${dataService === realDataService ? 'REAL' : 'MOCK'} Data Service`);
+console.log(`🔌 [PROVIDER] Implementation resolved: ${dataService === realDataService ? 'REAL' : 'MOCK'}`);

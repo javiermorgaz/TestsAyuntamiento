@@ -10,5 +10,9 @@
         "^@services/(.*)$": "<rootDir>/src/services/$1",
         "^@ui/(.*)$": "<rootDir>/src/ui/$1",
         "^@config/(.*)$": "<rootDir>/src/config/$1"
-    }
+    },
+    "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/tests/e2e/"
+    ]
 }

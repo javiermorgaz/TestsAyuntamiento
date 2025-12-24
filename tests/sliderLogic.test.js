@@ -22,7 +22,7 @@ jest.unstable_mockModule('../src/core/stateManager.js', () => ({
     default: {
         get: jest.fn((key) => {
             if (key === 'currentViewMode') return window._currentViewMode || 'list';
-            if (key === 'lastSliderIndex') return window._lastSliderIndex || -1;
+            if (key === 'lastSliderIndex') return window._lastSliderIndex ?? 0;
             return null;
         }),
         set: jest.fn((newState) => {
@@ -83,7 +83,7 @@ describe('TestRenderer - Slider Logic (Unit Tests)', () => {
     });
 
     describe('Slider Navigation', () => {
-        test('scrollSlider should call window.scrollBy with correct units', () => {
+        test('scrollSlider should call questionsContainer.scrollTo with correct position', () => {
             const q1 = document.createElement('div');
             q1.id = 'pregunta-0';
             const q2 = document.createElement('div');
@@ -97,10 +97,17 @@ describe('TestRenderer - Slider Logic (Unit Tests)', () => {
             Object.defineProperty(q2, 'offsetLeft', { value: 500 });
             Object.defineProperty(questionsContainer, 'offsetWidth', { value: 500 });
 
-            questionsContainer.scrollBy = jest.fn();
+            // Mock scrollTo (the new function used by scrollSlider)
+            questionsContainer.scrollTo = jest.fn();
+
+            // Reset slider state
+            window._lastSliderIndex = 0;
+            TestRenderer._sliderTotalItems = 2; // Must set this for setActiveIndex to work
 
             TestRenderer.scrollSlider(1);
-            expect(questionsContainer.scrollBy).toHaveBeenCalledWith(expect.objectContaining({
+
+            // After scrollSlider(1), the new index is 1, so scrollTo should be called with left: 1 * 500 = 500
+            expect(questionsContainer.scrollTo).toHaveBeenCalledWith(expect.objectContaining({
                 left: 500,
                 behavior: 'smooth'
             }));

@@ -8,7 +8,7 @@
 import StateManager from '@core/stateManager.js';
 import TestEngine from '@core/testEngine.js';
 import TestRenderer from '@ui/testRenderer.js';
-import { saveProgress, completeTest } from '@services/dataService.js';
+import { saveProgress, completeTest, getTestWithQuestions } from '@services/dataService.js';
 import { saveResult } from '@services/storage.js';
 
 let autoSaveTimeout = null;
@@ -51,12 +51,16 @@ function returnToList() {
 }
 
 /**
- * Carga un test desde su archivo JSON
+ * Carga un test desde su archivo JSON (usa el provider pattern)
  */
 async function loadTest(testId, fileName) {
     try {
-        const response = await fetch(`./data/${fileName}`);
-        const testData = await response.json();
+        // Usar el provider de dataService que automáticamente elige entre real y mock
+        const testData = await getTestWithQuestions(testId, fileName);
+        if (!testData) {
+            console.error('Error: No se pudo cargar el test');
+            return;
+        }
 
         StateManager.set({ currentTest: testData });
         StateManager.initResponses(testData.preguntas.length);
@@ -82,12 +86,16 @@ async function loadTest(testId, fileName) {
 }
 
 /**
- * Carga un test con progreso anterior
+ * Carga un test con progreso anterior (usa el provider pattern)
  */
 async function loadTestWithProgress(testId, fileName, progress) {
     try {
-        const response = await fetch(`./data/${fileName}`);
-        const testData = await response.json();
+        // Usar el provider de dataService que automáticamente elige entre real y mock
+        const testData = await getTestWithQuestions(testId, fileName);
+        if (!testData) {
+            console.error('Error: No se pudo cargar el test');
+            return;
+        }
 
         StateManager.set({
             currentTest: testData,
@@ -263,8 +271,8 @@ function restartTest() {
     window.location.reload();
 }
 
-// Event Listeners Iniciales
-document.addEventListener('DOMContentLoaded', () => {
+// Inicialización de Listeners
+function initEventListeners() {
     const btnToggle = document.getElementById('view-mode-toggle');
     if (btnToggle) btnToggle.addEventListener('click', toggleViewMode);
 
@@ -276,7 +284,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnBackHomeResult = document.getElementById('btn-back-home-result');
     if (btnBackHomeResult) btnBackHomeResult.addEventListener('click', returnToList);
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEventListeners);
+} else {
+    initEventListeners();
+}
 
 // Exportaciones para compatibilidad temporal con window (se eliminarán en 4.3)
 
