@@ -19,11 +19,8 @@ let implementation = realDataService;
 // Note: In Vite, top-level await is supported, so this is safe and will block 
 // modules importing this until the mock is loaded.
 if (IS_TEST_MODE && !IS_PROD) {
-    console.log('🧪 [PROVIDER] Test Mode detected, loading mocks...');
     const { mockDataService } = await import('../../tests/fixtures/mockDataService.js');
     implementation = mockDataService;
 }
 
 export const dataService = implementation;
-
-console.log(`🔌 [PROVIDER] Implementation resolved: ${dataService === realDataService ? 'REAL' : 'MOCK'}`);
