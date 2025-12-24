@@ -77,7 +77,8 @@ const TestRenderer = {
         // un scroll programático (para evitar "ecos"). Después de 500ms permitimos retroceso.
         if (options.fromObserver && nextIndex < currentIndex) {
             const timeSinceLastScroll = Date.now() - this._lastProgrammaticScrollTime;
-            if (timeSinceLastScroll < 1000) {
+            // Reducido a 500ms (aprox duración de scroll smooth) para permitir interacciones rápidas del usuario
+            if (timeSinceLastScroll < 500) {
                 return; // Bloquear eco de scroll programático
             }
             // Si pasó más tiempo, es un swipe manual legítimo, permitir

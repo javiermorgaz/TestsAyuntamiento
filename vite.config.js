@@ -16,6 +16,7 @@ export default defineConfig({
         }
     },
     server: {
+        host: true,
         open: true, // Auto-open browser
     },
     build: {
