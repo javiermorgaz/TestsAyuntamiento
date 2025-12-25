@@ -365,9 +365,9 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 - ✅ **Contrast Improvement**: Refinado de jerarquía visual en tarjetas y opciones.
 
 **v2.6** ✅ **COMPLETADO** (2025-12-25)
-- ✅ **Performance Optimization**: Implementación de **Batch Fetching** (eliminación N+1).
+- ✅ **Performance Optimization**: Implementación de **Batch Fetching**.
+- ✅ **UX Improvement**: Eliminación de FOUC y parpadeo de tema (v2.6.1).
 - ✅ **Payload Reduction**: Select optimizado de columnas en Supabase.
-- ✅ **O(1) Data Access**: Arquitectura basada en Map para sincronización de progreso.
 
 **v3.0** (Próximamente)
 - 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)

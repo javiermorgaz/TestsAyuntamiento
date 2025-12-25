@@ -1,5 +1,4 @@
 // assets/js/main.js
-import '/src/styles/style.css';
 import pkg from '../../package.json';
 import { fetchTests, findTestProgress, fetchAllProgress, deleteProgress } from '@services/dataService.js';
 import { showConfirm, showModal } from '@ui/modal.js';
