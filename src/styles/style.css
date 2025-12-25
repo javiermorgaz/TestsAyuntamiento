@@ -316,15 +316,6 @@
     @apply border-gray-700/50 text-gray-100 shadow-2xl;
 }
 
-@utility glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
-}
-
-.dark .glass {
-    background-color: rgba(11, 14, 20, 0.6);
-    backdrop-filter: blur(16px);
-    @apply border-gray-700/30;
-}
 
 /* 4.5 MODAL SYSTEM */
 @layer components {
@@ -574,33 +565,6 @@ body {
     min-height: auto !important;
     height: auto !important;
     margin-bottom: 140px;
-}
-
-/* Utilities Fallback */
-@utility p-6 {
-    padding: 1.5rem;
-}
-
-@utility gap-6 {
-    gap: 1.5rem;
-}
-
-@utility space-y-6 {
-    &>*+* {
-        margin-top: 1.5rem;
-    }
-}
-
-@utility mb-4 {
-    margin-bottom: 1rem;
-}
-
-@utility mb-6 {
-    margin-bottom: 1.5rem;
-}
-
-@utility mt-10 {
-    margin-top: 2.5rem;
 }
 
 /* Slider View Body State */
