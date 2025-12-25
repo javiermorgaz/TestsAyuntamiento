@@ -358,9 +358,11 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 - ✅ **Unified Mock System**: Provider pattern para gestión robusta de datos reales vs mock.
 - ✅ **Architecture Stability**: Refactor de lógica de Slider (Pure State-Derived).
 
-**v2.5** ✅ **COMPLETADO** (2025-12-24)
+**v2.5** ✅ **COMPLETADO** (2025-12-25)
 - ✅ **Visual Regression Testing**: Suite completa Playwright (14 baselines).
 - ✅ **CI/CD Pipeline**: GitHub Actions automatizado con runner macOS.
+- ✅ **CSS Optimization**: Eliminación de código redundante y variables no usadas.
+- ✅ **Contrast Improvement**: Refinado de jerarquía visual en tarjetas y opciones.
 
 **v3.0** (Próximamente)
 - 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)
@@ -376,4 +378,4 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 
 ---
 
-**Última actualización**: 2025-12-23
+**Última actualización**: 2025-12-25
