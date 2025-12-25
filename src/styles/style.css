@@ -21,19 +21,28 @@
 
     --font-sans: "Poppins", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
 
-    /* ALIASES to match Legacy Design with Tailwind classes */
+    /* Semantic color aliases for better code readability */
     --color-gray-800: #2d3748;
     --color-gray-900: #1a202c;
     --color-text-dark: #2c3e50;
 
-    /* RESTORE LEGACY FEEDBACK COLORS */
+    /* Custom feedback colors (not in Tailwind's default palette) */
     --color-green-100: #d5f4e6;
     --color-green-500: #27ae60;
     --color-red-100: #fadbd8;
     --color-red-500: #e74c3c;
+
+    /* Alternative color palette for modal components */
+    --color-primary-alt: #667eea;
+    --color-secondary-alt: #764ba2;
+    --color-dark-bg-alt: #1a202c;
+    --color-dark-card-alt: #2d3748;
+    --color-dark-text-alt: #e2e8f0;
 }
 
-/* 3. MANUALLY DEFINED CRITICAL UTILITIES */
+/* 3. MANUAL UTILITIES (Fallback for classes in JS template literals)
+   Tailwind's @source cannot detect classes inside ${interpolations},
+   so these must be defined manually. See: main.js, testRenderer.js */
 
 /* BACKGROUNDS */
 .bg-white {
@@ -174,7 +183,7 @@
     color: #1e293b;
 }
 
-/* Legacy Utility for Text Dark (Mapped to Slate-800) */
+/* Semantic text color (used throughout the app for main content) */
 .text-dark {
     color: #1e293b !important;
 }
@@ -206,7 +215,7 @@
 
 /* BORDERS */
 
-/* CUSTOM FEEDBACK UTILITIES (Legacy Color Restore) */
+/* Visual feedback for correct/incorrect answers (testRenderer.js) */
 .bg-success-light {
     background-color: #d5f4e6;
 }
@@ -239,9 +248,9 @@
     border-color: #374151;
 }
 
-/* 4. RESTORED COMPONENTS */
+/* 4. CUSTOM COMPONENTS */
 
-/* Validated Save Indicator (Restored from Legacy) */
+/* Auto-save indicator (appears when progress is saved) */
 .save-indicator {
     background-color: var(--color-green-500);
     color: white;
@@ -288,6 +297,209 @@
     @apply border-gray-700/30;
 }
 
+/* 4.5 MODAL SYSTEM */
+@layer components {
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+        opacity: 1;
+    }
+
+    .modal {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 90%;
+        max-height: 90vh;
+        overflow: auto;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal {
+        transform: scale(1);
+    }
+
+    .modal-header {
+        padding: 1.5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .modal-title {
+        margin: 0;
+        font-size: 1.25rem;
+        color: var(--color-dark);
+        font-weight: 600;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .modal-message {
+        margin: 0;
+        font-size: 1rem;
+        color: #34495e;
+        line-height: 1.6;
+        white-space: pre-line;
+    }
+
+    .modal-footer {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.75rem;
+    }
+
+    .modal-btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: 500;
+    }
+
+    .modal-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .modal-btn:active {
+        transform: translateY(0);
+    }
+
+    .modal-btn-primary {
+        background-color: #3498db;
+        color: white;
+    }
+
+    .modal-btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+    .modal-btn-secondary {
+        background-color: #95a5a6;
+        color: white;
+    }
+
+    .modal-btn-secondary:hover {
+        background-color: #7f8c8d;
+    }
+
+    /* Dark Mode Support */
+    html.dark .modal {
+        background: var(--color-dark-card-alt);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    html.dark .modal-title {
+        color: var(--color-dark-text-alt);
+    }
+
+    html.dark .modal-header,
+    html.dark .modal-footer {
+        border-color: #374151;
+    }
+
+    html.dark .modal-message {
+        color: #d1d5db;
+    }
+
+    html.dark .modal-btn-secondary {
+        background-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    html.dark .modal-btn-secondary:hover {
+        background-color: #374151;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .modal {
+            width: 95%;
+            max-width: none;
+        }
+
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            padding: 1rem;
+        }
+
+        .modal-title {
+            font-size: 1.1rem;
+        }
+
+        .modal-message {
+            font-size: 0.95rem;
+        }
+
+        .modal-footer {
+            flex-direction: column-reverse;
+        }
+
+        .modal-btn {
+            width: 100%;
+            min-height: 44px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .modal {
+            width: 98%;
+            max-height: 95vh;
+        }
+
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            padding: 0.75rem;
+        }
+
+        .modal-title {
+            font-size: 1rem;
+        }
+
+        .modal-message {
+            font-size: 0.9rem;
+        }
+
+        .modal-btn {
+            padding: 0.65rem 1rem;
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-height: 600px) and (orientation: landscape) {
+        .modal {
+            max-height: 95vh;
+        }
+
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            padding: 0.75rem;
+        }
+    }
+}
 
 /* 5. GLOBAL STYLES */
 body {
