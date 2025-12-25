@@ -36,6 +36,17 @@ export const mockDataService = {
         return null; // No progress by default in mock
     },
 
+    async fetchAllProgress() {
+        console.log('🧪 [MOCK] fetchAllProgress');
+        // Return mock progress for test 2
+        return [{
+            id: 888,
+            test_id: 2,
+            answers_data: Array(10).fill(1).map((_, i) => (i % 3) + 1),
+            status: 'in_progress'
+        }];
+    },
+
     async saveProgress(data) {
         console.log('🧪 [MOCK] saveProgress', data);
         return { id: 999, ...data, status: 'in_progress' };

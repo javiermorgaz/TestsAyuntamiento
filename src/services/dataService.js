@@ -16,6 +16,7 @@ export const completeTest = dataService.completeTest;
 export const checkStatus = dataService.checkStatus;
 export const isSupabaseAvailable = dataService.isSupabaseAvailable;
 export const saveToLocalStorage = dataService.saveToLocalStorage;
+export const fetchAllProgress = dataService.fetchAllProgress;
 
 // Also export specific mock-only helpers if needed
 export const getTestWithQuestions = dataService.getTestWithQuestions;

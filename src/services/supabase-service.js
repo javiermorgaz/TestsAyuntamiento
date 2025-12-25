@@ -23,7 +23,7 @@ async function fetchTestsFromSupabase() {
 
         const { data, error } = await client
             .from('tests')
-            .select('*')
+            .select('id, titulo, num_preguntas, fichero') // Payload Optimization: Added 'fichero' fix
             .order('id', { ascending: true });
 
         if (error) {
@@ -106,6 +106,48 @@ async function fetchTestInProgress(testId) {
 
     } catch (error) {
         console.error(`❌ Error al buscar progreso del test ${testId}:`, error);
+        throw error;
+    }
+}
+
+/**
+ * Carga todo el progreso activo del usuario de una sola vez (Batch Request)
+ * @returns {Promise<Array>} Array con todos los resultados en progreso
+ */
+async function fetchAllTestProgress() {
+    try {
+        const client = await getSupabaseClient();
+        if (!client) {
+            throw new Error('Cliente de Supabase no disponible');
+        }
+
+        // Fetch all results for the user, ordered by latest
+        const { data, error } = await client
+            .from('results')
+            .select('*')
+            .order('id', { ascending: false });
+
+        if (error) {
+            throw error;
+        }
+
+        // Filter locally to get only the latest unique result per test_id
+        // This simulates a "DISTINCT ON (test_id)" query which is cleaner here
+        const uniqueProgress = [];
+        const seenTests = new Set();
+
+        for (const result of data) {
+            if (!seenTests.has(result.test_id)) {
+                uniqueProgress.push(result);
+                seenTests.add(result.test_id);
+            }
+        }
+
+        console.log(`📦 Progreso en lote cargado: ${uniqueProgress.length} tests iniciados`);
+        return uniqueProgress;
+
+    } catch (error) {
+        console.error('❌ Error al cargar progreso en lote:', error);
         throw error;
     }
 }
@@ -336,10 +378,6 @@ async function deleteTestProgress(resultId) {
     }
 }
 
-// Hacer disponible globalmente
-// Hacer disponible globalmente
-
-
 // Exportaciones para ES Modules
 export {
     getSupabaseClient,
@@ -350,5 +388,6 @@ export {
     completeTestSupabase,
     fetchTestHistory,
     fetchAllResults,
-    deleteTestProgress
+    deleteTestProgress,
+    fetchAllTestProgress
 };

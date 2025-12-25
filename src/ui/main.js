@@ -1,7 +1,7 @@
 // assets/js/main.js
 import '/src/styles/style.css';
 import pkg from '../../package.json';
-import { fetchTests, findTestProgress, deleteProgress } from '@services/dataService.js';
+import { fetchTests, findTestProgress, fetchAllProgress, deleteProgress } from '@services/dataService.js';
 import { showConfirm, showModal } from '@ui/modal.js';
 import { loadTest, loadTestWithProgress } from '@core/test.js';
 
@@ -74,11 +74,24 @@ async function renderTestsList(tests) {
         return;
     }
 
+    // --- OPTIMIZACIÓN DE RENDIMIENTO ---
+    // En lugar de hacer 1 petición por test (N+1), hacemos 1 petición batch
+    const allProgress = await fetchAllProgress();
+
+    // Crear mapa de acceso rápido: testId -> progressData
+    const progressMap = new Map();
+    if (allProgress) {
+        allProgress.forEach(p => {
+            progressMap.set(p.test_id, p);
+        });
+    }
+
     let htmlContent = '';
     const itemsData = [];
 
     for (const test of tests) {
-        const progress = await findTestProgress(test.id);
+        // Usar mapa en memoria en lugar de await secuencial
+        const progress = progressMap.get(test.id);
 
         let progressHTML = '';
         let buttonsHTML = '';

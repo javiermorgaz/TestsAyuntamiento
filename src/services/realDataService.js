@@ -16,7 +16,8 @@ import {
     completeTestSupabase,
     fetchTestHistory,
     fetchAllResults,
-    deleteTestProgress
+    deleteTestProgress,
+    fetchAllTestProgress
 } from './supabase-service.js';
 
 import {
@@ -175,6 +176,25 @@ async function findTestProgress(testId) {
 }
 
 /**
+ * Carga todo el progreso activo del usuario de una sola vez
+ * @returns {Promise<Array>} Array con todos los resultados en progreso con status 'in_progress'
+ */
+async function fetchAllProgress() {
+    try {
+        if (await isSupabaseAvailable()) {
+            const allProgress = await fetchAllTestProgress();
+            if (allProgress && allProgress.length > 0) {
+                console.log(`📡 Progreso batch cargado: ${allProgress.length} items`);
+                return allProgress;
+            }
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al cargar progreso batch:', error.message);
+    }
+    return [];
+}
+
+/**
  * Guarda el progreso actual de un test
  * @param {Object} data - Datos del progreso
  * @param {number} data.id - ID del resultado (null para crear nuevo)
@@ -328,6 +348,7 @@ export const realDataService = {
     getTestWithQuestions,
     fetchHistory,
     findTestProgress,
+    fetchAllProgress,
     saveProgress,
     deleteProgress,
     completeTest,
@@ -342,6 +363,7 @@ export {
     getTestWithQuestions,
     fetchHistory,
     findTestProgress,
+    fetchAllProgress,
     saveProgress,
     deleteProgress,
     completeTest,

@@ -21,7 +21,8 @@ jest.unstable_mockModule('../src/services/supabase-service.js', () => ({
     completeTestSupabase: jest.fn(),
     fetchTestHistory: jest.fn(),
     fetchAllResults: jest.fn(),
-    deleteTestProgress: jest.fn()
+    deleteTestProgress: jest.fn(),
+    fetchAllTestProgress: jest.fn()
 }));
 
 jest.unstable_mockModule('../src/services/storage.js', () => ({
@@ -37,7 +38,8 @@ const {
     fetchTestsFromSupabase,
     fetchTestInProgress,
     saveTestProgress,
-    completeTestSupabase
+    completeTestSupabase,
+    fetchAllTestProgress
 } = await import('../src/services/supabase-service.js');
 const { getResults, saveResult } = await import('../src/services/storage.js');
 
@@ -160,6 +162,19 @@ describe('Data Service (Unit Tests)', () => {
                 aciertos: 5,
                 errores: 5
             }));
+        });
+    });
+
+    describe('fetchAllProgress', () => {
+        test('should return progress from Supabase if available', async () => {
+            getSupabaseClient.mockResolvedValue({});
+            const mockProgress = [{ test_id: 1, answers_data: [] }];
+            fetchAllTestProgress.mockResolvedValue(mockProgress);
+
+            const result = await dataService.fetchAllProgress();
+
+            expect(fetchAllTestProgress).toHaveBeenCalled();
+            expect(result).toEqual(mockProgress);
         });
     });
 });
