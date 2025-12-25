@@ -90,7 +90,7 @@ async function renderTestsList(tests) {
             progressHTML = `
                 <div class="mb-4">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-sm font-medium text-gray-700 dark:text-gray-300">📝 En progreso</span>
+                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">📝 En progreso</span>
                         <span class="text-sm font-semibold text-primary">${answeredCount}/${progress.total_questions}</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -120,7 +120,7 @@ async function renderTestsList(tests) {
         htmlContent += `
             <div class="glass-card p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
                 <h3 class="text-base font-bold text-dark mb-2">${test.titulo}</h3>
-                <p class="text-sm text-gray-500 mb-4 flex items-center gap-2 dark:text-gray-400">
+                <p class="text-sm text-gray-700 mb-4 flex items-center gap-2 dark:text-gray-300">
                     <span class="text-xl">📋</span>
                     <span>${test.num_preguntas} preguntas</span>
                 </p>

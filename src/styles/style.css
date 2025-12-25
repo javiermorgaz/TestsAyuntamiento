@@ -4,6 +4,28 @@
 @source "../../index.html";
 @source "../**/*.{js,jsx,ts,tsx}";
 
+/* ═══════════════════════════════════════════════════════════════════════
+   TAILWIND DYNAMIC CLASS SAFELIST
+   Classes used in JS template literals that Tailwind can't auto-detect.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* 1. BACKGROUNDS */
+@source inline("bg-white{,/95,/90,/30,/25,/20,/10}");
+@source inline("bg-gray-{50,100,200}{,/80,/60,/50,/40}");
+@source inline("bg-transparent");
+@source inline("bg-red-500");
+
+/* 2. DARK MODE BACKGROUNDS */
+@source inline("{dark:,}bg-gray-{700,800,900}{,/95,/90,/80,/60,/50,/40,/30}");
+
+/* 3. TEXT COLORS */
+@source inline("text-{white,gray-600,gray-700,gray-800}");
+@source inline("{dark:,}text-gray-{100,200,300,400}");
+
+/* 4. BORDERS */
+@source inline("border-gray-200");
+@source inline("dark:border-gray-700");
+
 /* 2. THEME CONFIGURATION */
 @theme {
     /* VIBRANT COLORS (Matched to Screenshots) */
@@ -22,8 +44,17 @@
     --font-sans: "Poppins", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
 
     /* Semantic color aliases for better code readability */
-    --color-gray-800: #2d3748;
-    --color-gray-900: #1a202c;
+    /* Standard Tailwind gray scale (required for @source inline patterns) */
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
     --color-text-dark: #2c3e50;
 
     /* Custom feedback colors (not in Tailwind's default palette) */
@@ -40,9 +71,9 @@
     --color-dark-text-alt: #e2e8f0;
 }
 
-/* 3. MANUAL UTILITIES (Fallback for classes in JS template literals)
-   Tailwind's @source cannot detect classes inside ${interpolations},
-   so these must be defined manually. See: main.js, testRenderer.js */
+/* 3. CUSTOM UTILITIES (Not standard Tailwind - must be manual for Cascade Priority) */
+/* Moving these to @source inline caused them to be generated at the top of the file,
+   losing priority against other styles. Keeping them manual ensures they win by cascade. */
 
 /* BACKGROUNDS */
 .bg-white {
@@ -79,15 +110,33 @@
 
 /* SLATE PALETTE (Light Mode) */
 .bg-gray-50 {
-    background-color: #f8fafc;
+    background-color: #f9fafb;
+    /* Lighter than Tailwind standard v3, matched to #f9fafb var */
 }
 
 .bg-gray-100 {
-    background-color: #f1f5f9;
+    background-color: #f3f4f6;
 }
 
 .bg-gray-200 {
-    background-color: #e2e8f0;
+    background-color: #e5e7eb;
+}
+
+/* TEXT COLORS (Manual overrides for Cascade Priority) */
+.text-gray-600 {
+    color: var(--color-gray-600);
+}
+
+.text-gray-700 {
+    color: var(--color-gray-700);
+}
+
+.text-gray-800 {
+    color: var(--color-gray-800);
+}
+
+.text-gray-900 {
+    color: var(--color-gray-900);
 }
 
 /* BRAND COLORS */
@@ -97,6 +146,35 @@
 
 .bg-primary\/10 {
     background-color: rgba(92, 106, 196, 0.1);
+}
+
+/* DARK MODE OVERRIDES (Manual - Must be LAST to win Cascade) */
+.dark .dark\:bg-gray-700 {
+    background-color: var(--color-gray-700);
+}
+
+.dark .dark\:bg-gray-800 {
+    background-color: var(--color-gray-800);
+}
+
+.dark .dark\:bg-gray-800\/80 {
+    background-color: rgba(31, 41, 55, 0.8);
+}
+
+.dark .dark\:text-gray-100 {
+    color: var(--color-gray-100);
+}
+
+.dark .dark\:text-gray-200 {
+    color: var(--color-gray-200);
+}
+
+.dark .dark\:text-gray-300 {
+    color: var(--color-gray-300);
+}
+
+.dark .dark\:text-white {
+    color: #ffffff;
 }
 
 .text-primary {
@@ -166,48 +244,13 @@
     background-color: rgba(55, 65, 81, 0.3);
 }
 
-/* TEXT COLORS */
-.text-white {
-    color: #ffffff;
-}
-
-.text-gray-600 {
-    color: #475569;
-}
-
-.text-gray-700 {
-    color: #334155;
-}
-
-.text-gray-800 {
-    color: #1e293b;
-}
+/* SEMANTIC COLORS */
 
 /* Semantic text color (used throughout the app for main content) */
 .text-dark {
     color: #1e293b !important;
 }
 
-/* DARK MODE TEXT OVERRIDES */
-.dark .dark\:text-white {
-    color: #ffffff;
-}
-
-.dark .dark\:text-gray-100 {
-    color: #f3f4f6;
-}
-
-.dark .dark\:text-gray-200 {
-    color: #e5e7eb;
-}
-
-.dark .dark\:text-gray-300 {
-    color: #d1d5db;
-}
-
-.dark .dark\:text-gray-400 {
-    color: #9ca3af;
-}
 
 .dark .text-dark {
     color: #f8fafc !important;

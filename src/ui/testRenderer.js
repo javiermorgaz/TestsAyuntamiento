@@ -115,7 +115,7 @@ const TestRenderer = {
                 : '';
 
             html += `
-                <div class="bg-white rounded-xl shadow-md p-6 md:p-8 border-l-4 ${borderClass} hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800" id="pregunta-${index}">
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8 border-l-4 ${borderClass} hover:shadow-lg transition-shadow duration-300 dark:bg-gray-700" id="pregunta-${index}">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="${numberBgClass} text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">${index + 1}</span>
                         ${autoBadge}
@@ -127,14 +127,14 @@ const TestRenderer = {
             pregunta.opciones.forEach((opcion, opcionIndex) => {
                 const optionValue = opcionIndex + 1;
                 html += `
-                    <label class="flex items-start p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-primary/10 hover:border-primary border-2 border-transparent transition-all duration-200 group dark:bg-gray-700/50 dark:hover:bg-primary/20 dark:hover:border-primary/50">
+                    <label class="flex items-start p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-primary/10 transition-all duration-200 group dark:bg-gray-800/80 dark:hover:bg-primary/20">
                         <input
                             type="radio"
                             name="pregunta-${index}"
                             value="${optionValue}"
                             class="question-option mt-1 w-5 h-5 text-primary focus:ring-primary focus:ring-2 cursor-pointer dark:bg-gray-600 dark:border-gray-500"
                         >
-                        <span class="ml-3 text-gray-700 group-hover:text-dark font-medium flex-1 dark:text-gray-300 dark:group-hover:text-gray-100">${opcion}</span>
+                        <span class="ml-3 text-gray-900 group-hover:text-dark font-medium flex-1 dark:text-gray-100 dark:group-hover:text-white">${opcion}</span>
                     </label>
                 `;
             });
@@ -200,7 +200,7 @@ const TestRenderer = {
             const borderColor = detalle.enBlanco ? 'border-yellow-400' : (detalle.esCorrecta ? 'border-green-500' : 'border-red-500');
 
             html += `
-                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 ${borderColor} dark:bg-gray-800">
+                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 ${borderColor} dark:bg-gray-700">
                     <div class="flex items-center gap-2 mb-4">
                         <span class="text-2xl">${statusIcon}</span>
                         <span class="font-semibold text-dark dark:text-gray-100">Pregunta ${index + 1}</span>
@@ -214,20 +214,20 @@ const TestRenderer = {
                 const isUserAnswer = optionValue === detalle.respuestaUsuario;
                 const isCorrectAnswer = optionValue === detalle.respuestaCorrecta;
 
-                let optionClass = 'p-3 rounded-lg border-2 ';
+                let optionClass = 'p-3 rounded-lg ';
                 let marcador = '';
                 let iconoOpcion = '';
 
                 if (isCorrectAnswer) {
-                    optionClass += 'bg-success-light border-success-bright text-success-bright dark:bg-green-900/40 dark:text-green-300';
+                    optionClass += 'bg-success-light text-success-bright dark:bg-green-900/40 dark:text-green-300';
                     marcador = '✓';
                     iconoOpcion = '✅';
                 } else if (isUserAnswer && !isCorrectAnswer) {
-                    optionClass += 'bg-danger-light border-danger-bright text-danger-bright dark:bg-red-900/40 dark:text-red-300';
+                    optionClass += 'bg-danger-light text-danger-bright dark:bg-red-900/40 dark:text-red-300';
                     marcador = '✗';
                     iconoOpcion = '❌';
                 } else {
-                    optionClass += 'bg-gray-50 border-gray-200 text-gray-700 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400';
+                    optionClass += 'bg-gray-50 text-gray-900 dark:bg-gray-800/80 dark:text-gray-100';
                 }
 
                 html += `
@@ -362,7 +362,7 @@ const TestRenderer = {
             nav.className = 'slider-controls-container';
 
             nav.innerHTML = `
-                <button id="slider-prev" class="bg-white/90 backdrop-blur hover:bg-white text-gray-800 font-bold py-3 px-6 rounded-full shadow-lg border border-gray-200 dark:bg-gray-800/90 dark:text-white dark:border-gray-700 transition-all transform hover:scale-105 flex items-center gap-2">
+                <button id="slider-prev" class="bg-white/90 backdrop-blur hover:bg-white text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg border border-gray-200 dark:bg-gray-800/90 dark:text-white dark:border-gray-700 transition-all transform hover:scale-105 flex items-center gap-2">
                     \u2190 <span class="hidden md:inline">Anterior</span><span class="md:hidden">Ant.</span>
                 </button>
                 <button id="slider-next" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center gap-2">
