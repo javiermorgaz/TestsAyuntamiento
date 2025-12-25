@@ -36,14 +36,10 @@
     --color-reset: #e67e22;
 
     --color-dark: #2c3e50;
-    --color-light: #f4f6f9;
-    --color-dark-bg: #0b0e14;
-    --color-dark-card: #151921;
     --color-dark-text: #f8fafc;
 
     --font-sans: "Poppins", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
 
-    /* Semantic color aliases for better code readability */
     /* Standard Tailwind gray scale (required for @source inline patterns) */
     --color-gray-50: #f9fafb;
     --color-gray-100: #f3f4f6;
@@ -55,7 +51,6 @@
     --color-gray-700: #374151;
     --color-gray-800: #1f2937;
     --color-gray-900: #111827;
-    --color-text-dark: #2c3e50;
 
     /* Custom feedback colors (not in Tailwind's default palette) */
     --color-green-100: #d5f4e6;
@@ -66,7 +61,6 @@
     /* Alternative color palette for modal components */
     --color-primary-alt: #667eea;
     --color-secondary-alt: #764ba2;
-    --color-dark-bg-alt: #1a202c;
     --color-dark-card-alt: #2d3748;
     --color-dark-text-alt: #e2e8f0;
 }
@@ -211,25 +205,17 @@
 }
 
 
-/* DARK MODE BACKGROUND OVERRIDES */
+/* Dark mode opacity variants (for glassmorphism effects) */
 .dark .dark\:bg-gray-900\/90 {
-    background-color: rgba(26, 32, 44, 0.9);
-}
-
-.dark .dark\:bg-gray-800 {
-    background-color: rgba(21, 25, 33, 0.95);
+    background-color: rgba(17, 24, 39, 0.9);
 }
 
 .dark .dark\:bg-gray-800\/95 {
-    background-color: rgba(45, 55, 72, 0.95);
+    background-color: rgba(31, 41, 55, 0.95);
 }
 
 .dark .dark\:bg-gray-800\/90 {
-    background-color: rgba(45, 55, 72, 0.90);
-}
-
-.dark .dark\:bg-gray-700 {
-    background-color: #374151;
+    background-color: rgba(31, 41, 55, 0.90);
 }
 
 .dark .dark\:bg-gray-700\/50 {
