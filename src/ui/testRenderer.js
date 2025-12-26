@@ -260,12 +260,14 @@ const TestRenderer = {
     // GESTIÓN DE MODOS DE VISTA
     // ═══════════════════════════════════════════════════════════════════════
 
-    updateViewModeUI(onGradeTest, onScrollSlider) {
+    updateViewModeUI(onGradeTest, onScrollSlider, forcedIndex = -1) {
         const { listIcon, sliderIcon, questionsContainer, testControls, form } = this.elements;
         const currentViewMode = StateManager.get('currentViewMode');
 
         let syncIndex = 0;
-        if (currentViewMode === 'slider') {
+        if (forcedIndex >= 0) {
+            syncIndex = forcedIndex;
+        } else if (currentViewMode === 'slider') {
             syncIndex = this.getCurrentQuestionIndexInListMode();
         } else if (questionsContainer) {
             const items = Array.from(questionsContainer.children).filter(el =>

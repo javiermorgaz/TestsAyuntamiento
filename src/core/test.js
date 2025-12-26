@@ -68,17 +68,12 @@ async function loadTest(testId, fileName) {
         // UI Setup
         document.getElementById('test-title').textContent = testData.titulo;
         TestRenderer.renderQuestions(testData.preguntas, saveAnswer);
-        TestRenderer.updateViewModeUI(gradeTest, scrollSlider);
-
-        // Mostrar vista de test
-        const testsListSection = document.getElementById('tests-list');
-        const testView = document.getElementById('test-view');
-        if (testsListSection) testsListSection.style.display = 'none';
-        if (testView) testView.style.display = 'block';
-
         // Activar auto-guardado
         const intervalId = setInterval(autoSaveProgress, 30000);
         StateManager.set({ autoSaveInterval: intervalId });
+
+        // Posicionamiento inteligente: En test nuevo, empezar en el 0
+        TestRenderer.updateViewModeUI(gradeTest, scrollSlider, 0);
 
     } catch (error) {
         console.error('Error al cargar el test:', error);
@@ -121,17 +116,28 @@ async function loadTestWithProgress(testId, fileName, progress) {
         if (testsListSection) testsListSection.style.display = 'none';
         if (testView) testView.style.display = 'block';
 
-        TestRenderer.updateViewModeUI(gradeTest, scrollSlider);
-
         // Activar auto-guardado
         const intervalId = setInterval(autoSaveProgress, 30000);
         StateManager.set({ autoSaveInterval: intervalId });
 
-        console.log(`✅ Test restaurado con ${progress.answers_data.filter(r => r !== null).length}/${testData.preguntas.length} respuestas`);
+        // Posicionamiento inteligente: Buscar primera pregunta sin contestar
+        const firstUnanswered = getFirstUnansweredIndex(progress.answers_data);
+        TestRenderer.updateViewModeUI(gradeTest, scrollSlider, firstUnanswered);
+
+        console.log(`✅ Test restaurado con ${progress.answers_data.filter(r => r !== null).length}/${testData.preguntas.length} respuestas. Saltando a pregunta ${firstUnanswered + 1}`);
 
     } catch (error) {
         console.error('Error al restaurar test:', error);
     }
+}
+
+/**
+ * Busca el índice de la primera pregunta sin contestar
+ */
+function getFirstUnansweredIndex(responses) {
+    if (!responses) return 0;
+    const index = responses.findIndex(answer => answer === null);
+    return index !== -1 ? index : 0;
 }
 
 /**
@@ -303,7 +309,8 @@ export {
     gradeTest,
     saveAnswer,
     scrollSlider,
-    restartTest
+    restartTest,
+    getFirstUnansweredIndex
 };
 
 // Funciones auxiliares expuestas para tests

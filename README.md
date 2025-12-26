@@ -368,6 +368,7 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 - ✅ **Performance Optimization**: Implementación de **Batch Fetching**.
 - ✅ **UX Improvement**: Eliminación de FOUC y parpadeo de tema (v2.6.1).
 - ✅ **Payload Reduction**: Select optimizado de columnas en Supabase.
+- ✅ **Smart Resumption**: Posicionamiento automático en la primera pregunta sin contestar (v2.7.0).
 
 **v3.0** (Próximamente)
 - 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)
