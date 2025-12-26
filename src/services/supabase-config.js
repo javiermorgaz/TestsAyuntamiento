@@ -22,12 +22,11 @@ async function initSupabase() {
     // Crear nueva promesa de inicialización
     initializationPromise = (async () => {
         try {
-            // Obtener credenciales desde las variables de entorno de Vite
             const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-            const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+            const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
             if (!SUPABASE_URL || !SUPABASE_KEY) {
-                console.warn('⚠️ No se han configurado las variables de entorno de Supabase (VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY). Modo offline activado.');
+                console.warn('⚠️ No se han configurado las variables de entorno de Supabase. Modo offline activado.');
                 return null;
             }
 

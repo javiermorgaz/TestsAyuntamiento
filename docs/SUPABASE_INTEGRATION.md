@@ -42,7 +42,7 @@ A diferencia de versiones anteriores, el cliente se inicializa usando variables 
 // Cliente inicializado automáticamente vía ENV
 const supabase = createClient(
     import.meta.env.VITE_SUPABASE_URL,
-    import.meta.env.VITE_SUPABASE_ANON_KEY
+    import.meta.env.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY
 );
 ```
 

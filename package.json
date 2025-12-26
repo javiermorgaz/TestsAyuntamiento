@@ -1,6 +1,6 @@
 {
   "name": "test-app-oposiciones",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "type": "module",
   "description": "Aplicación de tests para oposiciones de ayuntamiento",
   "scripts": {
@@ -19,7 +19,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@supabase/supabase-js": "^2.86.2"
+    "@supabase/supabase-js": "^2.86.2",
+    "dotenv": "^17.2.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",

@@ -12,7 +12,7 @@ En local, las credenciales se almacenan en un archivo `.env` en la raíz del pro
 **Variables requeridas:**
 ```bash
 VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
-VITE_SUPABASE_ANON_KEY=tu_clave_anon_aqui
+VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_clave_anon_aqui
 ```
 
 ### 2. Producción (GitHub Secrets)
@@ -27,7 +27,7 @@ Es el punto central de configuración. Utiliza `import.meta.env` (nativo de Vite
 
 ```javascript
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
 export const getSupabaseClient = ...
 ```
@@ -38,7 +38,7 @@ El flujo de CI/CD inyecta los secretos en el entorno de build:
 ```yaml
 env:
   VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-  VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+  VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY }}
 ```
 
 ---
@@ -47,7 +47,7 @@ env:
 
 1.  **Exposición Mínima**: Solo se exponen claves públicas (`anon_key`). Si una clave se viera comprometida, el impacto está limitado por las políticas de **Row Level Security (RLS)** de Supabase.
 2.  **No Hardcoding**: Las claves nunca se escriben directamente en el código fuente.
-3.  **Historial Limpio**: Se ha realizado una purga total del historial de Git (`git filter-branch`) para eliminar rastros de archivos de configuración antiguos (`supabaseAuth.txt`).
+3.  **Historial Limpio**: Se ha realizado una purga total del historial de Git (`git filter-branch`) para eliminar rastros de archivos de configuración antiguos.
 4.  **Vite Bundling**: Al usar Vite, las variables de entorno se inyectan en tiempo de compilación, lo que es más eficiente y seguro que realizar peticiones `fetch` adicionales en tiempo de ejecución.
 
 ---
@@ -69,4 +69,4 @@ env:
 
 ### 404 en GitHub Pages (Supabase no conecta)
 **Causa**: No se han configurado los Secrets en el repositorio de GitHub.
-**Solución**: Ve a tu repositorio en GitHub -> Settings -> Secrets and variables -> Actions -> New repository secret. Añade `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`.
+**Solución**: Ve a tu repositorio en GitHub -> Settings -> Secrets and variables -> Actions -> New repository secret. Añade `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY`.

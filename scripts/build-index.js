@@ -9,57 +9,60 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { createClient } from '@supabase/supabase-js';
+import dotenv from 'dotenv';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Cargar variables de entorno desde .env
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
+
 // --- 1. CONFIGURACIÓN DE RUTAS Y CONSTANTES ---
-const DATA_DIR = path.join(__dirname, '../data');
+const DATA_DIR = path.join(__dirname, '../public/data');
 const TESTS_DIR = path.join(DATA_DIR, 'tests');
 const OUTPUT_FILE = path.join(DATA_DIR, 'tests_index.json');
 const TESTS_TABLE = 'tests';
 
-const AUTH_FILE_PATH = path.join(__dirname, '..', 'config', 'supabaseAuth.txt');
-
 // --- 2. FUNCIÓN PARA CARGAR CREDENCIALES ---
-function loadAuthFile() {
+function loadCredentials() {
     try {
-        console.log(`🔎 Buscando credenciales en: ${AUTH_FILE_PATH}`);
+        console.log('🔎 Buscando credenciales en variables de entorno (.env)...');
 
-        const content = fs.readFileSync(AUTH_FILE_PATH, 'utf-8');
-        const config = {};
+        const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 
-        content.split('\n').forEach(line => {
-            const trimmedLine = line.trim();
-            if (trimmedLine && !trimmedLine.startsWith('#')) {
-                const match = trimmedLine.match(/^([^=]+)=(.*)$/);
-                if (match) {
-                    const key = match[1].trim();
-                    const value = match[2].trim().replace(/['"]+/g, '');
-                    config[key] = value;
-                }
-            }
-        });
+        const SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY
+            || process.env.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
-        const SUPABASE_URL = config.NEXT_PUBLIC_SUPABASE_URL;
-        const SERVICE_KEY = config.SUPABASE_SERVICE_KEY || config.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
-
-        if (!SUPABASE_URL || !SERVICE_KEY) {
-            throw new Error(`El archivo debe contener NEXT_PUBLIC_SUPABASE_URL y credentials.`);
+        if (!SUPABASE_URL) {
+            throw new Error('Falta VITE_SUPABASE_URL en el archivo .env');
         }
 
-        console.log('✅ Credenciales cargadas exitosamente.');
+        if (!SERVICE_KEY) {
+            throw new Error('Falta clave de Supabase. Necesitas:\n' +
+                '   - SUPABASE_SERVICE_KEY (recomendada)\n' +
+                '   - VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY');
+        }
+
+        const keyType = process.env.SUPABASE_SERVICE_KEY ? 'SERVICE_KEY' : 'PUBLISHABLE_DEFAULT_KEY';
+
+        console.log(`✅ Credenciales cargadas (${keyType})`);
+
+        if (keyType === 'PUBLISHABLE_DEFAULT_KEY') {
+            console.warn('⚠️  Usando clave pública. Para sincronización completa, usa SUPABASE_SERVICE_KEY');
+        }
+
         return { SUPABASE_URL, SERVICE_KEY };
 
     } catch (error) {
-        console.warn(`\n⚠️ Error al cargar las credenciales: ${error.message}`);
+        console.warn(`\n⚠️ ${error.message}`);
+
         return null;
     }
 }
 
 // --- 3. LÓGICA PRINCIPAL DEL SCRIPT ---
 async function buildIndexAndSync() {
-    const authConfig = loadAuthFile();
+    const authConfig = loadCredentials();
     let supabase = null;
 
     if (authConfig) {
@@ -119,15 +122,29 @@ async function buildIndexAndSync() {
 
         if (supabase && testsIndex.length > 0) {
             console.log('\n🔄 Sincronizando con Supabase...');
-            const { data, error: upsertError } = await supabase
-                .from(TESTS_TABLE)
-                .upsert(testsIndex, { onConflict: 'id' })
-                .select();
+            try {
+                const { data, error: upsertError } = await supabase
+                    .from(TESTS_TABLE)
+                    .upsert(testsIndex, { onConflict: 'id' })
+                    .select();
 
-            if (upsertError) {
-                throw new Error(`Error al sincronizar datos: ${upsertError.message}`);
+                if (upsertError) {
+                    throw new Error(`Error al sincronizar con Supabase: ${upsertError.message}\n` +
+                        `Detalles: ${JSON.stringify(upsertError, null, 2)}`);
+                }
+
+                if (!data || data.length === 0) {
+                    throw new Error('La sincronización no devolvió datos. Verifica permisos y que la tabla existe.');
+                }
+
+                console.log(`   ✅ Sincronizados ${data.length} tests en Supabase.`);
+
+            } catch (syncError) {
+                // Re-lanzar para que el catch principal lo capture
+                throw syncError;
             }
-            console.log(`   ✅ Sincronizados ${data.length} tests en Supabase.`);
+        } else if (!supabase) {
+            console.log('\n⏭️  Saltando sincronización con Supabase (no hay credenciales).');
         }
 
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(testsIndex, null, 2), 'utf-8');

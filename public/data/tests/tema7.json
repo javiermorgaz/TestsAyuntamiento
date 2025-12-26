@@ -4,396 +4,527 @@
   "preguntas": [
     {
       "id_p": 1,
-      "enunciado": "De acuerdo con el artículo 13.g) de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (LPAC), las personas tienen derecho a:",
+      "enunciado": "De acuerdo con lo establecido en el artículo 4 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se considera interesado en el procedimiento administrativo:",
       "opciones": [
-        "No aportar documentos que ya se encuentren en poder de la Administración Pública.",
-        "Obtener copias y certificaciones de los documentos contenidos en los procedimientos en los que tengan la condición de interesado.",
-        "Acceder a la información pública, archivos y registros."
+        "Quien lo promueva como titular de un deber individual o colectivo.",
+        "Quien tenga un derecho que pueda resultar afectado por la decisión que en el mismo se adopte, aunque no haya iniciado el procedimiento.",
+        "Aquel cuyo interés legítimo pueda resultar afectado por la resolución y se persone en el procedimiento una vez recaída resolución definitiva."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 2,
-      "enunciado": "Según el artículo 5.4 de la Ley 39/2015, la falta o insuficiente acreditación de la representación no impedirá que:",
+      "enunciado": "De acuerdo con lo establecido en el artículo 27 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, tendrá la consideración de copia auténtica de un documento privado la realizada por los órganos competentes de las Administraciones Públicas en la que quede garantizada:",
       "opciones": [
-        "Se tenga por no presentada la solicitud.",
-        "Se tenga por desistido al interesado.",
-        "Se tenga por realizado el acto de que se trate, siempre que se subsane en un plazo de diez días hábiles."
+        "La identidad del funcionario habilitado que ha realizado la copia.",
+        "La identidad del órgano que ha realizado la copia y su contenido.",
+        "La validez intrínseca del documento original."
       ],
-      "respuesta_correcta": 3,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 3,
-      "enunciado": "Según el artículo 2.1 de la Ley 39/2015, el sector público, a los efectos de esta Ley, comprende, excepto:",
+      "enunciado": "A efectos de lo establecido en el artículo 5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, no deberá acreditarse la representación:",
       "opciones": [
-        "La Administración General del Estado, las Administraciones de las Comunidades Autónomas y las Entidades que integran la Administración Local.",
-        "Las entidades de derecho público con personalidad jurídica propia vinculadas o dependientes de las Administraciones Públicas.",
-        "Las sociedades mercantiles que desarrollen actividades de gestión."
+        "Para los actos y gestiones de mero trámite.",
+        "Para formular solicitudes.",
+        "Para presentar comunicaciones."
       ],
-      "respuesta_correcta": 3,
+      "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 4,
-      "enunciado": "Según el artículo 31.1 de la Ley 39/2015, si el plazo se fija en horas, se entiende que son hábiles, y terminará:",
+      "enunciado": "De conformidad con el artículo 4.1 de Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se consideran interesados en el procedimiento administrativo:",
       "opciones": [
-        "A la misma hora en que se inició el cómputo.",
-        "A la última hora del día.",
-        "A la hora en que se registró la entrada de la solicitud."
+        "Las empresas adjudicatarias de los contratos públicos hasta que se resuelva la licitación.",
+        "Aquellos cuyos intereses legítimos, individuales o colectivos, puedan resultar afectados por la resolución y se personen en el procedimiento en tanto no haya recaído resolución definitiva.",
+        "Las entidades beneficiarias de subvenciones hasta que se resuelva el procedimiento de concesión."
       ],
-      "respuesta_correcta": 1,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 5,
-      "enunciado": "Según el artículo 3 de la Ley 39/2015, tienen capacidad de obrar ante las Administraciones Públicas:",
+      "enunciado": "De conformidad con el artículo 14.2 de Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, en todo caso, estarán obligados a relacionarse a través de medios electrónicos con las Administraciones Públicas para la realización de cualquier trámite de un procedimiento administrativo, al menos, los siguientes sujetos:",
       "opciones": [
-        "Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles.",
-        "Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas de procedimiento.",
-        "Solo las personas jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles."
+        "Las personas físicas.",
+        "Las personas jurídicas.",
+        "Las personas autónomas."
       ],
-      "respuesta_correcta": 1,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 6,
-      "enunciado": "Según el artículo 14.2 de la Ley 39/2015, están obligados a relacionarse a través de medios electrónicos con las Administraciones Públicas:",
+      "enunciado": "El artículo 5.6 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, determina que la falta o insuficiente acreditación de la representación no impedirá que se tenga por realizado el acto de que se trate, siempre que se aporte aquélla o se subsane el defecto dentro del plazo de:",
       "opciones": [
-        "Las personas jurídicas, las entidades sin personalidad jurídica y las personas físicas que ejerzan una actividad profesional.",
-        "Las personas jurídicas, las entidades sin personalidad jurídica y quienes representen a un interesado obligado a relacionarse electrónicamente.",
-        "Todas las personas físicas o jurídicas que desarrollen actividad económica."
+        "Siete días.",
+        "Diez días.",
+        "Cinco días."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 7,
-      "enunciado": "De acuerdo con el artículo 4 de la Ley 39/2015, se consideran interesados en el procedimiento administrativo:",
+      "enunciado": "El artículo 14.1 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas dispone que el medio elegido por la persona para comunicarse con las Administraciones Públicas podrá ser modificado por aquella:",
       "opciones": [
-        "Quienes lo promuevan como titulares de derechos o intereses individuales.",
-        "Quienes sin haber iniciado el procedimiento, tengan derechos que puedan resultar afectados por la decisión que en el mismo se adopte.",
-        "Quienes lo promuevan como titulares de derechos o intereses legítimos, individuales o colectivos, y aquellos cuyos derechos o intereses legítimos puedan resultar afectados."
+        "Con anterioridad al periodo de presentación de alegaciones.",
+        "En cualquier momento.",
+        "Si así lo autoriza la Administración."
       ],
-      "respuesta_correcta": 3,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 8,
-      "enunciado": "Según el artículo 68.1 de la Ley 39/2015, si la solicitud de iniciación no reúne los requisitos exigidos, se requerirá al interesado para que subsane la falta o aporte los documentos preceptivos en un plazo de:",
+      "enunciado": "Según el artículo 17.3 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los medios o soportes en que se almacenen documentos deberán contar con medidas de seguridad, que garanticen la integridad, autenticidad, confidencialidad, calidad, protección y conservación de los documentos almacenados, de acuerdo con lo previsto en:",
       "opciones": [
-        "Diez días.",
-        "Quince días.",
-        "Cinco días."
+        "La Ley de Protección de Datos.",
+        "El Esquema Nacional de Seguridad.",
+        "Lo dispuesto en la normativa europea de aplicación."
       ],
-      "respuesta_correcta": 1,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 9,
-      "enunciado": "Según el artículo 28.2 de la Ley 39/2015, los interesados tienen derecho a no aportar documentos que ya se encuentren en poder de la Administración Pública, salvo:",
+      "enunciado": "El artículo 27.6 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas dispone que la expedición de copias auténticas de documentos públicos notariales, registrales y judiciales, así como de los diarios oficiales, se regirá:",
       "opciones": [
-        "Que se opongan a la consulta.",
-        "Que se opongan a la consulta o que la Administración justifique la imposibilidad de consultarlos.",
-        "Que se opongan a la consulta, siempre que la Administración justifique la imposibilidad de consultarlos."
+        "Por su legislación específica.",
+        "Por lo dispuesto en la propia Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas.",
+        "Por el reglamento de desarrollo de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas."
       ],
       "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 10,
-      "enunciado": "Según el artículo 16.1 de la Ley 39/2015, cada Administración dispondrá de un Registro Electrónico General, que:",
+      "enunciado": "En los términos de lo preceptuado en el artículo 1.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, podrán incluirse trámites adicionales o distintos a los contemplados en dicha ley:",
       "opciones": [
-        "Permitirá la presentación de documentos las veinticuatro horas del día, todos los días del año, sin que quepan excepciones.",
-        "Será plenamente interoperable, garantizando la compatibilidad de los distintos sistemas registrales.",
-        "Se regirá por las normas de cada Comunidad Autónoma."
+        "Solo mediante Ley.",
+        "Mediante norma reglamentaria.",
+        "Sin necesidad de norma alguna por el órgano competente para resolver, siempre que lo haga de manera motivada."
       ],
-      "respuesta_correcta": 2,
+      "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 11,
-      "enunciado": "Según el artículo 28.2 de la Ley 39/2015, las Administraciones Públicas podrán consultar o recabar los documentos por medios electrónicos, salvo que el interesado se oponga a ello, de los siguientes extremos:",
+      "enunciado": "Según el artículo 5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, la representación de los interesados en el procedimiento",
       "opciones": [
-        "Los documentos que se encuentren en poder de la propia Administración o de otra distinta, o los elaborados por las Administraciones.",
-        "Los documentos que se encuentren en poder de la propia Administración o de otra distinta, o los elaborados por las Administraciones, siempre que no se oponga el interesado.",
-        "Los documentos que se encuentren en poder de la propia Administración o de otra distinta."
-      ],
-      "respuesta_correcta": 2,
-      "autogenerado": false
-    },
-    {
-      "id_p": 12,
-      "enunciado": "Según la Disposición Final Séptima de la Ley 39/2015, el Título V (referente a la tramitación de los procedimientos), entrará en vigor:",
-      "opciones": [
-        "A los seis meses de su publicación en el Boletín Oficial del Estado.",
-        "Al año de su publicación en el Boletín Oficial del Estado.",
-        "Al año de su entrada en vigor, salvo los artículos 68 y 70."
+        "Deberá acreditarse en todo caso y siempre mediante poder notarial.",
+        "Deberá acreditarse en todo caso y siempre mediante cualquier medio válido en derecho que deje constancia fidedigna de su existencia.",
+        "No deberá acreditarse en todo caso, presumiéndose a veces su existencia."
       ],
       "respuesta_correcta": 3,
       "autogenerado": false
     },
     {
-      "id_p": 13,
-      "enunciado": "Según el artículo 28.2 de la Ley 39/2015, los interesados tienen derecho a no aportar documentos que ya se encuentren en poder de la Administración Pública, salvo:",
+      "id_p": 12,
+      "enunciado": "Conforme a lo dispuesto en el artículo 14 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, en todo caso, estarán obligados a relacionarse a través de medios electrónicos con las Administraciones Públicas para la realización de cualquier trámite de un procedimiento administrativo:",
       "opciones": [
-        "Que se opongan a la consulta de los documentos.",
-        "Que se opongan a la consulta de los documentos, o que la Administración justifique la imposibilidad de consultarlos.",
-        "Que se opongan a la consulta de los documentos, o que la Administración justifique la imposibilidad de consultarlos, aun cuando la solicitud ya esté en curso."
+        "Las personas físicas.",
+        "Las entidades sin personalidad jurídica.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 13,
+      "enunciado": "Atendiendo a lo recogido en el artículo 30 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo común de las Administraciones Públicas, cuando para el cómputo de plazos, los mismos se fijen en meses, éstos se computarán:",
+      "opciones": [
+        "A partir del día en que se produzca la estimación o desestimación por silencio administrativo.",
+        "A partir del día siguiente a aquel en que tenga lugar la notificación o publicación del acto de que se trate.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 14,
-      "enunciado": "Según el artículo 5 de la Ley 39/2015, cualquier persona con capacidad de obrar podrá actuar ante las Administraciones Públicas:",
+      "enunciado": "Según lo establecido en el artículo 33.2 de la Ley 39/2015. de 1 de octubre, del Procedimiento Administrativo común de las Administraciones Públicas, contra el acuerdo que declare la aplicación de la tramitación de urgencia al procedimiento, sin perjuicio del procedente contra la resolución que ponga fin al procedimiento:",
       "opciones": [
-        "Por medio de representante, entendiéndose con este las actuaciones administrativas, salvo manifestación expresa en contra.",
-        "Por medio de representante, y se le presumirá autorizado para realizar todas las actuaciones administrativas, salvo que se trate de un acto personalísimo.",
-        "Por medio de representante, sin que se pueda entender con este las actuaciones administrativas."
-      ],
-      "respuesta_correcta": 1,
-      "autogenerado": false
-    },
-    {
-      "id_p": 15,
-      "enunciado": "Según el artículo 1.2 de la Ley 39/2015, esta Ley se aplica a la potestad sancionadora y a la revisión de oficio de los actos y disposiciones administrativas.",
-      "opciones": [
-        "Siempre que se trate de procedimientos iniciados a instancia de parte.",
-        "Siempre que se trate de procedimientos iniciados de oficio.",
-        "En defecto de la respectiva normativa sectorial."
+        "Cabrá recurso potestativo de reposición.",
+        "Cabrá recurso extraordinario de revisión.",
+        "No cabrá recurso alguno."
       ],
       "respuesta_correcta": 3,
       "autogenerado": false
     },
     {
-      "id_p": 16,
-      "enunciado": "Según el artículo 1.1 de la Ley 39/2015, la Ley tiene por objeto establecer y regular:",
+      "id_p": 15,
+      "enunciado": "Conforme a lo señalado en el artículo 5.5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, la acreditación de la condición de representante y de los poderes que tiene reconocidos en dicho momento deberá incorporarse al expediente administrativo por:",
       "opciones": [
-        "Las bases del régimen jurídico de las Administraciones Públicas, los principios del procedimiento administrativo común y la revisión de oficio de los actos administrativos.",
-        "Las bases del régimen jurídico de las Administraciones Públicas, los principios del procedimiento administrativo común y la potestad sancionadora y la responsabilidad patrimonial de las Administraciones Públicas.",
-        "Las bases del régimen jurídico de las Administraciones Públicas."
+        "El órgano competente para resolver el procedimiento.",
+        "El órgano competente para la tramitación del procedimiento.",
+        "El solicitante estará obligado a presentar su solicitud de acceso a la información a través de medios electrónicos."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según lo dispuesto en el artículo 27 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, las copias electrónicas de un documento electrónico original o de una copia electrónica auténtica, con o sin cambio de formato:",
+      "opciones": [
+        "Requerirán que el documento haya sido digitalizado y deberán incluir los metadatos que acrediten su condición de copia y que se visualicen al consultar el documento.",
+        "Deberán incluir los metadatos que acrediten su condición de copia y que se visualicen al consultar el documento.",
+        "Requerirán que el documento haya sido digitalizado no siendo condición necesaria que se incluyan los metadatos pero sí que se acredite su condición de copia mediante cualquier soporte."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 17,
-      "enunciado": "Según el artículo 31.2 de la Ley 39/2015, si el plazo se fija en meses o años, el cómputo se hará de fecha a fecha, y si en el mes de vencimiento no hubiera día equivalente al inicial:",
+      "enunciado": "Según el artículo 2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, el sector público institucional comprende:",
       "opciones": [
-        "Se entenderá que el plazo expira el último día del mes.",
-        "Se entenderá que el plazo expira el primer día del mes siguiente.",
-        "Se entenderá que el plazo expira el día anterior al del inicio del mes."
+        "Las Universidades Públicas.",
+        "Las entidades de derecho privado vinculadas o dependientes de las Administraciones Públicas.",
+        "Las respuestas a) y b) son correctas."
       ],
-      "respuesta_correcta": 1,
+      "respuesta_correcta": 3,
       "autogenerado": false
     },
     {
       "id_p": 18,
-      "enunciado": "Según el artículo 5.4 de la Ley 39/2015, la falta o insuficiente acreditación de la representación no impedirá que se tenga por realizado el acto de que se trate, siempre que se subsane en un plazo de:",
+      "enunciado": "Según dispone el artículo 30 de la Ley 39/2015, de 1 de octubre de 2015, del Procedimiento Administrativo Común de las Administraciones Públicas, cuando el cómputo de los plazos se señalen por días:",
       "opciones": [
-        "Cinco días.",
-        "Diez días.",
-        "Quince días."
+        "Se entiende que éstos son naturales, excluyéndose del cómputo los domingos y los declarados festivos.",
+        "Se entiende que éstos son hábiles, excluyéndose del cómputo los sábados, los domingos y los declarados festivos.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 19,
-      "enunciado": "Según el artículo 2 de la Ley 39/2015, ¿cuál de los siguientes sujetos no está excluido del ámbito de aplicación de la LPAC?",
+      "enunciado": "Según el artículo 32 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, cuando una incidencia técnica haya imposibilitado el funcionamiento ordinario del sistema o aplicación que corresponda, y hasta que se solucione el problema, la Administración podrá determinar:",
       "opciones": [
-        "Las Corporaciones de Derecho Público, en el ejercicio de funciones públicas.",
-        "Las Corporaciones de Derecho Público, en el ejercicio de funciones privadas.",
-        "Los órganos constitucionales."
+        "Una ampliación de los plazos no vencidos.",
+        "La suspensión del procedimiento.",
+        "La nulidad de las actuaciones realizadas durante la incidencia."
       ],
-      "respuesta_correcta": 3,
+      "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 20,
-      "enunciado": "Según el artículo 32.2 de la Ley 39/2015, el plazo máximo para la ampliación de los plazos establecidos para la presentación de documentos por los interesados es de:",
+      "enunciado": "Según el artículo 30 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
       "opciones": [
-        "La mitad del plazo inicialmente fijado.",
-        "El doble del plazo inicialmente fijado.",
-        "La misma duración del plazo inicialmente fijado."
+        "Cuando un día fuese hábil en el municipio o Comunidad Autónoma en que residiese el interesado, e inhábil en la sede del órgano administrativo, o a la inversa, se considerará inhábil en todo caso.",
+        "Cuando un día fuese inhábil en el municipio o Comunidad Autónoma en que residiese el interesado, y hábil en la sede del órgano administrativo, se considerará hábil en todo caso.",
+        "Cuando un día fuese inhábil en el municipio o Comunidad Autónoma en que residiese el interesado, y hábil en la sede del órgano administrativo, solo se considerará inhábil si el procedimiento administrativo se hubiese iniciado a instancia del interesado."
       ],
       "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 21,
-      "enunciado": "Según el artículo 13 de la Ley 39/2015, las personas tienen los siguientes derechos en sus relaciones con las Administraciones Públicas, excepto:",
+      "enunciado": "La Ley 39/2015, de 1 de octubre, de Procedimiento Administrativo Común de las Administraciones Públicas, establece en su articulo 2.1 que la presente ley se aplica al sector público, que comprende:",
       "opciones": [
-        "A ser tratadas con respeto y deferencia por las autoridades y empleados públicos.",
-        "A no presentar documentos que ya se encuentren en poder de la Administración actuante.",
-        "A la protección de sus datos personales, sin excepción."
+        "Únicamente, la Administración General del Estado y las Administraciones de las Comunidades Autónomas.",
+        "La Administración General del Estado, las Administraciones de las Comunidades Autónomas, las entidades que integran la Administración Local y el sector público institucional.",
+        "La Administración General del Estado, las Administraciones de las Comunidades Autónomas, y las entidades que integran la Administración institucional."
       ],
-      "respuesta_correcta": 3,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 22,
-      "enunciado": "Según el artículo 30.2 de la Ley 39/2015, los plazos señalados en días se entienden referidos a:",
+      "enunciado": "Conforme al artículo 5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, podrá actuar en representación de otra ante las Administraciones Públicas:",
       "opciones": [
-        "Días hábiles.",
-        "Días naturales.",
-        "Días laborables."
+        "Cualquier persona física.",
+        "Las personas físicas con capacidad de obrar y las personas jurídicas, siempre que ello esté previsto en sus Estatutos.",
+        "Cualquier persona jurídica."
       ],
-      "respuesta_correcta": 1,
+      "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 23,
-      "enunciado": "Según el artículo 30.2 de la Ley 39/2015, se consideran días inhábiles para el cómputo de plazos:",
+      "enunciado": "Según el artículo 30 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
       "opciones": [
-        "Los sábados, domingos y festivos de ámbito nacional.",
-        "Los sábados, domingos y los declarados festivos.",
-        "Los domingos y festivos, de ámbito nacional y autonómico."
+        "Cuando un día fuese hábil en el municipio o Comunidad Autónoma en que residiese el interesado, e inhábil en la sede del órgano administrativo, o a la inversa, se considerará hábil en todo caso.",
+        "En los plazos fijados en meses, si en el mes del vencimiento no hubiera un día equivalente a aquel en que comienza el cómputo, se entenderá que el plazo expira el último día del mes.",
+        "En los plazos fijados en meses, si en el mes del vencimiento no hubiera un día equivalente a aquel en que comienza el cómputo, se entenderá que el plazo expira el primer día hábil del mes siguiente al del vencimiento."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 24,
-      "enunciado": "Según el artículo 30.6 de la Ley 39/2015, la relación de días inhábiles a efectos de cómputos de plazos, de ámbito autonómico y local, se publicará antes del comienzo de cada año:",
+      "enunciado": "Conforme a lo dispuesto en el artículo 4 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se consideran interesados en el procedimiento administrativo:",
       "opciones": [
-        "En el Boletín Oficial del Estado y en el diario oficial de la Comunidad Autónoma.",
-        "Solo en el diario oficial de la Comunidad Autónoma.",
-        "En el diario oficial de la Comunidad Autónoma y en el de la provincia respectiva."
-      ],
-      "respuesta_correcta": 3,
-      "autogenerado": false
-    },
-    {
-      "id_p": 25,
-      "enunciado": "Según el artículo 29.3 de la Ley 39/2015, cuando una Ley de la Unión Europea establezca plazos máximos de tramitación de un procedimiento, estos prevalecerán sobre:",
-      "opciones": [
-        "Las normas estatales.",
-        "Las normas estatales o autonómicas.",
-        "Las normas autonómicas."
-      ],
-      "respuesta_correcta": 2,
-      "autogenerado": false
-    },
-    {
-      "id_p": 26,
-      "enunciado": "Según el artículo 16.5 de la Ley 39/2015, los documentos que los interesados dirijan a los órganos de las Administraciones Públicas podrán presentarse:",
-      "opciones": [
-        "En soporte no electrónico en las oficinas de Correos, conforme a sus reglamentos.",
-        "En soporte no electrónico en las oficinas de Correos, conforme a la legislación vigente.",
-        "Solo en soporte electrónico a través de los Registros Electrónicos."
+        "Los que, sin haber iniciado el procedimiento, tengan derechos que puedan resultar afectados por la decisión que en el mismo se adopte.",
+        "Aquellos cuyos intereses legítimos, individuales o colectivos, puedan resultar no afectados por la resolución y se personen en el procedimiento en tanto no haya recaído resolución definitiva.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
-      "id_p": 27,
-      "enunciado": "Según el artículo 31.4 de la Ley 39/2015, el funcionamiento de los Registros Electrónicos se regirá por:",
+      "id_p": 25,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 16.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
       "opciones": [
-        "La fecha y hora oficial de la sede electrónica de acceso.",
-        "La fecha y hora oficial del Tribunal Superior de Justicia.",
-        "La fecha y hora oficial de la sede electrónica de acceso, siendo en todo caso los mismos para todas las Comunidades Autónomas."
+        "Los asientos se anotarán respetando el orden temporal de recepción o salida de los documentos, e indicarán la fecha del día en que se produzcan.",
+        "Concluido el trámite de registro, los documentos serán cursados en el plazo de diez días a las unidades administrativas correspondientes desde el registro en que hubieran sido recibidas.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 26,
+      "enunciado": "Conforme a lo dispuesto en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, no se consideran interesados en el procedimiento administrativo:",
+      "opciones": [
+        "Quienes lo promuevan como titulares de derechos o intereses legítimos individuales o colectivos.",
+        "Los que, sin haber iniciado el procedimiento, tengan derechos que puedan resultar afectados por la decisión que en el mismo se adopte.",
+        "Aquellos cuyos intereses legítimos, individuales o colectivos, puedan resultar afectados por la resolución y se personen en el procedimiento en tanto no haya recaído resolución definitiva.",
+        "Quienes hayan solicitado personarse en el procedimiento."
+      ],
+      "respuesta_correcta": 4,
+      "autogenerado": false
+    },
+    {
+      "id_p": 27,
+      "enunciado": "Conforme a lo dispuesto en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, cuando los plazos se señalen por días, siempre que por Ley o en el Derecho de la Unión Europea no se exprese otro cómputo, se entiende que estos son:",
+      "opciones": [
+        "Naturales, excluyéndose en el cómputo los sábados, domingos y los declarados festivos.",
+        "Naturales, incluyéndose en el cómputo los sábados, domingos y los declarados festivos.",
+        "Hábiles, excluyéndose del cómputo los sábados, domingos y los declarados festivos.",
+        "Hábiles, incluyéndose en el cómputo los sábados, domingos y los declarados festivos."
       ],
       "respuesta_correcta": 3,
       "autogenerado": false
     },
     {
       "id_p": 28,
-      "enunciado": "Según el artículo 27.1 de la Ley 39/2015, las copias de documentos públicos administrativos o privados gozarán de validez y eficacia, siempre que exista:",
+      "enunciado": "De acuerdo con lo determinado en el artículo 32.3 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los acuerdos sobre ampliación de plazos o sobre su denegación:",
       "opciones": [
-        "Conformidad del funcionario, con el original.",
-        "Conformidad con el original y la autenticidad de la copia, con la garantía de la identidad del órgano que ha realizado la copia.",
-        "Conformidad con el original y que la copia sea electrónica."
-      ],
-      "respuesta_correcta": 2,
-      "autogenerado": false
-    },
-    {
-      "id_p": 29,
-      "enunciado": "Según el artículo 13.a) de la Ley 39/2015, las personas tienen derecho a:",
-      "opciones": [
-        "Comunicarse con las Administraciones Públicas y a formular alegaciones.",
-        "Ser informados de la gestión municipal.",
-        "Ser oídos en el procedimiento."
+        "No serán susceptibles de recurso, sin perjuicio del procedente contra la resolución que ponga fin al procedimiento.",
+        "Podrán ser susceptibles de recurso independiente al que proceda contra la resolución que ponga fin al procedimiento.",
+        "Podrán ser susceptibles del recurso extraordinario de revisión.",
+        "Las respuestas a), b) y c) son incorrectas."
       ],
       "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
-      "id_p": 30,
-      "enunciado": "Según el artículo 2.2 de la Ley 39/2015, se entiende por Sector Público Institucional:",
+      "id_p": 29,
+      "enunciado": "De acuerdo con lo determinado en el artículo 32.1 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, la Administración:",
       "opciones": [
-        "Las Universidades Públicas.",
-        "Los organismos públicos y entidades de derecho público vinculados o dependientes de las Administraciones Públicas.",
-        "Los órganos de las Comunidades Autónomas."
+        "Concederá de oficio una ampliación de los plazos establecidos, que no exceda de la mitad de los mismos, sin necesidad de notificarlo a los interesados cuando no se perjudiquen derechos de terceros.",
+        "Concederá, en todo caso, a petición de los interesados, una ampliación de los plazos establecidos, que no exceda de la mitad de los mismos, excepto si perjudican los derechos del interesado.",
+        "Sólo podrá conceder una ampliación de los plazos establecidos a petición de los interesados, siempre que no exceda de la mitad de los mismos, debiendo notificarlo a los posibles terceros perjudicados.",
+        "Salvo precepto en contrario, podrá conceder a petición de los interesados, una ampliación de los plazos establecidos, que no exceda de la mitad de los mismos, si las circunstancias lo aconsejan y no se perjudican derechos de tercero."
+      ],
+      "respuesta_correcta": 4,
+      "autogenerado": false
+    },
+    {
+      "id_p": 30,
+      "enunciado": "A efectos de lo establecido en el artículo 2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los Colegios Oficiales de Psicología, como Corporaciones de Derecho Público:",
+      "opciones": [
+        "No se encuentran comprendidos en el ámbito subjetivo de la Ley 39/2015, de 1 de octubre.",
+        "Se regirán por su normativa específica en el ejercicio de las funciones públicas que les hayan sido atribuidas por Ley o delegadas por una Administración Pública, y supletoriamente por la Ley 39/2015, de 1 de octubre.",
+        "Se regirán en primer término por la Ley 39/2015 de 1 de octubre, y supletoriamente por su normativa específica.",
+        "Se regirán por la Ley 39/2015, de 1 de octubre en el ejercicio de las funciones privadas para las que poseen competencias y supletoriamente por las que les hayan sido delegadas por una Administración Pública."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 31,
-      "enunciado": "Según el artículo 32.1 de la Ley 39/2015, la ampliación de los plazos por la Administración de oficio o a instancia de los interesados, solo se concederá si:",
+      "enunciado": "La Ley 39/2015 de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Publicas, establece que, en todo caso, estarán obligados a relacionarse a través de medios electrónicos con las Administraciones Publicas para la realización de cualquier trámite de un procedimiento administrativo:",
       "opciones": [
-        "Las circunstancias lo aconsejan y no se perjudican derechos de tercero.",
-        "El interesado lo solicita y no se perjudican derechos de tercero.",
-        "Las circunstancias lo aconsejan y se motiva."
+        "Las entidades sin personalidad jurídica.",
+        "Quienes ejerzan una actividad profesional para la que no se requiera colegiación obligatoria.",
+        "Las personas físicas.",
+        "Quienes representen a un interesado que esté obligado a relacionarse electrónicamente con la Administración."
       ],
       "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 32,
-      "enunciado": "Según el artículo 3 de la Ley 39/2015, la capacidad de obrar ante las Administraciones Públicas la ostentan:",
+      "enunciado": "De conformidad con lo establecido en el artículo 16 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los interesados NO podrían presentar documentos dirigidos a un Ayuntamiento:",
       "opciones": [
-        "Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles y las entidades sin personalidad jurídica.",
-        "Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles, las entidades sin personalidad jurídica y los menores de edad para el ejercicio de sus derechos.",
-        "Solo las personas jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles."
+        "En el registro electrónico de la Administración del General del Estado.",
+        "En el registro electrónico de una Comunidad autónoma que no sea la de Andalucía.",
+        "En las notarías que se constituyan como oficinas de presentación en materia de registros.",
+        "En las oficinas de Correos, si reglamentariamente asi se ha establecido."
       ],
-      "respuesta_correcta": 2,
+      "respuesta_correcta": 3,
       "autogenerado": false
     },
     {
       "id_p": 33,
-      "enunciado": "Según el artículo 32.1 de la Ley 39/2015, la ampliación de plazos no podrá exceder:",
+      "enunciado": "La ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Publicas, se aplica:",
       "opciones": [
-        "La mitad del plazo inicialmente fijado.",
-        "El doble del plazo inicialmente fijado.",
-        "La misma duración del plazo inicialmente fijado."
+        "Exclusivamente a la Administración General del Estado.",
+        "Únicamente a las Administraciones de las Comunidades Autónomas y a la Administración Local.",
+        "Al sector público, que incluye la Administración General del Estado, las Administraciones de las Comunidades Autónomas, las Entidades que integran la Administración Local y el sector público institucional.",
+        "Sólo a las entidades del sector público institucional."
       ],
       "respuesta_correcta": 3,
       "autogenerado": false
     },
     {
       "id_p": 34,
-      "enunciado": "Según el artículo 5.1 de la Ley 39/2015, para formular solicitudes, presentar declaraciones responsables o comunicaciones, interponer recursos, desistir de acciones y renunciar a derechos, en nombre de otro, se requerirá:",
+      "enunciado": "A efectos de lo establecido en el artículo 2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, las universidades públicas:",
       "opciones": [
-        "La acreditación de la representación.",
-        "La acreditación de la representación, sin que sea necesaria la manifestación expresa de la voluntad del interesado.",
-        "La acreditación de la representación, siempre que el interesado no esté presente."
+        "Se integran en el denominado sector público institucional.",
+        "Forman parte de las Administraciones de las Comunidades Autónomas.",
+        "No se encuentran comprendidas en el sector público.",
+        "Las respuestas a), b) y c) son incorrectas."
       ],
       "respuesta_correcta": 1,
       "autogenerado": false
     },
     {
       "id_p": 35,
-      "enunciado": "Según el artículo 31.1 de la Ley 39/2015, los plazos que no excedan de veinticuatro horas se entenderán por:",
+      "enunciado": "Según el artículo 2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, dicha Ley:",
       "opciones": [
-        "Días hábiles.",
-        "Horas hábiles.",
-        "Horas naturales."
+        "Se aplica en todo caso a las Universidades públicas.",
+        "Se aplica a las Universidades públicas con carácter supletorio.",
+        "No se aplica nunca a las Universidades públicas.",
+        "Se aplica en todo caso a las Universidades privadas."
       ],
       "respuesta_correcta": 2,
       "autogenerado": false
     },
     {
       "id_p": 36,
-      "enunciado": "Según el artículo 13.d) de la Ley 39/2015, las personas tienen derecho a que se les garantice la confidencialidad de:",
+      "enunciado": "De acuerdo con lo determinado en el artículo 5 de la Ley 39/2015 de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, la insuficiente acreditación de la representación:",
       "opciones": [
-        "Los datos personales que se encuentren en poder de las Administraciones Públicas.",
-        "La información personal que se encuentre en poder de las Administraciones Públicas.",
-        "Los datos que formen parte de los expedientes en los que sean interesados."
+        "Impedirá en todo caso que se tenga por realizado el acto de que se trate.",
+        "No impedirá que se tenga por realizado el acto de que se trate, siempre que se subsane el defecto dentro de un plazo máximo improrrogable de un mes que deberá conceder al efecto el órgano administrativo.",
+        "No impedirá que se tenga por realizado el acto de que se trate, siempre que se subsane el defecto dentro del plazo de diez días que deberá conceder al efecto el órgano administrativo, o de un plazo superior cuando las circunstancias del caso así lo requieran.",
+        "Impedirá sólo en determinados casos que se tenga por realizado el acto de que se trate, lo cual deberá ser valorado por el órgano administrativo."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 37,
+      "enunciado": "A efectos de lo establecido en el artículo 5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, no seria preciso acreditar la representación:",
+      "opciones": [
+        "Para los actos y gestiones de mero trámite, en los cuales se presumirá aquella representación.",
+        "Para formular solicitudes.",
+        "Para presentar comunicaciones.",
+        "Para desistir de acciones."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 38,
+      "enunciado": "Según el artículo 30 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Cuando los plazos se señalen por horas se entiende sin excepción que éstas son hábiles.",
+        "Los plazos expresados en horas se contarán desde la hora y minuto en que tenga lugar la notificación o publicación del acto de que se trate.",
+        "Los plazos expresados en horas se contarán desde la hora y minuto siguiente a la hora y minuto en que tenga lugar la notificación o publicación del acto de que se trate.",
+        "Los plazos no se podrán expresar en horas."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 39,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 30.5 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Los plazos expresados en días se contarán desde el mismo día en que se produzca la estimación o desestimación por silencio administrativo.",
+        "Cuando el último día del plazo sea inhábil, se entenderá prorrogado al primer día hábil siguiente.",
+        "Los plazos expresados en días se contarán desde el mismo día en que tenga lugar la notificación o publicación del acto de que se trate.",
+        "Cuando los plazos se señalen por días, se entiende que estos son hábiles, incluyéndose dentro del cómputo los sábados, los dosmingos y los declarados festivos."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 40,
+      "enunciado": "De conformidad con lo establecido en el artículo 30.1 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, en un procedimiento administrativo, son hábiles:",
+      "opciones": [
+        "Todas las horas del día.",
+        "Todas las horas del día que formen parte de un día hábil.",
+        "Las horas del día comprendidas entre las 06:00 h y las 22:00 h.",
+        "Las horas del día comprendidas entre las franjas horarias de 08:00 a 14:00 h y de 16:00 a 22:00 h."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 41,
+      "enunciado": "De conformidad con lo establecido en el artículo 14.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, no se encuentran obligados a relacionarse a través de medios electrónicos con las Administraciones Públicas para la realización de cualquier trámite de un procedimiento administrativo los siguientes sujetos:",
+      "opciones": [
+        "Las personas jurídicas.",
+        "Las entidades sin personalidad jurídica.",
+        "Quienes ejerzan cualquier actividad profesional.",
+        "Quienes representen a un interesado que esté obligado a relacionarse electrónicamente con la Administración."
+      ],
+      "respuesta_correcta": 4,
+      "autogenerado": false
+    },
+    {
+      "id_p": 42,
+      "enunciado": "Conforme a lo dispuesto en el artículo 17.2 de la Ley 39/2015, de 1 de octubre de 2015 del Procedimiento Administrativo Común de las Administraciones Públicas, los documentos electrónicos deberán conservarse en un formato que permita garantizar:",
+      "opciones": [
+        "La autenticidad, confidencialidad, integridad y conservación del documento.",
+        "La autenticidad, integridad y conservación del documento.",
+        "La autenticidad, integridad, calidad y conservación del documento.",
+        "La autenticidad, integridad, calidad, protección y conservación del documento."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 43,
+      "enunciado": "Conforme a lo dispuesto en el artículo 4 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, no tienen la condición de interesados en el procedimiento administrativo:",
+      "opciones": [
+        "Quienes lo promuevan como titulares de derechos individuales o colectivos.",
+        "Quienes lo promuevan como titulares de intereses legítimos individuales o colectivos.",
+        "Los que, sin haber iniciado el procedimiento, tengan intereses que puedan resultar afectados por la decisión que en el mismo se adopte.",
+        "Aquellos cuyos intereses legítimos, individuales o colectivos, puedan resultar afectados por la resolución y se personen en el procedimiento en tanto no haya recaído resolución definitiva."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 44,
+      "enunciado": "Cuando un día fuese hábil en el municipio o Comunidad Autónoma en que residiese el interesado, e inhábil en la sede del órgano administrativo, o a la inversa, se considerará:",
+      "opciones": [
+        "Hábil o inhábil en la sede del órgano administrativo.",
+        "Hábil o inhábil en el municipio donde resida el interesado.",
+        "Hábil o inhábil en la Comunidad Autónoma donde resida del interesado.",
+        "Inhábil en todo caso."
+      ],
+      "respuesta_correcta": 4,
+      "autogenerado": false
+    },
+    {
+      "id_p": 45,
+      "enunciado": "Según lo dispuesto en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, el apoderamiento apud acta podrá efectuarse:",
+      "opciones": [
+        "Por cotejo o compulsa en las oficinas de asistencia en materia de registros.",
+        "Solo mediante firma electrónica.",
+        "Solo por comparecencia personal en las oficinas de asistencia en materia de registros.",
+        "Mediante comparecencia electrónica en la correspondiente sede electrónica."
+      ],
+      "respuesta_correcta": 4,
+      "autogenerado": false
+    },
+    {
+      "id_p": 46,
+      "enunciado": "Conforme al artículo 16 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "La Administración dispondrá de un Registro Electrónico General común a la Administración General del Estado y a la de cada una de las Comunidades Autónomas.",
+        "La Administración dispondrá de un Registro Electrónico General común a todas ellas.",
+        "Cada Administración dispondrá de un Registro Electrónico General.",
+        "Las respuestas a) y b) son incorrectas."
       ],
       "respuesta_correcta": 3,
       "autogenerado": false

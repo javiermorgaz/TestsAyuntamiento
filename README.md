@@ -170,9 +170,29 @@ npm run build-index
 ```
 
 **Qué hace**:
-1. Lee todos los archivos JSON de `data/tests/`
-2. Genera `data/tests_index.json` con metadatos
+1. Lee todos los archivos JSON de `public/data/tests/`
+2. Genera `public/data/tests_index.json` con metadatos
 3. Sincroniza con la tabla `tests` de Supabase (si está configurado)
+
+**Configuración de credenciales**:
+
+Para que el script pueda sincronizar con Supabase, necesitas crear un archivo `.env` en la raíz del proyecto:
+
+```bash
+# Copia el archivo de ejemplo
+cp .env.example .env
+
+# Edita .env y añade tus credenciales de Supabase
+```
+
+El archivo `.env` debe contener:
+```env
+VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
+VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_publishable_key
+SUPABASE_SERVICE_KEY=tu_service_key  # Solo para el script
+```
+
+> **Nota**: El archivo `.env` está en `.gitignore` y nunca se subirá al repositorio. Las credenciales para producción se gestionan mediante GitHub Secrets.
 
 ### Agregar Nuevos Tests
 
@@ -212,7 +232,7 @@ Las credenciales de Supabase se gestionan mediante variables de entorno en un ar
 
 ```bash
 VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
-VITE_SUPABASE_ANON_KEY=tu_clave_anon_aqui
+VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY=tu_publishable_key_aqui
 ```
 
 Para despliegues en GitHub Pages, estas claves se inyectan de forma segura a través de **GitHub Secrets**.
