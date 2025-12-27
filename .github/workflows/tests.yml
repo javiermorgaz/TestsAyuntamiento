@@ -30,7 +30,7 @@ jobs:
         run: npx playwright install --with-deps chromium
         
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npx playwright test --config tests/playwright.config.js
         env:
           VITE_SUPABASE_URL: "${{ secrets.VITE_SUPABASE_URL }}"
           VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY: "${{ secrets.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY }}"
