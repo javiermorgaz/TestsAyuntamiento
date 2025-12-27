@@ -12,12 +12,12 @@ global.console = {
 };
 
 // Mock Supabase client dependency (as a module)
-jest.unstable_mockModule('../src/services/supabase-config.js', () => ({
+jest.unstable_mockModule('../src/config/supabase.js', () => ({
     getSupabaseClient: jest.fn()
 }));
 
 // Import the mocks and then the module under test
-const { getSupabaseClient } = await import('../src/services/supabase-config.js');
+const { getSupabaseClient } = await import('../src/config/supabase.js');
 const supabaseService = await import('../src/services/supabase-service.js');
 
 describe('Supabase Service (Unit Tests)', () => {

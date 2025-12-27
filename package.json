@@ -1,6 +1,6 @@
 {
   "name": "test-app-oposiciones",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "type": "module",
   "description": "Aplicación de tests para oposiciones de ayuntamiento",
   "scripts": {
@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "build-index": "node scripts/build-index.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest tests/",
-    "test:visual": "npx playwright test",
-    "test:visual:update": "npx playwright test --update-snapshots"
+    "test:visual": "npx playwright test --config tests/playwright.config.js",
+    "test:visual:update": "npx playwright test --config tests/playwright.config.js --update-snapshots"
   },
   "keywords": [
     "tests",
@@ -31,5 +31,23 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {},
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^@core/(.*)$": "<rootDir>/src/core/$1",
+      "^@services/(.*)$": "<rootDir>/src/services/$1",
+      "^@ui/(.*)$": "<rootDir>/src/ui/$1",
+      "^@config/(.*)$": "<rootDir>/src/config/$1"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/e2e/"
+    ]
   }
 }

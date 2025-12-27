@@ -8,7 +8,6 @@
  */
 
 import {
-    getSupabaseClient,
     fetchTestsFromSupabase,
     fetchTestById,
     fetchTestInProgress,
@@ -19,6 +18,8 @@ import {
     deleteTestProgress,
     fetchAllTestProgress
 } from './supabase-service.js';
+
+import { getSupabaseClient } from '@config/supabase.js';
 
 import {
     saveResult,

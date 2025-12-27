@@ -13,7 +13,6 @@ global.console = {
 
 // Mock dependencies as modules
 jest.unstable_mockModule('../src/services/supabase-service.js', () => ({
-    getSupabaseClient: jest.fn(),
     fetchTestsFromSupabase: jest.fn(),
     fetchTestById: jest.fn(),
     fetchTestInProgress: jest.fn(),
@@ -25,6 +24,10 @@ jest.unstable_mockModule('../src/services/supabase-service.js', () => ({
     fetchAllTestProgress: jest.fn()
 }));
 
+jest.unstable_mockModule('../src/config/supabase.js', () => ({
+    getSupabaseClient: jest.fn()
+}));
+
 jest.unstable_mockModule('../src/services/storage.js', () => ({
     getResults: jest.fn(),
     saveResult: jest.fn(),
@@ -34,13 +37,13 @@ jest.unstable_mockModule('../src/services/storage.js', () => ({
 
 // Import the mocks
 const {
-    getSupabaseClient,
     fetchTestsFromSupabase,
     fetchTestInProgress,
     saveTestProgress,
     completeTestSupabase,
     fetchAllTestProgress
 } = await import('../src/services/supabase-service.js');
+const { getSupabaseClient } = await import('../src/config/supabase.js');
 const { getResults, saveResult } = await import('../src/services/storage.js');
 
 // Import the module under test (testing the real implementation specifically)
