@@ -108,8 +108,8 @@ Además, si sales de un test sin finalizarlo, el progreso en curso se conserva e
 TestsAyuntamiento/
 ├── .github/                        # Workflows de CI/CD
 │   └── workflows/
-│       ├── deploy.yml              # Despliegue a GitHub Pages
-│       └── tests.yml               # Run Tests (Unit + UI)
+│       ├── tests.yml               # Tests unitarios + visuales
+│       └── deploy.yml              # Despliegue a GitHub Pages tras CI verde
 ├── src/
 │   ├── index.html                  # Punto de entrada de Vite
 │   ├── styles/
@@ -320,10 +320,14 @@ pnpm test
 
 ### Integración Continua (CI)
 El proyecto utiliza **GitHub Actions** para blindar la calidad del código:
-- **`tests.yml`**: Se ejecuta en cada `push` a `main`.
+- **`tests.yml`**: Se ejecuta en cada `push` a `main` y en pull requests.
   - Corre Tests Unitarios (Jest)
   - Corre Tests Visuales (Playwright) en entorno macOS (para coincidir con snapshots)
   - Sube artefactos de error automáticamente
+- **`deploy.yml`**: Se ejecuta cuando `tests.yml` termina correctamente en `main`.
+  - Genera `dist/`
+  - Inyecta los secrets de Supabase
+  - Despliega en GitHub Pages
 
 ---
 

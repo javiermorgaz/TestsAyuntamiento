@@ -33,7 +33,7 @@ export const getSupabaseClient = ...
 ```
 
 ### `.github/workflows/deploy.yml`
-El flujo de CI/CD inyecta los secretos en el entorno de build:
+El workflow de despliegue inyecta los secretos en el entorno de build solo después de que pasen los tests:
 
 ```yaml
 env:
