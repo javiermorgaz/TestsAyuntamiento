@@ -155,7 +155,7 @@ TestsAyuntamiento/
 ## 🔧 Para Desarrolladores
 
 ### Requisitos
-- Node.js (para script de sincronización)
+- Node.js 24 o superior (recomendado por `pnpm@11`)
 - Cuenta de Supabase (opcional, para sincronización en la nube)
 
 ### Instalación
