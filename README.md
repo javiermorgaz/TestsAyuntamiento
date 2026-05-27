@@ -13,7 +13,7 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 - ✅ **Historial de intentos** guardado localmente y en la nube
 - ✅ **Modo híbrido** - online (Supabase) + offline (localStorage)
 - ✅ **Sincronización en la nube** con Supabase
-- ✅ **Auto-guardado** de progreso durante el test (cada 30s + al cambiar respuesta)
+- ✅ **Auto-guardado** de progreso en el navegador (cada 30s, al cambiar respuesta y al volver al inicio)
 - ✅ **Continuación de tests** - retomar donde lo dejaste desde cualquier dispositivo
 - ✅ **Sincronización entre dispositivos** vía Supabase
 - ✅ **Modo Slider (Presentación)** - vista tipo diapositiva optimizada para móviles
@@ -61,20 +61,23 @@ Aplicación web para realizar tests de preparación para oposiciones de ayuntami
 
 #### Opción 1: Desarrollo local (Recomendado)
 ```bash
+# Activa pnpm si aún no lo tienes disponible
+corepack enable
+
 # Instala las dependencias
-npm install
+pnpm install
 
 # Inicia el servidor de desarrollo (Vite)
-npm run dev
+pnpm dev
 ```
 
 #### Opción 2: Construcción para producción
 ```bash
 # Genera la carpeta dist/ optimizada
-npm run build
+pnpm build
 
 # Previsualiza el resultado localmente
-npm run preview
+pnpm preview
 ```
 
 Luego abre en el navegador:
@@ -95,29 +98,31 @@ La aplicación guarda automáticamente tus últimos intentos de cada test. Puede
 - Número de aciertos / total
 - Porcentaje de acierto
 
+Además, si sales de un test sin finalizarlo, el progreso en curso se conserva en `localStorage` y aparece como "Continuar Test" al volver al listado. Supabase añade sincronización entre dispositivos cuando está configurado.
+
 ---
 
 ## 🗄️ Estructura del Proyecto
 
 ```
 TestsAyuntamiento/
-├── index.html                      # Punto de entrada
-├── playwright.config.js            # Configuración de Tests Visuales
 ├── .github/                        # Workflows de CI/CD
 │   └── workflows/
 │       ├── deploy.yml              # Despliegue a GitHub Pages
 │       └── tests.yml               # Run Tests (Unit + UI)
 ├── src/
-│   ├── style.css                   # Estilos principales (Tailwind CSS v4)
-│   ├── modal.css                   # Estilos de modales
+│   ├── index.html                  # Punto de entrada de Vite
+│   ├── styles/
+│   │   └── style.css               # Estilos principales (Tailwind CSS v4)
 │   ├── core/                       # Lógica de negocio
 │   │   ├── stateManager.js         # Gestión de estado centralizado
 │   │   ├── testEngine.js           # Motor de evaluación de tests
 │   │   └── test.js                 # Orquestador principal
 │   ├── services/                   # Capa de datos y APIs
-│   │   ├── dataService.js          # Abstracción híbrida (Supabase + Local)
+│   │   ├── dataService.js          # Punto de entrada de datos
+│   │   ├── dataService.provider.js # Selección de datos reales o mock
+│   │   ├── realDataService.js      # Abstracción híbrida (Supabase + localStorage)
 │   │   ├── supabase-service.js     # API de Supabase
-│   │   ├── supabase-config.js      # Configuración de cliente
 │   │   └── storage.js              # Persistencia local (localStorage)
 │   ├── ui/                         # Interfaz de usuario
 │   │   ├── main.js                 # Inicialización de la app
@@ -125,18 +130,23 @@ TestsAyuntamiento/
 │   │   ├── modal.js                # Diálogos modales
 │   │   └── darkMode.js             # Toggle de tema oscuro
 │   └── config/                     # Configuración
-│       └── tailwind-config.js      # Configuración de Tailwind
-├── public/                         # Assets estáticos (imágenes, favicons)
-│   └── data/                       # Contenido de los tests (JSON)
+│       └── supabase.js             # Cliente Supabase vía variables Vite
+├── public/                         # Assets estáticos servidos por Vite
+│   ├── data/                       # Índice y contenido de tests (JSON)
+│   └── ui/theme-init.js            # Script temprano para evitar FOUC
 ├── db/                             # Esquema SQL de referencia
-├── tests/                          # Suite de tests unitarios (Jest)
+├── tests/                          # Tests unitarios y visuales
+│   ├── e2e/                        # Playwright + snapshots
+│   └── playwright.config.js        # Configuración de tests visuales
 ├── .env                            # Variables de entorno (No incluido en Git)
-├── jest.config.json                # Configuración de Jest
 ├── package.json                    # Dependencias y scripts
+├── pnpm-lock.yaml                  # Lockfile reproducible de pnpm
+├── pnpm-workspace.yaml             # Aprobación de builds de dependencias pnpm
 ├── vite.config.js                  # Configuración de Vite + path aliases
 ├── README.md                       # Este archivo
 └── docs/
     ├── SUPABASE_INTEGRATION.md     # Documentación técnica
+    ├── SUPABASE_CREDENTIALS.md     # Guía de credenciales
     └── SECURITY.md                 # Gestión de credenciales
 ```
 
@@ -155,8 +165,11 @@ TestsAyuntamiento/
 git clone <url-del-repo>
 cd TestsAyuntamiento
 
+# Activar pnpm mediante Corepack
+corepack enable
+
 # Instalar dependencias
-npm install
+pnpm install
 ```
 
 Esto instalará también las dependencias de desarrollo necesarias para los tests (Jest).
@@ -166,7 +179,7 @@ Esto instalará también las dependencias de desarrollo necesarias para los test
 El script `build-index.js` genera automáticamente el índice de tests y sincroniza con Supabase:
 
 ```bash
-npm run build-index
+pnpm build-index
 ```
 
 **Qué hace**:
@@ -196,7 +209,7 @@ SUPABASE_SERVICE_KEY=tu_service_key  # Solo para el script
 
 ### Agregar Nuevos Tests
 
-1. **Crear archivo JSON** en `data/tests/` con el formato:
+1. **Crear archivo JSON** en `public/data/tests/` con el formato:
 
 ```json
 {
@@ -219,7 +232,7 @@ SUPABASE_SERVICE_KEY=tu_service_key  # Solo para el script
 
 2. **Ejecutar script**:
 ```bash
-npm run build-index
+pnpm build-index
 ```
 
 3. **Verificar** que el nuevo test aparece en la lista
@@ -243,31 +256,33 @@ Ver [SECURITY.md](./docs/SECURITY.md) para más detalles.
 
 #### `tests` - Catálogo de tests
 ```sql
-id              INT PRIMARY KEY
-titulo          TEXT
-fichero         TEXT
-num_preguntas   INT
+id          SERIAL PRIMARY KEY
+titulo      TEXT NOT NULL
+preguntas   JSONB NOT NULL
+created_at  TIMESTAMP WITH TIME ZONE
 ```
 
 #### `results` - Progreso y resultados
 ```sql
 id                  BIGINT PRIMARY KEY
 test_id             INT (FK → tests.id)
-status              ENUM ('in_progress', 'completed')
-score_percentage    NUMERIC
-total_correct       INT
-total_questions     INT
+status              TEXT ('in_progress' | 'completed')
 answers_data        JSONB
+total_questions     INT
+total_correct       INT
+score_percentage    NUMERIC
+created_at          TIMESTAMP WITH TIME ZONE
+updated_at          TIMESTAMP WITH TIME ZONE
 ```
 
-Ver [SUPABASE_INTEGRATION.md](./SUPABASE_INTEGRATION.md) para la API completa.
+Ver [SUPABASE_INTEGRATION.md](./docs/SUPABASE_INTEGRATION.md) para la API completa.
 
 ### ⚠️ Importante: Sincronización de Esquema
 El archivo `db/schema.sql` actúa como **contrato** para los tests unitarios. Este archivo **NO** se sincroniza automáticamente con Supabase.
 
 **Si modificas la estructura de la base de datos en Supabase:**
 1. Actualiza manualmente `db/schema.sql` para reflejar los cambios.
-2. Ejecuta `npm test` para asegurar que el código sigue siendo compatible con el nuevo esquema.
+2. Ejecuta `pnpm test` para asegurar que el código sigue siendo compatible con el nuevo esquema.
 
 ---
 
@@ -282,22 +297,26 @@ El proyecto cuenta con **tests unitarios** para garantizar la estabilidad del c�
 Para ejecutar todos los tests disponibles:
 
 ```bash
-npm test
+pnpm test
 ```
 
 ### Estructura de Tests
-- `tests/dataService.test.js`: Verifica la lógica de `assets/js/dataService.js` (mocks de Supabase y localStorage).
-- `tests/supabaseService.test.js`: Verifica que `assets/js/supabase-service.js` cumple con el esquema de la base de datos (`db/schema.sql`).
+- `tests/dataService.test.js`: Verifica la lógica de `src/services/dataService.js` y su fallback local.
+- `tests/provider.test.js`: Verifica la selección entre datos reales y mocks.
+- `tests/supabaseService.test.js`: Verifica que `src/services/supabase-service.js` cumple con el esquema de la base de datos (`db/schema.sql`).
+- `tests/stateManager.test.js`: Verifica el estado centralizado de la app.
+- `tests/testEngine.test.js`: Verifica la evaluación de respuestas y puntuaciones.
 - `tests/sliderLogic.test.js`: Verifica la resiliencia de la sincronización y la adaptación de altura del modo Slider.
+- `tests/smartResumption.test.js`: Verifica la restauración de progreso en la primera pregunta pendiente.
 
 ### Tests Visuales (E2E)
 - **Librería**: [Playwright](https://playwright.dev/)
 - **Objetivo**: Detectar regresiones visuales (pixel-perfect) y errores de integración.
 - **Ejecución**:
   ```bash
-  npx playwright test
+  pnpm exec playwright test
   ```
-- **Reportes**: `npx playwright show-report`
+- **Reportes**: `pnpm exec playwright show-report`
 
 ### Integración Continua (CI)
 El proyecto utiliza **GitHub Actions** para blindar la calidad del código:
@@ -319,7 +338,7 @@ El proyecto utiliza **GitHub Actions** para blindar la calidad del código:
 
 ## 🔒 Seguridad y Privacidad
 
-- Los datos de tests se almacenan **localmente** en tu navegador (localStorage)
+- El progreso en curso y el historial de intentos se almacenan **localmente** en tu navegador (localStorage)
 - Opcionalmente, se sincronizan con Supabase para acceso desde múltiples dispositivos
 - No se recopila información personal
 - Las credenciales de Supabase están **fuera del repositorio** por seguridad
@@ -390,6 +409,10 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 - ✅ **Payload Reduction**: Select optimizado de columnas en Supabase.
 - ✅ **Smart Resumption**: Posicionamiento automático en la primera pregunta sin contestar (v2.7.0).
 
+**v2.7.2** ✅ **COMPLETADO** (2026-05-27)
+- ✅ **Migración a pnpm**: Lockfile reproducible con `pnpm-lock.yaml` y CI/CD actualizado.
+- ✅ **Limpieza de estructura**: Eliminación del `public/package.json` obsoleto que duplicaba metadatos.
+
 **v3.0** (Próximamente)
 - 📊 Estadísticas avanzadas y gráficos de progreso (Chart.js)
 - 📖 Modo de estudio inteligente
@@ -404,4 +427,4 @@ Para preguntas o sugerencias, abre un issue en el repositorio.
 
 ---
 
-**Última actualización**: 2025-12-25
+**Última actualización**: 2026-05-27

@@ -32,7 +32,11 @@ jest.unstable_mockModule('../src/services/storage.js', () => ({
     getResults: jest.fn(),
     saveResult: jest.fn(),
     getTestResults: jest.fn(),
-    clearResults: jest.fn()
+    clearResults: jest.fn(),
+    saveProgress: jest.fn(),
+    getProgress: jest.fn(),
+    getAllProgress: jest.fn(),
+    deleteProgress: jest.fn()
 }));
 
 // Import the mocks
@@ -41,10 +45,18 @@ const {
     fetchTestInProgress,
     saveTestProgress,
     completeTestSupabase,
-    fetchAllTestProgress
+    fetchAllTestProgress,
+    deleteTestProgress
 } = await import('../src/services/supabase-service.js');
 const { getSupabaseClient } = await import('../src/config/supabase.js');
-const { getResults, saveResult } = await import('../src/services/storage.js');
+const {
+    getResults,
+    saveResult,
+    saveProgress: saveLocalProgress,
+    getProgress: getLocalProgress,
+    getAllProgress: getAllLocalProgress,
+    deleteProgress: deleteLocalProgress
+} = await import('../src/services/storage.js');
 
 // Import the module under test (testing the real implementation specifically)
 const dataService = await import('../src/services/realDataService.js');
@@ -55,6 +67,9 @@ describe('Data Service (Unit Tests)', () => {
         jest.clearAllMocks();
         getSupabaseClient.mockResolvedValue(null);
         getResults.mockReturnValue([]);
+        getLocalProgress.mockReturnValue(null);
+        getAllLocalProgress.mockReturnValue([]);
+        deleteLocalProgress.mockReturnValue(false);
     });
 
     describe('isSupabaseAvailable', () => {
@@ -105,7 +120,7 @@ describe('Data Service (Unit Tests)', () => {
     });
 
     describe('saveProgress', () => {
-        const mockData = { test_id: 1, answers_data: [1, 2] };
+        const mockData = { test_id: 1, answers_data: [1, 2], total_questions: 2 };
 
         test('should save to Supabase if available', async () => {
             getSupabaseClient.mockResolvedValue({});
@@ -121,15 +136,46 @@ describe('Data Service (Unit Tests)', () => {
 
             const now = 1234567890;
             jest.spyOn(Date, 'now').mockReturnValue(now);
+            const savedProgress = {
+                id: now,
+                ...mockData,
+                status: 'in_progress'
+            };
+            saveLocalProgress.mockReturnValue(savedProgress);
 
             const result = await dataService.saveProgress(mockData);
 
             expect(saveTestProgress).not.toHaveBeenCalled();
-            expect(result).toEqual({
+            expect(saveLocalProgress).toHaveBeenCalledWith({
                 id: now,
                 ...mockData,
                 status: 'in_progress'
             });
+            expect(result).toEqual(savedProgress);
+        });
+    });
+
+    describe('findTestProgress', () => {
+        test('should return progress from Supabase if available', async () => {
+            getSupabaseClient.mockResolvedValue({});
+            const mockProgress = { id: 10, test_id: 1, answers_data: [1, null] };
+            fetchTestInProgress.mockResolvedValue(mockProgress);
+
+            const result = await dataService.findTestProgress(1);
+
+            expect(fetchTestInProgress).toHaveBeenCalledWith(1);
+            expect(result).toEqual(mockProgress);
+        });
+
+        test('should fallback to local progress when offline', async () => {
+            const mockProgress = { id: 10, test_id: 1, answers_data: [1, null] };
+            getLocalProgress.mockReturnValue(mockProgress);
+
+            const result = await dataService.findTestProgress(1);
+
+            expect(fetchTestInProgress).not.toHaveBeenCalled();
+            expect(getLocalProgress).toHaveBeenCalledWith(1);
+            expect(result).toEqual(mockProgress);
         });
     });
 
@@ -166,6 +212,15 @@ describe('Data Service (Unit Tests)', () => {
                 errores: 5
             }));
         });
+
+        test('should remove local in-progress entry when finalizing offline', async () => {
+            getSupabaseClient.mockResolvedValue(null);
+
+            await dataService.completeTest({ ...mockResultData, id: 123 });
+
+            expect(deleteLocalProgress).toHaveBeenCalledWith(123);
+            expect(saveResult).toHaveBeenCalled();
+        });
     });
 
     describe('fetchAllProgress', () => {
@@ -178,6 +233,39 @@ describe('Data Service (Unit Tests)', () => {
 
             expect(fetchAllTestProgress).toHaveBeenCalled();
             expect(result).toEqual(mockProgress);
+        });
+
+        test('should return local progress when offline', async () => {
+            const mockProgress = [{ id: 10, test_id: 1, answers_data: [1, null] }];
+            getAllLocalProgress.mockReturnValue(mockProgress);
+
+            const result = await dataService.fetchAllProgress();
+
+            expect(fetchAllTestProgress).not.toHaveBeenCalled();
+            expect(getAllLocalProgress).toHaveBeenCalled();
+            expect(result).toEqual(mockProgress);
+        });
+    });
+
+    describe('deleteProgress', () => {
+        test('should delete from Supabase if available', async () => {
+            getSupabaseClient.mockResolvedValue({});
+            deleteTestProgress.mockResolvedValue(true);
+
+            const result = await dataService.deleteProgress(123);
+
+            expect(deleteTestProgress).toHaveBeenCalledWith(123);
+            expect(result).toBe(true);
+        });
+
+        test('should delete local progress when offline', async () => {
+            deleteLocalProgress.mockReturnValue(true);
+
+            const result = await dataService.deleteProgress(123);
+
+            expect(deleteTestProgress).not.toHaveBeenCalled();
+            expect(deleteLocalProgress).toHaveBeenCalledWith(123);
+            expect(result).toBe(true);
         });
     });
 });

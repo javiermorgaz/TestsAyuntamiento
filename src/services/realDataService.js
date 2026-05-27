@@ -25,7 +25,11 @@ import {
     saveResult,
     getResults,
     getTestResults,
-    clearResults
+    clearResults,
+    saveProgress as saveLocalProgress,
+    getProgress as getLocalProgress,
+    getAllProgress as getAllLocalProgress,
+    deleteProgress as deleteLocalProgress
 } from './storage.js';
 
 // ============================================
@@ -173,6 +177,16 @@ async function findTestProgress(testId) {
         console.warn('⚠️ Error al buscar progreso:', error.message);
     }
 
+    try {
+        const progress = getLocalProgress(testId);
+        if (progress) {
+            console.log(`💾 Progreso local encontrado (${progress.answers_data.filter(a => a !== null).length} respuestas)`);
+            return progress;
+        }
+    } catch (error) {
+        console.warn('⚠️ Error al buscar progreso local:', error.message);
+    }
+
     return null;
 }
 
@@ -192,7 +206,17 @@ async function fetchAllProgress() {
     } catch (error) {
         console.warn('⚠️ Error al cargar progreso batch:', error.message);
     }
-    return [];
+
+    try {
+        const allProgress = getAllLocalProgress();
+        if (allProgress.length > 0) {
+            console.log(`💾 Progreso local batch cargado: ${allProgress.length} items`);
+        }
+        return allProgress;
+    } catch (error) {
+        console.warn('⚠️ Error al cargar progreso local:', error.message);
+        return [];
+    }
 }
 
 /**
@@ -215,16 +239,14 @@ async function saveProgress(data) {
         console.warn('⚠️ Error al guardar en Supabase, guardando localmente:', error.message);
     }
 
-    // Fallback: guardar en localStorage temporalmente
-    // Nota: localStorage no soporta progreso in_progress, solo guarda resultados finales
-    // Aquí podríamos implementar una cola de sincronización para cuando vuelva online
-    console.log('💾 Progreso guardado solo en memoria (se perderá al cerrar)');
-
-    return {
-        id: data.id || Date.now(), // ID temporal
+    const savedProgress = saveLocalProgress({
+        id: data.id || Date.now(),
         ...data,
         status: 'in_progress'
-    };
+    });
+
+    console.log('💾 Progreso guardado en localStorage');
+    return savedProgress;
 }
 
 /**
@@ -245,7 +267,16 @@ async function deleteProgress(progressId) {
         console.warn('⚠️ Error al eliminar progreso:', error.message);
     }
 
-    return false;
+    try {
+        const isDeleted = deleteLocalProgress(progressId);
+        if (isDeleted) {
+            console.log('🗑️ Progreso eliminado de localStorage');
+        }
+        return isDeleted;
+    } catch (error) {
+        console.warn('⚠️ Error al eliminar progreso local:', error.message);
+        return false;
+    }
 }
 
 // ============================================
@@ -294,6 +325,10 @@ async function completeTest(data) {
  * @private
  */
 function saveToLocalStorage(data) {
+    if (data.id) {
+        deleteLocalProgress(data.id);
+    }
+
     const resultado = {
         testId: data.test_id,
         fecha: new Date().toISOString(),

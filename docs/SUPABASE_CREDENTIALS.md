@@ -81,7 +81,7 @@ Una vez que tengas las 3 credenciales:
 Ejecuta el script de generación de índices:
 
 ```bash
-npm run build-index
+pnpm build-index
 ```
 
 Si todo está correcto, deberías ver:

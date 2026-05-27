@@ -16,7 +16,9 @@ let autoSaveTimeout = null;
 /**
  * Función para volver al listado de tests
  */
-function returnToList() {
+async function returnToList() {
+    await autoSaveProgress();
+
     // Limpiar auto-guardado periódico
     const autoSaveInterval = StateManager.get('autoSaveInterval');
     if (autoSaveInterval) {

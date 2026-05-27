@@ -21,6 +21,7 @@ Thumbs.db
 # Archivos de log
 *.log
 npm-debug.log*
+pnpm-debug.log*
 
 # Variables de entorno
 .env
@@ -31,8 +32,11 @@ npm-debug.log*
 *.tmp
 *.temp
 
-# Archivos de lock de paquetes (opcional)
-# package-lock.json    # Descomenta si no quieres incluirlo
+# Archivos de pnpm
+.pnpm-store/
+
+# Lockfile legado de npm tras migracion a pnpm
+package-lock.json
 
 # AI Context Files
 GEMINI.md
