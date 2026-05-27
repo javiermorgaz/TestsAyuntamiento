@@ -101,6 +101,58 @@ describe('Supabase Service (Unit Tests)', () => {
                 total_questions: 10
             }));
         });
+
+        test('should create new progress when updating a local-only ID finds no row', async () => {
+            const mockProgress = { id: 9999999999999, test_id: 7, answers_data: [1, null], total_questions: 46 };
+
+            const mockUpdateSingle = {
+                single: jest.fn().mockResolvedValue({
+                    data: null,
+                    error: {
+                        code: 'PGRST116',
+                        message: 'JSON object requested, multiple (or no) rows returned',
+                        details: 'The result contains 0 rows'
+                    }
+                })
+            };
+            const mockUpdateSelect = {
+                select: jest.fn().mockReturnValue(mockUpdateSingle)
+            };
+            const mockEq = {
+                eq: jest.fn().mockReturnValue(mockUpdateSelect)
+            };
+            const mockUpdate = {
+                update: jest.fn().mockReturnValue(mockEq)
+            };
+            const mockInsertSingle = {
+                single: jest.fn().mockResolvedValue({ data: { id: 124 }, error: null })
+            };
+            const mockInsertSelect = {
+                select: jest.fn().mockReturnValue(mockInsertSingle)
+            };
+            const mockInsert = {
+                insert: jest.fn().mockReturnValue(mockInsertSelect)
+            };
+            const mockClient = {
+                from: jest.fn()
+                    .mockReturnValueOnce(mockUpdate)
+                    .mockReturnValueOnce(mockInsert)
+            };
+
+            getSupabaseClient.mockResolvedValue(mockClient);
+
+            const result = await supabaseService.saveTestProgress(mockProgress);
+
+            expect(mockUpdate.update).toHaveBeenCalled();
+            expect(mockEq.eq).toHaveBeenCalledWith('id', 9999999999999);
+            expect(mockInsert.insert).toHaveBeenCalledWith(expect.objectContaining({
+                test_id: 7,
+                status: 'in_progress',
+                answers_data: [1, null],
+                total_questions: 46
+            }));
+            expect(result).toEqual({ id: 124 });
+        });
     });
 
     describe('fetchTestInProgress', () => {

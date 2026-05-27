@@ -73,6 +73,34 @@ async function fetchTestById(testId) {
 // TABLA: results (Datos Dinámicos/Progreso)
 // ============================================
 
+function isMissingUpdatedRowError(error) {
+    return error?.code === 'PGRST116'
+        || error?.message?.includes('JSON object requested')
+        || error?.details?.includes('0 rows');
+}
+
+async function insertTestProgress(client, progressData) {
+    const { data, error } = await client
+        .from('results')
+        .insert({
+            test_id: progressData.test_id,
+            status: 'in_progress',
+            answers_data: progressData.answers_data,
+            total_questions: progressData.total_questions || progressData.answers_data.length,
+            score_percentage: null,
+            total_correct: null
+        })
+        .select()
+        .single();
+
+    if (error) {
+        throw error;
+    }
+
+    console.log(`💾 Nuevo progreso creado con ID: ${data.id}`);
+    return data;
+}
+
 /**
  * Busca si hay un test en progreso para un test específico
  * @param {number} testId - ID del test
@@ -180,6 +208,10 @@ async function saveTestProgress(progressData) {
                 .single();
 
             if (error) {
+                if (isMissingUpdatedRowError(error)) {
+                    console.warn(`⚠️ No existe progreso en Supabase con ID ${progressData.id}; creando uno nuevo.`);
+                    return await insertTestProgress(client, progressData);
+                }
                 throw error;
             }
 
@@ -188,25 +220,7 @@ async function saveTestProgress(progressData) {
 
         } else {
             // Es un nuevo registro
-            const { data, error } = await client
-                .from('results')
-                .insert({
-                    test_id: progressData.test_id,
-                    status: 'in_progress',
-                    answers_data: progressData.answers_data,
-                    total_questions: progressData.total_questions || progressData.answers_data.length,
-                    score_percentage: null,
-                    total_correct: null
-                })
-                .select()
-                .single();
-
-            if (error) {
-                throw error;
-            }
-
-            console.log(`💾 Nuevo progreso creado con ID: ${data.id}`);
-            return data;
+            return await insertTestProgress(client, progressData);
         }
 
     } catch (error) {

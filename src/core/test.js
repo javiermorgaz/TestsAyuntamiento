@@ -171,7 +171,7 @@ async function autoSaveProgress() {
             total_questions: test.preguntas.length
         });
 
-        if (!progressId && result.id) {
+        if (result.id && result.id !== progressId) {
             StateManager.set({ currentProgressId: result.id });
         }
 

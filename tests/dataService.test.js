@@ -167,6 +167,18 @@ describe('Data Service (Unit Tests)', () => {
             expect(result).toEqual(mockProgress);
         });
 
+        test('should not use local progress when Supabase has no progress', async () => {
+            getSupabaseClient.mockResolvedValue({});
+            fetchTestInProgress.mockResolvedValue(null);
+            getLocalProgress.mockReturnValue({ id: 10, test_id: 1, answers_data: [1, null] });
+
+            const result = await dataService.findTestProgress(1);
+
+            expect(fetchTestInProgress).toHaveBeenCalledWith(1);
+            expect(getLocalProgress).not.toHaveBeenCalled();
+            expect(result).toBeNull();
+        });
+
         test('should fallback to local progress when offline', async () => {
             const mockProgress = { id: 10, test_id: 1, answers_data: [1, null] };
             getLocalProgress.mockReturnValue(mockProgress);
@@ -233,6 +245,18 @@ describe('Data Service (Unit Tests)', () => {
 
             expect(fetchAllTestProgress).toHaveBeenCalled();
             expect(result).toEqual(mockProgress);
+        });
+
+        test('should not use local progress when Supabase returns an empty list', async () => {
+            getSupabaseClient.mockResolvedValue({});
+            fetchAllTestProgress.mockResolvedValue([]);
+            getAllLocalProgress.mockReturnValue([{ id: 10, test_id: 1, answers_data: [1, null] }]);
+
+            const result = await dataService.fetchAllProgress();
+
+            expect(fetchAllTestProgress).toHaveBeenCalled();
+            expect(getAllLocalProgress).not.toHaveBeenCalled();
+            expect(result).toEqual([]);
         });
 
         test('should return local progress when offline', async () => {

@@ -170,8 +170,10 @@ async function findTestProgress(testId) {
             const progress = await fetchTestInProgress(testId);
             if (progress) {
                 console.log(`🔄 Test en progreso encontrado (${progress.answers_data.filter(a => a !== null).length} respuestas)`);
-                return progress;
+            } else {
+                console.log(`📡 Supabase no tiene progreso para el test ${testId}`);
             }
+            return progress;
         }
     } catch (error) {
         console.warn('⚠️ Error al buscar progreso:', error.message);
@@ -198,10 +200,8 @@ async function fetchAllProgress() {
     try {
         if (await isSupabaseAvailable()) {
             const allProgress = await fetchAllTestProgress();
-            if (allProgress && allProgress.length > 0) {
-                console.log(`📡 Progreso batch cargado: ${allProgress.length} items`);
-                return allProgress;
-            }
+            console.log(`📡 Progreso batch cargado: ${allProgress?.length || 0} items`);
+            return allProgress || [];
         }
     } catch (error) {
         console.warn('⚠️ Error al cargar progreso batch:', error.message);
