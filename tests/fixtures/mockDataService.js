@@ -1,0 +1,101 @@
+/**
+ * Mock Data Service - Mock implementation for testing
+ * Uses fixtures from tests/fixtures/
+ */
+
+import mockTests from './mock-tests.json';
+import mockQuestionsMap from './mock-questions.json';
+
+export const mockDataService = {
+    async fetchTests() {
+        console.log('🧪 [MOCK] fetchTests');
+        return mockTests;
+    },
+
+    async fetchHistory(testId, limit = 3) {
+        console.log(`🧪 [MOCK] fetchHistory for test ${testId}`);
+        // Return dummy history
+        return [
+            { fecha: new Date().toISOString(), aciertos: 10, total: 10, porcentaje: "100.0" }
+        ];
+    },
+
+    async findTestProgress(testId) {
+        console.log(`🧪 [MOCK] findTestProgress for test ${testId}`);
+        if (testId === 2) {
+            // Mock 10 answers for a 40 question test
+            const answers = Array(40).fill(null);
+            for (let i = 0; i < 10; i++) answers[i] = (i % 3) + 1;
+            return {
+                id: 888,
+                test_id: 2,
+                answers_data: answers,
+                updated_at: new Date().toISOString()
+            };
+        }
+        return null; // No progress by default in mock
+    },
+
+    async fetchAllProgress() {
+        console.log('🧪 [MOCK] fetchAllProgress');
+        // Return mock progress for test 2
+        return [{
+            id: 888,
+            test_id: 2,
+            answers_data: Array(10).fill(1).map((_, i) => (i % 3) + 1),
+            status: 'in_progress'
+        }];
+    },
+
+    async saveProgress(data) {
+        console.log('🧪 [MOCK] saveProgress', data);
+        return { id: 999, ...data, status: 'in_progress' };
+    },
+
+    async deleteProgress(progressId) {
+        console.log(`🧪 [MOCK] deleteProgress ${progressId}`);
+        return true;
+    },
+
+    async completeTest(data) {
+        console.log('🧪 [MOCK] completeTest', data);
+        return {
+            testId: data.test_id,
+            fecha: new Date().toISOString(),
+            aciertos: data.total_correct,
+            errores: data.total_questions - data.total_correct,
+            blancos: 0,
+            total: data.total_questions,
+            respuestas: data.answers_data
+        };
+    },
+
+    async checkStatus() {
+        return {
+            supabase: false,
+            localStorage: true,
+            modo: 'mock'
+        };
+    },
+
+    async isSupabaseAvailable() {
+        return false;
+    },
+
+    saveToLocalStorage(data) {
+        console.log('🧪 [MOCK] saveToLocalStorage', data);
+        return data;
+    },
+
+    // Add specific function for fetching questions which is usually done via supabase-service or direct fetch
+    async getTestWithQuestions(testId) {
+        console.log(`🧪 [MOCK] getTestWithQuestions for test ${testId}`);
+        const test = mockTests.find(t => t.id === Number(testId));
+        if (!test) return null;
+
+        return {
+            ...test,
+            preguntas: mockQuestionsMap[testId] || []
+        };
+    }
+};

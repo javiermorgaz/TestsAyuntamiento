@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Tests de Oposición</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS & Tailwind -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- Evitar FOUC (Flash of Unstyled Content) y flash blanco en modo oscuro -->
+    <script src="/ui/theme-init.js"></script>
+</head>
+
+<body class="antialiased">
+    <header
+        class="bg-gray-800 text-white p-3 md:p-6 shadow-md text-center bg-opacity-80 backdrop-blur-sm dark:bg-gray-900/90 flex justify-between items-center relative">
+        <h1 class="text-lg md:text-3xl font-medium tracking-wide w-full text-center px-10 md:px-0">📚 Simulacros de
+            Oposiciones</h1>
+
+        <button id="theme-toggle" type="button"
+            class="absolute right-4 md:right-6 text-gray-200 hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-1.5 md:p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+                    fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+    </header>
+
+    <main class="container mx-auto px-2 md:px-4 py-4 max-w-4xl">
+        <section id="tests-list">
+            <div id="tests-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </section>
+
+        <section id="test-view" style="display:none;" class="glass-card p-3 md:p-4">
+            <div
+                class="sticky top-0 bg-white/95 backdrop-blur-sm -mx-3 -mt-3 md:-mx-4 md:-mt-4 px-3 md:px-4 py-4 border-b border-gray-200/50 z-40 rounded-t-xl flex items-center justify-between dark:bg-gray-800/95 dark:border-gray-700">
+                <button id="btn-back-home"
+                    class="text-primary hover:text-secondary transition-colors flex items-center gap-2 font-medium bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg">
+                    ← Volver al Inicio
+                </button>
+                <div class="flex items-center gap-3">
+                    <div id="save-indicator-container"></div>
+                    <button id="view-mode-toggle"
+                        class="p-2 rounded-lg text-gray-800 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                        aria-label="Cambiar vista">
+                        <!-- Icon: Cards/Slider (Show when in List mode) -->
+                        <svg id="icon-view-slider" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                        <!-- Icon: List (Show when in Slider mode) -->
+                        <svg id="icon-view-list" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <h2 id="test-title" class="text-lg md:text-xl font-semibold text-dark text-center mb-6 pt-4">
+            </h2>
+
+            <form id="questions-form">
+                <div id="questions-container" class="space-y-6"></div>
+            </form>
+
+            <div id="test-controls" class="mt-10 flex justify-center">
+                <button id="btn-finish" type="button"
+                    class="bg-primary hover:bg-secondary text-white font-medium text-sm py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 w-full md:w-auto min-w-[200px]">
+                    Finalizar y Corregir
+                </button>
+            </div>
+        </section>
+
+        <section id="result-view" style="display:none;">
+            <div class="test-header mb-6">
+                <button id="btn-back-home-result"
+                    class="text-white hover:text-gray-200 transition-colors flex items-center gap-2 font-medium bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm">
+                    ← Volver al Inicio
+                </button>
+            </div>
+            <div id="result-container"></div>
+        </section>
+
+        <footer id="app-footer" class="mt-12 mb-6 text-center">
+            <p class="text-white/60 text-xs font-light tracking-widest uppercase">
+                <span id="app-version">Cargando...</span> • <span id="app-date">Cargando...</span>
+            </p>
+        </footer>
+    </main>
+
+    <!-- Scripts de la aplicación -->
+    <script type="module" src="./ui/darkMode.js"></script>
+    <script type="module" src="./ui/main.js"></script>
+</body>
+
+</html>

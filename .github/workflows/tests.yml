@@ -1,0 +1,62 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+
+jobs:
+  test:
+    timeout-minutes: 20
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6.1.0
+        with:
+          version: 11.4.0
+          run_install: false
+      
+      - name: Set up Node
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check public documentation
+        run: python3 scripts/check-public-docs.py
+      
+      - name: Run Unit Tests
+        run: pnpm test
+
+      - name: Run SQLite API and migration tests
+        run: pnpm test:sqlite
+
+      - name: Run SQLite deployment guards
+        run: python3 -B -m unittest discover -s deploy -p 'test_sqlite*.py'
+        
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps chromium
+        
+      - name: Run Playwright tests
+        run: pnpm exec playwright test --config tests/playwright.config.js
+        env:
+          VITE_SUPABASE_URL: "${{ secrets.VITE_SUPABASE_URL }}"
+          VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY: "${{ secrets.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY }}"
+
+      - name: Run SQLite browser integration
+        run: pnpm test:sqlite:browser
+          
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7

@@ -1,0 +1,8 @@
+# Integrar manualmente después de sustituir el dominio y revisar la configuración.
+# No sustituir /etc/caddy/Caddyfile con este archivo.
+api-tests.example.invalid {
+    request_body {
+        max_size 256KB
+    }
+    reverse_proxy 127.0.0.1:8765
+}

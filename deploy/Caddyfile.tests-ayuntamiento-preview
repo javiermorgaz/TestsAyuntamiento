@@ -1,0 +1,27 @@
+{
+    admin off
+    persist_config off
+    servers {
+        protocols h1 h2
+    }
+}
+
+https://46.224.88.8 {
+    tls {
+        issuer acme {
+            dir https://acme-v02.api.letsencrypt.org/directory
+            profile shortlived
+        }
+    }
+    request_body {
+        max_size 256KB
+    }
+    @api path /api /api/* /health
+    handle @api {
+        reverse_proxy 127.0.0.1:8765
+    }
+    handle {
+        root * /var/www/tests-ayuntamiento-preview
+        file_server
+    }
+}

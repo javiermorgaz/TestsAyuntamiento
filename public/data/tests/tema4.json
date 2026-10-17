@@ -1,0 +1,186 @@
+{
+  "id": 4,
+  "titulo": "Tema 4. El Estatuto de Autonomía para Andalucía",
+  "preguntas": [
+    {
+      "id_p": 1,
+      "enunciado": "Según el artículo 94 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, las funciones de las áreas metropolitanas, mancomunidades, consorcios y aquellas otras agrupaciones de municipios que se establezcan se regularán:",
+      "opciones": [
+        "Por decreto-ley.",
+        "Por decreto del Consejo de Gobierno.",
+        "Por ley."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 2,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 93.1 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, la transferencia y delegación de competencias en los Ayuntamientos:",
+      "opciones": [
+        "Deberá realizarse por ley, aprobada por mayoría simple, siempre con la necesaria suficiencia financiera para poder desarrollarla, quedando en el ámbito de la Junta de Andalucía la planificación y control de las mismas.",
+        "Deberá realizarse por ley, aprobada por mayoría absoluta, siempre con la necesaria suficiencia financiera para poder desarrollarla, quedando en el ámbito de la Junta de Andalucía la planificación y control de las mismas.",
+        "Deberá realizarse mediante convenio administrativo y siempre teniendo en cuenta la suficiencia financiera para que se pueda desarrollar, quedando la planificación y control de las competencias a lo que disponga el convenio formalizado a tal efecto."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 3,
+      "enunciado": "Según el artículo 106 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, corresponde al Parlamento de Andalucía:",
+      "opciones": [
+        "La exigencia de responsabilidad penal al Presidente de la Junta.",
+        "La interposición de recursos de amparo y conflictos de competencia de acuerdo con lo que establezcan las leyes.",
+        "El control de los medios de comunicación social dependientes de la Comunidad Autónoma."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 4,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 106 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, no corresponde al Parlamento de Andalucía:",
+      "opciones": [
+        "El control de las empresas públicas andaluzas.",
+        "La orientación y el impulso de la acción del Consejo de Gobierno.",
+        "La interposición de conflictos de competencia.",
+        "El examen y aprobación de la Cuenta General de la Comunidad Autónoma, sin perjuicio del control atribuido a la Cámara de Cuentas."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 5,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 117.4 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, el presidente de la Junta podrá proponer por iniciativa propia o a solicitud de los ciudadanos, de conformidad con lo establecido en el artículo 78 del citado Estatuto y en la legislación del Estado, la celebración de consultas populares en el ámbito de la Comunidad Autónoma, sobre:",
+      "opciones": [
+        "Cuestiones de interés general en materias autonómicas o locales.",
+        "Cuestiones políticas que afecten a su ámbito territorial.",
+        "Cuestiones competenciales que afecten a su ámbito territorial."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 6,
+      "enunciado": "Según el artículo 118.5 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, la responsabilidad penal del Presidente de la Junta será exigible:",
+      "opciones": [
+        "Ante la Sala de lo Penal del Tribunal Supremo.",
+        "Ante la Sala de lo Penal de la Audiencia Nacional.",
+        "Ante el Tribunal Constitucional."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 7,
+      "enunciado": "Según el artículo 119 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, en el ámbito de las competencias de la Comunidad Autónoma corresponde el ejercicio de la potestad reglamentaria:",
+      "opciones": [
+        "Solo al Presidente o Presidenta de la Junta.",
+        "Al Presidente o Presidenta de la Junta y al Consejo de Gobierno.",
+        "Al Consejo de Gobierno y a cada uno de sus miembros."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 8,
+      "enunciado": "De conformidad con el artículo 119 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, la interposición de recursos de inconstitucionalidad y conflictos de competencia, así como la personación en los procesos constitucionales de acuerdo con lo que establezca la Ley Orgánica del Tribunal Constitucional, corresponde al:",
+      "opciones": [
+        "Presidente del Consejo de Gobierno.",
+        "Consejo de Gobierno.",
+        "Presidente o consejeros del Consejo de Gobierno, indistintamente."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 9,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 128.2 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, el Defensor del Pueblo Andaluz será elegido por el Parlamento por:",
+      "opciones": [
+        "Mayoría cualificada.",
+        "Mayoría de dos tercios.",
+        "Mayoría simple."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 10,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 129.2 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, el Consejo Consultivo ejercerá sus funciones:",
+      "opciones": [
+        "Con autonomía orgánica y funcional.",
+        "En colaboración con el Consejo de Gobierno.",
+        "En colaboración con las demás entidades y corporaciones de derecho público no integradas en la Administración de la Junta de Andalucía."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 11,
+      "enunciado": "De conformidad con lo dispuesto en el artículo 130.1 de la Ley Orgánica 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, la Cámara de Cuentas es el órgano de control externo de la actividad económica y presupuestaria de:",
+      "opciones": [
+        "Las demás entidades y corporaciones de derecho público no integradas en la Administración de la Junta de Andalucía, cuando las leyes sectoriales así lo prescriban.",
+        "La Junta de Andalucía, de los entes locales y del resto del sector público de Andalucía.",
+        "Las respuestas a) y b) son incorrectas."
+      ],
+      "respuesta_correcta": 2,
+      "autogenerado": false
+    },
+    {
+      "id_p": 12,
+      "enunciado": "Según establece el artículo 130.2 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, la Cámara de Cuentas:",
+      "opciones": [
+        "Depende orgánicamente del Parlamento de Andalucía.",
+        "Es el órgano de control interno de la actividad económica y presupuestaria de la Junta de Andalucía, de los entes locales y del resto del sector público de Andalucía.",
+        "Ejerce sus funciones con autonomía orgánica y funcional."
+      ],
+      "respuesta_correcta": 1,
+      "autogenerado": false
+    },
+    {
+      "id_p": 13,
+      "enunciado": "De conformidad con lo establecido en el artículo 131 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, la composición, competencia y funcionamiento del Consejo Audiovisual de Andalucía se regulará:",
+      "opciones": [
+        "Por Decreto del Consejo de Gobierno.",
+        "Por sus propios Estatutos.",
+        "Por una ley del Parlamento."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 14,
+      "enunciado": "Según el artículo 119 de la Ley Orgánica 2/2007, de 19 de marzo, de Reforma del Estatuto de Autonomía para Andalucía, en el ámbito de las competencias de la Comunidad Autónoma corresponde el ejercicio de la potestad reglamentaria:",
+      "opciones": [
+        "Solo al Presidente o la Presidenta de la Junta.",
+        "Solo al consejero o a la consejera de la materia de que se trate.",
+        "Al Consejo de Gobierno y a cada uno de sus miembros.",
+        "Las respuestas a), b) y c) son incorrectas."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    },
+    {
+      "id_p": 15,
+      "enunciado": "De conformidad con lo establecido en el artículo 89.1 de la Ley 2/2007, de 19 de marzo, de reforma del Estatuto de Autonomía para Andalucía, Andalucía se organiza territorialmente en:",
+      "opciones": [
+        "Municipios, provincias, mancomunidades y demás entidades territoriales que puedan crearse por ley.",
+        "Municipios, provincias y comarcas.",
+        "Municipios, provincias, comarcas y demás entidades territoriales que puedan crearse por ley.",
+        "Municipios, provincias y demás entidades territoriales que puedan crearse por ley."
+      ],
+      "respuesta_correcta": 4,
+      "autogenerado": false
+    },
+    {
+      "id_p": 16,
+      "enunciado": "Según el vigente Estatuto de Autonomía para Andalucía, la representación de la Comunidad Autónoma de Andalucía, en sus relaciones con otras Comunidades Autónomas, corresponde:",
+      "opciones": [
+        "Al presidente del Parlamento de Andalucía.",
+        "A cada Consejero en el ámbito competencial de su respectiva Consejería.",
+        "Al Presidente de la Junta de Andalucía.",
+        "Al presidente del Tribunal Superior de Justicia de Andalucía."
+      ],
+      "respuesta_correcta": 3,
+      "autogenerado": false
+    }
+  ]
+}

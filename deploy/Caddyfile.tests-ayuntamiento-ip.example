@@ -1,0 +1,15 @@
+# Caddy >= 2.11; revisar, adaptar y validar antes de integrar en Caddy.
+# Un certificado interno no permite el acceso normal desde GitHub Pages.
+# Define SQLITE_PUBLIC_ORIGIN en la configuración privada de Caddy.
+{$SQLITE_PUBLIC_ORIGIN} {
+    tls {
+        issuer acme {
+            dir https://acme-v02.api.letsencrypt.org/directory
+            profile shortlived
+        }
+    }
+    request_body {
+        max_size 256KB
+    }
+    reverse_proxy 127.0.0.1:8765
+}

@@ -1,0 +1,65 @@
+# Dependencias de Node.js
+node_modules/
+dist/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code (historial y planes locales)
+.claude/
+
+# Planificación temporal del desarrollo (no se sube al repo)
+.plan/
+
+# Archivos de log
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+!.env.*.example
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de pnpm
+.pnpm-store/
+
+# Lockfile legado de npm tras migracion a pnpm
+package-lock.json
+
+# AI Context Files
+GEMINI.md
+
+# Playwright
+playwright-report/
+test-results/
+
+# Copias privadas de datos y pruebas de migración
+.migration/
+__pycache__/
+
+# Bases de datos y accesos privados, también si se copian fuera de .migration
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-*
+*.sqlite3-*
+*.db-*
+*.pem
+*.key
+enrollment-*.json
+acceso-*.txt
